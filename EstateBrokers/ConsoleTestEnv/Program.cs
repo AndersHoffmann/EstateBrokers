@@ -6,7 +6,7 @@ namespace ConsoleTestEnv
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Universe!");
+            
         }
     }
 }
