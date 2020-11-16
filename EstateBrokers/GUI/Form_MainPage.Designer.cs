@@ -32,11 +32,14 @@
             this.LeftSidePanelMainPage = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BottomPanelMainPage = new System.Windows.Forms.Panel();
+            this.HomeButtonFrontPage = new System.Windows.Forms.Button();
+            this.TopPanelMainPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanelMainPage
             // 
             this.TopPanelMainPage.BackColor = System.Drawing.Color.Black;
+            this.TopPanelMainPage.Controls.Add(this.HomeButtonFrontPage);
             this.TopPanelMainPage.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanelMainPage.Location = new System.Drawing.Point(0, 0);
             this.TopPanelMainPage.Name = "TopPanelMainPage";
@@ -70,6 +73,17 @@
             this.BottomPanelMainPage.Size = new System.Drawing.Size(1420, 40);
             this.BottomPanelMainPage.TabIndex = 3;
             // 
+            // HomeButtonFrontPage
+            // 
+            this.HomeButtonFrontPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButtonFrontPage.ForeColor = System.Drawing.Color.White;
+            this.HomeButtonFrontPage.Location = new System.Drawing.Point(40, 4);
+            this.HomeButtonFrontPage.Name = "HomeButtonFrontPage";
+            this.HomeButtonFrontPage.Size = new System.Drawing.Size(75, 32);
+            this.HomeButtonFrontPage.TabIndex = 0;
+            this.HomeButtonFrontPage.Text = "Home";
+            this.HomeButtonFrontPage.UseVisualStyleBackColor = true;
+            // 
             // Form_MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -84,6 +98,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_MainPage";
             this.Text = "Form_MainPage";
+            this.TopPanelMainPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -94,5 +109,6 @@
         private System.Windows.Forms.Panel LeftSidePanelMainPage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel BottomPanelMainPage;
+        private System.Windows.Forms.Button HomeButtonFrontPage;
     }
 }
