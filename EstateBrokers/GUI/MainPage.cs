@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Form_MainPage : Form
+    public partial class MainPage : Form
     {
-        public Form_MainPage()
+        public MainPage()
         {
             InitializeComponent();
         }
