@@ -41,7 +41,6 @@
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_Container_mainpage.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +48,6 @@
             // panel_top_mainpage
             // 
             this.panel_top_mainpage.BackColor = System.Drawing.Color.Black;
-            this.panel_top_mainpage.Controls.Add(this.maskedTextBox1);
             this.panel_top_mainpage.Controls.Add(this.label1);
             this.panel_top_mainpage.Controls.Add(this.button_Close_FrontPage);
             this.panel_top_mainpage.Controls.Add(this.button_Home_FrontPage);
@@ -181,13 +179,6 @@
             this.button_cases_mainpage.Text = "Cases";
             this.button_cases_mainpage.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(410, 13);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 27);
-            this.maskedTextBox1.TabIndex = 6;
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -226,6 +217,5 @@
         private System.Windows.Forms.Button button_support_mainpage;
         private System.Windows.Forms.Button button_estimates_mainpage;
         private System.Windows.Forms.Button button_openhouse_mainpage;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

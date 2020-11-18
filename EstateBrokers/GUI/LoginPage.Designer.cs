@@ -35,12 +35,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_login = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textbox_username = new System.Windows.Forms.TextBox();
+            this.TextBox_password = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -100,16 +100,16 @@
             this.panel2.Size = new System.Drawing.Size(236, 1);
             this.panel2.TabIndex = 4;
             // 
-            // button1
+            // button_login
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(116, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "LOG IN ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_login.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_login.Location = new System.Drawing.Point(116, 327);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(236, 35);
+            this.button_login.TabIndex = 5;
+            this.button_login.Text = "LOG IN ";
+            this.button_login.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -137,39 +137,39 @@
             this.panel4.Size = new System.Drawing.Size(465, 10);
             this.panel4.TabIndex = 7;
             // 
-            // textBox1
+            // textbox_username
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(153, 224);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 20);
-            this.textBox1.TabIndex = 8;
+            this.textbox_username.BackColor = System.Drawing.Color.White;
+            this.textbox_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textbox_username.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textbox_username.ForeColor = System.Drawing.Color.Black;
+            this.textbox_username.Location = new System.Drawing.Point(153, 224);
+            this.textbox_username.Name = "textbox_username";
+            this.textbox_username.Size = new System.Drawing.Size(198, 20);
+            this.textbox_username.TabIndex = 8;
             // 
-            // textBox2
+            // TextBox_password
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(153, 278);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 20);
-            this.textBox2.TabIndex = 9;
+            this.TextBox_password.BackColor = System.Drawing.Color.White;
+            this.TextBox_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBox_password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TextBox_password.ForeColor = System.Drawing.Color.Black;
+            this.TextBox_password.Location = new System.Drawing.Point(153, 278);
+            this.TextBox_password.Name = "TextBox_password";
+            this.TextBox_password.Size = new System.Drawing.Size(198, 20);
+            this.TextBox_password.TabIndex = 9;
             // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextBox_password);
+            this.Controls.Add(this.textbox_username);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_login);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
@@ -196,11 +196,13 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textbox_username;
+        private System.Windows.Forms.TextBox TextBox_password;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button _Lo;
     }
 }
