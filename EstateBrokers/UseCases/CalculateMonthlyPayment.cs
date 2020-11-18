@@ -9,7 +9,7 @@ namespace UseCases
         public double CalculatePayment(double input, int LoanPeriodMonths)
         {
             BankInterface bank = new SimulatedBankPaymentCalculator();
-
+            {
             return bank.PaymentCalculator(input, LoanPeriodMonths);
         }
     }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace UseCases
 {
-    interface BankInterface
+    class Create
     {
-        public double PaymentCalculator(double input, int LoanDuration);
+        public void create (class Table, )
     }
 }

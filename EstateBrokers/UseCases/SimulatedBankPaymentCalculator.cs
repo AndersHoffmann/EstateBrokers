@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UseCases
 {
-    class SimulatedBankPaymentCalculator : BankInterface
+    class SimulatedBankPaymentCalculator : IBank
     {
 
         public double PaymentCalculator(double input, int LoanDuration )
