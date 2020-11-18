@@ -85,7 +85,7 @@
             this.button_Home_FrontPage.ForeColor = System.Drawing.Color.White;
             this.button_Home_FrontPage.Image = ((System.Drawing.Image)(resources.GetObject("button_Home_FrontPage.Image")));
             this.button_Home_FrontPage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Home_FrontPage.Location = new System.Drawing.Point(40, 1);
+            this.button_Home_FrontPage.Location = new System.Drawing.Point(46, 1);
             this.button_Home_FrontPage.Name = "button_Home_FrontPage";
             this.button_Home_FrontPage.Size = new System.Drawing.Size(126, 40);
             this.button_Home_FrontPage.TabIndex = 4;
