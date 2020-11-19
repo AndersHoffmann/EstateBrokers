@@ -8,7 +8,7 @@ namespace Database
 {
     public class EstateBrokerContext : DbContext
     {
-        public EstateBrokerContext() : base(EstateBrokerContext);
+        public EstateBrokerContext() 
         {
           
         }

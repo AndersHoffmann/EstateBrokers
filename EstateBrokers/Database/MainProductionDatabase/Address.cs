@@ -13,9 +13,9 @@ namespace Database
         [Key, Column(Order = 1)]
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
-        double OwnershipCost { get; set; }
-        int ExteriorArea { get; set; }
-        int InteriorArea { get; set; }
-        int BuildYear { get; set; }
+        public double OwnershipCost { get; set; }
+        public int ExteriorArea { get; set; }
+        public int InteriorArea { get; set; }
+        public int BuildYear { get; set; }
     }
 }

@@ -4,14 +4,14 @@ using System.Text;
 
 namespace UseCases
 {
-    interface IDatabase
+    public interface IDatabase
     {
         public void Create();
 
-        public void Read()
+        public void Read();
 
-        public void Update()
+        public void Update();
 
-        public void Delete()
+        public void Delete();
     }
 }

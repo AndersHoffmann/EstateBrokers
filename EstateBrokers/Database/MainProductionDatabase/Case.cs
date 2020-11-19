@@ -6,12 +6,12 @@ namespace Database
 {
    public class Case
     {
-        int CaseID { get; set; }
-        DateTime CreationDate { get; set; }
-        DateTime ClosedDate { get; set; }
-        Double Price { get; set; }
-        Realtor Realtor { get; set; }
-        public ICollection<Property> Property { get; set; }
+        public int CaseID { get; set; }
+        public DateTime CreationDate { get; set; }
+        public DateTime ClosedDate { get; set; }
+        public Double Price { get; set; }
+        public Realtor Realtor { get; set; }
+        public  ICollection<Property> Property { get; set; }
 
     }
 }

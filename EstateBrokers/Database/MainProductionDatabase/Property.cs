@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Database
+{ 
    public class Property
     {
         public int PropertyID { get; set; }
