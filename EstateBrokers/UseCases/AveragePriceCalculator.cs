@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Database;
 using Gateways;
 namespace UseCases
 {
@@ -8,14 +9,7 @@ namespace UseCases
     {
         public double CalculateAreaAverage(int postalCode)
         {
-            List<Case> cases = new List<Case>();
-
-            using (var database = new EstateBrokerContext())
-            {
-                var Cases = database.
-                    
-                    .ToList();
-            }
+            
         }
     }
 }

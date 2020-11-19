@@ -1,4 +1,6 @@
-﻿using Entities;
+﻿using Database;
+using Entities;
+using Gateways;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +10,11 @@ namespace UseCases
 {
     class OpenHouseLogic
     {
-        public void RunOpenHouse(List<Realtor> realtorList, List<Property> distributionList)
+        public void RunOpenHouse(List<Realtor> realtorList, List<Case> distributionList)
         {
+            ICaseCRUD crud = new CaseCRUD();
+            SingleFunctionMethods SFM = new SingleFunctionMethods();
+
             Random rnd = new Random();
             if (realtorList.Count == 3)
             {
@@ -22,8 +27,10 @@ namespace UseCases
                         reset = 0;
                     }
 
-                    //Crud code here
-                    
+                    crud.UpdateCase(distributionList[i].CaseID, distributionList[i].CreationDate, distributionList[i].ClosedDate, distributionList[i].Price, distributionList[i].Realtor);
+              
+                    SFM.SaveChanges();
+
                 }
             }
         }

@@ -8,7 +8,7 @@ namespace UseCases
 {
     class CaseCRUD : ICaseCRUD
     {
-        public void CreateCase(DateTime creationDate, double price, Realtor realtor)
+        public void CreateCaseCase(DateTime creationDate, double price, Realtor realtor)
         {
             var database = new EstateBrokerContext();
 
@@ -23,14 +23,14 @@ namespace UseCases
             database.SaveChanges();
         }
 
-        public Case Read(int ID)
+        public Case ReadCase(int ID)
         {
             using (var database = new EstateBrokerContext())
             {
                 return database.Cases.Find(ID);
             }
         }
-        public void Update(int ID, DateTime creationDate, DateTime closedDate, double price, Realtor realtor)
+        public void UpdateCase(int ID, DateTime creationDate, DateTime closedDate, double price, Realtor realtor)
         {
             using (var database = new EstateBrokerContext())
             {
@@ -41,7 +41,7 @@ namespace UseCases
                 workingCase.Realtor = realtor;
             }
         }
-        public void Delete(int ID)
+        public void DeleteCase(int ID)
         {
             var workingCase = new Case()
             {

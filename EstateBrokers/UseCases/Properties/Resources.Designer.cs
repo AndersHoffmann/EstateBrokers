@@ -59,5 +59,45 @@ namespace UseCases.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Postnr.;Bynavn
+        ///999;København C
+        ///1001;København K
+        ///1800;Frederiksberg C
+        ///2100;København Ø
+        ///2150;Nordhavn
+        ///2200;København N
+        ///2300;København S
+        ///2400;København NV
+        ///2412;Grønland
+        ///2450;København SV
+        ///2500;Valby
+        ///2600;Glostrup
+        ///2605;Brøndby
+        ///2610;Rødovre
+        ///2620;Albertslund
+        ///2625;Vallensbæk
+        ///2630;Taastrup
+        ///2635;Ishøj
+        ///2640;Hedehusene
+        ///2650;Hvidovre
+        ///2660;Brøndby Strand
+        ///2665;Vallensbæk Strand
+        ///2670;Greve
+        ///2680;Solrød Strand
+        ///2690;Karlslunde
+        ///2700;Brønshøj
+        ///2720;Vanløse
+        ///2730;Herlev
+        ///2740;Skovlunde
+        ///2750;Ballerup
+        ///2 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Postnummer_v2 {
+            get {
+                return ResourceManager.GetString("Postnummer_v2", resourceCulture);
+            }
+        }
     }
 }
