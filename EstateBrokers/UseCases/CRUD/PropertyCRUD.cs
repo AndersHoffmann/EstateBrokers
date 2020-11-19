@@ -6,7 +6,7 @@ using System.Text;
 
 namespace UseCases
 {
-    class PropertyCRUD : IPropertyCRUD
+    public class PropertyCRUD : IPropertyCRUD
     {
         public void Create(int estimatedPrice, Case Case, int postalCode, string adressLine1 )
         {

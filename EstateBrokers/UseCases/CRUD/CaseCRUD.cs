@@ -8,11 +8,11 @@ namespace UseCases
 {
     class CaseCRUD : ICaseCRUD
     {
-        public void Create(DateTime creationDate, double price, Realtor realtor)
+        public void CreateCase(DateTime creationDate, double price, Realtor realtor)
         {
             var database = new EstateBrokerContext();
 
-            var workingCase = new Database.Case()
+            var workingCase = new Case()
             {
                 CreationDate = creationDate,
                 Price = price,

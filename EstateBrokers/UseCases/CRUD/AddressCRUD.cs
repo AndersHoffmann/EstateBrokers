@@ -29,7 +29,10 @@ namespace UseCases
         }
         public Address Read(int postalCode, string addressLine1)
         {
-
+            using (var database = new EstateBrokerContext())
+            {
+                return database.Addresses.Find(postalCode, addressLine1);
+            }
         }
         public void Update(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
         {
@@ -45,9 +48,13 @@ namespace UseCases
                 address.BuildYear = buildYear;
             }
         }
-        public void Delete(int postalCode, string addressLine1))
+        public void Delete(int postalCode, string addressLine1)
         {
-
+            using (var database = new EstateBrokerContext())
+            {
+                Address address = database.Addresses.Find(postalCode, addressLine1);
+                database.Addresses.Remove(address);
+            }
         }
 
     }
