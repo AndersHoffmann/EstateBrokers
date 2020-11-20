@@ -14,6 +14,5 @@ namespace Gateways
         public void Update(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear);
 
         public void Delete(int postalCode, string addressLine1);
-
     }
 }

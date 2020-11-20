@@ -30,6 +30,15 @@ namespace UseCases
                 return database.Cases.Find(ID);
             }
         }
+
+        public List<Case> ReadCases(int postalCode)
+            {
+                using (var database = new EstateBrokerContext())
+                {
+                   return database.Where(s => s.PostalCode == postalCode).ToList();
+                }
+            }
+
         public void UpdateCase(int ID, DateTime creationDate, DateTime closedDate, double price, Realtor realtor)
         {
             using (var database = new EstateBrokerContext())
