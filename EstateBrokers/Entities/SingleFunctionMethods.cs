@@ -14,5 +14,36 @@ namespace Entities
                 database.SaveChanges();
             }
         }
+
+        public DbContext AddressCRUDInstance()
+        {
+
+        }
+        public DbContext CaseCRUDInstance()
+        {
+
+        }
+        public DbContext PropertyCRUDInstance()
+        {
+
+        }
+        public DbContext RealtorCRUDInstance()
+        {
+        private RealtorCRUD()
+        {
+        }
+        private static RealtorCRUD instance = null;
+        public static Singleton Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Singleton();
+                }
+                return instance;
+            }
+        }
+    }
     }
 }
