@@ -12,7 +12,7 @@ namespace UnitTests
     {
         [DataRow(DateTime 12-21-1997, double 2000100, Realtor real)]
         [TestMethod()]
-        public void Case_Object_Is_Created(DateTime creationDate, double price, Realtor realtor)
+        public void Case_Object_Is_Created_And_Readable()(DateTime creationDate, double price, Realtor realtor)
         {
             //Arrange
             var database = new EstateBrokerContext();
@@ -21,14 +21,7 @@ namespace UnitTests
             crud.CreateCase(creationDate, price, realtor);
             database.SaveChanges();
             //Assert
-
         }
-        [TestMethod()]
-        public void Case_Object_Is_Readable()
-        {
-
-        }
-
 
         [TestMethod()]
         public void Case_Object_Is_Deleted()
