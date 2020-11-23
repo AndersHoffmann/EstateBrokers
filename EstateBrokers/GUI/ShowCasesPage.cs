@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class CasesPage : UserControl
+    public partial class ShowCasesPage : UserControl
     {
-        public CasesPage()
+        public ShowCasesPage()
         {
             InitializeComponent();
         }
