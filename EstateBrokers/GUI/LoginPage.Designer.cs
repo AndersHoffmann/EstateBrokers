@@ -145,6 +145,7 @@
             this.textbox_username.ForeColor = System.Drawing.Color.Black;
             this.textbox_username.Location = new System.Drawing.Point(153, 224);
             this.textbox_username.Name = "textbox_username";
+            this.textbox_username.PasswordChar = '*';
             this.textbox_username.Size = new System.Drawing.Size(198, 20);
             this.textbox_username.TabIndex = 8;
             // 
