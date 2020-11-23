@@ -11,7 +11,7 @@ namespace UnitTests
     {
          List<Property> properties = new List<Property>();
          List<Realtor> realtors = new List<Realtor>();
-         OpenHouse OH = new OpenHouse();
+         
 
         private void FillLists()
         {
@@ -35,11 +35,6 @@ namespace UnitTests
         {
             FillLists();
 
-            OH.RunOpenHouse(realtors, properties);
-            for (int i = 0; i < 3; i++)
-            {
-                Assert.AreEqual(6, realtors[i].PropertyResponsibility.Count);
-            }
           
         }
         [TestMethod()]
@@ -47,11 +42,7 @@ namespace UnitTests
         {
             FillLists();
 
-            OH.RunOpenHouse(realtors, properties);
-            for (int i = 0; i < 3; i++)
-            {
-                Assert.AreEqual(6, realtors[i].PropertyResponsibility.Count);
-            }
+           
 
         }
     }

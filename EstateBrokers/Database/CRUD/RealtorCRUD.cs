@@ -8,7 +8,7 @@ namespace UseCases
 {
     class RealtorCRUD : IRealtorCRUD
     {
-        public void Create(string name, string phoneNR)
+        public void CreateRealtor(string name, string phoneNR)
         {
             var database = new EstateBrokerContext();
 
@@ -21,23 +21,25 @@ namespace UseCases
             database.Realtors.Add(realtor);
             database.SaveChanges();
         }
-        public Realtor Read(int ID)
+        public Entities.Realtor ReadRealtor(int ID)
         {
             using (var database = new EstateBrokerContext())
             {
                 return database.Realtors.Find(ID);
+              
             }
         }
-        public void Update(int ID, string name, string phoneNR)
+        public void UpdateRealtor(int ID, string name, string phoneNR)
         {
             using (var database = new EstateBrokerContext())
             {
                 Realtor realtor = database.Realtors.Find(ID);
                 realtor.Name = name;
-                realtor.PhoneNR = phoneNR; 
+                realtor.PhoneNR = phoneNR;
+                database.SaveChanges();
             }
         }
-        public void Delete(int ID)
+        public void DeleteRealtor(int ID)
         {
             var realtor = new Realtor()
             {

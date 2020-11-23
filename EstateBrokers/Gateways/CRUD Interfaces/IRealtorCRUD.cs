@@ -1,4 +1,4 @@
-﻿using Database;
+﻿using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,12 +7,12 @@ namespace Gateways
 {
     public interface IRealtorCRUD
     {
-        public void Create(string name, string phoneNR);
+        public void CreateRealtor(string name, string phoneNR);
 
-        public Realtor Read(int ID);
+        public Realtor ReadRealtor(int ID);
 
-        public void Update(int ID, string name, string phoneNR);
+        public void UpdateRealtor(int ID, string name, string phoneNR);
 
-        public void Delete(int ID);
+        public void DeleteRealtor(int ID);
     }
 }

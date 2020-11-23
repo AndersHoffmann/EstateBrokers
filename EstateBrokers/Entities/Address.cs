@@ -1,17 +1,14 @@
 ﻿using System;
-using Entities;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace Database
+namespace Entities
 {
-    public class Address : Entities.Address
+    public class Address
     {
-        [Key, Column(Order = 0)]
         public int PostalCode { get; set; }
-        [Key, Column(Order = 1)]
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
         public double OwnershipCost { get; set; }

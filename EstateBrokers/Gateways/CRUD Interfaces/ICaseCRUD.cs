@@ -1,4 +1,4 @@
-﻿using Database;
+﻿using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +15,6 @@ namespace Gateways
 
         public void UpdateCase(int ID, DateTime creationDate, DateTime closedDate, double price, Realtor realtor);
 
-        public void Delete(int ID);
+        public void DeleteCase(int ID);
     }
 }

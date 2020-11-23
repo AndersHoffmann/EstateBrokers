@@ -1,15 +1,11 @@
 ﻿using Database;
-using Entities;
 using Gateways;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UseCases
 {
     class AddressCRUD : IAddressCRUD
     { 
-        public void Create(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
+        public void CreateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
         {
             var database = new EstateBrokerContext();
 
@@ -25,16 +21,16 @@ namespace UseCases
             };
 
             database.Addresses.Add(address);
-            database.SaveChanges();
         }
-        public Address Read(int postalCode, string addressLine1)
+        public Entities.Address ReadAddress(int postalCode, string addressLine1)
         {
             using (var database = new EstateBrokerContext())
             {
                 return database.Addresses.Find(postalCode, addressLine1);
+             
             }
         }
-        public void Update(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
+        public void UpdateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
         {
             using (var database = new EstateBrokerContext())
             {
@@ -46,14 +42,16 @@ namespace UseCases
                 address.ExteriorArea = exteriorArea;
                 address.InteriorArea = interiorArea;
                 address.BuildYear = buildYear;
+                database.SaveChanges();
             }
         }
-        public void Delete(int postalCode, string addressLine1)
+        public void DeleteAddress(int postalCode, string addressLine1)
         {
             using (var database = new EstateBrokerContext())
             {
                 Address address = database.Addresses.Find(postalCode, addressLine1);
                 database.Addresses.Remove(address);
+                database.SaveChanges();
             }
         }
 

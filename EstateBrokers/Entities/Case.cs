@@ -1,11 +1,10 @@
 ﻿using System;
-using Entities;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Database
+namespace Entities
 {
-   public class Case : Entities.Case
+   public class Case
     {
         public int CaseID { get; set; }
         public DateTime CreationDate { get; set; }

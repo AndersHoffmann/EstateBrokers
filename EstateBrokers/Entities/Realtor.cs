@@ -4,14 +4,13 @@ using System.Text;
 
 
 
-namespace Database
+namespace Entities
 {
-   public class Realtor : Entities.Realtor
+   public class Realtor
     {
         public int RealtorID { get; set; }
         public string Name { get; set; }
         public string PhoneNR { get; set; }
         public ICollection<Case> Case { get; set; }
-
     }
 }

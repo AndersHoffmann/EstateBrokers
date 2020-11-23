@@ -1,5 +1,6 @@
 ﻿using Database;
 using Gateways;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,14 +9,14 @@ namespace UseCases
 {
     public class PropertyCRUD : IPropertyCRUD
     {
-        public void Create(int estimatedPrice, Case Case, int postalCode, string adressLine1 )
+        public void CreateProperty(int estimatedPrice, Entities.Case Case, int postalCode, string adressLine1 )
         {
             var database = new EstateBrokerContext();
 
-            var property = new Property()
+            var property = new Database.Property()
             {
                 EstimatedPrice = estimatedPrice,
-                Case = Case,
+                Case = (Database.Case)Case,
                 PostalCode = postalCode,
                 AddressLine1= adressLine1
             };
@@ -23,27 +24,28 @@ namespace UseCases
             database.Properties.Add(property);
             database.SaveChanges();
         }
-        public Property Read(int ID)
+        public Entities.Property ReadProperty(int ID)
         {
             using (var database = new EstateBrokerContext())
             {
                 return database.Properties.Find(ID);
             }
         }
-        public void Update(int ID, int estimatedPrice, Case Case, int postalCode, string adressLine1)
+        public void UpdateProperty(int ID, int estimatedPrice, Entities.Case Case, int postalCode, string adressLine1)
         {
             using (var database = new EstateBrokerContext())
             {
-                Property property = database.Properties.Find(ID);
+                Database.Property property = database.Properties.Find(ID);
                 property.EstimatedPrice = estimatedPrice;
-                property.Case = Case;
+                property.Case = (Database.Case)Case;
                 property.PostalCode = postalCode;
                 property.AddressLine1 = adressLine1;
+                database.SaveChanges();
             }
         }
-        public void Delete(int ID)
+        public void DeleteProperty(int ID)
         {
-            var property = new Property()
+            var property = new Database.Property()
             {
                 PropertyID = ID
             };
