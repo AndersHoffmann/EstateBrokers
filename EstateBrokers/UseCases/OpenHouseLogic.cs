@@ -10,10 +10,9 @@ namespace UseCases
 {
     class OpenHouseLogic
     {
-        public void RunOpenHouse(List<Realtor> realtorList, List<Case> distributionList)
+        public void RunOpenHouse(List<Entities.Realtor> realtorList, List<Entities.Case> distributionList)
         {
             ICaseCRUD crud = new CaseCRUD();
-            SingleFunctionMethods SFM = new SingleFunctionMethods();
 
             Random rnd = new Random();
             if (realtorList.Count == 3)
@@ -23,14 +22,11 @@ namespace UseCases
                 {
                     if (i % 3 == 0)
                     {
-                        List<Realtor> tempArray = realtorList.OrderBy(x => rnd.Next()).ToList();
+                        List<Entities.Realtor> tempArray = realtorList.OrderBy(x => rnd.Next()).ToList();
                         reset = 0;
                     }
 
                     crud.UpdateCase(distributionList[i].CaseID, distributionList[i].CreationDate, distributionList[i].ClosedDate, distributionList[i].Price, distributionList[i].Realtor);
-              
-                    SFM.SaveChanges();
-
                 }
             }
         }

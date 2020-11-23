@@ -8,7 +8,7 @@ using System.Text;
 
 namespace UseCases
 {
-    class CaseCRUD : ICaseCRUD
+    public class CaseCRUD : ICaseCRUD
     {
         public void CreateCase(DateTime creationDate, double price, Entities.Realtor realtor)
         {

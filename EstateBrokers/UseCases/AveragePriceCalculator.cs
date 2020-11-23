@@ -12,9 +12,9 @@ namespace UseCases
         {
             ICaseCRUD crud = new CaseCRUD();
 
-            List<Case> caseList = crud.ReadCases(postalCode);
+            List<Entities.Case> caseList = crud.ReadCases(postalCode);
             
-            return icaseList.Average(a => a.Price);
+            return caseList.Average(a => a.Price);
         }
     }
 }
