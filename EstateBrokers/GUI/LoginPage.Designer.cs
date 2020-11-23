@@ -104,7 +104,7 @@
             // 
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_login.Location = new System.Drawing.Point(116, 327);
+            this.button_login.Location = new System.Drawing.Point(116, 332);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(236, 35);
             this.button_login.TabIndex = 5;
