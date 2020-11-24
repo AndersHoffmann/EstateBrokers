@@ -1,17 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Entities;
 using Gateways;
+using System.Collections.Generic;
 
 namespace UseCases.Statistics
 {
     class CalculateAverageM2PriceForArea
     {
-        public double Calculate(int Postalcode)
+        private IEstimatesInput _estimatesInput;
+        //public CalculateAverageM2PriceForArea(IEstimatesInput ie)
+        //{
+
+        //    _estimatesInput = ie;
+            
+
+        //}
+
+        public double Calculate(int postalCode)
         {
             ICaseCRUD crud = new CaseCRUD();
-            List<Case> cases = crud.ReadCases(Postalcode);
+            List<Case> cases = crud.ReadCases(postalCode);
             double totalPrice = 0;
             int count = 0;
             foreach (var item in cases)

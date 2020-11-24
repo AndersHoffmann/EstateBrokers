@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
-
+using Controllers;
 namespace GUI
 {
     public partial class EstimatesPage : UserControl
@@ -13,6 +13,27 @@ namespace GUI
         public EstimatesPage()
         {
             InitializeComponent();
+        }
+
+        private void EstimatesPage_Load(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void textBox_AreaCodeInput_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void button_check_Click(object sender, EventArgs e)
+        {
+
+
+
         }
     }
 }
