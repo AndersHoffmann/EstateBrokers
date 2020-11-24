@@ -1,19 +1,24 @@
-﻿using UseCases.Statistics;
+﻿using System;
+using UseCases.Statistics;
 
 namespace Controllers
 {
-    class EstimatesController : IEstimatesInput
+    public class EstimatesController
     {
+        public static IEstimatesInput EstimatesInput;
 
-        public EstimatesRequestModel CheckCode(int postalCode)
+        public EstimatesController (IEstimatesInput estimatesInput)
         {
-            //Check
-            EstimatesRequestModel es = new EstimatesRequestModel();
-            es.PostalCode = postalCode;
-            return es;
+            EstimatesInput = estimatesInput;
+            
         }
-
-
+       
+        public void EstimateCode(string postalCode)
+        {
+            EstimatesRequestModel request = new EstimatesRequestModel();
+            request.PostalCode = Int32.Parse(postalCode);
+            EstimatesInput.Calculate(request);
+        }
 
     }
 }

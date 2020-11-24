@@ -4,10 +4,10 @@ using System.Text;
 
 namespace ViewModels
 {
-    class EstimatesViewModel
+    public class EstimatesViewModel
     {
+        public string PostalCode { get; set; }
 
-
-
+        public string City { get; set; }
     }
 }

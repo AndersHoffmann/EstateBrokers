@@ -2,9 +2,7 @@
 {
     public interface IEstimatesOutput
     {
-
-
-
+        public void DisplayData(EstimatesResponseModel reponse);
 
     }
 }

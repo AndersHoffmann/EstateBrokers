@@ -5,21 +5,17 @@ using System.Collections.Generic;
 
 namespace UseCases.Statistics
 {
-    class CalculateAverageM2PriceForArea
+    public class CalculateAverageM2PriceForArea : IEstimatesInput
     {
-        private IEstimatesInput _estimatesInput;
-        //public CalculateAverageM2PriceForArea(IEstimatesInput ie)
-        //{
-
-        //    _estimatesInput = ie;
-            
-
-        //}
-
-        public double Calculate(int postalCode)
+        public IEstimatesOutput EstimatesOutput { get; set; }
+        public CalculateAverageM2PriceForArea(IEstimatesOutput estimatesOutput)
+        {
+            EstimatesOutput = estimatesOutput;
+        }
+        public double Calculate(EstimatesRequestModel request)
         {
             ICaseCRUD crud = new CaseCRUD();
-            List<Case> cases = crud.ReadCases(postalCode);
+            List<Case> cases = crud.ReadCases(request.PostalCode);
             double totalPrice = 0;
             int count = 0;
             foreach (var item in cases)

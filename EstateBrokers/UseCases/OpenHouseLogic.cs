@@ -22,7 +22,7 @@ namespace UseCases
                     if (i % 3 == 0)
                     {
                         List<Entities.Realtor> tempArray = realtorList.OrderBy(x => rnd.Next()).ToList();
-                        reset = 0;
+                      
                     }
 
                     crud.UpdateCase(distributionList[i].CaseID, distributionList[i].CreationDate, distributionList[i].ClosedDate, distributionList[i].Price, distributionList[i].Realtor);

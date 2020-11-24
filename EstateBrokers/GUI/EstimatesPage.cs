@@ -6,6 +6,8 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using Controllers;
+using UseCases.Statistics;
+using Presenters;
 namespace GUI
 {
     public partial class EstimatesPage : UserControl
@@ -14,6 +16,8 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+
 
         private void EstimatesPage_Load(object sender, EventArgs e)
         {
@@ -34,6 +38,18 @@ namespace GUI
 
 
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EstimatesController estimatesController = new EstimatesController(new CalculateAverageM2PriceForArea(new EstimatesPresenter()));
+
+            estimatesController.EstimateCode(textBox1.Text);
         }
     }
 }

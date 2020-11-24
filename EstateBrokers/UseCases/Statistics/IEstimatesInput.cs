@@ -2,9 +2,7 @@
 {
     public interface IEstimatesInput
     {
-
-        public EstimatesRequestModel CheckCode(int postalCode);
-
+        public double Calculate(EstimatesRequestModel request);
 
     }
 }

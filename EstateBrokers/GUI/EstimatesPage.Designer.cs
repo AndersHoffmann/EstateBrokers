@@ -63,6 +63,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +110,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(300, 33);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button2
             // 
@@ -407,11 +411,38 @@
             this.label19.TabIndex = 33;
             this.label19.Text = "Final estimated price";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1091, 181);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 27);
+            this.textBox1.TabIndex = 34;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(1091, 238);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 27);
+            this.textBox5.TabIndex = 35;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1091, 283);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 39);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EstimatesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label18);
@@ -494,6 +525,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label19;
-
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button1;
     }
 }
