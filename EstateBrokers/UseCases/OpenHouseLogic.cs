@@ -17,7 +17,6 @@ namespace UseCases
             Random rnd = new Random();
             if (realtorList.Count == 3)
             {
-                int reset = 0;
                 for (int i = 1; i < distributionList.Count + 1; i++)
                 {
                     if (i % 3 == 0)

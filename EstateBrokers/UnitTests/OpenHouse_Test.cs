@@ -1,4 +1,5 @@
-﻿using Database;
+﻿using Entities;
+using Gateways;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
