@@ -106,7 +106,7 @@
             // 
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_login.Location = new System.Drawing.Point(116, 327);
+            this.button_login.Location = new System.Drawing.Point(116, 332);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(236, 35);
             this.button_login.TabIndex = 5;
@@ -147,6 +147,7 @@
             this.textbox_username.ForeColor = System.Drawing.Color.Black;
             this.textbox_username.Location = new System.Drawing.Point(153, 224);
             this.textbox_username.Name = "textbox_username";
+            this.textbox_username.PasswordChar = '*';
             this.textbox_username.Size = new System.Drawing.Size(198, 20);
             this.textbox_username.TabIndex = 8;
             // 
