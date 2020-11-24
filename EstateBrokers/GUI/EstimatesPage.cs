@@ -47,9 +47,7 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EstimatesController estimatesController = new EstimatesController(new CalculateAverageM2PriceForArea(new EstimatesPresenter()));
-
-            estimatesController.EstimateCode(textBox1.Text);
+            
         }
     }
 }

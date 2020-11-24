@@ -1,8 +1,11 @@
-﻿namespace UseCases.Statistics
+﻿
+
+namespace UseCases.Statistics
+
 {
     public interface IEstimatesInput
     {
-        public double Calculate(EstimatesRequestModel request);
+        public void Calculate(EstimatesRequestModel request);
 
     }
 }

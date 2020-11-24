@@ -41,6 +41,8 @@
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
+            this.InputTextBox = new System.Windows.Forms.TextBox();
+            this.outputTextBox = new System.Windows.Forms.TextBox();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_Container_mainpage.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +124,8 @@
             // panel_Container_mainpage
             // 
             this.panel_Container_mainpage.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_Container_mainpage.Controls.Add(this.outputTextBox);
+            this.panel_Container_mainpage.Controls.Add(this.InputTextBox);
             this.panel_Container_mainpage.Controls.Add(this.button_support_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_estimates_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_openhouse_mainpage);
@@ -154,6 +158,7 @@
             this.button_estimates_mainpage.TabIndex = 0;
             this.button_estimates_mainpage.Text = "Estimates";
             this.button_estimates_mainpage.UseVisualStyleBackColor = true;
+            this.button_estimates_mainpage.Click += new System.EventHandler(this.button_estimates_mainpage_Click);
             // 
             // button_openhouse_mainpage
             // 
@@ -179,6 +184,20 @@
             this.button_cases_mainpage.Text = "Cases";
             this.button_cases_mainpage.UseVisualStyleBackColor = true;
             // 
+            // InputTextBox
+            // 
+            this.InputTextBox.Location = new System.Drawing.Point(757, 222);
+            this.InputTextBox.Name = "InputTextBox";
+            this.InputTextBox.Size = new System.Drawing.Size(100, 27);
+            this.InputTextBox.TabIndex = 1;
+            // 
+            // outputTextBox
+            // 
+            this.outputTextBox.Location = new System.Drawing.Point(933, 222);
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.Size = new System.Drawing.Size(100, 27);
+            this.outputTextBox.TabIndex = 2;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -199,6 +218,7 @@
             this.panel_top_mainpage.ResumeLayout(false);
             this.panel_top_mainpage.PerformLayout();
             this.panel_Container_mainpage.ResumeLayout(false);
+            this.panel_Container_mainpage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -217,5 +237,8 @@
         private System.Windows.Forms.Button button_support_mainpage;
         private System.Windows.Forms.Button button_estimates_mainpage;
         private System.Windows.Forms.Button button_openhouse_mainpage;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox InputTextBox;
+        private System.Windows.Forms.TextBox outputTextBox;
     }
 }

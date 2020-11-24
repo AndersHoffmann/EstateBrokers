@@ -6,7 +6,6 @@ namespace UseCases.Statistics
 {
     public class EstimatesResponseModel
     {
-        public int PostalCode { get; set; }
-        public string City { get; set; }
+       public double AverageHousePrice { get; set; }
     }
 }
