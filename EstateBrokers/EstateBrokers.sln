@@ -10,9 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application Business Rules", "Application Business Rules", "{08862C1B-3D9F-45A5-8325-6D7227F8DEA3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface Adapters", "Interface Adapters", "{147FF269-3D51-41B0-94A3-FC3D47F36510}"
-	ProjectSection(SolutionItems) = preProject
-		Database\MainProductionDatabase\Realtor.cs = Database\MainProductionDatabase\Realtor.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks and Drivers", "Frameworks and Drivers", "{A7A244FD-393D-4D63-BC8E-960954277171}"
 EndProject
@@ -32,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{6B4B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{9B157178-4FE9-4D3D-9085-F05ECBF7636D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{1609011E-418E-4D53-B313-36E655FB7F78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ViewModels\ViewModels.csproj", "{1609011E-418E-4D53-B313-36E655FB7F78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
