@@ -14,18 +14,18 @@ namespace UseCases.Statistics
         }
         public void Calculate(EstimatesRequestModel request)
         {
-            //ICaseCRUD crud = new CaseCRUD();
-            //List<Case> cases = crud.ReadCases(request.PostalCode);
-            //double totalPrice = 0;
-            //int count = 0;
-            //foreach (var item in cases)
-            //{
-            //    totalPrice = totalPrice + item.Price;
-            //    count++;
-            //}
+            ICaseCRUD crud = new CaseCRUD();
+            List<Case> cases = crud.ReadCases(request.PostalCode);
+            double totalPrice = 0;
+            int count = 0;
+            foreach (var item in cases)
+            {
+                totalPrice = totalPrice + item.Price;
+                count++;
+            }
             EstimatesResponseModel response = new EstimatesResponseModel();
 
-            response.AverageHousePrice = request.PostalCode * 2;
+            response.AverageHousePrice = totalPrice / count;
 
             EstimatesOutput.DisplayData(response);
         }
