@@ -1,28 +1,30 @@
 ﻿using Entities;
 using Gateways;
+using UseCases;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace UnitTests
 {
     [TestClass]
     public class OpenHouse_Test
     {
-         List<Property> properties = new List<Property>();
+         List<Case> Cases = new List<Case>();
          List<Realtor> realtors = new List<Realtor>();
          
 
         private void FillLists()
         {
-            properties.Clear();
+            Cases.Clear();
             realtors.Clear();
 
             for (int i = 0; i < 18; i++)
             {
-                properties.Add(new Property());
-                properties[i].PropertyID = i;
+                Cases.Add(new Case());
+                Cases[i].CaseID = i;
             }
             for (int i = 0; i < 3; i++)
             {
@@ -34,17 +36,19 @@ namespace UnitTests
         [TestMethod()]
         public void Number_Of_Properties_Should_Be_Equal()
         {
+            //Arrange
             FillLists();
+            OpenHouseLogic openHouseLogic = new OpenHouseLogic();
 
-          
-        }
-        [TestMethod()]
-        public void Method()
-        {
-            FillLists();
+            //Act
+            openHouseLogic.RunOpenHouse(realtors, Cases);
 
-           
+            int realtorOne = Cases.Count(s => s.Realtor.RealtorID == 0);
+            int realtorTwo = Cases.Count(s => s.Realtor.RealtorID == 1);
+            int realtorThree = Cases.Count(s => s.Realtor.RealtorID == 2);
 
+            //Assert
+            Assert.AreEqual(realtorOne, realtorOne, realtorThree);
         }
     }
 }

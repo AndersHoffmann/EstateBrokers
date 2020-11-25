@@ -8,26 +8,34 @@ using System.Text;
 
 namespace UseCases
 {
-    class OpenHouseLogic
+    public class OpenHouseLogic
     {
-        public void RunOpenHouse(List<Entities.Realtor> realtorList, List<Entities.Case> distributionList)
+        public List<Entities.Case> RunOpenHouse(List<Entities.Realtor> realtorList, List<Entities.Case> distributionList)
         {
-            ICaseCRUD crud = new CaseCRUD();
-
+            List<Entities.Case> Cases = new List<Entities.Case>();
             Random rnd = new Random();
-            if (realtorList.Count == 3)
-            {
+
                 for (int i = 1; i < distributionList.Count + 1; i++)
                 {
                     if (i % 3 == 0)
                     {
                         List<Entities.Realtor> tempArray = realtorList.OrderBy(x => rnd.Next()).ToList();
-                      
+                  
                     }
 
-                    crud.UpdateCase(distributionList[i].CaseID, distributionList[i].CreationDate, distributionList[i].ClosedDate, distributionList[i].Price, distributionList[i].Realtor);
+                Cases.Add(distributionList[i]);
                 }
-            }
+            return Cases;
+        }
+        public void SaveOpenHouseChanges(List<Entities.Realtor> realtorList, List<Entities.Case> distributionList)
+        {
+            List <Entities.Case>  Cases = RunOpenHouse(realtorList, distributionList);
+            ICaseCRUD crud = new CaseCRUD();
+            foreach (var item in Cases)
+            {
+                crud.CreateCase(item.CreationDate, item.Price, item.Realtor);
+            }           
         }
     }
 }
+
