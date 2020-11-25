@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstimatesPage));
             this.button_check = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox_AveragePricePerSquareMeter = new System.Windows.Forms.ListBox();
             this.textBox_AreaCodeInput = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBox_AvaragePricePerSquareMeter = new System.Windows.Forms.TextBox();
+            this.button_AddToList = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,11 +61,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_FinalEstimatedPrice = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +72,7 @@
             this.button_check.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_check.Image = ((System.Drawing.Image)(resources.GetObject("button_check.Image")));
             this.button_check.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_check.Location = new System.Drawing.Point(747, 782);
+            this.button_check.Location = new System.Drawing.Point(403, 778);
             this.button_check.Name = "button_check";
             this.button_check.Size = new System.Drawing.Size(211, 78);
             this.button_check.TabIndex = 0;
@@ -83,15 +80,15 @@
             this.button_check.UseVisualStyleBackColor = true;
             this.button_check.Click += new System.EventHandler(this.button_check_Click);
             // 
-            // listBox1
+            // listBox_AveragePricePerSquareMeter
             // 
-            this.listBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(747, 345);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(428, 354);
-            this.listBox1.TabIndex = 1;
+            this.listBox_AveragePricePerSquareMeter.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listBox_AveragePricePerSquareMeter.FormattingEnabled = true;
+            this.listBox_AveragePricePerSquareMeter.ItemHeight = 25;
+            this.listBox_AveragePricePerSquareMeter.Location = new System.Drawing.Point(747, 345);
+            this.listBox_AveragePricePerSquareMeter.Name = "listBox_AveragePricePerSquareMeter";
+            this.listBox_AveragePricePerSquareMeter.Size = new System.Drawing.Size(619, 354);
+            this.listBox_AveragePricePerSquareMeter.TabIndex = 1;
             // 
             // textBox_AreaCodeInput
             // 
@@ -100,30 +97,29 @@
             this.textBox_AreaCodeInput.Name = "textBox_AreaCodeInput";
             this.textBox_AreaCodeInput.Size = new System.Drawing.Size(211, 31);
             this.textBox_AreaCodeInput.TabIndex = 2;
-            this.textBox_AreaCodeInput.TextChanged += new System.EventHandler(this.textBox_AreaCodeInput_TextChanged);
             // 
-            // textBox2
+            // textBox_AvaragePricePerSquareMeter
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(747, 740);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(300, 33);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox_AvaragePricePerSquareMeter.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox_AvaragePricePerSquareMeter.Location = new System.Drawing.Point(747, 740);
+            this.textBox_AvaragePricePerSquareMeter.Name = "textBox_AvaragePricePerSquareMeter";
+            this.textBox_AvaragePricePerSquareMeter.ReadOnly = true;
+            this.textBox_AvaragePricePerSquareMeter.Size = new System.Drawing.Size(300, 33);
+            this.textBox_AvaragePricePerSquareMeter.TabIndex = 3;
             // 
-            // button2
+            // button_AddToList
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(402, 783);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 78);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Add to list";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_AddToList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AddToList.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_AddToList.Image = ((System.Drawing.Image)(resources.GetObject("button_AddToList.Image")));
+            this.button_AddToList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_AddToList.Location = new System.Drawing.Point(746, 778);
+            this.button_AddToList.Name = "button_AddToList";
+            this.button_AddToList.Size = new System.Drawing.Size(211, 78);
+            this.button_AddToList.TabIndex = 4;
+            this.button_AddToList.Text = "Add to list";
+            this.button_AddToList.UseVisualStyleBackColor = true;
+            this.button_AddToList.Click += new System.EventHandler(this.button_AddToList_Click);
             // 
             // button3
             // 
@@ -131,7 +127,7 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1181, 621);
+            this.button3.Location = new System.Drawing.Point(1146, 226);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(211, 78);
             this.button3.TabIndex = 5;
@@ -164,7 +160,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1181, 537);
+            this.button4.Location = new System.Drawing.Point(1155, 73);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(211, 78);
             this.button4.TabIndex = 9;
@@ -178,7 +174,7 @@
             this.ListboxAvailableAreaCodes.ItemHeight = 25;
             this.ListboxAvailableAreaCodes.Location = new System.Drawing.Point(402, 346);
             this.ListboxAvailableAreaCodes.Name = "ListboxAvailableAreaCodes";
-            this.ListboxAvailableAreaCodes.Size = new System.Drawing.Size(212, 329);
+            this.ListboxAvailableAreaCodes.Size = new System.Drawing.Size(225, 354);
             this.ListboxAvailableAreaCodes.TabIndex = 10;
             // 
             // label3
@@ -392,14 +388,14 @@
             this.label18.TabIndex = 31;
             this.label18.Text = "House informations";
             // 
-            // textBox4
+            // textBox_FinalEstimatedPrice
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(579, 154);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(193, 33);
-            this.textBox4.TabIndex = 32;
+            this.textBox_FinalEstimatedPrice.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox_FinalEstimatedPrice.Location = new System.Drawing.Point(579, 154);
+            this.textBox_FinalEstimatedPrice.Name = "textBox_FinalEstimatedPrice";
+            this.textBox_FinalEstimatedPrice.ReadOnly = true;
+            this.textBox_FinalEstimatedPrice.Size = new System.Drawing.Size(193, 33);
+            this.textBox_FinalEstimatedPrice.TabIndex = 32;
             // 
             // label19
             // 
@@ -411,40 +407,13 @@
             this.label19.TabIndex = 33;
             this.label19.Text = "Final estimated price";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(1091, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 34;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(1091, 238);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 35;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1091, 283);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 39);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // EstimatesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox_FinalEstimatedPrice);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label17);
@@ -472,10 +441,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button_AddToList);
+            this.Controls.Add(this.textBox_AvaragePricePerSquareMeter);
             this.Controls.Add(this.textBox_AreaCodeInput);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBox_AveragePricePerSquareMeter);
             this.Controls.Add(this.button_check);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -491,10 +460,10 @@
         #endregion
 
         private System.Windows.Forms.Button button_check;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox_AveragePricePerSquareMeter;
         private System.Windows.Forms.TextBox textBox_AreaCodeInput;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox_AvaragePricePerSquareMeter;
+        private System.Windows.Forms.Button button_AddToList;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -523,10 +492,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_FinalEstimatedPrice;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
     }
 }

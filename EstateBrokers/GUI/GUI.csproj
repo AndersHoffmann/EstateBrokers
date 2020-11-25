@@ -19,6 +19,7 @@
     <ProjectReference Include="..\Controllers\Controllers.csproj" />
     <ProjectReference Include="..\Presenters\Presenters.csproj" />
     <ProjectReference Include="..\UseCases\UseCases.csproj" />
+    <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>

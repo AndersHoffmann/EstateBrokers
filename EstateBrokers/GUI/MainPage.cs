@@ -12,20 +12,13 @@ using UseCases.Statistics;
 
 namespace GUI
 {
-    public partial class MainPage : Form, IFrontEnd
+    public partial class MainPage : Form
     {
-        EstimatesController estimatesController { get; set; }
+        
         public MainPage()
         {
-            IEstimatesOutput estimatesOutput = new EstimatesPresenter(this);
-            IEstimatesInput estimatesInput = new CalculateAverageM2PriceForArea(estimatesOutput);
-            estimatesController = new EstimatesController(estimatesInput);
+            
             InitializeComponent();
-        }
-
-        public void UpdateAveragePriceField(EstimatesViewModel estimatesViewModel)
-        {
-            outputTextBox.Text = estimatesViewModel.AveragePriceOfHouses;
         }
 
         private void button_Close_FrontPage_Click(object sender, EventArgs e)
@@ -35,7 +28,12 @@ namespace GUI
 
         private void button_estimates_mainpage_Click(object sender, EventArgs e)
         {
-            estimatesController.EstimateCode(InputTextBox.Text);
+            
+        }
+
+        private void estimatesPage1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
