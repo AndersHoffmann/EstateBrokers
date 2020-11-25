@@ -37,12 +37,11 @@
             this.panel_botton_mainpage = new System.Windows.Forms.Panel();
             this.panel_right_mainpage = new System.Windows.Forms.Panel();
             this.panel_Container_mainpage = new System.Windows.Forms.Panel();
+            this.estimatesPage1 = new GUI.EstimatesPage();
             this.button_support_mainpage = new System.Windows.Forms.Button();
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
-            this.InputTextBox = new System.Windows.Forms.TextBox();
-            this.outputTextBox = new System.Windows.Forms.TextBox();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_Container_mainpage.SuspendLayout();
             this.SuspendLayout();
@@ -124,8 +123,7 @@
             // panel_Container_mainpage
             // 
             this.panel_Container_mainpage.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_Container_mainpage.Controls.Add(this.outputTextBox);
-            this.panel_Container_mainpage.Controls.Add(this.InputTextBox);
+            this.panel_Container_mainpage.Controls.Add(this.estimatesPage1);
             this.panel_Container_mainpage.Controls.Add(this.button_support_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_estimates_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_openhouse_mainpage);
@@ -134,6 +132,17 @@
             this.panel_Container_mainpage.Name = "panel_Container_mainpage";
             this.panel_Container_mainpage.Size = new System.Drawing.Size(1408, 908);
             this.panel_Container_mainpage.TabIndex = 4;
+            // 
+            // estimatesPage1
+            // 
+            this.estimatesPage1.BackColor = System.Drawing.Color.White;
+            this.estimatesPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.estimatesPage1.Location = new System.Drawing.Point(1, 1);
+            this.estimatesPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.estimatesPage1.Name = "estimatesPage1";
+            this.estimatesPage1.Size = new System.Drawing.Size(1408, 908);
+            this.estimatesPage1.TabIndex = 1;
+            this.estimatesPage1.Load += new System.EventHandler(this.estimatesPage1_Load);
             // 
             // button_support_mainpage
             // 
@@ -184,20 +193,6 @@
             this.button_cases_mainpage.Text = "Cases";
             this.button_cases_mainpage.UseVisualStyleBackColor = true;
             // 
-            // InputTextBox
-            // 
-            this.InputTextBox.Location = new System.Drawing.Point(757, 222);
-            this.InputTextBox.Name = "InputTextBox";
-            this.InputTextBox.Size = new System.Drawing.Size(100, 27);
-            this.InputTextBox.TabIndex = 1;
-            // 
-            // outputTextBox
-            // 
-            this.outputTextBox.Location = new System.Drawing.Point(933, 222);
-            this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.Size = new System.Drawing.Size(100, 27);
-            this.outputTextBox.TabIndex = 2;
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -218,7 +213,6 @@
             this.panel_top_mainpage.ResumeLayout(false);
             this.panel_top_mainpage.PerformLayout();
             this.panel_Container_mainpage.ResumeLayout(false);
-            this.panel_Container_mainpage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -238,7 +232,6 @@
         private System.Windows.Forms.Button button_estimates_mainpage;
         private System.Windows.Forms.Button button_openhouse_mainpage;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox InputTextBox;
-        private System.Windows.Forms.TextBox outputTextBox;
+        private EstimatesPage estimatesPage1;
     }
 }

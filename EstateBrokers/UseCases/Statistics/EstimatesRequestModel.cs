@@ -3,6 +3,6 @@
     public class EstimatesRequestModel
     {
         public int PostalCode { get; set; }
-  
+      
     }
 }
