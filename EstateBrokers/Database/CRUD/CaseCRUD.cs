@@ -50,8 +50,11 @@ namespace UseCases
                 {
                        cases.Add((Database.Case)database.Cases.Where(s => s.Property == database.Properties.Find(item.PropertyID)));      
                 }
+                
+                database.SaveChanges();
+
                 return cases;
-             
+              
             }
            
         }

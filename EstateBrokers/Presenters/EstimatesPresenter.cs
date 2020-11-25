@@ -6,22 +6,22 @@ using ViewModels;
 
 namespace Presenters
 {
-    public class EstimatesPresenter : IEstimatesOutput
+    public partial class EstimatesPresenter : IEstimatesOutput
     {
-        EstimatesViewModel viewModel;
-        public void DisplayData(EstimatesResponseModel reponse)
+        public IFrontEnd FrontEnd { get; set; }
+        public EstimatesPresenter(IFrontEnd frontEnd)
         {
-
-            viewModel.PostalCode = reponse.PostalCode.ToString();
-            viewModel.City = reponse.City;
-
-            UpdateView(this.viewModel);
+            FrontEnd = frontEnd;
         }
-
-        public void UpdateView(EstimatesViewModel viewModel)
+        
+        public void DisplayData(EstimatesResponseModel response)
         {
-            //Textbox1.Text = viewModel.PostalCode;
-            //...
+            EstimatesViewModel estimatesViewModel = new EstimatesViewModel();
+
+            estimatesViewModel.AveragePriceOfHouses = response.AverageHousePrice.ToString();
+           
+            FrontEnd.UpdateAveragePriceField(estimatesViewModel);
         }
+        
     }
 }
