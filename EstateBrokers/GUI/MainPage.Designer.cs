@@ -37,7 +37,6 @@
             this.panel_botton_mainpage = new System.Windows.Forms.Panel();
             this.panel_right_mainpage = new System.Windows.Forms.Panel();
             this.panel_Container_mainpage = new System.Windows.Forms.Panel();
-            this.estimatesPage1 = new GUI.EstimatesPage();
             this.button_support_mainpage = new System.Windows.Forms.Button();
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
@@ -123,7 +122,6 @@
             // panel_Container_mainpage
             // 
             this.panel_Container_mainpage.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_Container_mainpage.Controls.Add(this.estimatesPage1);
             this.panel_Container_mainpage.Controls.Add(this.button_support_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_estimates_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_openhouse_mainpage);
@@ -132,17 +130,6 @@
             this.panel_Container_mainpage.Name = "panel_Container_mainpage";
             this.panel_Container_mainpage.Size = new System.Drawing.Size(1408, 908);
             this.panel_Container_mainpage.TabIndex = 4;
-            // 
-            // estimatesPage1
-            // 
-            this.estimatesPage1.BackColor = System.Drawing.Color.White;
-            this.estimatesPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.estimatesPage1.Location = new System.Drawing.Point(1, 1);
-            this.estimatesPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.estimatesPage1.Name = "estimatesPage1";
-            this.estimatesPage1.Size = new System.Drawing.Size(1408, 908);
-            this.estimatesPage1.TabIndex = 1;
-            this.estimatesPage1.Load += new System.EventHandler(this.estimatesPage1_Load);
             // 
             // button_support_mainpage
             // 
@@ -232,6 +219,5 @@
         private System.Windows.Forms.Button button_estimates_mainpage;
         private System.Windows.Forms.Button button_openhouse_mainpage;
         private System.Windows.Forms.TextBox textBox2;
-        private EstimatesPage estimatesPage1;
     }
 }
