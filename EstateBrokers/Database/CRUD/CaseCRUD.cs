@@ -13,14 +13,16 @@ namespace UseCases
 
             var database = new EstateBrokerContext();
             IRealtorCRUD realtorCRUD = new RealtorCRUD();
-            Realtor realtor = (Realtor)realtorCRUD.ReadRealtor(realtorID);
+            
 
             var workingCase = new Database.Case()
             {
                 CreationDate = creationDate,
                 Price = price,
-                Realtor = realtor
             };
+            Realtor realtor = database.Realtors.FirstOrDefault(a => a.RealtorID == realtorID);
+
+            workingCase.Realtor = realtor;
 
             database.Cases.Add(workingCase);
             database.SaveChanges();

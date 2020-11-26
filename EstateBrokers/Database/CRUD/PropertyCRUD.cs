@@ -4,6 +4,7 @@ using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace UseCases
 {
@@ -12,11 +13,10 @@ namespace UseCases
         public int CreateProperty(double estimatedPrice, Entities.Case Case, int postalCode, string adressLine1 )
         {
             var database = new EstateBrokerContext();
-
             var property = new Database.Property()
             {
                 EstimatedPrice = estimatedPrice,
-                Case = (Database.Case)Case,
+                Case = database.Cases.FirstOrDefault(a => a.CaseID == Case.CaseID),
                 PostalCode = postalCode,
                 AddressLine1= adressLine1
             };
