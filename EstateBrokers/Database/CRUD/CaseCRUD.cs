@@ -42,9 +42,12 @@ namespace UseCases
                 {
                 List<Entities.Case> cases = new List<Entities.Case>();
                 List<Database.Property> properties = new List<Database.Property>();
-
-                    
-                properties.Add((Database.Property)(database.Properties.Where(s => s.PostalCode == postalCode)));
+                
+                    if (database.Properties.Any(s => s.PostalCode == postalCode) == true)
+                {
+                    properties.Add((Database.Property)(database.Properties.Where(s => s.PostalCode == postalCode)));
+                }
+           
 
                 foreach (var item in properties)
                 {
