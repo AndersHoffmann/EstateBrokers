@@ -1,24 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+using UseCases.CreateEntry;
+using ViewModels;
 namespace Presenters
 {
-    class CreateEntryPresenter
+
+    public partial class CreateEntryPresenter : ICreateEntryOutput
     {
-        public partial class CreateEntryPresenter : ICreateEntryOutput
+        public ICreateCaseFontEnd FrontEnd { get; set; }
+
+        public CreateEntryPresenter(ICreateCaseFontEnd frontEnd)
         {
-            public IFrontEnd FrontEnd { get; set; }
-            public CreateEntryPresenter(IFrontEnd frontEnd)
-            {
-                FrontEnd = frontEnd;
-            }
+            FrontEnd = frontEnd;
+        }
 
-            public void DisplayData(CreateEntryResponseModel response)
-            {
-               //Martin skriv denne kode please
-            }
+      
+        public void ConfirmEntryCreation(CreateEntryResponseModel response)
+        {
+            CasesViewModel casesviewmodel = new CasesViewModel();
 
+            casesviewmodel.CreateCasesSucess = response.EntryCreatedSuccesfully;
+
+            FrontEnd.DisplayCreateCasesStatus(casesviewmodel);
         }
     }
+
 }

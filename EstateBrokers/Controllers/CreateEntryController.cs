@@ -1,24 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using UseCases.CreateEntry;
 
 namespace Controllers
 {
-    class CreateEntryController
+    public class CreateEntryController
     {
-        public static IEstimatesInput EstimatesInput;
+        public static ICreateEntryInput CreateEntryInput;
 
-        public EstimatesController(IEstimatesInput estimatesInput)
+        public CreateEntryController(ICreateEntryInput createEntryInput)
         {
-            EstimatesInput = estimatesInput;
+            CreateEntryInput = createEntryInput;
 
         }
 
-        public void EstimateCode(string postalCode)
+        public void CreateEntry(string realtorID, string price, string estimatedprice, string postalCode, string addressLine1, 
+            string AddressLine2, string ownershipCost, string exteriorArea, string interiorArea, string buildYear )
         {
-            EstimatesRequestModel request = new EstimatesRequestModel();
-            request.PostalCode = Int32.Parse(postalCode);
-            EstimatesInput.Calculate(request);
+            CreateEntryRequestModel request = new CreateEntryRequestModel();
+            //For Case
+            request.realtorID = Int32.Parse(realtorID);
+            request.creationDate = DateTime.Today;
+            request.price = Double.Parse(price);
+
+            //For Property
+            request.estimatedPrice = Double.Parse(estimatedprice);
+
+            //For Property and Address
+            request.postalCode = Int32.Parse(postalCode);
+            request.AddressLine1 = addressLine1;
+
+            //For Address 
+            request.AddressLine2 = AddressLine2;
+            request.ownershipCost = Double.Parse(ownershipCost);
+            request.exteriorArea = Int32.Parse(exteriorArea);
+            request.interiorArea = Int32.Parse(interiorArea);
+            request.buildYear = Int32.Parse(buildYear);
+
+
+            CreateEntryInput.Create(request);
+
         }
 
     }

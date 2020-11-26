@@ -12,10 +12,11 @@ using ViewModels;
 
 namespace GUI
 {
-    public partial class EstimatesPage : UserControl, IFrontEnd
+    public partial class EstimatesPage : UserControl, IEstimatesFrontEnd
     {
 
         EstimatesController estimatesController { get; set; }
+
         public EstimatesPage()
         {
             IEstimatesOutput estimatesOutput = new EstimatesPresenter(this);

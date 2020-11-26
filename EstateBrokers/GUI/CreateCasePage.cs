@@ -1,18 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using Controllers;
+using Presenters;
+using System;
 using System.Windows.Forms;
-
+using UseCases.CreateEntry;
+using ViewModels;
 namespace GUI
 {
-    public partial class CreateCasePage : UserControl
+    public partial class CreateCasePage : UserControl, ICreateCaseFontEnd
     {
+
+        CreateEntryController createcasecontroller { get; set; }
+
         public CreateCasePage()
         {
+            ICreateEntryOutput createcaseOutput = new CreateEntryPresenter(this);
+            ICreateEntryInput createcaseInput = new RunCreateEntry(createcaseOutput);
+            createcasecontroller = new CreateEntryController(createcaseInput);
             InitializeComponent();
+        }
+
+        public void DisplayCreateCasesStatus(CasesViewModel casesViewModel)
+        {
+            if (casesViewModel.CreateCasesSucess == true)
+            {
+                MessageBox.Show("Sucess");
+
+            }
+            else
+            {
+                MessageBox.Show("Creating failed");
+            }
+
+
+        }
+
+        private void CreateCasePage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Save_Click(object sender, EventArgs e)
+        {
+            createcasecontroller.CreateEntry(textBox_RealtorID.Text, textBox_Price.Text, textBox_EstimatedPrice.Text, textbox_PostalCode.Text, textbox_AddressLine1.Text, textBox_AddressLine2.Text, textBox_OwnershipCost.Text, textBox_ExteriorArea.Text, textBox_InteriorArea.Text, textBox_BuildYear.Text);
+
         }
     }
 }

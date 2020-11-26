@@ -7,7 +7,7 @@ namespace Gateways
 {
     public interface ICaseCRUD
     {
-        public int CreateCase(DateTime creationDate, double price, Realtor realtor);
+        public int CreateCase(DateTime creationDate, double price, int realtor);
 
         public Case ReadCase(int ID);
 

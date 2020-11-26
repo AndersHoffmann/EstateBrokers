@@ -7,6 +7,7 @@ namespace UseCases.Statistics
 {
     public class CalculateAverageM2PriceForArea : IEstimatesInput
     {
+
         public IEstimatesOutput EstimatesOutput { get; set; }
         public CalculateAverageM2PriceForArea(IEstimatesOutput estimatesOutput)
         {

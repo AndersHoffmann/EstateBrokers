@@ -1,8 +1,9 @@
 ﻿using ViewModels;
 namespace Presenters
 {
-    public interface IFrontEnd
+    public interface IEstimatesFrontEnd
     {
         public void UpdateAveragePriceField(EstimatesViewModel estimatesViewModel);
+
     }
 }

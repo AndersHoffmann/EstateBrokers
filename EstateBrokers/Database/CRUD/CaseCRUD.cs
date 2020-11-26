@@ -1,25 +1,25 @@
 ﻿using Database;
 using Gateways;
-using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace UseCases
 {
     public class CaseCRUD : ICaseCRUD
     {
-        public int CreateCase(DateTime creationDate, double price, Entities.Realtor realtor)
+        public int CreateCase(DateTime creationDate, double price, int realtorID)
         {
-            Database.Realtor dbRealtor = (Database.Realtor)realtor;
+
             var database = new EstateBrokerContext();
+            IRealtorCRUD realtorCRUD = new RealtorCRUD();
+            Realtor realtor = (Realtor)realtorCRUD.ReadRealtor(realtorID);
 
             var workingCase = new Database.Case()
             {
                 CreationDate = creationDate,
                 Price = price,
-                Realtor = dbRealtor
+                Realtor = realtor
             };
 
             database.Cases.Add(workingCase);
@@ -32,35 +32,35 @@ namespace UseCases
             using (var database = new EstateBrokerContext())
             {
                 return database.Cases.Find(ID);
-            
+
             }
-         
+
         }
 
         public List<Entities.Case> ReadCases(int postalCode)
+        {
+            using (var database = new EstateBrokerContext())
             {
-                using (var database = new EstateBrokerContext())
-                {
                 List<Entities.Case> cases = new List<Entities.Case>();
                 List<Database.Property> properties = new List<Database.Property>();
-                
-                    if (database.Properties.Any(s => s.PostalCode == postalCode) == true)
+
+                if (database.Properties.Any(s => s.PostalCode == postalCode) == true)
                 {
                     properties.Add((Database.Property)(database.Properties.Where(s => s.PostalCode == postalCode)));
                 }
-           
+
 
                 foreach (var item in properties)
                 {
-                       cases.Add((Database.Case)database.Cases.Where(s => s.Property == database.Properties.Find(item.PropertyID)));      
+                    cases.Add((Database.Case)database.Cases.Where(s => s.Property == database.Properties.Find(item.PropertyID)));
                 }
-                
+
                 database.SaveChanges();
 
                 return cases;
-              
+
             }
-           
+
         }
 
         public void UpdateCase(int ID, DateTime creationDate, DateTime closedDate, double price, Entities.Realtor realtor)
@@ -74,7 +74,7 @@ namespace UseCases
                 workingCase.Realtor = (Database.Realtor)realtor;
                 database.SaveChanges();
             }
-       
+
         }
         public void DeleteCase(int ID)
         {

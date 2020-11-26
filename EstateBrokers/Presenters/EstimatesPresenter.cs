@@ -8,8 +8,8 @@ namespace Presenters
 {
     public partial class EstimatesPresenter : IEstimatesOutput
     {
-        public IFrontEnd FrontEnd { get; set; }
-        public EstimatesPresenter(IFrontEnd frontEnd)
+        public IEstimatesFrontEnd FrontEnd { get; set; }
+        public EstimatesPresenter(IEstimatesFrontEnd frontEnd)
         {
             FrontEnd = frontEnd;
         }

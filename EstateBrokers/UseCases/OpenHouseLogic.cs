@@ -33,7 +33,7 @@ namespace UseCases
             ICaseCRUD crud = new CaseCRUD();
             foreach (var item in Cases)
             {
-                crud.CreateCase(item.CreationDate, item.Price, item.Realtor);
+              //  crud.CreateCase(item.CreationDate, item.Price, item.Realtor);
             }           
         }
     }
