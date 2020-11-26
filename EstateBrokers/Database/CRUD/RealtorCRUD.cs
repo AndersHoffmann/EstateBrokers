@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UseCases
+namespace Database
 {
-    class RealtorCRUD : IRealtorCRUD
+    public class RealtorCRUD : IRealtorCRUD
     {
         public void CreateRealtor(string name, string phoneNR)
         {

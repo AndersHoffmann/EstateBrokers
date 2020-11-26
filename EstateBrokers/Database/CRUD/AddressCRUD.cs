@@ -3,9 +3,9 @@ using Gateways;
 
 namespace UseCases
 {
-    class AddressCRUD : IAddressCRUD
+    public class AddressCRUD : IAddressCRUD
     { 
-        public void CreateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
+        public int CreateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
         {
             var database = new EstateBrokerContext();
 
@@ -21,6 +21,7 @@ namespace UseCases
             };
 
             database.Addresses.Add(address);
+            return address.PostalCode;
         }
         public Entities.Address ReadAddress(int postalCode, string addressLine1)
         {

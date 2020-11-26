@@ -6,7 +6,7 @@ namespace UseCases.CreateEntry
 {
     public interface ICreateEntryOutput
     {
-        public void ConfirmEntryCreation(CreateEntryResponseModel response)
+        public void ConfirmEntryCreation(CreateEntryResponseModel response);
             
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UseCases.CreateEntry
 {
-    class CreateEntryResponseModel
+    public class CreateEntryResponseModel
     {
         public bool EntryCreatedSuccesfully { get; set; }
     }

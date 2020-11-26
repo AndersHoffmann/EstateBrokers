@@ -7,7 +7,7 @@ namespace Gateways
 {
    public interface IAddressCRUD
     {
-        public void CreateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear);
+        public int CreateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear);
 
         public Address ReadAddress(int postalCode, string addressLine1);
 

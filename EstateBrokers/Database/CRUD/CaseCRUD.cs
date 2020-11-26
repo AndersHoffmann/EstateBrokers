@@ -10,7 +10,7 @@ namespace UseCases
 {
     public class CaseCRUD : ICaseCRUD
     {
-        public void CreateCase(DateTime creationDate, double price, Entities.Realtor realtor)
+        public int CreateCase(DateTime creationDate, double price, Entities.Realtor realtor)
         {
             Database.Realtor dbRealtor = (Database.Realtor)realtor;
             var database = new EstateBrokerContext();
@@ -24,6 +24,7 @@ namespace UseCases
 
             database.Cases.Add(workingCase);
             database.SaveChanges();
+            return workingCase.CaseID;
         }
 
         public Entities.Case ReadCase(int ID)

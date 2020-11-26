@@ -9,7 +9,7 @@ namespace UseCases
 {
     public class PropertyCRUD : IPropertyCRUD
     {
-        public void CreateProperty(int estimatedPrice, Entities.Case Case, int postalCode, string adressLine1 )
+        public int CreateProperty(double estimatedPrice, Entities.Case Case, int postalCode, string adressLine1 )
         {
             var database = new EstateBrokerContext();
 
@@ -23,6 +23,7 @@ namespace UseCases
 
             database.Properties.Add(property);
             database.SaveChanges();
+            return property.PropertyID;
         }
         public Entities.Property ReadProperty(int ID)
         {

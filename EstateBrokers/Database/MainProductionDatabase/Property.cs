@@ -9,7 +9,7 @@ namespace Database
    public class Property : Entities.Property
     {
         public int PropertyID { get; set; }
-        public int EstimatedPrice { get; set; }
+        public double EstimatedPrice { get; set; }
         public Case Case { get; set; }
 
         [ForeignKey("Address"), Column(Order = 0)]

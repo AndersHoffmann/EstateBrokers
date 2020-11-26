@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UseCases.CreateEntry
 {
-    class CreateEntryRequestModel
+    public class CreateEntryRequestModel
     {
         //For Case
         public int realtorID { get; set; }
