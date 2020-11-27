@@ -93,7 +93,7 @@
             this.textBox_AreaCodeInput.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox_AreaCodeInput.Location = new System.Drawing.Point(402, 741);
             this.textBox_AreaCodeInput.Name = "textBox_AreaCodeInput";
-            this.textBox_AreaCodeInput.Size = new System.Drawing.Size(211, 31);
+            this.textBox_AreaCodeInput.Size = new System.Drawing.Size(225, 31);
             this.textBox_AreaCodeInput.TabIndex = 2;
             // 
             // textBox_AvaragePricePerSquareMeter
@@ -123,6 +123,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.Location = new System.Drawing.Point(402, 713);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 25);
@@ -133,6 +134,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label2.Location = new System.Drawing.Point(747, 712);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(340, 25);
@@ -153,6 +155,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label3.Location = new System.Drawing.Point(402, 320);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 23);
@@ -163,6 +166,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label4.Location = new System.Drawing.Point(0, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 44);
@@ -173,6 +177,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label5.Location = new System.Drawing.Point(746, 319);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(239, 23);
@@ -183,6 +188,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.checkBox1.Location = new System.Drawing.Point(107, 607);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(100, 27);
@@ -194,6 +200,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.checkBox2.Location = new System.Drawing.Point(107, 640);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(120, 27);
@@ -205,6 +212,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.checkBox3.Location = new System.Drawing.Point(107, 673);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(102, 27);
@@ -226,6 +234,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label6.Location = new System.Drawing.Point(107, 457);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(158, 23);
@@ -326,6 +335,7 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.checkBox4.Location = new System.Drawing.Point(107, 574);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(168, 27);
@@ -337,6 +347,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label17.Location = new System.Drawing.Point(102, 385);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(193, 23);
@@ -354,6 +365,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label18.Location = new System.Drawing.Point(107, 341);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(183, 23);
@@ -363,7 +375,7 @@
             // textBox_FinalEstimatedPrice
             // 
             this.textBox_FinalEstimatedPrice.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_FinalEstimatedPrice.Location = new System.Drawing.Point(579, 154);
+            this.textBox_FinalEstimatedPrice.Location = new System.Drawing.Point(590, 146);
             this.textBox_FinalEstimatedPrice.Name = "textBox_FinalEstimatedPrice";
             this.textBox_FinalEstimatedPrice.ReadOnly = true;
             this.textBox_FinalEstimatedPrice.Size = new System.Drawing.Size(193, 33);
@@ -373,7 +385,8 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(537, 119);
+            this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label19.Location = new System.Drawing.Point(548, 111);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(285, 32);
             this.label19.TabIndex = 33;
@@ -417,6 +430,7 @@
             this.Controls.Add(this.listBox_AveragePricePerSquareMeter);
             this.Controls.Add(this.button_check);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EstimatesPage";
             this.Size = new System.Drawing.Size(1408, 908);
