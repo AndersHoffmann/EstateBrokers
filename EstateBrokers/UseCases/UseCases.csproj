@@ -36,7 +36,6 @@
 
   <ItemGroup>
     <Folder Include="GetEntries\" />
-    <Folder Include="ShowCases\" />
   </ItemGroup>
 
 </Project>

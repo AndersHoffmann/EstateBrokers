@@ -32,7 +32,7 @@ namespace GUI
 
         private void button_check_Click(object sender, EventArgs e)
         {
-            estimatesController.EstimateCode(textBox_AreaCodeInput.Text);
+             estimatesController.EstimateCode(textBox_AreaCodeInput.Text);
         }
 
         public void UpdateAveragePriceField(EstimatesViewModel estimatesViewModel)

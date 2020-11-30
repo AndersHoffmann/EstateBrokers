@@ -19,6 +19,6 @@ namespace Controllers
             request.PostalCode = Int32.Parse(postalCode);
             EstimatesInput.Calculate(request);
         }
-
+ 
     }
 }

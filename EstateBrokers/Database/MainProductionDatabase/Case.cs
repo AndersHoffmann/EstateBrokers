@@ -12,7 +12,7 @@ namespace Database
         public DateTime ClosedDate { get; set; }
         public Double Price { get; set; }
         public Realtor Realtor { get; set; }
-        public  ICollection<Property> Property { get; set; }
+        public  Property Property { get; set; }
 
     }
 }
