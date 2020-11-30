@@ -24,8 +24,11 @@ namespace UseCases.ShowCases
             foreach (var Case in workingCaseList)
             {
                 ShowEntriesResponseModel showEntriesResponseModel = new ShowEntriesResponseModel();
-                showEntriesResponseModel.realtorID = Case.Realtor.RealtorID;
-                showEntriesResponseModel.creationDate = Case.CreationDate;
+                if (Case.Realtor != null)
+                {
+                    showEntriesResponseModel.realtorID = Case.Realtor.RealtorID;
+                }   
+                
                 if (Case.ClosedDate != null)
                 {
                     showEntriesResponseModel.closedDate = Case.ClosedDate;

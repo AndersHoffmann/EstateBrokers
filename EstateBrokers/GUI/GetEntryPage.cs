@@ -16,9 +16,7 @@ namespace GUI
             IShowEntryOutput entryOutput = new GetEntryPresenter(this);
             IShowEntryInput entryInput = new ShowEntries(entryOutput);
             showentrycontroller = new ShowEntryController(entryInput);
-
             InitializeComponent();
-
         }
 
         private void GetEntryPage_Load(object sender, EventArgs e)
@@ -38,6 +36,9 @@ namespace GUI
             dataGridView_ShowEntries.DataSource = showEntriesViewModel.Entries;
         }
 
-   
+        private void dataGridView_ShowEntries_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

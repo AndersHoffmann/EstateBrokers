@@ -15,6 +15,11 @@ namespace Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
+            modelBuilder.Entity<Case>()
+            .HasOne(a => a.Property)
+            .WithOne(a => a.Case)
+            .HasForeignKey<Case>(c => c.CaseID);
 
             modelBuilder.Entity<Address>().HasKey(p => new { p.PostalCode, p.AddressLine1 });
         }

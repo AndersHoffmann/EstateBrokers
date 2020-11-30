@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(EstateBrokerContext))]
-    [Migration("20201125174121_CreateEstateBrokerDB")]
-    partial class CreateEstateBrokerDB
+    [Migration("20201130152228_CreateEstateBrokersDB")]
+    partial class CreateEstateBrokersDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -52,9 +52,7 @@ namespace Database.Migrations
             modelBuilder.Entity("Database.Case", b =>
                 {
                     b.Property<int>("CaseID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("ClosedDate")
                         .HasColumnType("datetime2");
@@ -85,18 +83,13 @@ namespace Database.Migrations
                     b.Property<string>("AddressLine1")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CaseID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EstimatedPrice")
-                        .HasColumnType("int");
+                    b.Property<double>("EstimatedPrice")
+                        .HasColumnType("float");
 
                     b.Property<int>("PostalCode")
                         .HasColumnType("int");
 
                     b.HasKey("PropertyID");
-
-                    b.HasIndex("CaseID");
 
                     b.ToTable("Properties");
                 });
@@ -121,25 +114,24 @@ namespace Database.Migrations
 
             modelBuilder.Entity("Database.Case", b =>
                 {
+                    b.HasOne("Database.Property", "Property")
+                        .WithOne("Case")
+                        .HasForeignKey("Database.Case", "CaseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Database.Realtor", "Realtor")
                         .WithMany("Case")
                         .HasForeignKey("RealtorID");
+
+                    b.Navigation("Property");
 
                     b.Navigation("Realtor");
                 });
 
             modelBuilder.Entity("Database.Property", b =>
                 {
-                    b.HasOne("Database.Case", "Case")
-                        .WithMany("Property")
-                        .HasForeignKey("CaseID");
-
                     b.Navigation("Case");
-                });
-
-            modelBuilder.Entity("Database.Case", b =>
-                {
-                    b.Navigation("Property");
                 });
 
             modelBuilder.Entity("Database.Realtor", b =>

@@ -5,7 +5,7 @@ namespace UseCases.ShowCases
     public class ShowEntriesResponseModel
     {
         //For Case
-        public int realtorID { get; set; }
+        public int? realtorID { get; set; }
         public DateTime creationDate { get; set; }
         public DateTime closedDate { get; set; }
         public Double price { get; set; }

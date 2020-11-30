@@ -48,6 +48,7 @@ namespace GUI
             this.dataGridView_ShowEntries.RowTemplate.Height = 25;
             this.dataGridView_ShowEntries.Size = new System.Drawing.Size(1169, 748);
             this.dataGridView_ShowEntries.TabIndex = 0;
+            this.dataGridView_ShowEntries.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ShowEntries_CellContentClick);
             // 
             // textBox1
             // 

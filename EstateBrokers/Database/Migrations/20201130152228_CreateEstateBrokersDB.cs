@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Database.Migrations
 {
-    public partial class CreateEstateBrokerDB : Migration
+    public partial class CreateEstateBrokersDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,6 +25,21 @@ namespace Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Properties",
+                columns: table => new
+                {
+                    PropertyID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EstimatedPrice = table.Column<double>(type: "float", nullable: false),
+                    PostalCode = table.Column<int>(type: "int", nullable: false),
+                    AddressLine1 = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Properties", x => x.PropertyID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Realtors",
                 columns: table => new
                 {
@@ -42,8 +57,7 @@ namespace Database.Migrations
                 name: "Cases",
                 columns: table => new
                 {
-                    CaseID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CaseID = table.Column<int>(type: "int", nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ClosedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
@@ -53,6 +67,12 @@ namespace Database.Migrations
                 {
                     table.PrimaryKey("PK_Cases", x => x.CaseID);
                     table.ForeignKey(
+                        name: "FK_Cases_Properties_CaseID",
+                        column: x => x.CaseID,
+                        principalTable: "Properties",
+                        principalColumn: "PropertyID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Cases_Realtors_RealtorID",
                         column: x => x.RealtorID,
                         principalTable: "Realtors",
@@ -60,37 +80,10 @@ namespace Database.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Properties",
-                columns: table => new
-                {
-                    PropertyID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    EstimatedPrice = table.Column<int>(type: "int", nullable: false),
-                    CaseID = table.Column<int>(type: "int", nullable: true),
-                    PostalCode = table.Column<int>(type: "int", nullable: false),
-                    AddressLine1 = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Properties", x => x.PropertyID);
-                    table.ForeignKey(
-                        name: "FK_Properties_Cases_CaseID",
-                        column: x => x.CaseID,
-                        principalTable: "Cases",
-                        principalColumn: "CaseID",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_Cases_RealtorID",
                 table: "Cases",
                 column: "RealtorID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Properties_CaseID",
-                table: "Properties",
-                column: "CaseID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -99,10 +92,10 @@ namespace Database.Migrations
                 name: "Addresses");
 
             migrationBuilder.DropTable(
-                name: "Properties");
+                name: "Cases");
 
             migrationBuilder.DropTable(
-                name: "Cases");
+                name: "Properties");
 
             migrationBuilder.DropTable(
                 name: "Realtors");

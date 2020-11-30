@@ -41,6 +41,7 @@
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
+            this.getEntryPage1 = new GUI.GetEntryPage();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_Container_mainpage.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +123,7 @@
             // panel_Container_mainpage
             // 
             this.panel_Container_mainpage.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_Container_mainpage.Controls.Add(this.getEntryPage1);
             this.panel_Container_mainpage.Controls.Add(this.button_support_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_estimates_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_openhouse_mainpage);
@@ -180,6 +182,15 @@
             this.button_cases_mainpage.Text = "Cases";
             this.button_cases_mainpage.UseVisualStyleBackColor = true;
             // 
+            // getEntryPage1
+            // 
+            this.getEntryPage1.BackColor = System.Drawing.Color.White;
+            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.getEntryPage1.Location = new System.Drawing.Point(120, 10);
+            this.getEntryPage1.Name = "getEntryPage1";
+            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
+            this.getEntryPage1.TabIndex = 1;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -220,5 +231,6 @@
         private System.Windows.Forms.Button button_estimates_mainpage;
         private System.Windows.Forms.Button button_openhouse_mainpage;
         private System.Windows.Forms.TextBox textBox2;
+        private GetEntryPage getEntryPage1;
     }
 }
