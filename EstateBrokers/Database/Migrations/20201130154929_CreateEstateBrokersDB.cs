@@ -59,7 +59,7 @@ namespace Database.Migrations
                 {
                     CaseID = table.Column<int>(type: "int", nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ClosedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ClosedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Price = table.Column<double>(type: "float", nullable: false),
                     RealtorID = table.Column<int>(type: "int", nullable: true)
                 },

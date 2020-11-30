@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(EstateBrokerContext))]
-    [Migration("20201130152228_CreateEstateBrokersDB")]
+    [Migration("20201130154929_CreateEstateBrokersDB")]
     partial class CreateEstateBrokersDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,7 +54,7 @@ namespace Database.Migrations
                     b.Property<int>("CaseID")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("ClosedDate")
+                    b.Property<DateTime?>("ClosedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CreationDate")
