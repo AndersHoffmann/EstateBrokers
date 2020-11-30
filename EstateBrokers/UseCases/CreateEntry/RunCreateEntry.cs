@@ -1,4 +1,4 @@
-﻿-using Database;
+﻿using Database;
 using Gateways;
 
 namespace UseCases.CreateEntry

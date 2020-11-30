@@ -20,12 +20,12 @@ namespace UseCases.ShowCases
             ICaseCRUD caseCRUD = new CaseCRUD();
             IPropertyCRUD propertyCRUD = new PropertyCRUD();
 
-            List<ShowEntriesResponseModel> responseList = new List<ShowEntriesResponseModel>();
+            List<ShowEntriesRequestModel> responseList = new List<ShowEntriesRequestModel>();
             List<Entities.Case> workingCaseList = caseCRUD.ReadAllCases();
 
             foreach (var Case in workingCaseList)
             {
-                ShowEntriesResponsetModel showEntriesResponseModel = new ShowEntriesResponseModel();
+                ShowEntriesRequestModel showEntriesResponseModel = new ShowEntriesRequestModel();
                 showEntriesResponseModel.realtorID = Case.Realtor.RealtorID;
                 showEntriesResponseModel.creationDate = Case.CreationDate;
                 if (Case.ClosedDate != null)

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace UseCases.ShowCases
+﻿namespace UseCases.ShowCases
 {
-    class IShowEntryInput
+    interface IShowEntryInput
     {
-        public void GetEntries()
+        public void GetEntries();
     }
 }

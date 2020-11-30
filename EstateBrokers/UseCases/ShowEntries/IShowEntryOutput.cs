@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace UseCases.ShowCases
 {
-    class IShowEntryOutput
+    interface IShowEntryOutput
     {
         public List<ShowEntriesRequestModel> ReturnListOfEntries(List<ShowEntriesRequestModel> inputList);
     }
