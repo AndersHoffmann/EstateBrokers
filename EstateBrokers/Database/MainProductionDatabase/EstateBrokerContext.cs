@@ -27,7 +27,7 @@ namespace Database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source = den1.mssql7.gear.host;
-            Initial Catalog = estatebrokerdb; User ID = estatebrokerdb; Password = Sd8a-9E?0B5E");
+            Initial Catalog = estatebrokerdb; User ID = estatebrokerdb; Password = Ye7DQ8?Pq_3h");
         }
 
     
