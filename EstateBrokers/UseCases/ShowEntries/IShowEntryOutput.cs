@@ -4,7 +4,7 @@ namespace UseCases.ShowCases
 {
     public interface IShowEntryOutput
     {
-        public List<ShowEntriesResponseModel> ReturnListOfEntries(List<ShowEntriesResponseModel> inputList);
+        public void DisplayListOfEntries(List<ShowEntriesResponseModel> inputList);
 
     }
 }

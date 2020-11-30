@@ -44,7 +44,7 @@ namespace UseCases.ShowCases
                 showEntriesResponseModel.buildYear = workingAddress.BuildYear;
                 responseList.Add(showEntriesResponseModel);
 
-                showEntryOutput.ReturnListOfEntries(responseList);
+                showEntryOutput.DisplayListOfEntries(responseList);
             }
 
         }
