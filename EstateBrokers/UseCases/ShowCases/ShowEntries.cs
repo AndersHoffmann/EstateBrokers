@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 using Database;
+using Gateways;
+
 namespace UseCases.ShowCases
 {
-    class Class1
+    class ShowEntries
     {
         public void GetEntries()
         {
             IAddressCRUD addressCRUD = new AddressCRUD();
             ICaseCRUD caseCRUD = new CaseCRUD();
-            IPropertyCRUD propertyCRUD = PropertyCRUD();
+            IPropertyCRUD propertyCRUD = new PropertyCRUD();
 
             List<ShowEntriesRequestModel> entryList = new List<ShowEntriesRequestModel>();
-            List<Case> workingCaseList = caseCRUD.ReadAllCases();
+            List<Entities.Case> workingCaseList = caseCRUD.ReadAllCases();
+
             foreach (var Case in workingCaseList)
             {
                 ShowEntriesRequestModel showEntriesRequestModel = new ShowEntriesRequestModel();
@@ -21,12 +24,13 @@ namespace UseCases.ShowCases
                 showEntriesRequestModel.creationDate = Case.CreationDate;
                 if (Case.ClosedDate != null)
                 {
-                    showEntriesRequestModel.closedDate = Case.ClosedDate();
+                    showEntriesRequestModel.closedDate = Case.ClosedDate;
                 }
+
                 showEntriesRequestModel.price = Case.Price;
-                Property workingProperty = propertyCRUD.ReadProperty(Case.Property.PropertyID);
+                Property workingProperty = (Property)propertyCRUD.ReadProperty(Case.Property.PropertyID);
                 showEntriesRequestModel.estimatedPrice = workingProperty.EstimatedPrice;
-                Address workingAddress addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
+                Address workingAddress = (Address)addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
                 showEntriesRequestModel.postalCode = workingAddress.PostalCode;
                 showEntriesRequestModel.AddressLine1 = workingAddress.AddressLine1;
                 showEntriesRequestModel.AddressLine2 = workingAddress.AddressLine2;
