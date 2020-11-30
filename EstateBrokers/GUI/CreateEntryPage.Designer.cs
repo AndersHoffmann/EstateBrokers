@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class CreateCasePage
+    partial class CreateEntryPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateCasePage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateEntryPage));
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();

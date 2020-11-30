@@ -14,5 +14,14 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void ShowCasesPage_Load(object sender, EventArgs e)
+        {
+
+
+
+
+
+        }
     }
 }

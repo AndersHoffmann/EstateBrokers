@@ -37,7 +37,6 @@
             this.panel_botton_mainpage = new System.Windows.Forms.Panel();
             this.panel_right_mainpage = new System.Windows.Forms.Panel();
             this.panel_Container_mainpage = new System.Windows.Forms.Panel();
-            this.createCasePage1 = new GUI.CreateCasePage();
             this.button_support_mainpage = new System.Windows.Forms.Button();
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
@@ -123,7 +122,6 @@
             // panel_Container_mainpage
             // 
             this.panel_Container_mainpage.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_Container_mainpage.Controls.Add(this.createCasePage1);
             this.panel_Container_mainpage.Controls.Add(this.button_support_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_estimates_mainpage);
             this.panel_Container_mainpage.Controls.Add(this.button_openhouse_mainpage);
@@ -132,16 +130,6 @@
             this.panel_Container_mainpage.Name = "panel_Container_mainpage";
             this.panel_Container_mainpage.Size = new System.Drawing.Size(1408, 908);
             this.panel_Container_mainpage.TabIndex = 4;
-            // 
-            // createCasePage1
-            // 
-            this.createCasePage1.BackColor = System.Drawing.Color.White;
-            this.createCasePage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.createCasePage1.Location = new System.Drawing.Point(160, 22);
-            this.createCasePage1.Margin = new System.Windows.Forms.Padding(4);
-            this.createCasePage1.Name = "createCasePage1";
-            this.createCasePage1.Size = new System.Drawing.Size(1169, 845);
-            this.createCasePage1.TabIndex = 1;
             // 
             // button_support_mainpage
             // 
@@ -232,6 +220,5 @@
         private System.Windows.Forms.Button button_estimates_mainpage;
         private System.Windows.Forms.Button button_openhouse_mainpage;
         private System.Windows.Forms.TextBox textBox2;
-        private CreateCasePage createCasePage1;
     }
 }

@@ -13,7 +13,7 @@ namespace UseCases
 
             var database = new EstateBrokerContext();
             IRealtorCRUD realtorCRUD = new RealtorCRUD();
-            
+
 
             var workingCase = new Database.Case()
             {
@@ -38,6 +38,18 @@ namespace UseCases
             }
 
         }
+
+        //********************************************
+        public List<Entities.Case> ReadAllCases()
+        {
+            using (var database = new EstateBrokerContext())
+            {
+                return database.Cases.Cast<Entities.Case>().ToList();
+            }
+
+        }
+        //********************************************
+
 
         public List<Entities.Case> ReadCases(int postalCode)
         {

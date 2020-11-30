@@ -6,12 +6,12 @@ using UseCases.CreateEntry;
 using ViewModels;
 namespace GUI
 {
-    public partial class CreateCasePage : UserControl, ICreateCaseFontEnd
+    public partial class CreateEntryPage : UserControl, ICreateCaseFontEnd
     {
 
         CreateEntryController createcasecontroller { get; set; }
 
-        public CreateCasePage()
+        public CreateEntryPage()
         {
             ICreateEntryOutput createcaseOutput = new CreateEntryPresenter(this);
             ICreateEntryInput createcaseInput = new RunCreateEntry(createcaseOutput);
