@@ -6,9 +6,9 @@ namespace Presenters
 
     public partial class CreateEntryPresenter : ICreateEntryOutput
     {
-        public ICreateCaseFontEnd FrontEnd { get; set; }
+        public ICreateEntryFrontEnd FrontEnd { get; set; }
 
-        public CreateEntryPresenter(ICreateCaseFontEnd frontEnd)
+        public CreateEntryPresenter(ICreateEntryFrontEnd frontEnd)
         {
             FrontEnd = frontEnd;
         }

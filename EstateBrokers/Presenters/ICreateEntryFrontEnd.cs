@@ -3,7 +3,7 @@
 
 namespace Presenters
 {
-    public interface ICreateCaseFontEnd
+    public interface ICreateEntryFrontEnd
     {
 
         public void DisplayCreateCasesStatus(CasesViewModel casesViewModel);

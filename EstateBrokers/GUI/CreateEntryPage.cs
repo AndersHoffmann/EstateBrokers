@@ -6,7 +6,7 @@ using UseCases.CreateEntry;
 using ViewModels;
 namespace GUI
 {
-    public partial class CreateEntryPage : UserControl, ICreateCaseFontEnd
+    public partial class CreateEntryPage : UserControl, ICreateEntryFrontEnd
     {
 
         CreateEntryController createcasecontroller { get; set; }

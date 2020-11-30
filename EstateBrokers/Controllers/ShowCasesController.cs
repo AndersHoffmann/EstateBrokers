@@ -2,7 +2,7 @@
 {
     class ShowCasesController
     {
-
+        //public static IShowCasesInput ShowCasesInput
 
         public ShowCasesController()
         {

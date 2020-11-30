@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class ShowCasesPage
+    partial class GetEntryPage
     {
         /// <summary> 
         /// Required designer variable.
