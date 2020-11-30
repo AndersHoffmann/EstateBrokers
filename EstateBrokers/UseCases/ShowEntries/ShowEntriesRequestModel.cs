@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UseCases.ShowCases
 {
-    class ShowEntriesRequestModel
+    class ShowEntriesResponseModel
     {
             //For Case
             public int realtorID { get; set; }
