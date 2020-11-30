@@ -1,6 +1,6 @@
 ﻿namespace UseCases.ShowCases
 {
-    interface IShowEntryInput
+    public interface IShowEntryInput
     {
         public void GetEntries();
     }

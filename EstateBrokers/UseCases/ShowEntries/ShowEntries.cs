@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Database;
+﻿using Database;
 using Gateways;
+using System.Collections.Generic;
 
 namespace UseCases.ShowCases
 {
-    class ShowEntries : IShowEntryInput
+    public class ShowEntries : IShowEntryInput
     {
         public IShowEntryOutput showEntryOutput { get; set; }
 
@@ -20,12 +18,12 @@ namespace UseCases.ShowCases
             ICaseCRUD caseCRUD = new CaseCRUD();
             IPropertyCRUD propertyCRUD = new PropertyCRUD();
 
-            List<ShowEntriesRequestModel> responseList = new List<ShowEntriesRequestModel>();
+            List<ShowEntriesResponseModel> responseList = new List<ShowEntriesResponseModel>();
             List<Entities.Case> workingCaseList = caseCRUD.ReadAllCases();
 
             foreach (var Case in workingCaseList)
             {
-                ShowEntriesRequestModel showEntriesResponseModel = new ShowEntriesRequestModel();
+                ShowEntriesResponseModel showEntriesResponseModel = new ShowEntriesResponseModel();
                 showEntriesResponseModel.realtorID = Case.Realtor.RealtorID;
                 showEntriesResponseModel.creationDate = Case.CreationDate;
                 if (Case.ClosedDate != null)

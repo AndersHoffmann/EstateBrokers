@@ -29,24 +29,25 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView_ShowCases = new System.Windows.Forms.DataGridView();
+            this.dataGridView_ShowEntries = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowCases)).BeginInit();
+            this.button_LoadEntries = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowEntries)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView_ShowCases
+            // dataGridView_ShowEntries
             // 
-            this.dataGridView_ShowCases.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ShowCases.Location = new System.Drawing.Point(0, 97);
-            this.dataGridView_ShowCases.Name = "dataGridView_ShowCases";
-            this.dataGridView_ShowCases.RowTemplate.Height = 25;
-            this.dataGridView_ShowCases.Size = new System.Drawing.Size(1169, 748);
-            this.dataGridView_ShowCases.TabIndex = 0;
+            this.dataGridView_ShowEntries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ShowEntries.Location = new System.Drawing.Point(0, 97);
+            this.dataGridView_ShowEntries.Name = "dataGridView_ShowEntries";
+            this.dataGridView_ShowEntries.RowTemplate.Height = 25;
+            this.dataGridView_ShowEntries.Size = new System.Drawing.Size(1169, 748);
+            this.dataGridView_ShowEntries.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -104,23 +105,33 @@ namespace GUI
             this.label3.TabIndex = 6;
             this.label3.Text = "To";
             // 
-            // ShowCasesPage
+            // button_LoadEntries
+            // 
+            this.button_LoadEntries.Location = new System.Drawing.Point(888, 46);
+            this.button_LoadEntries.Name = "button_LoadEntries";
+            this.button_LoadEntries.Size = new System.Drawing.Size(117, 45);
+            this.button_LoadEntries.TabIndex = 7;
+            this.button_LoadEntries.Text = "Load";
+            this.button_LoadEntries.UseVisualStyleBackColor = true;
+            this.button_LoadEntries.Click += new System.EventHandler(this.button_LoadEntries_Click);
+            // 
+            // GetEntryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button_LoadEntries);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView_ShowCases);
+            this.Controls.Add(this.dataGridView_ShowEntries);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Name = "ShowCasesPage";
+            this.Name = "GetEntryPage";
             this.Size = new System.Drawing.Size(1169, 845);
-            this.Load += new System.EventHandler(this.ShowCasesPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowCases)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowEntries)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,12 +139,14 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView_ShowCases;
+        private System.Windows.Forms.DataGridView dataGridView_ShowCEntries;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button_LoadEntries;
+        private System.Windows.Forms.DataGridView dataGridView_ShowEntries;
     }
 }

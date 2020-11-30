@@ -2,7 +2,7 @@
 
 namespace UseCases.ShowCases
 {
-    public class ShowEntriesRequestModel
+    public class ShowEntriesResponseModel
     {
         //For Case
         public int realtorID { get; set; }

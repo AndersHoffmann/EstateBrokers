@@ -2,8 +2,9 @@
 
 namespace UseCases.ShowCases
 {
-    interface IShowEntryOutput
+    public interface IShowEntryOutput
     {
-        public List<ShowEntriesRequestModel> ReturnListOfEntries(List<ShowEntriesRequestModel> inputList);
+        public List<ShowEntriesResponseModel> ReturnListOfEntries(List<ShowEntriesResponseModel> inputList);
+
     }
 }
