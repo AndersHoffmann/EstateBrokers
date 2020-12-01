@@ -13,7 +13,19 @@ namespace Entities
         public Double Price { get; set; }
         public IRealtor? Realtor { get; set; }
         public IProperty Property { get; set; }
+        public Case(int caseID, DateTime creationDate, DateTime? closedDate, double price, IRealtor? realtor, IProperty property)
+        {
+            CaseID = caseID;
+            CreationDate = creationDate;
+            ClosedDate = closedDate;
+            Price = price;
+            Realtor = realtor;
+            Property = property;
+        }
+        public Case()
+        {
 
-     
+        }
     }
+   
 }

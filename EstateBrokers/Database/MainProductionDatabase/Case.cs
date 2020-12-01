@@ -9,6 +9,16 @@ namespace Database
 {
    public class Case : ICase
     {
+        public Case(int caseID, DateTime creationDate, DateTime? closedDate, double price, IRealtor realtor, IProperty property)
+        {
+            CaseID = caseID;
+            CreationDate = creationDate;
+            ClosedDate = closedDate;
+            Price = price;
+            Realtor = realtor;
+            Property = property;
+        }
+
         public int CaseID { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime? ClosedDate { get; set; }
@@ -16,5 +26,6 @@ namespace Database
         public int RealtorID { get; set; }
         public IRealtor Realtor { get; set; }
         public IProperty Property { get; set; }
+
     }
 }

@@ -33,10 +33,7 @@ namespace UseCases
         {
             using (var database = new EstateBrokerContext())
             {
-                var Case = database.Cases.Find(ID);
-                Entities.Case @case = 
-                return database.Cases.Find(ID);
-
+                return (Entities.Case)CaseFactory.CreateCase(database.Cases.Find(ID));
             }
 
         }
@@ -49,7 +46,7 @@ namespace UseCases
             {
                 foreach (var Case in database.Cases)
                 {
-                    caseList.Add(Case);
+                    caseList.Add((Entities.Case)CaseFactory.CreateCase(Case));
                 }
                 return caseList;
             }
@@ -73,7 +70,7 @@ namespace UseCases
 
                 foreach (var item in properties)
                 {
-                    cases.Add((Database.Case)database.Cases.Where(s => s.Property == database.Properties.Find(item.PropertyID)));
+                    cases.Add(database.Cases.Where(s => s.Property == database.Properties.Find(item.PropertyID)));
                 }
 
                 database.SaveChanges();
