@@ -15,19 +15,14 @@ namespace Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-            modelBuilder.Entity<Case>()
-            .HasOne(a => a.Property)
-            .WithOne(a => a.Case)
-            .HasForeignKey<Case>(c => c.CaseID);
 
             modelBuilder.Entity<Address>().HasKey(p => new { p.PostalCode, p.AddressLine1 });
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source = den1.mssql7.gear.host;
-            Initial Catalog = estatebrokerdb; User ID = estatebrokerdb; Password = Ye7DQ8?Pq_3h");
+            optionsBuilder.UseSqlServer(@"Data Source = den1.mssql8.gear.host;
+            Initial Catalog = estatebrokerdb; User ID = estatebrokerdb; Password = Ln7!-734U18b");
         }
 
     

@@ -50,7 +50,9 @@ namespace Database.Migrations
             modelBuilder.Entity("Database.Case", b =>
                 {
                     b.Property<int>("CaseID")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<DateTime?>("ClosedDate")
                         .HasColumnType("datetime2");
@@ -61,7 +63,7 @@ namespace Database.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<int?>("RealtorID")
+                    b.Property<int>("RealtorID")
                         .HasColumnType("int");
 
                     b.HasKey("CaseID");
@@ -81,6 +83,9 @@ namespace Database.Migrations
                     b.Property<string>("AddressLine1")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("CaseID")
+                        .HasColumnType("int");
+
                     b.Property<double>("EstimatedPrice")
                         .HasColumnType("float");
 
@@ -88,6 +93,9 @@ namespace Database.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("PropertyID");
+
+                    b.HasIndex("CaseID")
+                        .IsUnique();
 
                     b.ToTable("Properties");
                 });
@@ -112,24 +120,29 @@ namespace Database.Migrations
 
             modelBuilder.Entity("Database.Case", b =>
                 {
-                    b.HasOne("Database.Property", "Property")
-                        .WithOne("Case")
-                        .HasForeignKey("Database.Case", "CaseID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Database.Realtor", "Realtor")
                         .WithMany("Case")
-                        .HasForeignKey("RealtorID");
-
-                    b.Navigation("Property");
+                        .HasForeignKey("RealtorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Realtor");
                 });
 
             modelBuilder.Entity("Database.Property", b =>
                 {
+                    b.HasOne("Database.Case", "Case")
+                        .WithOne("Property")
+                        .HasForeignKey("Database.Property", "CaseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Case");
+                });
+
+            modelBuilder.Entity("Database.Case", b =>
+                {
+                    b.Navigation("Property");
                 });
 
             modelBuilder.Entity("Database.Realtor", b =>

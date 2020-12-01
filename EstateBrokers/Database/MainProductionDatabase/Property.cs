@@ -10,6 +10,8 @@ namespace Database
     {
         public int PropertyID { get; set; }
         public double EstimatedPrice { get; set; }
+
+        public int CaseID { get; set; }
         public Case Case { get; set; }
 
         [ForeignKey("Address"), Column(Order = 0)]
