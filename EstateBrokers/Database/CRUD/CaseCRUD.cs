@@ -33,6 +33,8 @@ namespace UseCases
         {
             using (var database = new EstateBrokerContext())
             {
+                var Case = database.Cases.Find(ID);
+                Entities.Case @case = 
                 return database.Cases.Find(ID);
 
             }
@@ -42,9 +44,14 @@ namespace UseCases
         //********************************************
         public List<Entities.Case> ReadAllCases()
         {
+            List<Entities.Case> caseList = new List<Entities.Case>();
             using (var database = new EstateBrokerContext())
             {
-                return database.Cases.Cast<Entities.Case>().ToList();
+                foreach (var Case in database.Cases)
+                {
+                    caseList.Add(Case);
+                }
+                return caseList;
             }
 
         }

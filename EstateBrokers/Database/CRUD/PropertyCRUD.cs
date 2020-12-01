@@ -32,6 +32,19 @@ namespace UseCases
                 return database.Properties.Find(ID);
             }
         }
+        public List<Entities.Property> GetAllProperties()
+        {
+            List<Entities.Property> workingList = new List<Entities.Property>();
+
+            using (var database = new EstateBrokerContext())
+            {
+                foreach (var Property in database.Properties)
+                {
+                    workingList.Add(Property);
+                }
+            }
+            return workingList;
+        }
         public void UpdateProperty(int ID, int estimatedPrice, Entities.Case Case, int postalCode, string adressLine1)
         {
             using (var database = new EstateBrokerContext())

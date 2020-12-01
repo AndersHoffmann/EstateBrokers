@@ -1,13 +1,10 @@
-﻿using Entities.ObjectInterFaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-
-
-namespace Entities
+namespace Entities.ObjectInterFaces
 {
-   public class Realtor : IRealtor
+    public interface IRealtor
     {
         public int RealtorID { get; set; }
         public string Name { get; set; }

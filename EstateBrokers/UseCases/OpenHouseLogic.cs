@@ -17,11 +17,10 @@ namespace UseCases
 
                 for (int i = 1; i < distributionList.Count + 1; i++)
                 {
-                    if (i % 3 == 0)
-                    {
+                 
                         List<Entities.Realtor> tempArray = realtorList.OrderBy(x => rnd.Next()).ToList();
                   
-                    }
+                    
 
                 Cases.Add(distributionList[i]);
                 }

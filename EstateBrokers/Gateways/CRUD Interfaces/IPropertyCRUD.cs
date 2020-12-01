@@ -11,6 +11,8 @@ namespace Gateways
 
         public Property ReadProperty(int ID);
 
+        public List<Property> GetAllProperties();
+
         public void UpdateProperty(int ID, int estimatedPrice, Case Case, int postalCode, string adressLine1);
 
         public void DeleteProperty(int ID);

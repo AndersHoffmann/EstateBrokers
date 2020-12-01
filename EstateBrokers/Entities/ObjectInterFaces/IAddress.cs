@@ -1,13 +1,10 @@
-﻿using Entities.ObjectInterFaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace Entities
-{
-    public class Address : IAddress
+namespace Entities.ObjectInterFaces
+{     
+    public interface IAddress
     {
         public int PostalCode { get; set; }
         public string AddressLine1 { get; set; }

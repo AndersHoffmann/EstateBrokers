@@ -1,11 +1,10 @@
-﻿using Entities.ObjectInterFaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities
+namespace Entities.ObjectInterFaces
 {
-   public class Case : ICase
+    public interface ICase
     {
         public int CaseID { get; set; }
         public DateTime CreationDate { get; set; }
@@ -13,7 +12,5 @@ namespace Entities
         public Double Price { get; set; }
         public IRealtor? Realtor { get; set; }
         public IProperty Property { get; set; }
-
-     
     }
 }

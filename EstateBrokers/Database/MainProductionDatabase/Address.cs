@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using Entities.ObjectInterFaces;
 
 namespace Database
 {
-    public class Address : Entities.Address
+    public class Address : IAddress
     {
         [Key, Column(Order = 0)]
         public int PostalCode { get; set; }

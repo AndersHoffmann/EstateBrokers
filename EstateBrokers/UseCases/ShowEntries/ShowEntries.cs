@@ -19,25 +19,27 @@ namespace UseCases.ShowCases
             IPropertyCRUD propertyCRUD = new PropertyCRUD();
 
             List<ShowEntriesResponseModel> responseList = new List<ShowEntriesResponseModel>();
-            List<Entities.Case> workingCaseList = caseCRUD.ReadAllCases();
+            List<Entities.Property> workingPropertyList = propertyCRUD.GetAllProperties();
 
-            foreach (var Case in workingCaseList)
+            foreach (var property in workingPropertyList)
             {
                 ShowEntriesResponseModel showEntriesResponseModel = new ShowEntriesResponseModel();
-                if (Case.Realtor != null)
+                   showEntriesResponseModel.estimatedPrice = property.EstimatedPrice;
+                Case workingCase = (Case)caseCRUD.ReadCase(property.Case.CaseID);
+                if (workingCase.RealtorID != null)
                 {
-                    showEntriesResponseModel.realtorID = Case.Realtor.RealtorID;
+                    showEntriesResponseModel.realtorID = workingCase.Realtor.RealtorID;
                 }   
                 
-                if (Case.ClosedDate != null)
+                if (workingCase.ClosedDate != null)
                 {
-                    showEntriesResponseModel.closedDate = Case.ClosedDate;
+                    showEntriesResponseModel.closedDate = workingCase.ClosedDate;
                 }
 
-                showEntriesResponseModel.price = Case.Price;
-                Property workingProperty = (Property)propertyCRUD.ReadProperty(Case.Property.PropertyID);
-                showEntriesResponseModel.estimatedPrice = workingProperty.EstimatedPrice;
-                Address workingAddress = (Address)addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
+                showEntriesResponseModel.price = workingCase.Price;
+               
+             
+                Address workingAddress = (Address)addressCRUD.ReadAddress(property.PostalCode, property.AddressLine1);
                 showEntriesResponseModel.postalCode = workingAddress.PostalCode;
                 showEntriesResponseModel.AddressLine1 = workingAddress.AddressLine1;
                 showEntriesResponseModel.AddressLine2 = workingAddress.AddressLine2;

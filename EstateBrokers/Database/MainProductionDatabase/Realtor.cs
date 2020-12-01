@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.ObjectInterFaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,12 +7,11 @@ using System.Text;
 
 namespace Database
 {
-   public class Realtor : Entities.Realtor
+   public class Realtor : IRealtor
     {
         public int RealtorID { get; set; }
         public string Name { get; set; }
         public string PhoneNR { get; set; }
-        public ICollection<Case> Case { get; set; }
-
+        public ICollection<ICase> Case { get; set; }
     }
 }
