@@ -12,15 +12,15 @@ namespace Database
 
             if (Realtor is Database.Realtor) 
             {
-
+                return new Entities.Realtor(Realtor.RealtorID, Realtor.Name, Realtor.PhoneNR, Realtor.Case);
             }
             if (Realtor is Entities.Realtor)
             {
-
+                return new Database.Realtor(Realtor.RealtorID, Realtor.Name, Realtor.PhoneNR, Realtor.Case);
             }
-            if (Realtor is null)
+            else 
             {
-
+                return new Entities.Realtor();
             }
 
         }

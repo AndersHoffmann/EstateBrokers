@@ -18,10 +18,11 @@ namespace Database
             {
                 return new Database.Address(Address.PostalCode, Address.AddressLine1, Address.AddressLine2, Address.ExteriorArea, Address.InteriorArea, Address.BuildYear);
             }
-            if (Address is null)
+            else 
             {
                 return new Entities.Address();
             }
+          
 
         }
 

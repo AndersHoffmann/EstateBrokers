@@ -18,7 +18,7 @@ namespace Database
             {
                 return new Database.Case(Case.CaseID, Case.CreationDate, Case.ClosedDate, Case.Price, Case.Realtor, Case.Property);
             }
-            if (Case is null)
+            else 
             {
                 return new Entities.Case();
             }

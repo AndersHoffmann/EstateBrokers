@@ -9,6 +9,14 @@ namespace Database
 {
    public class Realtor : IRealtor
     {
+        public Realtor(int realtorID, string name, string phoneNR, ICollection<ICase> @case)
+        {
+            RealtorID = realtorID;
+            Name = name;
+            PhoneNR = phoneNR;
+            Case = @case;
+        }
+
         public int RealtorID { get; set; }
         public string Name { get; set; }
         public string PhoneNR { get; set; }
