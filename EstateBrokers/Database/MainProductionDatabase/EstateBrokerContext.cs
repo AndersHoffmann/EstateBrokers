@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Text;
 
@@ -23,8 +24,9 @@ namespace Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source = den1.mssql8.gear.host;
-            Initial Catalog = estatebrokerdb; User ID = estatebrokerdb; Password = Ln7!-734U18b");
+
+            var sqlConn = ConfigurationManager.AppSettings.Get("sqlConnectionstring");
+            optionsBuilder.UseSqlServer(sqlConn);
         }
 
     
