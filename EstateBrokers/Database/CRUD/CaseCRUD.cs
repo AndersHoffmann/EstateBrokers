@@ -70,7 +70,7 @@ namespace UseCases
 
                 foreach (var item in properties)
                 {
-                    cases.Add(database.Cases.Where(s => s.Property == database.Properties.Find(item.PropertyID)));
+                    cases.Add((Entities.Case)database.Cases.Where(s => s.Property == database.Properties.Find(item.PropertyID)));
                 }
 
                 database.SaveChanges();
@@ -89,7 +89,7 @@ namespace UseCases
                 workingCase.CreationDate = creationDate;
                 workingCase.ClosedDate = closedDate;
                 workingCase.Price = price;
-                workingCase.Realtor = (Database.Realtor)realtor;
+                workingCase.Realtor = realtor;
                 database.SaveChanges();
             }
 

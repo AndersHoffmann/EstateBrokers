@@ -10,6 +10,10 @@ namespace Database
 {
     public class Address : IAddress
     {
+        public Address()
+        {
+        }
+
         public Address(int postalCode, string addressLine1, string addressLine2, int exteriorArea, int interiorArea, int buildYear)
         {
             PostalCode = postalCode;

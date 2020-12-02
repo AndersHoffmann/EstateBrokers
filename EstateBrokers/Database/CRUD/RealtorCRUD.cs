@@ -25,7 +25,7 @@ namespace Database
         {
             using (var database = new EstateBrokerContext())
             {
-                return database.Realtors.Find(ID);
+                return (Entities.Realtor)RealtorFactory.CreateRealtor(database.Realtors.Find(ID));
               
             }
         }
@@ -41,13 +41,9 @@ namespace Database
         }
         public void DeleteRealtor(int ID)
         {
-            var realtor = new Realtor()
-            {
-                RealtorID = ID
-            };
             using (var database = new EstateBrokerContext())
             {
-                database.Realtors.Remove(realtor);
+                database.Realtors.Remove(database.Realtors.Find(ID)); 
                 database.SaveChanges();
 
             }

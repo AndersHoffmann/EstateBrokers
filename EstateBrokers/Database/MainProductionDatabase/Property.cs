@@ -9,6 +9,10 @@ namespace Database
 { 
    public class Property : IProperty
     {
+        public Property()
+        {
+        }
+
         public Property(int propertyID, double estimatedPrice, ICase @case, int postalCode, string addressLine1)
         {
             PropertyID = propertyID;

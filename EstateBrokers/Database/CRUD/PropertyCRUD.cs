@@ -29,7 +29,7 @@ namespace UseCases
         {
             using (var database = new EstateBrokerContext())
             {
-                return database.Properties.Find(ID);
+                return (Entities.Property)PropertyFactory.CreateProperty(database.Properties.Find(ID));
             }
         }
         public List<Entities.Property> GetAllProperties()
@@ -40,7 +40,7 @@ namespace UseCases
             {
                 foreach (var Property in database.Properties)
                 {
-                    workingList.Add(Property);
+                    workingList.Add((Entities.Property)PropertyFactory.CreateProperty(Property));
                 }
             }
             return workingList;
@@ -51,7 +51,7 @@ namespace UseCases
             {
                 Database.Property property = database.Properties.Find(ID);
                 property.EstimatedPrice = estimatedPrice;
-                property.Case = (Database.Case)Case;
+                property.Case = Case;
                 property.PostalCode = postalCode;
                 property.AddressLine1 = adressLine1;
                 database.SaveChanges();
@@ -59,13 +59,9 @@ namespace UseCases
         }
         public void DeleteProperty(int ID)
         {
-            var property = new Database.Property()
-            {
-                PropertyID = ID
-            };
             using (var database = new EstateBrokerContext())
             {
-                database.Properties.Remove(property);
+                database.Properties.Remove(database.Properties.Find(ID));
                 database.SaveChanges();
             }
             

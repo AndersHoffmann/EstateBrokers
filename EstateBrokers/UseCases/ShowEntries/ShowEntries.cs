@@ -24,9 +24,11 @@ namespace UseCases.ShowCases
             foreach (var property in workingPropertyList)
             {
                 ShowEntriesResponseModel showEntriesResponseModel = new ShowEntriesResponseModel();
-                   showEntriesResponseModel.estimatedPrice = property.EstimatedPrice;
-                Case workingCase = (Case)caseCRUD.ReadCase(property.Case.CaseID);
-                if (workingCase.RealtorID != null)
+                showEntriesResponseModel.estimatedPrice = property.EstimatedPrice;
+
+                Entities.Case workingCase = caseCRUD.ReadCase(property.Case.CaseID);
+
+                if (workingCase.Realtor != null)
                 {
                     showEntriesResponseModel.realtorID = workingCase.Realtor.RealtorID;
                 }   
@@ -39,7 +41,7 @@ namespace UseCases.ShowCases
                 showEntriesResponseModel.price = workingCase.Price;
                
              
-                Address workingAddress = (Address)addressCRUD.ReadAddress(property.PostalCode, property.AddressLine1);
+                Entities.Address workingAddress = addressCRUD.ReadAddress(property.PostalCode, property.AddressLine1);
                 showEntriesResponseModel.postalCode = workingAddress.PostalCode;
                 showEntriesResponseModel.AddressLine1 = workingAddress.AddressLine1;
                 showEntriesResponseModel.AddressLine2 = workingAddress.AddressLine2;

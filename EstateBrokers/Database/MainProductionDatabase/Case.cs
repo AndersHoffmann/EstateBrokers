@@ -9,6 +9,10 @@ namespace Database
 {
    public class Case : ICase
     {
+        public Case()
+        {
+        }
+
         public Case(int caseID, DateTime creationDate, DateTime? closedDate, double price, IRealtor realtor, IProperty property)
         {
             CaseID = caseID;

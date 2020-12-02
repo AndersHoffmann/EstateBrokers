@@ -27,7 +27,7 @@ namespace UseCases
         {
             using (var database = new EstateBrokerContext())
             {
-                return database.Addresses.Find(postalCode, addressLine1);
+                return (Entities.Address)AddressFactory.CreateAddress(database.Addresses.Find(postalCode, addressLine1));
              
             }
         }
@@ -50,8 +50,7 @@ namespace UseCases
         {
             using (var database = new EstateBrokerContext())
             {
-                Address address = database.Addresses.Find(postalCode, addressLine1);
-                database.Addresses.Remove(address);
+                database.Addresses.Remove(database.Addresses.Find(postalCode, addressLine1));
                 database.SaveChanges();
             }
         }

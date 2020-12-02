@@ -9,6 +9,10 @@ namespace Database
 {
    public class Realtor : IRealtor
     {
+        public Realtor()
+        {
+        }
+
         public Realtor(int realtorID, string name, string phoneNR, ICollection<ICase> @case)
         {
             RealtorID = realtorID;
