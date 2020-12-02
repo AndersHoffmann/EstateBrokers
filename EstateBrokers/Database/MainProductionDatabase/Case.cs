@@ -20,7 +20,10 @@ namespace Database
             ClosedDate = closedDate;
             Price = price;
             Realtor = realtor;
+            ConcreteRealtor = (Realtor)realtor;
             Property = property;
+            ConcreteProperty = (Property)property;
+            
         }
 
         public int CaseID { get; set; }
@@ -28,8 +31,11 @@ namespace Database
         public DateTime? ClosedDate { get; set; }
         public double Price { get; set; }
         public int RealtorID { get; set; }
-        public IRealtor Realtor { get; set; }
+        public Realtor ConcreteRealtor { get; set; }
+        [NotMapped]
+        public IRealtor? Realtor { get; set; }
+        public Property ConcreteProperty { get; set; }
+        [NotMapped]
         public IProperty Property { get; set; }
-
     }
 }

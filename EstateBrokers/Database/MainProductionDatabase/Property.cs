@@ -13,19 +13,23 @@ namespace Database
         {
         }
 
-        public Property(int propertyID, double estimatedPrice, ICase @case, int postalCode, string addressLine1)
+        public Property(int propertyID, double estimatedPrice, ICase @case, int caseID, int postalCode, string addressLine1)
         {
             PropertyID = propertyID;
             EstimatedPrice = estimatedPrice;
             Case = @case;
+            CaseID = caseID;
             PostalCode = postalCode;
             AddressLine1 = addressLine1;
+            ConcreteCase = (Case)@case;
         }
 
         public int PropertyID { get; set; }
         public double EstimatedPrice { get; set; }
 
         public int CaseID { get; set; }
+        public Case ConcreteCase { get; set; }
+        [NotMapped]
         public ICase Case { get; set; }
 
         [ForeignKey("Address"), Column(Order = 0)]

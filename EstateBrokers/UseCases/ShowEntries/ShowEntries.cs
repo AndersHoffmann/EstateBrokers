@@ -26,7 +26,7 @@ namespace UseCases.ShowCases
                 ShowEntriesResponseModel showEntriesResponseModel = new ShowEntriesResponseModel();
                 showEntriesResponseModel.estimatedPrice = property.EstimatedPrice;
 
-                Entities.Case workingCase = caseCRUD.ReadCase(property.Case.CaseID);
+                Entities.Case workingCase = caseCRUD.ReadCase(property.CaseID);
 
                 if (workingCase.Realtor != null)
                 {

@@ -17,6 +17,8 @@ namespace Database
         {
 
             modelBuilder.Entity<Address>().HasKey(p => new { p.PostalCode, p.AddressLine1 });
+
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -12,14 +12,16 @@ namespace Entities
    
         public int PropertyID { get; set; }
         public double EstimatedPrice { get; set; }
+        public int CaseID { get; set; }
         public ICase Case { get; set; }
         public int PostalCode { get; set; }
         public string AddressLine1 { get; set; }
-        public Property(int propertyID, double estimatedPrice, ICase @case, int postalCode, string addressLine1)
+        public Property(int propertyID, double estimatedPrice, ICase @case, int caseID, int postalCode, string addressLine1)
         {
             PropertyID = propertyID;
             EstimatedPrice = estimatedPrice;
             Case = @case;
+            CaseID = caseID;
             PostalCode = postalCode;
             AddressLine1 = addressLine1;
         }

@@ -12,11 +12,13 @@ namespace Database
 
             if (Property is Database.Property) 
             {
-                return new Entities.Property(Property.PropertyID, Property.EstimatedPrice, Property.Case, Property.PostalCode, Property.AddressLine1);
+                return new Entities.Property
+                    (Property.PropertyID, Property.EstimatedPrice, Property.Case, Property.CaseID, Property.PostalCode, Property.AddressLine1);
             }
             if (Property is Entities.Property)
             {
-                return new Database.Property(Property.PropertyID, Property.EstimatedPrice, Property.Case, Property.PostalCode, Property.AddressLine1);
+                return new Database.Property
+                    (Property.PropertyID, Property.EstimatedPrice, Property.Case, Property.CaseID, Property.PostalCode, Property.AddressLine1);
             }
             else
             {

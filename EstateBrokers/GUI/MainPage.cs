@@ -24,6 +24,7 @@ namespace GUI
         private void button_Close_FrontPage_Click(object sender, EventArgs e)
         {
             this.Close();
+            getEntryPage1.BringToFront();
         }
 
         private void button_estimates_mainpage_Click(object sender, EventArgs e)

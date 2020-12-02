@@ -8,6 +8,7 @@ namespace Entities.ObjectInterFaces
     {
         public int PropertyID { get; set; }
         public double EstimatedPrice { get; set; }
+        public int CaseID { get; set; }
         public ICase Case { get; set; }
         public int PostalCode { get; set; }
         public string AddressLine1 { get; set; }
