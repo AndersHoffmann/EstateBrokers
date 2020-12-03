@@ -29,40 +29,54 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_CreateCase = new System.Windows.Forms.Button();
+            this.button_ShowCases = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.OnCasesPage_createEntryPage = new GUI.CreateEntryPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // button_CreateCase
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(0, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 115);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Create case";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_CreateCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_CreateCase.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_CreateCase.Location = new System.Drawing.Point(0, 332);
+            this.button_CreateCase.Name = "button_CreateCase";
+            this.button_CreateCase.Size = new System.Drawing.Size(205, 115);
+            this.button_CreateCase.TabIndex = 0;
+            this.button_CreateCase.Text = "Create case";
+            this.button_CreateCase.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button_ShowCases
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(0, 453);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 116);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Show cases";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_ShowCases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_ShowCases.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_ShowCases.Location = new System.Drawing.Point(0, 453);
+            this.button_ShowCases.Name = "button_ShowCases";
+            this.button_ShowCases.Size = new System.Drawing.Size(205, 116);
+            this.button_ShowCases.TabIndex = 1;
+            this.button_ShowCases.Text = "Show cases";
+            this.button_ShowCases.UseVisualStyleBackColor = true;
+            this.button_ShowCases.Click += new System.EventHandler(this.button_ShowCases_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.OnCasesPage_createEntryPage);
             this.panel1.Location = new System.Drawing.Point(204, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1169, 845);
             this.panel1.TabIndex = 2;
+            // 
+            // OnCasesPage_createEntryPage
+            // 
+            this.OnCasesPage_createEntryPage.BackColor = System.Drawing.Color.White;
+            this.OnCasesPage_createEntryPage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OnCasesPage_createEntryPage.Location = new System.Drawing.Point(0, 0);
+            this.OnCasesPage_createEntryPage.Margin = new System.Windows.Forms.Padding(4);
+            this.OnCasesPage_createEntryPage.Name = "OnCasesPage_createEntryPage";
+            this.OnCasesPage_createEntryPage.Size = new System.Drawing.Size(1169, 845);
+            this.OnCasesPage_createEntryPage.TabIndex = 0;
             // 
             // label1
             // 
@@ -81,12 +95,14 @@ namespace GUI
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_ShowCases);
+            this.Controls.Add(this.button_CreateCase);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CasesPage";
             this.Size = new System.Drawing.Size(1408, 908);
+            this.Load += new System.EventHandler(this.CasesPage_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,9 +110,10 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_CreateCase;
+        private System.Windows.Forms.Button button_ShowCases;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private CreateEntryPage OnCasesPage_createEntryPage;
     }
 }

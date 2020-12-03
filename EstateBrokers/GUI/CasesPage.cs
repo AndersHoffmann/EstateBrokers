@@ -14,5 +14,15 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void button_ShowCases_Click(object sender, EventArgs e)
+        {
+            OnCasesPage_createEntryPage.BringToFront();
+        }
+
+        private void CasesPage_Load(object sender, EventArgs e)
+        {
+            OnCasesPage_createEntryPage.SendToBack();
+        }
     }
 }

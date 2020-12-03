@@ -43,8 +43,6 @@
             this.TextBox_password = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -182,30 +180,11 @@
             this.panel6.Size = new System.Drawing.Size(10, 405);
             this.panel6.TabIndex = 11;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(150, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 27);
-            this.textBox1.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(116, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 23);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "ID";
-            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.TextBox_password);
@@ -250,7 +229,5 @@
         private System.Windows.Forms.Button _Lo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
     }
 }

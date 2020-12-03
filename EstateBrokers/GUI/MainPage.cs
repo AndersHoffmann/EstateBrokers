@@ -24,7 +24,7 @@ namespace GUI
         private void button_Close_FrontPage_Click(object sender, EventArgs e)
         {
             this.Close();
-            getEntryPage1.BringToFront();
+
         }
 
         private void button_estimates_mainpage_Click(object sender, EventArgs e)
@@ -34,6 +34,15 @@ namespace GUI
 
         private void estimatesPage1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button_cases_mainpage_Click(object sender, EventArgs e)
+        {
+
+            CasesPage cs = new CasesPage();
+            cs.BringToFront();
+
 
         }
     }

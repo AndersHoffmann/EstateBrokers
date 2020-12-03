@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class EstimatesPage : UserControl
+    public partial class PropertyValuationPage : UserControl
     {
-        public EstimatesPage()
+        public PropertyValuationPage()
         {
             InitializeComponent();
         }
