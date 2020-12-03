@@ -8,7 +8,7 @@ namespace UseCases
     class ExportCaseToText
     {
         //Recieves all the relevant information through method parameters and prints it to a text file on the users desktop. 
-        public static void Write(String RealtorName, string RealtorPhone, int CaseID, DateTime CreationDate, DateTime ClosedDate , double Price, int PostalCode, string AddressLine1, string AdressLine2, int ExteriorArea, int InteriorArea, int BuildYear, int AverageAreaPrice)
+        public static void Write(string RealtorName, string RealtorPhone, int CaseID, DateTime CreationDate, DateTime ClosedDate , double Price, int PostalCode, string AddressLine1, string AdressLine2, int ExteriorArea, int InteriorArea, int BuildYear, int AverageAreaPrice)
         {
             var outputFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
                              $"Case /{CaseID} Details.txt";

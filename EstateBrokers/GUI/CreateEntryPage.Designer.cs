@@ -64,6 +64,7 @@ namespace GUI
             // button_Save
             // 
             this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Save.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Save.Image = ((System.Drawing.Image)(resources.GetObject("button_Save.Image")));
             this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Save.Location = new System.Drawing.Point(705, 741);
@@ -77,6 +78,7 @@ namespace GUI
             // button_Cancel
             // 
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Cancel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("button_Cancel.Image")));
             this.button_Cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Cancel.Location = new System.Drawing.Point(956, 741);
@@ -103,7 +105,7 @@ namespace GUI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(456, 450);
+            this.label2.Location = new System.Drawing.Point(456, 431);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 24);
             this.label2.TabIndex = 4;
@@ -125,7 +127,7 @@ namespace GUI
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(456, 382);
+            this.label4.Location = new System.Drawing.Point(456, 363);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 24);
             this.label4.TabIndex = 6;
@@ -136,7 +138,7 @@ namespace GUI
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(456, 312);
+            this.label5.Location = new System.Drawing.Point(456, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 24);
             this.label5.TabIndex = 7;
@@ -147,7 +149,7 @@ namespace GUI
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label8.Location = new System.Drawing.Point(456, 233);
+            this.label8.Location = new System.Drawing.Point(456, 214);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(155, 24);
             this.label8.TabIndex = 10;
@@ -264,7 +266,7 @@ namespace GUI
             // textBox_OwnershipCost
             // 
             this.textBox_OwnershipCost.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_OwnershipCost.Location = new System.Drawing.Point(456, 269);
+            this.textBox_OwnershipCost.Location = new System.Drawing.Point(456, 250);
             this.textBox_OwnershipCost.Name = "textBox_OwnershipCost";
             this.textBox_OwnershipCost.Size = new System.Drawing.Size(222, 31);
             this.textBox_OwnershipCost.TabIndex = 24;
@@ -272,7 +274,7 @@ namespace GUI
             // textBox_ExteriorArea
             // 
             this.textBox_ExteriorArea.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_ExteriorArea.Location = new System.Drawing.Point(456, 409);
+            this.textBox_ExteriorArea.Location = new System.Drawing.Point(456, 390);
             this.textBox_ExteriorArea.Name = "textBox_ExteriorArea";
             this.textBox_ExteriorArea.Size = new System.Drawing.Size(222, 31);
             this.textBox_ExteriorArea.TabIndex = 25;
@@ -280,7 +282,7 @@ namespace GUI
             // textBox_InteriorArea
             // 
             this.textBox_InteriorArea.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_InteriorArea.Location = new System.Drawing.Point(456, 343);
+            this.textBox_InteriorArea.Location = new System.Drawing.Point(456, 324);
             this.textBox_InteriorArea.Name = "textBox_InteriorArea";
             this.textBox_InteriorArea.Size = new System.Drawing.Size(222, 31);
             this.textBox_InteriorArea.TabIndex = 26;
@@ -288,7 +290,7 @@ namespace GUI
             // textBox_BuildYear
             // 
             this.textBox_BuildYear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_BuildYear.Location = new System.Drawing.Point(456, 477);
+            this.textBox_BuildYear.Location = new System.Drawing.Point(456, 458);
             this.textBox_BuildYear.Name = "textBox_BuildYear";
             this.textBox_BuildYear.Size = new System.Drawing.Size(222, 31);
             this.textBox_BuildYear.TabIndex = 27;
@@ -341,7 +343,7 @@ namespace GUI
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
-            // CreateCasePage
+            // CreateEntryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -376,7 +378,7 @@ namespace GUI
             this.Controls.Add(this.button_Save);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "CreateCasePage";
+            this.Name = "CreateEntryPage";
             this.Size = new System.Drawing.Size(1169, 845);
             this.Load += new System.EventHandler(this.CreateCasePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
