@@ -37,11 +37,11 @@
             this.panel_botton_mainpage = new System.Windows.Forms.Panel();
             this.panel_right_mainpage = new System.Windows.Forms.Panel();
             this.panel_Container_mainpage = new System.Windows.Forms.Panel();
+            this.getEntryPage1 = new GUI.GetEntryPage();
             this.button_support_mainpage = new System.Windows.Forms.Button();
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
-            this.getEntryPage1 = new GUI.GetEntryPage();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_Container_mainpage.SuspendLayout();
             this.SuspendLayout();
@@ -133,6 +133,15 @@
             this.panel_Container_mainpage.Size = new System.Drawing.Size(1408, 908);
             this.panel_Container_mainpage.TabIndex = 4;
             // 
+            // getEntryPage1
+            // 
+            this.getEntryPage1.BackColor = System.Drawing.Color.White;
+            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.getEntryPage1.Location = new System.Drawing.Point(120, 10);
+            this.getEntryPage1.Name = "getEntryPage1";
+            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
+            this.getEntryPage1.TabIndex = 1;
+            // 
             // button_support_mainpage
             // 
             this.button_support_mainpage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,15 +190,6 @@
             this.button_cases_mainpage.TabIndex = 0;
             this.button_cases_mainpage.Text = "Cases";
             this.button_cases_mainpage.UseVisualStyleBackColor = true;
-            // 
-            // getEntryPage1
-            // 
-            this.getEntryPage1.BackColor = System.Drawing.Color.White;
-            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.getEntryPage1.Location = new System.Drawing.Point(120, 10);
-            this.getEntryPage1.Name = "getEntryPage1";
-            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
-            this.getEntryPage1.TabIndex = 1;
             // 
             // MainPage
             // 

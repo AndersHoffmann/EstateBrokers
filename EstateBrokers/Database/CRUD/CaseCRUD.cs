@@ -8,6 +8,8 @@ namespace UseCases
 {
     public class CaseCRUD : ICaseCRUD
     {
+        public object cases { get; private set; }
+
         public int CreateCase(DateTime creationDate, double price, int realtorID)
         {
 
@@ -64,13 +66,13 @@ namespace UseCases
 
                 if (database.Properties.Any(s => s.PostalCode == postalCode) == true)
                 {
-                    properties.Add((Database.Property)(database.Properties.Where(s => s.PostalCode == postalCode)));
+                    properties = database.Properties.Where(s => s.PostalCode == postalCode).ToList();
                 }
 
 
                 foreach (var item in properties)
                 {
-                    cases.Add((Entities.Case)database.Cases.Where(s => s.Property == database.Properties.Find(item.PropertyID)));
+                   this.cases = database.Cases.Where(s => s.CaseID == item.CaseID).ToList();
                 }
 
                 database.SaveChanges();
