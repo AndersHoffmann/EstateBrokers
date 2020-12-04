@@ -37,7 +37,6 @@
             this.panel_botton_mainpage = new System.Windows.Forms.Panel();
             this.panel_right_mainpage = new System.Windows.Forms.Panel();
             this.panel_Container_mainpage = new System.Windows.Forms.Panel();
-            this.getEntryPage1 = new GUI.GetEntryPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_support_mainpage = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.getEntryPage1 = new GUI.GetEntryPage();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_Container_mainpage.SuspendLayout();
             this.SuspendLayout();
@@ -138,15 +138,6 @@
             this.panel_Container_mainpage.Size = new System.Drawing.Size(1408, 908);
             this.panel_Container_mainpage.TabIndex = 4;
             // 
-            // getEntryPage1
-            // 
-            this.getEntryPage1.BackColor = System.Drawing.Color.White;
-            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.getEntryPage1.Location = new System.Drawing.Point(104, 24);
-            this.getEntryPage1.Name = "getEntryPage1";
-            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
-            this.getEntryPage1.TabIndex = 3;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
@@ -228,6 +219,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(39, 908);
             this.panel3.TabIndex = 3;
+            // 
+            // getEntryPage1
+            // 
+            this.getEntryPage1.BackColor = System.Drawing.Color.White;
+            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.getEntryPage1.Location = new System.Drawing.Point(160, 17);
+            this.getEntryPage1.Name = "getEntryPage1";
+            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
+            this.getEntryPage1.TabIndex = 3;
             // 
             // MainPage
             // 

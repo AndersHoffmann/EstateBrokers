@@ -17,9 +17,9 @@ namespace Controllers
         {
             PrintEntriesRequestModel request = new PrintEntriesRequestModel();
             request.CaseID = caseId;
+            PrintInput.WriteToFile(request);
 
         }
-
 
     }
 }
