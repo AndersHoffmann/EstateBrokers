@@ -10,6 +10,7 @@ namespace UseCases
     {
         public object cases { get; private set; }
 
+
         public int CreateCase(DateTime creationDate, double price, int realtorID)
         {
 
@@ -30,7 +31,26 @@ namespace UseCases
             database.SaveChanges();
             return workingCase.CaseID;
         }
+        public List<Entities.Case> ReadAPreDefinedNumberOfCasesWithNoRealtor(int number)
+        {
+            List<Entities.Case> caseList = new List<Entities.Case>();
+            using (var database = new EstateBrokerContext())
+            {
 
+                caseList.Add((Entities.Case)database.Cases.Where(a => a.RealtorID == 0));
+                if (caseList.Count > number)
+                {
+                    caseList.RemoveRange(number, caseList.Count - 1);
+                }
+
+                
+                    return caseList;
+                
+                
+                
+            }
+
+        }
         public Entities.Case ReadCase(int ID)
         {
             using (var database = new EstateBrokerContext())
