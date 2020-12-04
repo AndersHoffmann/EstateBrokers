@@ -15,7 +15,8 @@ namespace Controllers
 
         public void PrintCases(int caseId)
         {
-
+            PrintEntriesRequestModel request = new PrintEntriesRequestModel();
+            request.CaseID = caseId;
 
         }
 

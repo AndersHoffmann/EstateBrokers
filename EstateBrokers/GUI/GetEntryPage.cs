@@ -53,7 +53,7 @@ namespace GUI
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-
+            printEntryController.PrintCases(Convert.ToInt32(textBox_CaseIDtoPrint.Text));
 
         }
 

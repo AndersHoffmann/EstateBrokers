@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Database;
@@ -8,7 +7,7 @@ using Gateways;
 
 namespace UseCases.PrintEntries
 {
-    class PrintEntry : IPrintEntriesInput
+    public class PrintEntry : IPrintEntriesInput
     {
         public IPrintEntriesOutput PrintEntriesOutput { get; set; }
 
@@ -18,8 +17,9 @@ namespace UseCases.PrintEntries
         }
 
         //Recieves all the relevant information through method parameters and prints it to a text file on the users desktop. 
-        public void WriteToFile(PrintObject request)
+        public void WriteToFile(PrintEntriesRequestModel Request)
         {
+            var request = GetDataForPrint(Request);
             PrintEntriesResponseModel response = new PrintEntriesResponseModel();
             var outputFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
                              $"Case /{request.CaseID} Details.txt";
@@ -58,7 +58,7 @@ namespace UseCases.PrintEntries
             }
             PrintEntriesOutput.PrintSuccess(response);
         }
-        public PrintObject GetDataForPrint(int CaseID)
+        public PrintObject GetDataForPrint(PrintEntriesRequestModel request)
         {
             IAddressCRUD addressCRUD = new AddressCRUD();
             ICaseCRUD caseCRUD = new CaseCRUD();
@@ -66,11 +66,11 @@ namespace UseCases.PrintEntries
             IRealtorCRUD realtorCRUD = new RealtorCRUD();
             PrintObject printObject = new PrintObject();
             CalculateAverageWithIntegerInput calc = new CalculateAverageWithIntegerInput();
-            Entities.Case workingCase = caseCRUD.ReadCase(CaseID);
+            Entities.Case workingCase = caseCRUD.ReadCase(request.CaseID);
 
             Entities.Realtor workingRealtor = realtorCRUD.ReadRealtor(workingCase.Realtor.RealtorID);
 
-            Entities.Property workingProperty = propertyCRUD.ReadProperty(CaseID);
+            Entities.Property workingProperty = propertyCRUD.ReadProperty(request.CaseID);
 
             Entities.Address workingAddress = addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
 
