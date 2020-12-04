@@ -6,6 +6,6 @@ namespace UseCases.PrintEntries
 {
     public interface IPrintEntriesInput
     {
-        public void WriteToFile(PrintEntriesRequestModel printEntriesRequestModel);
+        public void WriteToFile(PrintObject printObject);
     }
 }

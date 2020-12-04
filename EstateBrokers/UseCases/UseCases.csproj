@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <Folder Include="GetEntries\" />
+    <Folder Include="PaymentCalculator\" />
   </ItemGroup>
 
 </Project>
