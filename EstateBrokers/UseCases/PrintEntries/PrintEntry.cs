@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Database;
 using Entities;
+using Gateways;
 
 namespace UseCases.PrintEntries
 {
@@ -16,7 +18,7 @@ namespace UseCases.PrintEntries
         }
 
         //Recieves all the relevant information through method parameters and prints it to a text file on the users desktop. 
-        public void WriteToFile(PrintEntriesRequestModel request)
+        public void WriteToFile(PrintObject request)
         {
             PrintEntriesResponseModel response = new PrintEntriesResponseModel();
             var outputFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
@@ -56,5 +58,44 @@ namespace UseCases.PrintEntries
             }
             PrintEntriesOutput.PrintSuccess(response);
         }
+        public PrintObject GetDataForPrint(int CaseID)
+        {
+            IAddressCRUD addressCRUD = new AddressCRUD();
+            ICaseCRUD caseCRUD = new CaseCRUD();
+            IPropertyCRUD propertyCRUD = new PropertyCRUD();
+            IRealtorCRUD realtorCRUD = new RealtorCRUD();
+            PrintObject printObject = new PrintObject();
+            CalculateAverageWithIntegerInput calc = new CalculateAverageWithIntegerInput();
+            Entities.Case workingCase = caseCRUD.ReadCase(CaseID);
+
+            Entities.Realtor workingRealtor = realtorCRUD.ReadRealtor(workingCase.Realtor.RealtorID);
+
+            Entities.Property workingProperty = propertyCRUD.ReadProperty(CaseID);
+
+            Entities.Address workingAddress = addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
+
+            printObject.RealtorName = workingRealtor.Name;
+            printObject.RealtorPhone = workingRealtor.PhoneNR;
+
+            printObject.CaseID = workingCase.CaseID;
+            printObject.CreationDate = workingCase.CreationDate;
+            printObject.ClosedDate = (DateTime)workingCase.ClosedDate;
+            printObject.Price = workingCase.Price;
+
+            printObject.PostalCode = workingProperty.PostalCode;
+            printObject.AddressLine1 = workingProperty.AddressLine1;
+            printObject.EstimatedPrice = workingProperty.EstimatedPrice;
+
+
+            printObject.AddressLine2 = workingAddress.AddressLine2;
+            printObject.ExteriorArea = workingAddress.ExteriorArea;
+            printObject.InteriorArea = workingAddress.InteriorArea;
+            printObject.BuildYear = workingAddress.BuildYear;
+
+            printObject.AverageAreaPrice = calc.Calculate(workingProperty.PostalCode);
+
+            return printObject;
+        }
     }
+
 }
