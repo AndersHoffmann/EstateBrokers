@@ -8,7 +8,7 @@ namespace UseCases.ShowCases
         public int? realtorID { get; set; }
         public DateTime creationDate { get; set; }
         public DateTime? closedDate { get; set; }
-        public Double price { get; set; }
+        public double price { get; set; }
 
         //For Property
         public double estimatedPrice { get; set; }

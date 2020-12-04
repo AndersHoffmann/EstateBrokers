@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using Entities;
 
 namespace UseCases.PrintEntries
 {
-    class PrintEntry : IPrintEntriesInput
+    public class PrintEntry : IPrintEntriesInput
     {
         public IPrintEntriesOutput PrintEntriesOutput { get; set; }
 

@@ -65,22 +65,9 @@
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -88,7 +75,20 @@
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -159,7 +159,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(19, 75);
+            this.label4.Location = new System.Drawing.Point(17, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 28);
             this.label4.TabIndex = 6;
@@ -492,71 +492,6 @@
             this.panel2.Size = new System.Drawing.Size(1499, 10);
             this.panel2.TabIndex = 29;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label21.Location = new System.Drawing.Point(283, -4);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(97, 23);
-            this.label21.TabIndex = 27;
-            this.label21.Text = "Case ID 2";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label22.Location = new System.Drawing.Point(283, 73);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(97, 23);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "Case ID 3";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label23.Location = new System.Drawing.Point(283, -80);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(97, 23);
-            this.label23.TabIndex = 25;
-            this.label23.Text = "Case ID 1";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label24.Location = new System.Drawing.Point(283, -115);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(129, 23);
-            this.label24.TabIndex = 24;
-            this.label24.Text = "Open houses";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(283, -54);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(191, 27);
-            this.textBox16.TabIndex = 23;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(283, 99);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(191, 27);
-            this.textBox17.TabIndex = 22;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(283, 22);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(191, 27);
-            this.textBox18.TabIndex = 21;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
@@ -573,71 +508,6 @@
             this.panel3.Size = new System.Drawing.Size(10, 381);
             this.panel3.TabIndex = 30;
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label25.Location = new System.Drawing.Point(283, -4);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(97, 23);
-            this.label25.TabIndex = 27;
-            this.label25.Text = "Case ID 2";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label26.Location = new System.Drawing.Point(283, 73);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(97, 23);
-            this.label26.TabIndex = 26;
-            this.label26.Text = "Case ID 3";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label27.Location = new System.Drawing.Point(283, -80);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(97, 23);
-            this.label27.TabIndex = 25;
-            this.label27.Text = "Case ID 1";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label28.Location = new System.Drawing.Point(283, -115);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(129, 23);
-            this.label28.TabIndex = 24;
-            this.label28.Text = "Open houses";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(283, -54);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(191, 27);
-            this.textBox19.TabIndex = 23;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(283, 99);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(191, 27);
-            this.textBox20.TabIndex = 22;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(283, 22);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(191, 27);
-            this.textBox21.TabIndex = 21;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
@@ -653,6 +523,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 292);
             this.panel4.TabIndex = 30;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(18, 351);
+            this.panel5.TabIndex = 30;
             // 
             // label29
             // 
@@ -719,13 +597,135 @@
             this.textBox24.Size = new System.Drawing.Size(191, 27);
             this.textBox24.TabIndex = 21;
             // 
-            // panel5
+            // label25
             // 
-            this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(18, 351);
-            this.panel5.TabIndex = 30;
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label25.Location = new System.Drawing.Point(283, -4);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(97, 23);
+            this.label25.TabIndex = 27;
+            this.label25.Text = "Case ID 2";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label26.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label26.Location = new System.Drawing.Point(283, 73);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(97, 23);
+            this.label26.TabIndex = 26;
+            this.label26.Text = "Case ID 3";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label27.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label27.Location = new System.Drawing.Point(283, -80);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(97, 23);
+            this.label27.TabIndex = 25;
+            this.label27.Text = "Case ID 1";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label28.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label28.Location = new System.Drawing.Point(283, -115);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(129, 23);
+            this.label28.TabIndex = 24;
+            this.label28.Text = "Open houses";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(283, -54);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(191, 27);
+            this.textBox19.TabIndex = 23;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(283, 99);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(191, 27);
+            this.textBox20.TabIndex = 22;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(283, 22);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(191, 27);
+            this.textBox21.TabIndex = 21;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label21.Location = new System.Drawing.Point(283, -4);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(97, 23);
+            this.label21.TabIndex = 27;
+            this.label21.Text = "Case ID 2";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label22.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label22.Location = new System.Drawing.Point(283, 73);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(97, 23);
+            this.label22.TabIndex = 26;
+            this.label22.Text = "Case ID 3";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label23.Location = new System.Drawing.Point(283, -80);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(97, 23);
+            this.label23.TabIndex = 25;
+            this.label23.Text = "Case ID 1";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label24.Location = new System.Drawing.Point(283, -115);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(129, 23);
+            this.label24.TabIndex = 24;
+            this.label24.Text = "Open houses";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(283, -54);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(191, 27);
+            this.textBox16.TabIndex = 23;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(283, 99);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(191, 27);
+            this.textBox17.TabIndex = 22;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(283, 22);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(191, 27);
+            this.textBox18.TabIndex = 21;
             // 
             // button1
             // 
