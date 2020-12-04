@@ -1,75 +1,77 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace Database.Login
 {
-    class Login
+    public class Login : ILoginInput
     {
 
+      
+
+        static Thread thd;
+        public static ILoginOutput LoginOutput;
+        public static LoginRequestModel RequestModel;
+
+        public Login(ILoginOutput loginOutput)
+        {
+            LoginOutput = loginOutput;
+        }
+
+        public void RunAuthLogin(LoginRequestModel request)
+        {
+            RequestModel = request;
+            thd = new Thread(new ThreadStart(AuthLogin));
+            thd.Start();
+
+           
+        }
 
         private static string sqlConn = ConfigurationManager.AppSettings.Get("sqlConnectionstring");
 
-        public static void AuthLogin(string username, string password)
+        public static void AuthLogin()
         {
 
-            //Tjek om username er i databasen
-
-
-
-            //Hvis ja 
-            //Tjek om koden passer til det username 
-
-            //Hvis nej
-            //Username eller password forkert
+            LoginResponseModel response = new LoginResponseModel();
 
             SqlConnection conn = new SqlConnection(sqlConn);
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
 
-            using (SqlCommand com = new SqlCommand())
+                    cmd.CommandText = "spLoginCheck_UserNameAndPassword";
+
+                    cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = RequestModel.username;
+                    cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = RequestModel.password;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    conn.Open();
+
+                    var valid = cmd.ExecuteScalar();
+
+                    if (valid != null)
+                    {
+                        response.LoginSucess = true;
+                    }
+                    else
+                    {
+                        response.LoginSucess = false;
+                    }
+
+                    conn.Close();
+                }
+            }
+            catch (System.Exception)
             {
 
-                conn.Open();
-
-                com.CommandText = "CheckUsername";
-                com.Parameters.Add("@Username", SqlDbType.VarChar).Value = username;
-
-                com.ExecuteScalar();
-                int UserExist = 0;
-                var test = com.ExecuteScalar();
-
-                //IF EXISTS(Select* from LoginData where Username = 'Martin')
-                //BEGIN
-                //Select ConfidentialID,
-                //Password, 
-                //Case Password
-                //when HASHBYTES('SHA2_512', 'AndersKode') 
-                //THEN 'Authorized User'
-                //else 'Not Authorized'
-                //end As Status from Confidentials
-                //END
-
-
-                conn.Close();
-
-
-
-
-
-
+                response.LoginSucess = false;
             }
 
+            LoginOutput.ConfirmLogin(response);
         }
-        public static void ExecuteCommand(string StoredProcedureName)
-        {
-            var conn = new SqlConnection(sqlConn);
-            conn.Open();
-            var com = new SqlCommand();
-            com.Connection = conn;
-            com.CommandText = StoredProcedureName;
-            com.CommandType = CommandType.StoredProcedure;
-            com.ExecuteNonQuery();
-            conn.Close();
-        }
-
     }
 }

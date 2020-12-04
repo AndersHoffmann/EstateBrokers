@@ -112,6 +112,7 @@
             this.button_login.TabIndex = 5;
             this.button_login.Text = "LOGIN ";
             this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // label2
             // 
@@ -147,7 +148,6 @@
             this.textbox_username.ForeColor = System.Drawing.Color.Black;
             this.textbox_username.Location = new System.Drawing.Point(153, 241);
             this.textbox_username.Name = "textbox_username";
-            this.textbox_username.PasswordChar = '*';
             this.textbox_username.Size = new System.Drawing.Size(198, 20);
             this.textbox_username.TabIndex = 8;
             // 
@@ -159,6 +159,7 @@
             this.TextBox_password.ForeColor = System.Drawing.Color.Black;
             this.TextBox_password.Location = new System.Drawing.Point(153, 295);
             this.TextBox_password.Name = "TextBox_password";
+            this.TextBox_password.PasswordChar = '*';
             this.TextBox_password.Size = new System.Drawing.Size(198, 20);
             this.TextBox_password.TabIndex = 9;
             // 
@@ -203,6 +204,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginPage";
             this.Size = new System.Drawing.Size(465, 405);
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
