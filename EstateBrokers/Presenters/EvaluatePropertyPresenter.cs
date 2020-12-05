@@ -20,6 +20,8 @@ namespace Presenters
         public void DisplayPropertyEvaluation(EvaluatePropertyResponseModel evaluatePropertyResponseModel)
         {
             evaluatePropertyViewModel.PropertyValuation = evaluatePropertyResponseModel.PropertyValuation.ToString();
+
+            FrontEnd.UpdatePropertyValuationField(evaluatePropertyViewModel);
         }
     }
 

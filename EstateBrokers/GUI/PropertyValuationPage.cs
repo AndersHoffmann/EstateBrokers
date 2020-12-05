@@ -14,19 +14,24 @@ namespace GUI
 {
     public partial class PropertyValuationPage : UserControl, IEvaluatePropertyFrontEnd
     {
-        EvaluatePropertyController evaluatePropertyController { get; set; }
+        EvaluatePropertyController EvaluatePropertyController { get; set; }
 
         public PropertyValuationPage()
         {
             IEvaluatePropertyOutput estimatesOutput = new EvaluatePropertyPresenter(this);
             IEvaluatePropertyInput estimatesInput = new EvaluateProperty(estimatesOutput);
-            evaluatePropertyController = new EvaluatePropertyController(estimatesInput);
+            EvaluatePropertyController = new EvaluatePropertyController(estimatesInput);
             InitializeComponent();
         }
 
         public void UpdatePropertyValuationField(EvaluatePropertyViewModel evaluatePropertyViewModel)
         {
             textBox_FinalPrice.Text = evaluatePropertyViewModel.PropertyValuation;
+        }
+
+        private void button_Estimate_Click(object sender, EventArgs e)
+        {
+            EvaluatePropertyController.EstimateCode(textbox_SquareMeter.Text, trackbar_HouseCondition.Value, checkbox_DesignerHouse.Checked, checkbox_Garden.Checked, checkbox_Basement.Checked, checkBox3.Checked);
         }
     }
 }

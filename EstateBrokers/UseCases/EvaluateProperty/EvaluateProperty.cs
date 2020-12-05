@@ -27,7 +27,7 @@ namespace UseCases.OpenHouse
 
             baseSquareMeterPrice = evaluatePropertyRequestModel.IsDesignerHouse ? baseSquareMeterPrice * 1.6 : baseSquareMeterPrice;
             baseSquareMeterPrice = evaluatePropertyRequestModel.HasBasement ? baseSquareMeterPrice * 1.2 : baseSquareMeterPrice;
-            baseSquareMeterPrice = evaluatePropertyRequestModel.HasGarden ? baseSquareMeterPrice * 1.4 : baseSquareMeterPrice;
+            baseSquareMeterPrice = evaluatePropertyRequestModel.HasGarden ? baseSquareMeterPrice * 1.2 : baseSquareMeterPrice;
             baseSquareMeterPrice = evaluatePropertyRequestModel.HasGarage ? baseSquareMeterPrice * 1.1 : baseSquareMeterPrice;
 
             double evaluation = baseSquareMeterPrice * evaluatePropertyRequestModel.SquareMeter;
