@@ -51,8 +51,6 @@ namespace GUI
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox_FinalPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_Estimate = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -267,24 +265,6 @@ namespace GUI
             this.label1.TabIndex = 52;
             this.label1.Text = "Final estimated house price";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(77, 259);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "House price";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(78, 284);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 31);
-            this.textBox1.TabIndex = 54;
-            // 
             // button_Estimate
             // 
             this.button_Estimate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -327,8 +307,6 @@ namespace GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_Estimate);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_FinalPrice);
             this.Controls.Add(this.label18);
@@ -384,8 +362,6 @@ namespace GUI
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox_FinalPrice;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_Estimate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
