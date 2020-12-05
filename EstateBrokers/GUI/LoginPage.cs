@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-using Controllers;
-using Presenters;
-using ViewModels;
+﻿using Controllers;
 using Database.Login;
+using Presenters;
+using System;
+using System.Windows.Forms;
+using ViewModels;
 
 namespace GUI
 {
@@ -31,14 +26,17 @@ namespace GUI
 
             if (loginViewModel.LoginSucess == true)
             {
+
                 MessageBox.Show("Login sucess");
+                this.Dispose();
+
             }
             else
             {
                 MessageBox.Show("Invalid username or password");
 
             }
-            
+
         }
 
         private void LoginPage_Load(object sender, EventArgs e)

@@ -8,7 +8,7 @@ namespace Database.Login
     public class Login : ILoginInput
     {
 
-      
+        static LoginResponseModel response = new LoginResponseModel();
 
         static Thread thd;
         public static ILoginOutput LoginOutput;
@@ -23,9 +23,9 @@ namespace Database.Login
         {
             RequestModel = request;
             thd = new Thread(new ThreadStart(AuthLogin));
-            thd.Start();
+            thd.Start();           
+            LoginOutput.ConfirmLogin(response);
 
-           
         }
 
         private static string sqlConn = ConfigurationManager.AppSettings.Get("sqlConnectionstring");
@@ -33,45 +33,35 @@ namespace Database.Login
         public static void AuthLogin()
         {
 
-            LoginResponseModel response = new LoginResponseModel();
-
             SqlConnection conn = new SqlConnection(sqlConn);
-            try
+
+            using (SqlCommand cmd = new SqlCommand())
             {
-                using (SqlCommand cmd = new SqlCommand())
+                cmd.Connection = conn;
+
+                cmd.CommandText = "spLoginCheck_UserNameAndPassword";
+
+                cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = RequestModel.username;
+                cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = RequestModel.password;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                conn.Open();
+
+                var valid = cmd.ExecuteScalar();
+
+                if (valid != null)
                 {
-                    cmd.Connection = conn;
-
-                    cmd.CommandText = "spLoginCheck_UserNameAndPassword";
-
-                    cmd.Parameters.Add("@username", SqlDbType.NVarChar).Value = RequestModel.username;
-                    cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = RequestModel.password;
-
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    conn.Open();
-
-                    var valid = cmd.ExecuteScalar();
-
-                    if (valid != null)
-                    {
-                        response.LoginSucess = true;
-                    }
-                    else
-                    {
-                        response.LoginSucess = false;
-                    }
-
-                    conn.Close();
+                    response.LoginSucess = true;
                 }
-            }
-            catch (System.Exception)
-            {
+                else
+                {
+                    response.LoginSucess = false;
+                }
 
-                response.LoginSucess = false;
+                conn.Close();
             }
 
-            LoginOutput.ConfirmLogin(response);
         }
     }
 }
