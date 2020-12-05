@@ -8,34 +8,35 @@ namespace Database.Login
     public class Login : ILoginInput
     {
 
-        static LoginResponseModel response = new LoginResponseModel();
-
         public static ILoginOutput LoginOutput;
         public static LoginRequestModel RequestModel;
 
         public Login(ILoginOutput loginOutput)
         {
             LoginOutput = loginOutput;
+            
         }
 
         public void Auth(LoginRequestModel request)
         {
+            var response = new LoginResponseModel();
 
-            AuthLogin(request);
+            var thread = new Thread(() =>
+            {
+                response.LoginSucess = AuthLogin(request);
 
+            });
+            thread.Start();
+            thread.Join();
 
             LoginOutput.ConfirmLogin(response);
         }
 
         private static string sqlConn = ConfigurationManager.AppSettings.Get("sqlConnectionstring");
 
-        public static void AuthLogin(LoginRequestModel request)
+        public static bool AuthLogin(LoginRequestModel request)
         {
-            
-
-            new Thread(() =>{
-
-               
+         
                 SqlConnection conn = new SqlConnection(sqlConn);
                 using (SqlCommand cmd = new SqlCommand())
                 {
@@ -53,22 +54,18 @@ namespace Database.Login
                     conn.Open();
 
                     var valid = cmd.ExecuteScalar();
+                    conn.Close();
+
 
                     if (valid != null)
                     {
-                        response.LoginSucess = true;
+                        return true;
                     }
                     else
                     {
-                        response.LoginSucess = false;
+                        return false;
                     }
-
-                    conn.Close();
                 }
-                
-            }).Start();
-
-           
         }
     }
 }
