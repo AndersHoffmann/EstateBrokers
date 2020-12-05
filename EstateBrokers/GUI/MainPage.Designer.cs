@@ -37,7 +37,7 @@
             this.panel_botton_mainpage = new System.Windows.Forms.Panel();
             this.panel_right_mainpage = new System.Windows.Forms.Panel();
             this.panel_Container_mainpage = new System.Windows.Forms.Panel();
-            this.getEntryPage1 = new GUI.GetEntryPage();
+            this.loginPage1 = new GUI.LoginPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_support_mainpage = new System.Windows.Forms.Button();
@@ -45,7 +45,6 @@
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.loginPage1 = new GUI.LoginPage();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_Container_mainpage.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +127,6 @@
             // 
             this.panel_Container_mainpage.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel_Container_mainpage.Controls.Add(this.loginPage1);
-            this.panel_Container_mainpage.Controls.Add(this.getEntryPage1);
             this.panel_Container_mainpage.Controls.Add(this.panel2);
             this.panel_Container_mainpage.Controls.Add(this.panel1);
             this.panel_Container_mainpage.Controls.Add(this.button_support_mainpage);
@@ -140,14 +138,15 @@
             this.panel_Container_mainpage.Size = new System.Drawing.Size(1408, 908);
             this.panel_Container_mainpage.TabIndex = 4;
             // 
-            // getEntryPage1
+            // loginPage1
             // 
-            this.getEntryPage1.BackColor = System.Drawing.Color.White;
-            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.getEntryPage1.Location = new System.Drawing.Point(129, 35);
-            this.getEntryPage1.Name = "getEntryPage1";
-            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
-            this.getEntryPage1.TabIndex = 3;
+            this.loginPage1.BackColor = System.Drawing.Color.White;
+            this.loginPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginPage1.Location = new System.Drawing.Point(-6, -6);
+            this.loginPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.loginPage1.Name = "loginPage1";
+            this.loginPage1.Size = new System.Drawing.Size(1413, 914);
+            this.loginPage1.TabIndex = 3;
             // 
             // panel2
             // 
@@ -178,6 +177,7 @@
             this.button_support_mainpage.TabIndex = 0;
             this.button_support_mainpage.Text = "\r\n\r\nSupport";
             this.button_support_mainpage.UseVisualStyleBackColor = false;
+            this.button_support_mainpage.Click += new System.EventHandler(this.button_support_mainpage_Click);
             // 
             // button_estimates_mainpage
             // 
@@ -231,16 +231,6 @@
             this.panel3.Size = new System.Drawing.Size(39, 908);
             this.panel3.TabIndex = 3;
             // 
-            // loginPage1
-            // 
-            this.loginPage1.BackColor = System.Drawing.Color.White;
-            this.loginPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loginPage1.Location = new System.Drawing.Point(450, 200);
-            this.loginPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.loginPage1.Name = "loginPage1";
-            this.loginPage1.Size = new System.Drawing.Size(465, 405);
-            this.loginPage1.TabIndex = 4;
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -285,7 +275,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private GetEntryPage getEntryPage1;
         private LoginPage loginPage1;
     }
 }
