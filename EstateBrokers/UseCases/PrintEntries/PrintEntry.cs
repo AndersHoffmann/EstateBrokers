@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Database;
@@ -8,7 +7,7 @@ using Gateways;
 
 namespace UseCases.PrintEntries
 {
-    class PrintEntry : IPrintEntriesInput
+    public class PrintEntry : IPrintEntriesInput
     {
         public IPrintEntriesOutput PrintEntriesOutput { get; set; }
 
@@ -18,47 +17,49 @@ namespace UseCases.PrintEntries
         }
 
         //Recieves all the relevant information through method parameters and prints it to a text file on the users desktop. 
-        public void WriteToFile(PrintObject request)
+        public void WriteToFile(PrintEntriesRequestModel Request)
         {
             PrintEntriesResponseModel response = new PrintEntriesResponseModel();
+            PrintObject po = GetDataForPrint(Request.CaseID);
             var outputFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
-                             $"Case /{request.CaseID} Details.txt";
+                             $"Case /{po.CaseID} Details.txt";
+            
 
-            double M2price = request.Price / request.InteriorArea;
+            double M2price = po.Price / po.InteriorArea;
 
             using (StreamWriter sw = File.CreateText(outputFilePath))
             {
                 sw.WriteLine($"Printed at: {DateTime.Now}");
                 sw.WriteLine(" ");
                 sw.WriteLine(" ");
-                sw.WriteLine($" Your Realtor was {request.RealtorName} ");
-                sw.WriteLine($" Phone: {request.RealtorPhone} ");
+                sw.WriteLine($" Your Realtor was {po.RealtorName} ");
+                sw.WriteLine($" Phone: {po.RealtorPhone} ");
                 sw.WriteLine(" ");
-                sw.WriteLine($"Case number {request.CaseID}");
-                sw.WriteLine($"Current price {request.Price}");
-                sw.WriteLine($"Adresss {request.AddressLine1}, {request.AddressLine2}");
-                sw.WriteLine($"Postal code {request.PostalCode}");
+                sw.WriteLine($"Case number {po.CaseID}");
+                sw.WriteLine($"Current price {po.Price}");
+                sw.WriteLine($"Adresss {po.AddressLine1}, {po.AddressLine2}");
+                sw.WriteLine($"Postal code {po.PostalCode}");
                 sw.WriteLine(" ");
                 sw.WriteLine(" ");
-                sw.WriteLine($"The listing was created on {request.CreationDate}");
-                if (request.ClosedDate != null)
+                sw.WriteLine($"The listing was created on {po.CreationDate}");
+                if (po.ClosedDate != null)
                 {
                     sw.WriteLine(" ");
-                    sw.WriteLine($"The listing was finalized on {request.ClosedDate}");
+                    sw.WriteLine($"The listing was finalized on {po.ClosedDate}");
                 }
-                sw.WriteLine($"The building was built in {request.BuildYear}");
+                sw.WriteLine($"The building was built in {po.BuildYear}");
                 sw.WriteLine(" ");
-                sw.WriteLine($"The insde area of the property is {request.InteriorArea} m2");
-                sw.WriteLine($"The outside area of the property is {request.ExteriorArea} m2");
+                sw.WriteLine($"The insde area of the property is {po.InteriorArea} m2");
+                sw.WriteLine($"The outside area of the property is {po.ExteriorArea} m2");
                 sw.WriteLine(" ");
-                sw.WriteLine($"This property cost {M2price} per m2, and the average for the area is {request.AverageAreaPrice}");
+                sw.WriteLine($"This property cost {M2price} per m2, and the average for the area is {po.AverageAreaPrice}");
 
                 response.success = true;
                 sw.Close();
             }
             PrintEntriesOutput.PrintSuccess(response);
         }
-        public PrintObject GetDataForPrint(int CaseID)
+        public PrintObject GetDataForPrint(int caseId)
         {
             IAddressCRUD addressCRUD = new AddressCRUD();
             ICaseCRUD caseCRUD = new CaseCRUD();
@@ -66,11 +67,11 @@ namespace UseCases.PrintEntries
             IRealtorCRUD realtorCRUD = new RealtorCRUD();
             PrintObject printObject = new PrintObject();
             CalculateAverageWithIntegerInput calc = new CalculateAverageWithIntegerInput();
-            Entities.Case workingCase = caseCRUD.ReadCase(CaseID);
+            Entities.Case workingCase = caseCRUD.ReadCase(caseId);
 
             Entities.Realtor workingRealtor = realtorCRUD.ReadRealtor(workingCase.Realtor.RealtorID);
 
-            Entities.Property workingProperty = propertyCRUD.ReadProperty(CaseID);
+            Entities.Property workingProperty = propertyCRUD.ReadProperty(caseId);
 
             Entities.Address workingAddress = addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
 

@@ -36,8 +36,6 @@
             this.button_AddToList = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ListboxAvailableAreaCodes = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -48,9 +46,9 @@
             this.button_check.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_check.Image = ((System.Drawing.Image)(resources.GetObject("button_check.Image")));
             this.button_check.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_check.Location = new System.Drawing.Point(128, 602);
+            this.button_check.Location = new System.Drawing.Point(717, 602);
             this.button_check.Name = "button_check";
-            this.button_check.Size = new System.Drawing.Size(211, 78);
+            this.button_check.Size = new System.Drawing.Size(300, 78);
             this.button_check.TabIndex = 0;
             this.button_check.Text = "Check";
             this.button_check.UseVisualStyleBackColor = true;
@@ -61,23 +59,23 @@
             this.listBox_AveragePricePerSquareMeter.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listBox_AveragePricePerSquareMeter.FormattingEnabled = true;
             this.listBox_AveragePricePerSquareMeter.ItemHeight = 25;
-            this.listBox_AveragePricePerSquareMeter.Location = new System.Drawing.Point(472, 169);
+            this.listBox_AveragePricePerSquareMeter.Location = new System.Drawing.Point(86, 179);
             this.listBox_AveragePricePerSquareMeter.Name = "listBox_AveragePricePerSquareMeter";
-            this.listBox_AveragePricePerSquareMeter.Size = new System.Drawing.Size(619, 354);
+            this.listBox_AveragePricePerSquareMeter.Size = new System.Drawing.Size(931, 354);
             this.listBox_AveragePricePerSquareMeter.TabIndex = 1;
             // 
             // textBox_AreaCodeInput
             // 
             this.textBox_AreaCodeInput.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_AreaCodeInput.Location = new System.Drawing.Point(127, 565);
+            this.textBox_AreaCodeInput.Location = new System.Drawing.Point(717, 563);
             this.textBox_AreaCodeInput.Name = "textBox_AreaCodeInput";
-            this.textBox_AreaCodeInput.Size = new System.Drawing.Size(225, 31);
+            this.textBox_AreaCodeInput.Size = new System.Drawing.Size(300, 31);
             this.textBox_AreaCodeInput.TabIndex = 2;
             // 
             // textBox_AvaragePricePerSquareMeter
             // 
             this.textBox_AvaragePricePerSquareMeter.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_AvaragePricePerSquareMeter.Location = new System.Drawing.Point(472, 564);
+            this.textBox_AvaragePricePerSquareMeter.Location = new System.Drawing.Point(86, 562);
             this.textBox_AvaragePricePerSquareMeter.Name = "textBox_AvaragePricePerSquareMeter";
             this.textBox_AvaragePricePerSquareMeter.ReadOnly = true;
             this.textBox_AvaragePricePerSquareMeter.Size = new System.Drawing.Size(300, 33);
@@ -89,9 +87,9 @@
             this.button_AddToList.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_AddToList.Image = ((System.Drawing.Image)(resources.GetObject("button_AddToList.Image")));
             this.button_AddToList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_AddToList.Location = new System.Drawing.Point(471, 602);
+            this.button_AddToList.Location = new System.Drawing.Point(86, 602);
             this.button_AddToList.Name = "button_AddToList";
-            this.button_AddToList.Size = new System.Drawing.Size(211, 78);
+            this.button_AddToList.Size = new System.Drawing.Size(300, 78);
             this.button_AddToList.TabIndex = 4;
             this.button_AddToList.Text = "Add to list";
             this.button_AddToList.UseVisualStyleBackColor = true;
@@ -102,7 +100,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(127, 537);
+            this.label1.Location = new System.Drawing.Point(86, 536);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 6;
@@ -113,39 +111,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(472, 536);
+            this.label2.Location = new System.Drawing.Point(677, 536);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(340, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Average price per square meter";
-            // 
-            // ListboxAvailableAreaCodes
-            // 
-            this.ListboxAvailableAreaCodes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ListboxAvailableAreaCodes.FormattingEnabled = true;
-            this.ListboxAvailableAreaCodes.ItemHeight = 25;
-            this.ListboxAvailableAreaCodes.Location = new System.Drawing.Point(127, 170);
-            this.ListboxAvailableAreaCodes.Name = "ListboxAvailableAreaCodes";
-            this.ListboxAvailableAreaCodes.Size = new System.Drawing.Size(225, 354);
-            this.ListboxAvailableAreaCodes.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(127, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 23);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Available area codes";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(471, 143);
+            this.label5.Location = new System.Drawing.Point(86, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(239, 23);
             this.label5.TabIndex = 12;
@@ -155,7 +132,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(11, 95);
+            this.label4.Location = new System.Drawing.Point(12, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(172, 25);
             this.label4.TabIndex = 13;
@@ -168,8 +145,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.ListboxAvailableAreaCodes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_AddToList);
@@ -197,8 +172,6 @@
         private System.Windows.Forms.Button button_AddToList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox ListboxAvailableAreaCodes;
-        private System.Windows.Forms.Label label3;
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

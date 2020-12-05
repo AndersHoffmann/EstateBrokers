@@ -6,6 +6,6 @@ namespace UseCases.PrintEntries
 {
     public interface IPrintEntriesOutput
     {
-        public bool PrintSuccess(PrintEntriesResponseModel responseModel);
+        public void PrintSuccess(PrintEntriesResponseModel responseModel);
     }
 }

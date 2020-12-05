@@ -250,7 +250,7 @@ namespace GUI
             // 
             // textBox_FinalPrice
             // 
-            this.textBox_FinalPrice.Location = new System.Drawing.Point(474, 263);
+            this.textBox_FinalPrice.Location = new System.Drawing.Point(491, 264);
             this.textBox_FinalPrice.Name = "textBox_FinalPrice";
             this.textBox_FinalPrice.ReadOnly = true;
             this.textBox_FinalPrice.Size = new System.Drawing.Size(325, 31);
@@ -261,7 +261,7 @@ namespace GUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(474, 238);
+            this.label1.Location = new System.Drawing.Point(491, 238);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(263, 23);
             this.label1.TabIndex = 52;
@@ -292,7 +292,7 @@ namespace GUI
             this.button_Estimate.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button_Estimate.Image = ((System.Drawing.Image)(resources.GetObject("button_Estimate.Image")));
             this.button_Estimate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Estimate.Location = new System.Drawing.Point(474, 310);
+            this.button_Estimate.Location = new System.Drawing.Point(491, 310);
             this.button_Estimate.Name = "button_Estimate";
             this.button_Estimate.Size = new System.Drawing.Size(132, 49);
             this.button_Estimate.TabIndex = 55;

@@ -38,6 +38,7 @@
             // 
             // button_cases
             // 
+            this.button_cases.BackColor = System.Drawing.Color.AliceBlue;
             this.button_cases.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_cases.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_cases.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -46,7 +47,7 @@
             this.button_cases.Size = new System.Drawing.Size(1408, 107);
             this.button_cases.TabIndex = 0;
             this.button_cases.Text = "Cases";
-            this.button_cases.UseVisualStyleBackColor = true;
+            this.button_cases.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -72,6 +73,7 @@
             // 
             // button_OpenHouse
             // 
+            this.button_OpenHouse.BackColor = System.Drawing.Color.AliceBlue;
             this.button_OpenHouse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_OpenHouse.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_OpenHouse.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -80,10 +82,11 @@
             this.button_OpenHouse.Size = new System.Drawing.Size(1408, 107);
             this.button_OpenHouse.TabIndex = 3;
             this.button_OpenHouse.Text = "Open house";
-            this.button_OpenHouse.UseVisualStyleBackColor = true;
+            this.button_OpenHouse.UseVisualStyleBackColor = false;
             // 
             // button_Estimates
             // 
+            this.button_Estimates.BackColor = System.Drawing.Color.AliceBlue;
             this.button_Estimates.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_Estimates.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_Estimates.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -92,10 +95,11 @@
             this.button_Estimates.Size = new System.Drawing.Size(1408, 107);
             this.button_Estimates.TabIndex = 4;
             this.button_Estimates.Text = "Estimates";
-            this.button_Estimates.UseVisualStyleBackColor = true;
+            this.button_Estimates.UseVisualStyleBackColor = false;
             // 
             // button_NotOnTheList
             // 
+            this.button_NotOnTheList.BackColor = System.Drawing.Color.AliceBlue;
             this.button_NotOnTheList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_NotOnTheList.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_NotOnTheList.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -104,7 +108,7 @@
             this.button_NotOnTheList.Size = new System.Drawing.Size(1408, 107);
             this.button_NotOnTheList.TabIndex = 5;
             this.button_NotOnTheList.Text = "Not on the list? ";
-            this.button_NotOnTheList.UseVisualStyleBackColor = true;
+            this.button_NotOnTheList.UseVisualStyleBackColor = false;
             // 
             // SupportPage
             // 
