@@ -39,6 +39,8 @@ namespace Database.Login
                 SqlConnection conn = new SqlConnection(sqlConn);
                 using (SqlCommand cmd = new SqlCommand())
                 {
+                    Thread.CurrentThread.IsBackground = true;
+
                     cmd.Connection = conn;
 
                     cmd.CommandText = "spLoginCheck_UserNameAndPassword";
