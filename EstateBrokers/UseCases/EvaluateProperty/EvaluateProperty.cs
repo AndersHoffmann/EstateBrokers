@@ -7,53 +7,35 @@ namespace UseCases.OpenHouse
 {
     public class EvaluateProperty : IEvaluatePropertyInput
     {
-        public IEvaluatePropertyOutput OpenHouseOutput { get; set; }
+        public IEvaluatePropertyOutput EvaluatePropertyOutput { get; set; }
 
-        public EvaluateProperty(IEvaluatePropertyOutput openHouseOutput)
+        public EvaluateProperty(IEvaluatePropertyOutput evaluatePropertyOutput)
         {
-            OpenHouseOutput = openHouseOutput;
-        }
-        public void RunOpenHouse(EvaluatePropertyRequestModel openHouseRequestModel)
-        {
-
-            ICaseCRUD caseCRUD = new CaseCRUD();
-            List<Entities.Realtor> realtorList = new List<Entities.Realtor>();
-            bool success;
-            realtorList[0] = openHouseRequestModel.Realtor1;
-            realtorList[1] = openHouseRequestModel.Realtor2;
-            realtorList[2] = openHouseRequestModel.Realtor3;
-
-            EvaluatePropertyResponseModel response = new EvaluatePropertyResponseModel();
-            Random rnd = new Random();
-            List<List<int>> CaseIDLists = new List<List<int>>();
-            List<Entities.Case> Cases = caseCRUD.ReadAPreDefinedNumberOfCasesWithNoRealtor(18);
-
-            if (Cases.Count != 18)
-            {
-                success = false;
-                response.HousesAssignedSuccessfully = success;
-                OpenHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
-            }
-            else
-            {
-                for (int i = 1; i < Cases.Count; i++)
-                {
-
-                    List<Entities.Realtor> tempArray = realtorList.OrderBy(x => rnd.Next()).ToList();
-
-                    Cases[i].Realtor = tempArray[i % 3];
-                    CaseIDLists[i % 3].Add(Cases[i].CaseID);
-                }
-                success = true;
-
-                response.Realtor1Cases = CaseIDLists[0];
-                response.Realtor1Cases = CaseIDLists[1];
-                response.Realtor1Cases = CaseIDLists[2];
-                response.HousesAssignedSuccessfully = success;
-                OpenHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
-            }
+            EvaluatePropertyOutput = evaluatePropertyOutput;
         }
 
+        public void MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel)
+        {
+
+            var response = new EvaluatePropertyResponseModel();
+
+            double baseSquareMeterPrice = 5000;
+
+            double conditionMultiplier = evaluatePropertyRequestModel.HouseCondition;
+
+            baseSquareMeterPrice *= 1 + conditionMultiplier / 20;
+
+            baseSquareMeterPrice = evaluatePropertyRequestModel.IsDesignerHouse ? baseSquareMeterPrice * 1.6 : baseSquareMeterPrice;
+            baseSquareMeterPrice = evaluatePropertyRequestModel.HasBasement ? baseSquareMeterPrice * 1.2 : baseSquareMeterPrice;
+            baseSquareMeterPrice = evaluatePropertyRequestModel.HasGarden ? baseSquareMeterPrice * 1.4 : baseSquareMeterPrice;
+            baseSquareMeterPrice = evaluatePropertyRequestModel.HasGarage ? baseSquareMeterPrice * 1.1 : baseSquareMeterPrice;
+
+            double evaluation = baseSquareMeterPrice * evaluatePropertyRequestModel.SquareMeter;
+
+            response.PropertyValuation = evaluation;
+            EvaluatePropertyOutput.DisplayPropertyEvaluation(response);
+
+        }
     }
 }
 

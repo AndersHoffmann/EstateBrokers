@@ -7,8 +7,11 @@ namespace UseCases.OpenHouse
 {
     public class EvaluatePropertyRequestModel
     {
-        public Realtor Realtor1 { get; set; }
-        public Realtor Realtor2 { get; set; }
-        public Realtor Realtor3 { get; set; }
+        public int SquareMeter { get; set; }
+        public int HouseCondition { get; set; }
+        public bool IsDesignerHouse { get; set; }
+        public bool  HasGarden { get; set; }
+        public bool HasBasement { get; set; }
+        public bool HasGarage { get; set; }
     }
 }

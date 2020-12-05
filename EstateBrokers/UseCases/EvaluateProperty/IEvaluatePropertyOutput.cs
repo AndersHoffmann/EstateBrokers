@@ -6,6 +6,6 @@ namespace UseCases.OpenHouse
 {
     public interface IEvaluatePropertyOutput
     {
-        public void ReturnSuccessStateAndAsssignedPropertyIDs(EvaluatePropertyResponseModel openHouseResponseModel);
+        public void DisplayPropertyEvaluation(EvaluatePropertyResponseModel evaluatePropertyResponseModel);
     }
 }

@@ -6,6 +6,6 @@ namespace UseCases.OpenHouse
 {
     public interface IEvaluatePropertyInput
     {
-        public void RunOpenHouse(EvaluatePropertyRequestModel openHouseRequestModel);
+        public void MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel);
     }
 }
