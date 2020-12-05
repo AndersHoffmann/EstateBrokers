@@ -3,7 +3,7 @@
     public interface ILoginInput
     {
 
-        public void RunAuthLogin(LoginRequestModel request);
+        public void Auth(LoginRequestModel request);
 
 
     }

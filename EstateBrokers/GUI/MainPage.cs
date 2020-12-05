@@ -19,6 +19,7 @@ namespace GUI
         {
             
             InitializeComponent();
+            loginPage1.BringToFront();
         }
 
         private void button_Close_FrontPage_Click(object sender, EventArgs e)
@@ -43,6 +44,11 @@ namespace GUI
             CasesPage cs = new CasesPage();
             cs.BringToFront();
 
+
+        }
+
+        private void button_support_mainpage_Click(object sender, EventArgs e)
+        {
 
         }
     }

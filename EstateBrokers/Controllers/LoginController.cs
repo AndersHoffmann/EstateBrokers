@@ -19,7 +19,7 @@ namespace Controllers
             request.username = username;
             request.password = password;
 
-            LoginInput.RunAuthLogin(request);
+            LoginInput.Auth(request);
         }
 
     }
