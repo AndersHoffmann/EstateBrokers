@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace GUI
@@ -13,16 +8,26 @@ namespace GUI
         public CasesPage()
         {
             InitializeComponent();
+            HideAllUserControls();
         }
 
         private void button_ShowCases_Click(object sender, EventArgs e)
         {
-            OnCasesPage_createEntryPage.BringToFront();
+            getEntryPage1.Show();
+            getEntryPage1.BringToFront();
         }
 
-        private void CasesPage_Load(object sender, EventArgs e)
+        private void button_CreateCase_Click(object sender, EventArgs e)
         {
-            OnCasesPage_createEntryPage.SendToBack();
+            createEntryPage1.Show();
+            createEntryPage1.BringToFront();
+        }
+
+        private void HideAllUserControls()
+        {
+            createEntryPage1.Hide();
+            getEntryPage1.Hide();
+
         }
     }
 }

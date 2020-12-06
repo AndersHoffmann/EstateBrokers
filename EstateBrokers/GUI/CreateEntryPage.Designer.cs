@@ -328,7 +328,7 @@ namespace GUI
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(14, 49);
+            this.label12.Location = new System.Drawing.Point(17, 22);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(241, 44);
             this.label12.TabIndex = 31;

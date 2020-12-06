@@ -17,38 +17,62 @@ namespace GUI
         
         public MainPage()
         {
-            
+       
             InitializeComponent();
             loginPage1.BringToFront();
+            HideAllUserControls();
+
         }
 
         private void button_Close_FrontPage_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             this.Close();
+
+        }
+
+
+        private void button_Home_FrontPage_Click(object sender, EventArgs e)
+        {
+            HideAllUserControls();
+            panel_MainContainer.BringToFront();
+           
+        }
+
+        private void button_cases_mainpage_Click(object sender, EventArgs e)
+        {
+            casesPage1.Show();
+            casesPage1.BringToFront();
+        }
+
+        private void button_openhouse_mainpage_Click(object sender, EventArgs e)
+        {
+            openHousePage1.Show();
+            openHousePage1.BringToFront();
 
         }
 
         private void button_estimates_mainpage_Click(object sender, EventArgs e)
         {
-            
-        }
 
-        private void estimatesPage1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button_cases_mainpage_Click(object sender, EventArgs e)
-        {
-
-            CasesPage cs = new CasesPage();
-            cs.BringToFront();
-
+            estimatesPage1.Show();
+            estimatesPage1.BringToFront();
 
         }
 
         private void button_support_mainpage_Click(object sender, EventArgs e)
         {
+            supportPage1.Show();
+            supportPage1.BringToFront();
+
+        }
+        private void HideAllUserControls()
+        {
+
+            casesPage1.Hide();
+            openHousePage1.Hide();
+            estimatesPage1.Hide();
+            supportPage1.Hide();
 
         }
     }
