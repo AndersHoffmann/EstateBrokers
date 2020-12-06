@@ -31,9 +31,9 @@ namespace GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PropertyValuationPage));
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textbox_SquareMeter = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkbox_DesignerHouse = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -45,18 +45,16 @@ namespace GUI
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.trackbar_HouseCondition = new System.Windows.Forms.TrackBar();
+            this.checkBox_Garage = new System.Windows.Forms.CheckBox();
+            this.checkbox_Basement = new System.Windows.Forms.CheckBox();
+            this.checkbox_Garden = new System.Windows.Forms.CheckBox();
             this.textBox_FinalPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_Estimate = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackbar_HouseCondition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,46 +63,46 @@ namespace GUI
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label18.Location = new System.Drawing.Point(77, 340);
+            this.label18.Location = new System.Drawing.Point(46, 238);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(183, 23);
             this.label18.TabIndex = 50;
             this.label18.Text = "House informations";
             // 
-            // textBox3
+            // textbox_SquareMeter
             // 
-            this.textBox3.Location = new System.Drawing.Point(77, 410);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 31);
-            this.textBox3.TabIndex = 49;
+            this.textbox_SquareMeter.Location = new System.Drawing.Point(46, 308);
+            this.textbox_SquareMeter.Name = "textbox_SquareMeter";
+            this.textbox_SquareMeter.Size = new System.Drawing.Size(188, 31);
+            this.textbox_SquareMeter.TabIndex = 49;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label17.Location = new System.Drawing.Point(72, 384);
+            this.label17.Location = new System.Drawing.Point(41, 282);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(193, 23);
             this.label17.TabIndex = 48;
             this.label17.Text = "House square meter";
             // 
-            // checkBox4
+            // checkbox_DesignerHouse
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.checkBox4.Location = new System.Drawing.Point(77, 573);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(168, 27);
-            this.checkBox4.TabIndex = 47;
-            this.checkBox4.Text = "Designer house";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkbox_DesignerHouse.AutoSize = true;
+            this.checkbox_DesignerHouse.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkbox_DesignerHouse.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.checkbox_DesignerHouse.Location = new System.Drawing.Point(46, 471);
+            this.checkbox_DesignerHouse.Name = "checkbox_DesignerHouse";
+            this.checkbox_DesignerHouse.Size = new System.Drawing.Size(168, 27);
+            this.checkbox_DesignerHouse.TabIndex = 47;
+            this.checkbox_DesignerHouse.Text = "Designer house";
+            this.checkbox_DesignerHouse.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(85, 510);
+            this.label16.Location = new System.Drawing.Point(54, 408);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(21, 22);
             this.label16.TabIndex = 46;
@@ -113,7 +111,7 @@ namespace GUI
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(108, 510);
+            this.label15.Location = new System.Drawing.Point(77, 408);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(21, 22);
             this.label15.TabIndex = 45;
@@ -122,7 +120,7 @@ namespace GUI
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(129, 510);
+            this.label14.Location = new System.Drawing.Point(98, 408);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 22);
             this.label14.TabIndex = 44;
@@ -131,7 +129,7 @@ namespace GUI
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(151, 510);
+            this.label13.Location = new System.Drawing.Point(120, 408);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(21, 22);
             this.label13.TabIndex = 43;
@@ -140,7 +138,7 @@ namespace GUI
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(176, 510);
+            this.label12.Location = new System.Drawing.Point(145, 408);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(21, 22);
             this.label12.TabIndex = 42;
@@ -149,7 +147,7 @@ namespace GUI
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(197, 510);
+            this.label11.Location = new System.Drawing.Point(166, 408);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(21, 22);
             this.label11.TabIndex = 41;
@@ -158,7 +156,7 @@ namespace GUI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(219, 510);
+            this.label10.Location = new System.Drawing.Point(188, 408);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(21, 22);
             this.label10.TabIndex = 40;
@@ -167,7 +165,7 @@ namespace GUI
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(240, 510);
+            this.label9.Location = new System.Drawing.Point(209, 408);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(21, 22);
             this.label9.TabIndex = 39;
@@ -176,7 +174,7 @@ namespace GUI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(257, 510);
+            this.label8.Location = new System.Drawing.Point(226, 408);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 22);
             this.label8.TabIndex = 38;
@@ -185,7 +183,7 @@ namespace GUI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(64, 510);
+            this.label7.Location = new System.Drawing.Point(33, 408);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 22);
             this.label7.TabIndex = 37;
@@ -196,57 +194,57 @@ namespace GUI
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(77, 456);
+            this.label6.Location = new System.Drawing.Point(46, 354);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(158, 23);
             this.label6.TabIndex = 36;
             this.label6.Text = "House condition";
             // 
-            // trackBar1
+            // trackbar_HouseCondition
             // 
-            this.trackBar1.AutoSize = false;
-            this.trackBar1.Location = new System.Drawing.Point(59, 482);
-            this.trackBar1.Minimum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(226, 45);
-            this.trackBar1.TabIndex = 35;
-            this.trackBar1.Value = 1;
+            this.trackbar_HouseCondition.AutoSize = false;
+            this.trackbar_HouseCondition.Location = new System.Drawing.Point(28, 380);
+            this.trackbar_HouseCondition.Minimum = 1;
+            this.trackbar_HouseCondition.Name = "trackbar_HouseCondition";
+            this.trackbar_HouseCondition.Size = new System.Drawing.Size(226, 45);
+            this.trackbar_HouseCondition.TabIndex = 35;
+            this.trackbar_HouseCondition.Value = 1;
             // 
-            // checkBox3
+            // checkBox_Garage
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.checkBox3.Location = new System.Drawing.Point(77, 672);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(102, 27);
-            this.checkBox3.TabIndex = 34;
-            this.checkBox3.Text = "Garage";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox_Garage.AutoSize = true;
+            this.checkBox_Garage.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox_Garage.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.checkBox_Garage.Location = new System.Drawing.Point(46, 570);
+            this.checkBox_Garage.Name = "checkBox_Garage";
+            this.checkBox_Garage.Size = new System.Drawing.Size(102, 27);
+            this.checkBox_Garage.TabIndex = 34;
+            this.checkBox_Garage.Text = "Garage";
+            this.checkBox_Garage.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkbox_Basement
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.checkBox2.Location = new System.Drawing.Point(77, 639);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(120, 27);
-            this.checkBox2.TabIndex = 33;
-            this.checkBox2.Text = "Basement";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkbox_Basement.AutoSize = true;
+            this.checkbox_Basement.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkbox_Basement.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.checkbox_Basement.Location = new System.Drawing.Point(46, 537);
+            this.checkbox_Basement.Name = "checkbox_Basement";
+            this.checkbox_Basement.Size = new System.Drawing.Size(120, 27);
+            this.checkbox_Basement.TabIndex = 33;
+            this.checkbox_Basement.Text = "Basement";
+            this.checkbox_Basement.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkbox_Garden
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.checkBox1.Location = new System.Drawing.Point(77, 606);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(100, 27);
-            this.checkBox1.TabIndex = 32;
-            this.checkBox1.Text = "Garden";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkbox_Garden.AutoSize = true;
+            this.checkbox_Garden.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkbox_Garden.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.checkbox_Garden.Location = new System.Drawing.Point(46, 504);
+            this.checkbox_Garden.Name = "checkbox_Garden";
+            this.checkbox_Garden.Size = new System.Drawing.Size(100, 27);
+            this.checkbox_Garden.TabIndex = 32;
+            this.checkbox_Garden.Text = "Garden";
+            this.checkbox_Garden.UseVisualStyleBackColor = true;
             // 
             // textBox_FinalPrice
             // 
@@ -267,24 +265,6 @@ namespace GUI
             this.label1.TabIndex = 52;
             this.label1.Text = "Final estimated house price";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(77, 259);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "House price";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(78, 284);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 31);
-            this.textBox1.TabIndex = 54;
-            // 
             // button_Estimate
             // 
             this.button_Estimate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -298,6 +278,7 @@ namespace GUI
             this.button_Estimate.TabIndex = 55;
             this.button_Estimate.Text = "     Estimate";
             this.button_Estimate.UseVisualStyleBackColor = true;
+            this.button_Estimate.Click += new System.EventHandler(this.button_Estimate_Click);
             // 
             // pictureBox1
             // 
@@ -327,14 +308,12 @@ namespace GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_Estimate);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_FinalPrice);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textbox_SquareMeter);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkbox_DesignerHouse);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -346,15 +325,15 @@ namespace GUI
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.trackbar_HouseCondition);
+            this.Controls.Add(this.checkBox_Garage);
+            this.Controls.Add(this.checkbox_Basement);
+            this.Controls.Add(this.checkbox_Garden);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "PropertyValuationPage";
             this.Size = new System.Drawing.Size(1165, 852);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackbar_HouseCondition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -364,9 +343,9 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textbox_SquareMeter;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkbox_DesignerHouse;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -378,14 +357,12 @@ namespace GUI
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TrackBar trackbar_HouseCondition;
+        private System.Windows.Forms.CheckBox checkBox_Garage;
+        private System.Windows.Forms.CheckBox checkbox_Basement;
+        private System.Windows.Forms.CheckBox checkbox_Garden;
         private System.Windows.Forms.TextBox textBox_FinalPrice;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_Estimate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
