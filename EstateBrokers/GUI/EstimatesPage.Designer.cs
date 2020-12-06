@@ -145,6 +145,7 @@ namespace GUI
             this.button_LoanEstimate.TabIndex = 11;
             this.button_LoanEstimate.Text = "Loan estimate";
             this.button_LoanEstimate.UseVisualStyleBackColor = true;
+            this.button_LoanEstimate.Click += new System.EventHandler(this.button_LoanEstimate_Click);
             // 
             // label1
             // 
