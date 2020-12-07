@@ -4,15 +4,28 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using ViewModels;
+using Presenters;
+using UseCases.PaymentCalculator;
+using Gateways;
+using Controllers;
 using System.Windows.Forms;
+using Bank;
 
 namespace GUI
 {
-    public partial class EstimatesPage : UserControl
+    public partial class EstimatesPage : UserControl, IPaymentCalculatorFrontEnd
     {
+        PaymentCalculatorController paymentCalculateController { get; set; }
+
         public EstimatesPage()
         {
-           
+            IBank bank = new SimulatedBankPaymentCalculator();
+            IPaymentCalculatorOutput paymentCalculatorOutput = new PaymentCalculatorPresenter(this);
+            IPaymentCalculatorInput paymentCalculatorInput = new CalculateMonthlyPayment(paymentCalculatorOutput, bank);
+            paymentCalculateController = new PaymentCalculatorController(paymentCalculatorInput);
+
+
             InitializeComponent();
             HideAllUserControlsOnEstimatePage();
         }
@@ -41,8 +54,13 @@ namespace GUI
         private void button_LoanEstimate_Click(object sender, EventArgs e)
         {
 
+            paymentCalculateController.CalculatePayment(textBox_HousePrice.Text, textBox_NumberOfPayments.Text);
 
+        }
 
+        public void PricePerMonthToText(PaymentCalculatorViewModel paymentCalculatorView)
+        {
+            textBox_PricePerMonth.Text = paymentCalculatorView.PricePerMonth.ToString();
         }
     }
 }
