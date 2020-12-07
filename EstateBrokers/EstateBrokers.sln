@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ViewModels\ViewModels.csproj", "{1609011E-418E-4D53-B313-36E655FB7F78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{BBB792EF-C79D-4CB5-BDF5-DDBF811B2F66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank", "Bank\Bank.csproj", "{BBB792EF-C79D-4CB5-BDF5-DDBF811B2F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionContainers", "DependencyInjectionContainers\DependencyInjectionContainers.csproj", "{71F79C18-41EF-4355-A593-4272527C5E4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{BBB792EF-C79D-4CB5-BDF5-DDBF811B2F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBB792EF-C79D-4CB5-BDF5-DDBF811B2F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBB792EF-C79D-4CB5-BDF5-DDBF811B2F66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F79C18-41EF-4355-A593-4272527C5E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F79C18-41EF-4355-A593-4272527C5E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F79C18-41EF-4355-A593-4272527C5E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F79C18-41EF-4355-A593-4272527C5E4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{9B157178-4FE9-4D3D-9085-F05ECBF7636D} = {6B4B0B25-5260-4CAD-9C60-A77BA4256F49}
 		{1609011E-418E-4D53-B313-36E655FB7F78} = {147FF269-3D51-41B0-94A3-FC3D47F36510}
 		{BBB792EF-C79D-4CB5-BDF5-DDBF811B2F66} = {A7A244FD-393D-4D63-BC8E-960954277171}
+		{71F79C18-41EF-4355-A593-4272527C5E4A} = {A7A244FD-393D-4D63-BC8E-960954277171}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0BD59E1-DBBB-48D6-B224-F2CA1A67DB12}
