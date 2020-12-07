@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace UseCases.PaymentCalculator
+﻿namespace UseCases.PaymentCalculator
 {
-  public interface IPaymentCalculatorInput
+    public interface IPaymentCalculatorInput
     {
-
+        public void CalculatePayment(PaymentCalculatorRequestModel request);
 
     }
 }

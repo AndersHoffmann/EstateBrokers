@@ -2,5 +2,8 @@
 {
     public class PaymentCalculatorResponseModel
     {
+
+        public double PricePerMonth { get; set; }
+
     }
 }

@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace UseCases.PaymentCalculator
+﻿namespace UseCases.PaymentCalculator
 {
-    interface IPaymentCalculatorOutput
+    public interface IPaymentCalculatorOutput
     {
 
-
+        public void FinalPricePerMonth(PaymentCalculatorResponseModel response);
 
     }
 }
