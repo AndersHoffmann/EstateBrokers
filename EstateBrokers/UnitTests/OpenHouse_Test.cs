@@ -42,7 +42,7 @@ namespace UnitTests
             OpenHouseLogic openHouseLogic = new OpenHouseLogic();
 
             //Act
-            openHouseLogic.RunOpenHouse(realtors, Cases);
+            //openHouseLogic.RunOpenHouse(realtors);
 
             int realtorOne = Cases.Count(s => s.Realtor.RealtorID == 0);
             int realtorTwo = Cases.Count(s => s.Realtor.RealtorID == 1);
