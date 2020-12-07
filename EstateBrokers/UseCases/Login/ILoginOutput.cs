@@ -1,4 +1,4 @@
-﻿namespace Database.Login
+﻿namespace UseCases.Login
 {
     public interface ILoginOutput
     {
