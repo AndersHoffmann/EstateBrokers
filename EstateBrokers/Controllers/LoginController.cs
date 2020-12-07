@@ -1,4 +1,4 @@
-﻿using Database.Login;
+﻿using UseCases.Login;
 
 namespace Controllers
 {
@@ -19,7 +19,7 @@ namespace Controllers
             request.username = username;
             request.password = password;
 
-            LoginInput.RunAuthLogin(request);
+            LoginInput.Auth(request);
         }
 
     }

@@ -14,5 +14,17 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void button_Clear_Click(object sender, EventArgs e)
+        {
+
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox)
+                {
+                    (control as TextBox).Clear();
+                }
+            }
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using UseCases.OpenHouse;
+using UseCases.EvaluateProperty;
 using UseCases.Statistics;
 
 namespace Controllers
@@ -11,9 +11,9 @@ namespace Controllers
         public EvaluatePropertyController(IEvaluatePropertyInput evaluatePropertyInput)
         {
             _evaluatePropertyInput = evaluatePropertyInput;
-            
+
         }
-       
+
         public void EstimateCode(string squareMeters, int houseCondition, bool isDesignerHouse, bool hasGarden, bool hasBasement, bool hasGarage)
         {
             EvaluatePropertyRequestModel request = new EvaluatePropertyRequestModel();
@@ -27,6 +27,6 @@ namespace Controllers
 
             _evaluatePropertyInput.MakeEvaluation(request);
         }
- 
+
     }
 }

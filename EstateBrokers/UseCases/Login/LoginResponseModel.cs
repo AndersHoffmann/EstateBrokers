@@ -1,5 +1,4 @@
-﻿
-namespace Database.Login
+﻿namespace UseCases.Login
 {
     public class LoginResponseModel
     {

@@ -1,18 +1,23 @@
-﻿using Gateways;
+﻿
+using Gateways;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace UseCases.OpenHouse
+namespace UseCases.EvaluateProperty
 {
     public class EvaluateProperty : IEvaluatePropertyInput
+
     {
+
         public IEvaluatePropertyOutput EvaluatePropertyOutput { get; set; }
 
         public EvaluateProperty(IEvaluatePropertyOutput evaluatePropertyOutput)
         {
             EvaluatePropertyOutput = evaluatePropertyOutput;
         }
+
+
 
         public void MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel)
         {

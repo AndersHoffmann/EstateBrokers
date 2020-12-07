@@ -1,12 +1,14 @@
-﻿using Entities;
+﻿
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UseCases.OpenHouse
+namespace UseCases.EvaluateProperty
 {
     public class EvaluatePropertyRequestModel
     {
+
         public int SquareMeter { get; set; }
         public int HouseCondition { get; set; }
         public bool IsDesignerHouse { get; set; }

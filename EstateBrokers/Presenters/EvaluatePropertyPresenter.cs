@@ -1,12 +1,17 @@
-﻿using System;
+﻿using UseCases.EvaluateProperty;
+using System;
 using UseCases.CreateEntry;
-using UseCases.OpenHouse;
+
 using ViewModels;
+
+
 namespace Presenters
+
 {
 
     public partial class EvaluatePropertyPresenter : IEvaluatePropertyOutput
     {
+
         public IEvaluatePropertyFrontEnd FrontEnd { get; set; }
 
         public EvaluatePropertyViewModel evaluatePropertyViewModel;

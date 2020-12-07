@@ -36,19 +36,18 @@
             this.panel_left_mainpage = new System.Windows.Forms.Panel();
             this.panel_botton_mainpage = new System.Windows.Forms.Panel();
             this.panel_right_mainpage = new System.Windows.Forms.Panel();
-            this.panel_Container_mainpage = new System.Windows.Forms.Panel();
-            this.loginPage1 = new GUI.LoginPage();
-            this.getEntryPage1 = new GUI.GetEntryPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_MainContainer = new System.Windows.Forms.Panel();
             this.button_support_mainpage = new System.Windows.Forms.Button();
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.propertyValuationPage1 = new GUI.PropertyValuationPage();
+            this.casesPage1 = new GUI.CasesPage();
+            this.estimatesPage1 = new GUI.EstimatesPage();
+            this.supportPage1 = new GUI.SupportPage();
+            this.openHousePage1 = new GUI.OpenHousePage();
+            this.loginPage1 = new GUI.LoginPage();
             this.panel_top_mainpage.SuspendLayout();
-            this.panel_Container_mainpage.SuspendLayout();
+            this.panel_MainContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_top_mainpage
@@ -97,6 +96,7 @@
             this.button_Home_FrontPage.TabIndex = 4;
             this.button_Home_FrontPage.Text = "Home";
             this.button_Home_FrontPage.UseVisualStyleBackColor = true;
+            this.button_Home_FrontPage.Click += new System.EventHandler(this.button_Home_FrontPage_Click);
             // 
             // panel_left_mainpage
             // 
@@ -125,57 +125,22 @@
             this.panel_right_mainpage.Size = new System.Drawing.Size(40, 920);
             this.panel_right_mainpage.TabIndex = 3;
             // 
-            // panel_Container_mainpage
+            // panel_MainContainer
             // 
-            this.panel_Container_mainpage.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_Container_mainpage.Controls.Add(this.propertyValuationPage1);
-            this.panel_Container_mainpage.Controls.Add(this.loginPage1);
-            this.panel_Container_mainpage.Controls.Add(this.getEntryPage1);
-            this.panel_Container_mainpage.Controls.Add(this.panel2);
-            this.panel_Container_mainpage.Controls.Add(this.panel1);
-            this.panel_Container_mainpage.Controls.Add(this.button_support_mainpage);
-            this.panel_Container_mainpage.Controls.Add(this.button_estimates_mainpage);
-            this.panel_Container_mainpage.Controls.Add(this.button_openhouse_mainpage);
-            this.panel_Container_mainpage.Controls.Add(this.button_cases_mainpage);
-            this.panel_Container_mainpage.Location = new System.Drawing.Point(46, 46);
-            this.panel_Container_mainpage.Name = "panel_Container_mainpage";
-            this.panel_Container_mainpage.Size = new System.Drawing.Size(1408, 908);
-            this.panel_Container_mainpage.TabIndex = 4;
-            // 
-            // loginPage1
-            // 
-            this.loginPage1.BackColor = System.Drawing.Color.White;
-            this.loginPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loginPage1.Location = new System.Drawing.Point(450, 200);
-            this.loginPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.loginPage1.Name = "loginPage1";
-            this.loginPage1.Size = new System.Drawing.Size(465, 405);
-            this.loginPage1.TabIndex = 4;
-            // 
-            // getEntryPage1
-            // 
-            this.getEntryPage1.BackColor = System.Drawing.Color.White;
-            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.getEntryPage1.Location = new System.Drawing.Point(129, 35);
-            this.getEntryPage1.Name = "getEntryPage1";
-            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
-            this.getEntryPage1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel2.Location = new System.Drawing.Point(691, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(39, 908);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel1.Location = new System.Drawing.Point(328, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(39, 908);
-            this.panel1.TabIndex = 1;
+            this.panel_MainContainer.BackColor = System.Drawing.Color.White;
+            this.panel_MainContainer.Controls.Add(this.loginPage1);
+            this.panel_MainContainer.Controls.Add(this.button_support_mainpage);
+            this.panel_MainContainer.Controls.Add(this.button_estimates_mainpage);
+            this.panel_MainContainer.Controls.Add(this.button_openhouse_mainpage);
+            this.panel_MainContainer.Controls.Add(this.button_cases_mainpage);
+            this.panel_MainContainer.Controls.Add(this.casesPage1);
+            this.panel_MainContainer.Controls.Add(this.estimatesPage1);
+            this.panel_MainContainer.Controls.Add(this.supportPage1);
+            this.panel_MainContainer.Controls.Add(this.openHousePage1);
+            this.panel_MainContainer.Location = new System.Drawing.Point(46, 43);
+            this.panel_MainContainer.Name = "panel_MainContainer";
+            this.panel_MainContainer.Size = new System.Drawing.Size(1423, 920);
+            this.panel_MainContainer.TabIndex = 4;
             // 
             // button_support_mainpage
             // 
@@ -187,9 +152,10 @@
             this.button_support_mainpage.Location = new System.Drawing.Point(1090, 0);
             this.button_support_mainpage.Name = "button_support_mainpage";
             this.button_support_mainpage.Size = new System.Drawing.Size(331, 908);
-            this.button_support_mainpage.TabIndex = 0;
+            this.button_support_mainpage.TabIndex = 1;
             this.button_support_mainpage.Text = "\r\n\r\nSupport";
             this.button_support_mainpage.UseVisualStyleBackColor = false;
+            this.button_support_mainpage.Click += new System.EventHandler(this.button_support_mainpage_Click);
             // 
             // button_estimates_mainpage
             // 
@@ -201,7 +167,7 @@
             this.button_estimates_mainpage.Location = new System.Drawing.Point(727, 0);
             this.button_estimates_mainpage.Name = "button_estimates_mainpage";
             this.button_estimates_mainpage.Size = new System.Drawing.Size(331, 908);
-            this.button_estimates_mainpage.TabIndex = 0;
+            this.button_estimates_mainpage.TabIndex = 2;
             this.button_estimates_mainpage.Text = "\r\n\r\nEstimates";
             this.button_estimates_mainpage.UseVisualStyleBackColor = false;
             this.button_estimates_mainpage.Click += new System.EventHandler(this.button_estimates_mainpage_Click);
@@ -216,9 +182,10 @@
             this.button_openhouse_mainpage.Location = new System.Drawing.Point(364, 0);
             this.button_openhouse_mainpage.Name = "button_openhouse_mainpage";
             this.button_openhouse_mainpage.Size = new System.Drawing.Size(331, 908);
-            this.button_openhouse_mainpage.TabIndex = 0;
+            this.button_openhouse_mainpage.TabIndex = 3;
             this.button_openhouse_mainpage.Text = " \r\n\r\n   \r\nOpen  house";
             this.button_openhouse_mainpage.UseVisualStyleBackColor = false;
+            this.button_openhouse_mainpage.Click += new System.EventHandler(this.button_openhouse_mainpage_Click);
             // 
             // button_cases_mainpage
             // 
@@ -230,42 +197,69 @@
             this.button_cases_mainpage.Location = new System.Drawing.Point(0, 0);
             this.button_cases_mainpage.Name = "button_cases_mainpage";
             this.button_cases_mainpage.Size = new System.Drawing.Size(331, 908);
-            this.button_cases_mainpage.TabIndex = 0;
+            this.button_cases_mainpage.TabIndex = 4;
             this.button_cases_mainpage.Text = "\r\n\r\nCases";
             this.button_cases_mainpage.UseVisualStyleBackColor = false;
             this.button_cases_mainpage.Click += new System.EventHandler(this.button_cases_mainpage_Click);
             // 
-            // panel3
+            // casesPage1
             // 
-            this.panel3.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel3.Location = new System.Drawing.Point(1101, 46);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(39, 908);
-            this.panel3.TabIndex = 3;
+            this.casesPage1.BackColor = System.Drawing.Color.White;
+            this.casesPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.casesPage1.Location = new System.Drawing.Point(-6, -3);
+            this.casesPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.casesPage1.Name = "casesPage1";
+            this.casesPage1.Size = new System.Drawing.Size(1427, 920);
+            this.casesPage1.TabIndex = 5;
+            // 
+            // estimatesPage1
+            // 
+            this.estimatesPage1.BackColor = System.Drawing.Color.White;
+            this.estimatesPage1.Location = new System.Drawing.Point(0, 0);
+            this.estimatesPage1.Name = "estimatesPage1";
+            this.estimatesPage1.Size = new System.Drawing.Size(1423, 908);
+            this.estimatesPage1.TabIndex = 6;
+            // 
+            // supportPage1
+            // 
+            this.supportPage1.BackColor = System.Drawing.Color.White;
+            this.supportPage1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.supportPage1.Location = new System.Drawing.Point(-2, 0);
+            this.supportPage1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.supportPage1.Name = "supportPage1";
+            this.supportPage1.Size = new System.Drawing.Size(1423, 908);
+            this.supportPage1.TabIndex = 7;
+            // 
+            // openHousePage1
+            // 
+            this.openHousePage1.BackColor = System.Drawing.Color.White;
+            this.openHousePage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.openHousePage1.Location = new System.Drawing.Point(-6, 0);
+            this.openHousePage1.Name = "openHousePage1";
+            this.openHousePage1.Size = new System.Drawing.Size(1429, 917);
+            this.openHousePage1.TabIndex = 8;
             // 
             // propertyValuationPage1
             // 
-            this.propertyValuationPage1.BackColor = System.Drawing.Color.White;
-            this.propertyValuationPage1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.propertyValuationPage1.Location = new System.Drawing.Point(129, 35);
-            this.propertyValuationPage1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.propertyValuationPage1.Name = "propertyValuationPage1";
-            this.propertyValuationPage1.Size = new System.Drawing.Size(1165, 852);
-            this.propertyValuationPage1.TabIndex = 5;
+            this.loginPage1.BackColor = System.Drawing.Color.White;
+            this.loginPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginPage1.Location = new System.Drawing.Point(-1, -3);
+            this.loginPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.loginPage1.Name = "loginPage1";
+            this.loginPage1.Size = new System.Drawing.Size(1424, 923);
+            this.loginPage1.TabIndex = 9;
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1500, 1000);
-            this.Controls.Add(this.panel_Container_mainpage);
+            this.Controls.Add(this.panel_MainContainer);
             this.Controls.Add(this.panel_right_mainpage);
             this.Controls.Add(this.panel_botton_mainpage);
             this.Controls.Add(this.panel_left_mainpage);
             this.Controls.Add(this.panel_top_mainpage);
-            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -274,7 +268,7 @@
             this.Text = "MainPage";
             this.panel_top_mainpage.ResumeLayout(false);
             this.panel_top_mainpage.PerformLayout();
-            this.panel_Container_mainpage.ResumeLayout(false);
+            this.panel_MainContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -287,17 +281,17 @@
         private System.Windows.Forms.Panel panel_right_mainpage;
         private System.Windows.Forms.Button button_Home_FrontPage;
         private System.Windows.Forms.Button button_Close_FrontPage;
-        private System.Windows.Forms.Panel panel_Container_mainpage;
-        private System.Windows.Forms.Button button_cases_mainpage;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel_MainContainer;
         private System.Windows.Forms.Button button_support_mainpage;
         private System.Windows.Forms.Button button_estimates_mainpage;
         private System.Windows.Forms.Button button_openhouse_mainpage;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private GetEntryPage getEntryPage1;
+        private System.Windows.Forms.Button button_cases_mainpage;
+        private CasesPage casesPage1;
+        private EstimatesPage estimatesPage1;
+        private SupportPage supportPage1;
+        private OpenHousePage openHousePage1;
         private LoginPage loginPage1;
         private PropertyValuationPage propertyValuationPage1;
     }

@@ -46,7 +46,7 @@
             this.button_check.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_check.Image = ((System.Drawing.Image)(resources.GetObject("button_check.Image")));
             this.button_check.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_check.Location = new System.Drawing.Point(717, 602);
+            this.button_check.Location = new System.Drawing.Point(86, 602);
             this.button_check.Name = "button_check";
             this.button_check.Size = new System.Drawing.Size(300, 78);
             this.button_check.TabIndex = 0;
@@ -67,7 +67,7 @@
             // textBox_AreaCodeInput
             // 
             this.textBox_AreaCodeInput.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_AreaCodeInput.Location = new System.Drawing.Point(717, 563);
+            this.textBox_AreaCodeInput.Location = new System.Drawing.Point(86, 565);
             this.textBox_AreaCodeInput.Name = "textBox_AreaCodeInput";
             this.textBox_AreaCodeInput.Size = new System.Drawing.Size(300, 31);
             this.textBox_AreaCodeInput.TabIndex = 2;
@@ -75,7 +75,7 @@
             // textBox_AvaragePricePerSquareMeter
             // 
             this.textBox_AvaragePricePerSquareMeter.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_AvaragePricePerSquareMeter.Location = new System.Drawing.Point(86, 562);
+            this.textBox_AvaragePricePerSquareMeter.Location = new System.Drawing.Point(717, 565);
             this.textBox_AvaragePricePerSquareMeter.Name = "textBox_AvaragePricePerSquareMeter";
             this.textBox_AvaragePricePerSquareMeter.ReadOnly = true;
             this.textBox_AvaragePricePerSquareMeter.Size = new System.Drawing.Size(300, 33);
@@ -87,7 +87,7 @@
             this.button_AddToList.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_AddToList.Image = ((System.Drawing.Image)(resources.GetObject("button_AddToList.Image")));
             this.button_AddToList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_AddToList.Location = new System.Drawing.Point(86, 602);
+            this.button_AddToList.Location = new System.Drawing.Point(717, 602);
             this.button_AddToList.Name = "button_AddToList";
             this.button_AddToList.Size = new System.Drawing.Size(300, 78);
             this.button_AddToList.TabIndex = 4;

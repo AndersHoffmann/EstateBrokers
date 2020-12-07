@@ -12,7 +12,37 @@ namespace GUI
     {
         public EstimatesPage()
         {
+           
             InitializeComponent();
+            HideAllUserControlsOnEstimatePage();
+        }
+
+        private void button_PostalEstimates_Click(object sender, EventArgs e)
+        {
+            postalCodeEstimates1.Show();
+            postalCodeEstimates1.BringToFront();
+        }
+
+        private void button_PropertyValuation_Click(object sender, EventArgs e)
+        {
+            propertyValuationPage1.Show();
+            propertyValuationPage1.BringToFront();
+
+        }
+
+        private void HideAllUserControlsOnEstimatePage()
+        {
+
+            propertyValuationPage1.Hide();
+            postalCodeEstimates1.Hide();
+
+        }
+
+        private void button_LoanEstimate_Click(object sender, EventArgs e)
+        {
+
+
+
         }
     }
 }

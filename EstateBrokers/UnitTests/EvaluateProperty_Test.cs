@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UseCases.OpenHouse;
+using UseCases.EvaluateProperty;
 using Presenters;
 
 namespace UnitTests
 {
-    
+
     [TestClass]
     public class EvaluateProperty_Test
     {
@@ -25,7 +25,7 @@ namespace UnitTests
             requestModel.HasGarage = true;
 
             //Act
-
+            
             var evaluateOutput = new EvaluatePropertyPresenter();
             var evaluateProperty = new EvaluateProperty(evaluateOutput);
 

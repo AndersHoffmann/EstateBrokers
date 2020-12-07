@@ -1,22 +1,25 @@
 ﻿using Controllers;
-using Database.Login;
+using UseCases.Login;
 using Presenters;
 using System;
 using System.Windows.Forms;
 using ViewModels;
+using Gateways;
+using Database.Login;
 
 namespace GUI
 {
     public partial class LoginPage : UserControl, ILoginFrontEnd
     {
         LoginController loginController { get; set; }
+      
 
         public LoginPage()
         {
+            ILogin login = new Login();
             ILoginOutput loginOutput = new LoginPresenter(this);
-            ILoginInput loginInput = new Login(loginOutput);
+            ILoginInput loginInput = new AuthLogin(loginOutput, login);
             loginController = new LoginController(loginInput);
-
 
             InitializeComponent();
         }
