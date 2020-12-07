@@ -26,8 +26,17 @@ namespace GUI
 
         private void button_Close_FrontPage_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            this.Close();
+            string message = "Are you sure you want to exit? - Remember to save your work before you exit";
+            string caption = "Confirm";
+
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            var result = MessageBox.Show(message, caption, buttons);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Dispose();
+                this.Close();
+            }
 
         }
 
