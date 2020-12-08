@@ -1,8 +1,8 @@
-﻿using Gateways;
+﻿using Database;
+using Gateways;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 namespace UseCases.OpenHouse
 {
     public class OpenHouseLogic : IOpenHouseInput
@@ -17,11 +17,16 @@ namespace UseCases.OpenHouse
         {
 
             ICaseCRUD caseCRUD = new CaseCRUD();
+            IRealtorCRUD realtorcrud = new RealtorCRUD();
+
             List<Entities.Realtor> realtorList = new List<Entities.Realtor>();
+
             bool success;
-            realtorList[0] = openHouseRequestModel.Realtor1;
-            realtorList[1] = openHouseRequestModel.Realtor2;
-            realtorList[2] = openHouseRequestModel.Realtor3;
+
+            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId1));
+            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId2));
+            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId3));
+
 
             OpenHouseResponseModel response = new OpenHouseResponseModel();
             Random rnd = new Random();
@@ -47,8 +52,8 @@ namespace UseCases.OpenHouse
                 success = true;
 
                 response.Realtor1Cases = CaseIDLists[0];
-                response.Realtor1Cases = CaseIDLists[1];
-                response.Realtor1Cases = CaseIDLists[2];
+                response.Realtor2Cases = CaseIDLists[1];
+                response.Realtor3Cases = CaseIDLists[2];
                 response.HousesAssignedSuccessfully = success;
                 OpenHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
             }

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace UseCases
+namespace Database
 {
     public class CaseCRUD : ICaseCRUD
     {
@@ -42,12 +42,9 @@ namespace UseCases
                 {
                     caseList.RemoveRange(number, caseList.Count - 1);
                 }
-
-                
+         
                     return caseList;
-                
-                
-                
+  
             }
 
         }

@@ -12,9 +12,9 @@ namespace Presenters
     {
         IGetEntryFrontEnd FrontEnd { get; set; }
 
-        public GetEntryPresenter(IGetEntryFrontEnd frontend)
+        public GetEntryPresenter(IGetEntryFrontEnd frontEnd)
         {
-            FrontEnd = frontend;
+            FrontEnd = frontEnd;
         }
 
         public void DisplayListOfEntries(List<ShowEntriesResponseModel> inputList)

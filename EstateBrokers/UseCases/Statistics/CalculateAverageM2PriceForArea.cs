@@ -2,6 +2,7 @@
 using Entities;
 using Gateways;
 using System.Collections.Generic;
+using Database;
 
 namespace UseCases.Statistics
 {
@@ -16,7 +17,7 @@ namespace UseCases.Statistics
         public void Calculate(EstimatesRequestModel request)
         {
             ICaseCRUD crud = new CaseCRUD();
-            List<Case> cases = crud.ReadCases(request.PostalCode);
+            List<Entities.Case> cases = crud.ReadCases(request.PostalCode);
             double totalPrice = 0;
             int count = 0;
             foreach (var item in cases)

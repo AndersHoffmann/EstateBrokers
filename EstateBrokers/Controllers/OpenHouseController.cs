@@ -1,10 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+using UseCases.OpenHouse;
 namespace Controllers
 {
-    class OpenHouseController
+    public class OpenHouseController
     {
+        public static IOpenHouseInput OpenHouseInput;
+
+        public OpenHouseController(IOpenHouseInput openHouseInput)
+        {
+            OpenHouseInput = openHouseInput;
+
+        }
+
+        public void OpenHouseDistribution(string realterIdOne, string realtorIdTwo, string realtorIdThree)
+        {
+
+            OpenHouseRequestModel openHouseRequestModel = new OpenHouseRequestModel();
+
+            openHouseRequestModel.RealtorId1 = Int32.Parse(realterIdOne);
+            openHouseRequestModel.RealtorId2 = Int32.Parse(realtorIdTwo);
+            openHouseRequestModel.RealtorId3 = Int32.Parse(realtorIdThree);
+
+            OpenHouseInput.RunOpenHouse(openHouseRequestModel);
+
+        }
+
+
     }
 }
