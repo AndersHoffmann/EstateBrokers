@@ -22,6 +22,10 @@ namespace GUI
             loginController = new LoginController(loginInput);
 
             InitializeComponent();
+
+            toolTip_ForUserName.SetToolTip(pictureBox_UsernamePicture, "Type in your username");
+            toolTip_ForPassword.SetToolTip(pictureBox_ForLockToPassword, "Type in your password");
+            toolTip_NewUser.SetToolTip(label_NewUser, "Contact your manager for a login");
         }
 
         public void LoginAttempt(LoginViewModel loginViewModel)
@@ -53,5 +57,12 @@ namespace GUI
             loginController.TryLogin(textbox_username.Text, TextBox_password.Text);
 
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+
     }
 }

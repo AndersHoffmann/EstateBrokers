@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Presenters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +19,7 @@ namespace GUI
 
         public PropertyValuationPage()
         {
-            IEvaluatePropertyOutput estimatesOutput = new EvaluatePropertyPresenter(this);
-            IEvaluatePropertyInput estimatesInput = new EvaluateProperty(estimatesOutput);
-            EvaluatePropertyController = new EvaluatePropertyController(estimatesInput);
+            EvaluatePropertyController = DependencyInjectionContainer.GetEvaluatePropertyController(this);
             InitializeComponent();
         }
 

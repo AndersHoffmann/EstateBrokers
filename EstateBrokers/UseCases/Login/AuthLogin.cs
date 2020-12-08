@@ -19,7 +19,6 @@ namespace UseCases.Login
 
         public void Auth(LoginRequestModel request)
         {
-
             var response = new LoginResponseModel();
 
             var thread = new Thread(() =>
@@ -29,7 +28,6 @@ namespace UseCases.Login
             });
             thread.Start();
             thread.Join();
-
             LoginOutput.ConfirmLogin(response);
         }
 

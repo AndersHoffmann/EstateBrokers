@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Bank\Bank.csproj" />
     <ProjectReference Include="..\Controllers\Controllers.csproj" />
     <ProjectReference Include="..\Presenters\Presenters.csproj" />
     <ProjectReference Include="..\UseCases\UseCases.csproj" />

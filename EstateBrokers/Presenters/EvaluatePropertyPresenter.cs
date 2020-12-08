@@ -1,4 +1,7 @@
 ﻿using UseCases.EvaluateProperty;
+using System;
+using UseCases.CreateEntry;
+
 using ViewModels;
 
 
@@ -26,4 +29,5 @@ namespace Presenters
             FrontEnd.UpdatePropertyValuationField(evaluatePropertyViewModel);
         }
     }
+
 }

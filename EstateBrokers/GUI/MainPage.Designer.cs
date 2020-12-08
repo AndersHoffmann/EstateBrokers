@@ -239,7 +239,7 @@
             this.openHousePage1.Size = new System.Drawing.Size(1429, 917);
             this.openHousePage1.TabIndex = 8;
             // 
-            // loginPage1
+            // propertyValuationPage1
             // 
             this.loginPage1.BackColor = System.Drawing.Color.White;
             this.loginPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -293,5 +293,6 @@
         private SupportPage supportPage1;
         private OpenHousePage openHousePage1;
         private LoginPage loginPage1;
+        private PropertyValuationPage propertyValuationPage1;
     }
 }

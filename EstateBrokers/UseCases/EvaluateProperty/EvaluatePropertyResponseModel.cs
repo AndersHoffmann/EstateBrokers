@@ -1,4 +1,8 @@
-﻿namespace UseCases.EvaluateProperty
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace UseCases.EvaluateProperty
 {
     public class EvaluatePropertyResponseModel
     {

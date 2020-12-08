@@ -1,4 +1,10 @@
-﻿namespace UseCases.EvaluateProperty
+﻿
+using Gateways;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace UseCases.EvaluateProperty
 {
     public class EvaluateProperty : IEvaluatePropertyInput
 
@@ -15,6 +21,7 @@
 
         public void MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel)
         {
+
             var response = new EvaluatePropertyResponseModel();
 
             double baseSquareMeterPrice = 5000;
@@ -32,6 +39,8 @@
 
             response.PropertyValuation = evaluation;
             EvaluatePropertyOutput.DisplayPropertyEvaluation(response);
+
         }
     }
 }
+
