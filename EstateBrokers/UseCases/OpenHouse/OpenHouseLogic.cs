@@ -8,16 +8,20 @@ namespace UseCases.OpenHouse
 {
     public class OpenHouseLogic : IOpenHouseInput
     {
-        public IOpenHouseOutput OpenHouseOutput { get; set; }
+        IOpenHouseOutput _openHouseOutput;
+        ICaseCRUD _caseCRUD;
+        IRealtorCRUD _realtorCRUD;
 
         public OpenHouseLogic()
         {
 
         }
 
-        public OpenHouseLogic(IOpenHouseOutput openHouseOutput)
+        public OpenHouseLogic(IOpenHouseOutput openHouseOutput, ICaseCRUD caseCRUD, IRealtorCRUD realtorCRUD)
         {
-            OpenHouseOutput = openHouseOutput;
+            _openHouseOutput = openHouseOutput;
+            _caseCRUD = caseCRUD;
+            _realtorCRUD = realtorCRUD;
         }
             
         public void RunOpenHouse(OpenHouseRequestModel openHouseRequestModel)
@@ -47,7 +51,7 @@ namespace UseCases.OpenHouse
             {
                 success = false;
                 response.HousesAssignedSuccessfully = success;
-                OpenHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
+                _openHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
             }
             else
             {
@@ -66,7 +70,7 @@ namespace UseCases.OpenHouse
                 response.Realtor2Cases = CaseIDLists[1];
                 response.Realtor3Cases = CaseIDLists[2];
                 response.HousesAssignedSuccessfully = success;
-                OpenHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
+                _openHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
             }
         }
 

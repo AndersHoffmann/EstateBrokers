@@ -9,15 +9,17 @@ namespace UseCases.Statistics
     public class CalculateAverageM2PriceForArea : IEstimatesInput
     {
 
-        public IEstimatesOutput EstimatesOutput { get; set; }
-        public CalculateAverageM2PriceForArea(IEstimatesOutput estimatesOutput)
+        IEstimatesOutput _estimatesOutput;
+        ICaseCRUD _caseCRUD;
+        public CalculateAverageM2PriceForArea(IEstimatesOutput estimatesOutput, ICaseCRUD caseCRUD)
         {
-            EstimatesOutput = estimatesOutput;
+            _estimatesOutput = estimatesOutput;
+            _caseCRUD = caseCRUD;
         }
         public void Calculate(EstimatesRequestModel request)
         {
-            ICaseCRUD crud = new CaseCRUD();
-            List<Entities.Case> cases = crud.ReadCases(request.PostalCode);
+            
+            List<Entities.Case> cases = _caseCRUD.ReadCases(request.PostalCode);
             double totalPrice = 0;
             int count = 0;
             foreach (var item in cases)
@@ -29,7 +31,7 @@ namespace UseCases.Statistics
 
             response.AverageHousePrice = totalPrice / count;
 
-            EstimatesOutput.DisplayData(response);
+            _estimatesOutput.DisplayData(response);
         }
 
        

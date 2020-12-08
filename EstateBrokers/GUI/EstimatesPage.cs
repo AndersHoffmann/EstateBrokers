@@ -16,15 +16,12 @@ namespace GUI
 {
     public partial class EstimatesPage : UserControl, IPaymentCalculatorFrontEnd
     {
-        PaymentCalculatorController paymentCalculateController { get; set; }
+        PaymentCalculatorController _paymentCalculateController { get; set; }
 
         public EstimatesPage()
         {
-            IBank bank = new SimulatedBankPaymentCalculator();
-            IPaymentCalculatorOutput paymentCalculatorOutput = new PaymentCalculatorPresenter(this);
-            IPaymentCalculatorInput paymentCalculatorInput = new CalculateMonthlyPayment(paymentCalculatorOutput, bank);
-            paymentCalculateController = new PaymentCalculatorController(paymentCalculatorInput);
 
+            _paymentCalculateController = DependencyInjectionContainer.GetPaymentCalculatorController(this);
 
             InitializeComponent();
             HideAllUserControlsOnEstimatePage();
@@ -54,7 +51,7 @@ namespace GUI
         private void button_LoanEstimate_Click(object sender, EventArgs e)
         {
 
-            paymentCalculateController.CalculatePayment(textBox_HousePrice.Text, textBox_NumberOfPayments.Text);
+            _paymentCalculateController.CalculatePayment(textBox_HousePrice.Text, textBox_NumberOfPayments.Text);
 
         }
 

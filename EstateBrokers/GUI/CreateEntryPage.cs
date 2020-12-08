@@ -11,13 +11,11 @@ namespace GUI
     public partial class CreateEntryPage : UserControl, ICreateEntryFrontEnd
     {
 
-        CreateEntryController createcasecontroller { get; set; }
+        CreateEntryController _createcasecontroller { get; set; }
 
         public CreateEntryPage()
         {
-            ICreateEntryOutput createcaseOutput = new CreateEntryPresenter(this);
-            ICreateEntryInput createcaseInput = new RunCreateEntry(createcaseOutput, new CaseCRUD(), new PropertyCRUD(), new AddressCRUD());
-            createcasecontroller = new CreateEntryController(createcaseInput);
+            _createcasecontroller = DependencyInjectionContainer.GetCreateEntryController(this);
             InitializeComponent();
         }
 
@@ -43,7 +41,7 @@ namespace GUI
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            createcasecontroller.CreateEntry(textBox_RealtorID.Text, textBox_Price.Text, textBox_EstimatedPrice.Text, textbox_PostalCode.Text, textbox_AddressLine1.Text, textBox_AddressLine2.Text, textBox_OwnershipCost.Text, textBox_ExteriorArea.Text, textBox_InteriorArea.Text, textBox_BuildYear.Text);
+            _createcasecontroller.CreateEntry(textBox_RealtorID.Text, textBox_Price.Text, textBox_EstimatedPrice.Text, textbox_PostalCode.Text, textbox_AddressLine1.Text, textBox_AddressLine2.Text, textBox_OwnershipCost.Text, textBox_ExteriorArea.Text, textBox_InteriorArea.Text, textBox_BuildYear.Text);
 
         }
 

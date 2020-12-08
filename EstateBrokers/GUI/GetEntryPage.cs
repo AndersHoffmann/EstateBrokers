@@ -10,20 +10,16 @@ namespace GUI
 {
     public partial class GetEntryPage : UserControl, IGetEntryFrontEnd, IPrintEntryFrontEnd
     {
-        ShowEntryController showentrycontroller { get; set; }
-        PrintEntryController printEntryController { get; set; }
+        ShowEntryController _showentrycontroller;
+        PrintEntryController _printEntryController;
 
         public GetEntryPage()
         {
             //Get entry
-            IShowEntryOutput entryOutput = new GetEntryPresenter(this);
-            IShowEntryInput entryInput = new ShowEntries(entryOutput);
-            showentrycontroller = new ShowEntryController(entryInput);
+            _showentrycontroller = DependencyInjectionContainer.GetShowEntryController(this);
 
             //Print entry
-            IPrintEntriesOutput printOutput = new PrintEntryPresenter(this);
-            IPrintEntriesInput printInput = new PrintEntry(printOutput);
-            printEntryController = new PrintEntryController(printInput);
+            _printEntryController = DependencyInjectionContainer.GetPrintEntryController(this);
 
             InitializeComponent();
         }
@@ -31,7 +27,7 @@ namespace GUI
         private void GetEntryPage_Load(object sender, EventArgs e)
         {
 
-            showentrycontroller.StartShowEntries();
+            _showentrycontroller.StartShowEntries();
         }
 
 
@@ -48,12 +44,12 @@ namespace GUI
 
         private void button_Reload_Click(object sender, EventArgs e)
         {
-            showentrycontroller.StartShowEntries();
+            _showentrycontroller.StartShowEntries();
         }
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-            printEntryController.PrintCases(Convert.ToInt32(textBox_CaseIDtoPrint.Text));
+            _printEntryController.PrintCases(Convert.ToInt32(textBox_CaseIDtoPrint.Text));
 
         }
 

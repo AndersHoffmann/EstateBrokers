@@ -9,11 +9,16 @@ namespace UseCases.PrintEntries
 {
     public class CalculateAverageWithIntegerInput
     {
+        ICaseCRUD _caseCRUD;
+        public CalculateAverageWithIntegerInput(ICaseCRUD caseCRUD)
+        {
+            _caseCRUD = caseCRUD;
+        }
         public double Calculate(int input)
         {
-            ICaseCRUD crud = new CaseCRUD();
+          
 
-            List<Entities.Case> cases = crud.ReadCases(input);
+            List<Entities.Case> cases = _caseCRUD.ReadCases(input);
             double totalPrice = 0;
             int count = 0;
             foreach (var item in cases)

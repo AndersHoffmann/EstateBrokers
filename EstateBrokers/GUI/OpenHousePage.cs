@@ -15,13 +15,12 @@ namespace GUI
 {
     public partial class OpenHousePage : UserControl, IOpenHouseFrontEnd
     {
-        OpenHouseController openHouseController { get; set; }
+        OpenHouseController _openHouseController;
 
         public OpenHousePage()
         {
-            IOpenHouseOutput openHouseOutput = new OpenHousePresenter(this);
-            IOpenHouseInput openHouseInput = new OpenHouseLogic(openHouseOutput);
-            openHouseController = new OpenHouseController(openHouseInput);
+
+            _openHouseController = DependencyInjectionContainer.GetOpenHouseController(this);
 
             InitializeComponent();
         }
@@ -40,7 +39,7 @@ namespace GUI
 
         private void button_Assign_Click(object sender, EventArgs e)
         {
-            openHouseController.OpenHouseDistribution(textBox_RealtorID1.Text, textBox_RealtorID2.Text, textBox_RealtorID3.Text);
+            _openHouseController.OpenHouseDistribution(textBox_RealtorID1.Text, textBox_RealtorID2.Text, textBox_RealtorID3.Text);
         }
 
         public void ListsForCaseAssign(OpenHouseViewModel openHouseViewModel)

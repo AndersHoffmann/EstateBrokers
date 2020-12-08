@@ -6,15 +6,15 @@ namespace UseCases.PaymentCalculator
 
     public class CalculateMonthlyPayment : IPaymentCalculatorInput
     {
-        public static IPaymentCalculatorOutput PaymentCalculatorOutput;
+        IPaymentCalculatorOutput _paymentCalculatorOutput;
         public static PaymentCalculatorRequestModel RequestModel;
-        public static IBank Bank;
+        IBank _bank;
 
         public CalculateMonthlyPayment(IPaymentCalculatorOutput paymentCalculatorOutput, IBank bank)
 
         {
-            PaymentCalculatorOutput = paymentCalculatorOutput;
-            Bank = bank;
+            _paymentCalculatorOutput = paymentCalculatorOutput;
+            _bank = bank;
         }
 
         public void CalculatePayment(PaymentCalculatorRequestModel request)
@@ -22,9 +22,9 @@ namespace UseCases.PaymentCalculator
 
             var response = new PaymentCalculatorResponseModel();
 
-            response.PricePerMonth = Bank.PaymentCalculator(request.Price, request.LoanDuration);
+            response.PricePerMonth = _bank.PaymentCalculator(request.Price, request.LoanDuration);
 
-            PaymentCalculatorOutput.FinalPricePerMonth(response);
+            _paymentCalculatorOutput.FinalPricePerMonth(response);
 
 
         }

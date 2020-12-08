@@ -6,27 +6,32 @@ namespace UseCases.ShowCases
 {
     public class ShowEntries : IShowEntryInput
     {
-        public IShowEntryOutput showEntryOutput { get; set; }
+        IShowEntryOutput _showEntryOutput;
+        IAddressCRUD _addressCRUD;
+        ICaseCRUD _caseCRUD;
+        IPropertyCRUD _propertyCRUD;
 
-        public ShowEntries(IShowEntryOutput showentryoutput)
+        public ShowEntries(IShowEntryOutput showentryoutput, IAddressCRUD addressCRUD, ICaseCRUD caseCRUD, IPropertyCRUD propertyCRUD)
         {
-            showEntryOutput = showentryoutput;
+            _showEntryOutput = showentryoutput;
+            _addressCRUD = addressCRUD;
+            _caseCRUD = caseCRUD;
+            _propertyCRUD = propertyCRUD;
+
         }
         public void GetEntries()
         {
-            IAddressCRUD addressCRUD = new AddressCRUD();
-            ICaseCRUD caseCRUD = new CaseCRUD();
-            IPropertyCRUD propertyCRUD = new PropertyCRUD();
+            
 
             List<ShowEntriesResponseModel> responseList = new List<ShowEntriesResponseModel>();
-            List<Entities.Property> workingPropertyList = propertyCRUD.GetAllProperties();
+            List<Entities.Property> workingPropertyList = _propertyCRUD.GetAllProperties();
 
             foreach (var property in workingPropertyList)
             {
                 ShowEntriesResponseModel showEntriesResponseModel = new ShowEntriesResponseModel();
                 showEntriesResponseModel.estimatedPrice = property.EstimatedPrice;
 
-                Entities.Case workingCase = caseCRUD.ReadCase(property.CaseID);
+                Entities.Case workingCase = _caseCRUD.ReadCase(property.CaseID);
 
                 if (workingCase.Realtor != null)
                 {
@@ -41,7 +46,7 @@ namespace UseCases.ShowCases
                 showEntriesResponseModel.price = workingCase.Price;
                
              
-                Entities.Address workingAddress = addressCRUD.ReadAddress(property.PostalCode, property.AddressLine1);
+                Entities.Address workingAddress = _addressCRUD.ReadAddress(property.PostalCode, property.AddressLine1);
                 showEntriesResponseModel.postalCode = workingAddress.PostalCode;
                 showEntriesResponseModel.AddressLine1 = workingAddress.AddressLine1;
                 showEntriesResponseModel.AddressLine2 = workingAddress.AddressLine2;
@@ -51,7 +56,7 @@ namespace UseCases.ShowCases
                 showEntriesResponseModel.buildYear = workingAddress.BuildYear;
                 responseList.Add(showEntriesResponseModel);
 
-                showEntryOutput.DisplayListOfEntries(responseList);
+                _showEntryOutput.DisplayListOfEntries(responseList);
             }
 
         }

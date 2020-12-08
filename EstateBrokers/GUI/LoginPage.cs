@@ -11,15 +11,13 @@ namespace GUI
 {
     public partial class LoginPage : UserControl, ILoginFrontEnd
     {
-        LoginController loginController { get; set; }
+        LoginController _loginController { get; set; }
       
 
         public LoginPage()
         {
-            ILogin login = new Login();
-            ILoginOutput loginOutput = new LoginPresenter(this);
-            ILoginInput loginInput = new AuthLogin(loginOutput, login);
-            loginController = new LoginController(loginInput);
+
+            _loginController = DependencyInjectionContainer.GetLoginController(this);
 
             InitializeComponent();
 
@@ -54,7 +52,7 @@ namespace GUI
         private void button_login_Click(object sender, EventArgs e)
         {
 
-            loginController.TryLogin(textbox_username.Text, TextBox_password.Text);
+            _loginController.TryLogin(textbox_username.Text, TextBox_password.Text);
 
         }
 

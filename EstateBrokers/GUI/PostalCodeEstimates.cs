@@ -15,13 +15,11 @@ namespace GUI
     public partial class PostalCodeEstimates : UserControl, IEstimatesFrontEnd
     {
 
-        EstimatesController estimatesController { get; set; }
+        EstimatesController _estimatesController { get; set; }
 
         public PostalCodeEstimates()
         {
-            IEstimatesOutput estimatesOutput = new EstimatesPresenter(this);
-            IEstimatesInput estimatesInput = new CalculateAverageM2PriceForArea(estimatesOutput);
-            estimatesController = new EstimatesController(estimatesInput);
+            _estimatesController = DependencyInjectionContainer.GetEstimatesController(this);
             InitializeComponent();
         }
 
@@ -32,7 +30,7 @@ namespace GUI
 
         private void button_check_Click(object sender, EventArgs e)
         {
-             estimatesController.EstimateCode(textBox_AreaCodeInput.Text);
+             _estimatesController.EstimateCode(textBox_AreaCodeInput.Text);
         }
 
         public void UpdateAveragePriceField(EstimatesViewModel estimatesViewModel)

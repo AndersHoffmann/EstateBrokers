@@ -9,11 +9,21 @@ namespace UseCases.PrintEntries
 {
     public class PrintEntry : IPrintEntriesInput
     {
-        public IPrintEntriesOutput PrintEntriesOutput { get; set; }
+        IPrintEntriesOutput _printEntriesOutput;
+        IAddressCRUD _addressCRUD;
+        ICaseCRUD _caseCRUD = new CaseCRUD();
+        IPropertyCRUD _propertyCRUD = new PropertyCRUD();
+        IRealtorCRUD _realtorCRUD = new RealtorCRUD();
+        
 
-        public PrintEntry(IPrintEntriesOutput printEntriesOutput)
+        public PrintEntry(IPrintEntriesOutput printEntriesOutput, IAddressCRUD addressCRUD, ICaseCRUD caseCRUD, IPropertyCRUD propertyCRUD, IRealtorCRUD realtorCRUD)
         {
-            PrintEntriesOutput = printEntriesOutput;
+            _printEntriesOutput = printEntriesOutput;
+            _addressCRUD = addressCRUD;
+            _caseCRUD = caseCRUD;
+            _propertyCRUD = propertyCRUD;
+            _realtorCRUD = realtorCRUD;
+
         }
 
         //Recieves all the relevant information through method parameters and prints it to a text file on the users desktop. 
@@ -57,23 +67,20 @@ namespace UseCases.PrintEntries
                 response.success = true;
                 sw.Close();
             }
-            PrintEntriesOutput.PrintSuccess(response);
+            _printEntriesOutput.PrintSuccess(response);
         }
         public PrintObject GetDataForPrint(int caseId)
         {
-            IAddressCRUD addressCRUD = new AddressCRUD();
-            ICaseCRUD caseCRUD = new CaseCRUD();
-            IPropertyCRUD propertyCRUD = new PropertyCRUD();
-            IRealtorCRUD realtorCRUD = new RealtorCRUD();
             PrintObject printObject = new PrintObject();
-            CalculateAverageWithIntegerInput calc = new CalculateAverageWithIntegerInput();
-            Entities.Case workingCase = caseCRUD.ReadCase(caseId);
+            CalculateAverageWithIntegerInput calc = new CalculateAverageWithIntegerInput(_caseCRUD);
 
-            Entities.Realtor workingRealtor = realtorCRUD.ReadRealtor(workingCase.Realtor.RealtorID);
+            Entities.Case workingCase = _caseCRUD.ReadCase(caseId);
 
-            Entities.Property workingProperty = propertyCRUD.ReadProperty(caseId);
+            Entities.Realtor workingRealtor = _realtorCRUD.ReadRealtor(workingCase.Realtor.RealtorID);
 
-            Entities.Address workingAddress = addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
+            Entities.Property workingProperty = _propertyCRUD.ReadProperty(caseId);
+
+            Entities.Address workingAddress = _addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
 
             printObject.RealtorName = workingRealtor.Name;
             printObject.RealtorPhone = workingRealtor.PhoneNR;
