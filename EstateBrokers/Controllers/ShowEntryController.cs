@@ -5,6 +5,7 @@ namespace Controllers
     {
 
         public static IShowEntryInput ShowEntryInput;
+
         public ShowEntryController(IShowEntryInput showEntryInput)
         {
 

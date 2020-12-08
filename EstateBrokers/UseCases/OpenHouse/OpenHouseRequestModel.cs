@@ -7,8 +7,8 @@ namespace UseCases.OpenHouse
 {
     public class OpenHouseRequestModel
     {
-        public Realtor Realtor1 { get; set; }
-        public Realtor Realtor2 { get; set; }
-        public Realtor Realtor3 { get; set; }
+        public int RealtorId1 { get; set; }
+        public int RealtorId2 { get; set; }
+        public int RealtorId3 { get; set; }
     }
 }

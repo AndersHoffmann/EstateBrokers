@@ -1,9 +1,9 @@
-﻿using Gateways;
+﻿using Database;
+using Gateways;
 using Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 namespace UseCases.OpenHouse
 {
     public class OpenHouseLogic : IOpenHouseInput
@@ -23,87 +23,50 @@ namespace UseCases.OpenHouse
         public void RunOpenHouse(OpenHouseRequestModel openHouseRequestModel)
         {
             ICaseCRUD caseCRUD = new CaseCRUD();
-            List<Entities.Realtor> realtorList = AssignRealtors(openHouseRequestModel.Realtor1, openHouseRequestModel.Realtor2, openHouseRequestModel.Realtor3);
-            List<List<int>> CaseIDLists = new List<List<int>>();
-            List<Entities.Case> Cases = caseCRUD.ReadAPreDefinedNumberOfCasesWithNoRealtor(18);
+            IRealtorCRUD realtorcrud = new RealtorCRUD();
 
-            Random rnd = new Random();
+            List<Entities.Realtor> realtorList = new List<Entities.Realtor>();
+
             bool success;
 
+            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId1));
+            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId2));
+            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId3));
 
-            DistributeCases(out CaseIDLists, out success, Cases, rnd, realtorList);
-            AssignCases(CaseIDLists, realtorList[0].RealtorID, realtorList[1].RealtorID, realtorList[2].RealtorID);
-            OpenHouseReturn(CaseIDLists, success);
-            
-        }
-        public void DistributeCases(out List<List<int>> CaseIDLists, out bool Success, List<Entities.Case> Cases, Random rnd, List<Entities.Realtor> realtorList)
-        {
-            List<List<int>> tempIDList = new List<List<int>>();
 
-            if (CheckIfNumberOFCasesIsValid(Cases.Count) == true)
+            OpenHouseResponseModel response = new OpenHouseResponseModel();
+            Random rnd = new Random();
+            List<List<int>> CaseIDLists = new List<List<int>>();
+            List<Entities.Case> Cases = caseCRUD.ReadAPreDefinedNumberOfCasesWithNoRealtor(19);
+
+            CaseIDLists.Add(new List<int>());
+            CaseIDLists.Add(new List<int>());
+            CaseIDLists.Add(new List<int>());
+
+            if (Cases.Count != 19)
             {
+                success = false;
+                response.HousesAssignedSuccessfully = success;
+                OpenHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
+            }
+            else
+            {
+
+
                 for (int i = 1; i < Cases.Count; i++)
                 {
                     List<Entities.Realtor> tempArray = realtorList.OrderBy(x => rnd.Next()).ToList();
                     Cases[i].Realtor = tempArray[i % 3];
-                    tempIDList[i % 3].Add(Cases[i].CaseID);
+                    CaseIDLists[i % 3].Add(Cases[i].CaseID);
                 }
-                CaseIDLists = tempIDList;
-                Success = true;
-            }
-            else
-            {
-                Success = false;
-                CaseIDLists = tempIDList;
-            }
-        }
-        public void AssignCases(List<List<int>> CaseIDLists, int RealtorID1, int RealtorID2, int RealtorID3)
-        {
-            ICaseCRUD caseCRUD = new CaseCRUD();
-            IRealtorCRUD realtorCRUD = new RealtorCRUD(); 
-            foreach (var item in CaseIDLists[0])
-            {
-                Entities.Case workingCase = caseCRUD.ReadCase(item);
-                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate.GetValueOrDefault(), workingCase.Price, realtorCRUD.ReadRealtor(RealtorID1));
-            }
-            foreach (var item in CaseIDLists[1])
-            {
-                Entities.Case workingCase = caseCRUD.ReadCase(item);
-                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate.GetValueOrDefault(), workingCase.Price, realtorCRUD.ReadRealtor(RealtorID2));
-            }
-            foreach (var item in CaseIDLists[2])
-            {
-                Entities.Case workingCase = caseCRUD.ReadCase(item);
-                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate.GetValueOrDefault(), workingCase.Price, realtorCRUD.ReadRealtor(RealtorID3));
-            }
-        }
-        public void OpenHouseReturn(List<List<int>> CaseIDLists, bool success)
-        {
-            OpenHouseResponseModel response = new OpenHouseResponseModel();
 
-            response.Realtor1Cases = CaseIDLists[0];
-            response.Realtor2Cases = CaseIDLists[1];
-            response.Realtor3Cases = CaseIDLists[2];
-            response.HousesAssignedSuccessfully = success;
-            OpenHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
-        }
-        public List<Entities.Realtor> AssignRealtors(Entities.Realtor realtor1, Entities.Realtor realtor2, Entities.Realtor realtor3)
-        {
-            List<Entities.Realtor> realtorList = new List<Entities.Realtor>();
-            realtorList[0] = realtor1;
-            realtorList[1] = realtor2;
-            realtorList[2] = realtor3;
-            return realtorList;
-        }
-        public bool CheckIfNumberOFCasesIsValid(int caseCount)
-        {
-            if (caseCount == 18)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
+                success = true;
+
+                response.Realtor1Cases = CaseIDLists[0];
+                response.Realtor2Cases = CaseIDLists[1];
+                response.Realtor3Cases = CaseIDLists[2];
+                response.HousesAssignedSuccessfully = success;
+                OpenHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
             }
         }
 

@@ -19,9 +19,10 @@ namespace GUI
         {
        
             InitializeComponent();
-            loginPage1.BringToFront();
+            //  loginPage1.BringToFront();
+            loginPage1.Hide();
             HideAllUserControls();
-
+            
         }
 
         private void button_Close_FrontPage_Click(object sender, EventArgs e)
@@ -84,5 +85,7 @@ namespace GUI
             supportPage1.Hide();
 
         }
+
+   
     }
 }
