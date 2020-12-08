@@ -2,6 +2,7 @@
 using Presenters;
 using System;
 using System.Windows.Forms;
+using UseCases;
 using UseCases.CreateEntry;
 using ViewModels;
 namespace GUI
@@ -14,7 +15,7 @@ namespace GUI
         public CreateEntryPage()
         {
             ICreateEntryOutput createcaseOutput = new CreateEntryPresenter(this);
-            ICreateEntryInput createcaseInput = new RunCreateEntry(createcaseOutput);
+            ICreateEntryInput createcaseInput = new RunCreateEntry(createcaseOutput, new CaseCRUD(), new PropertyCRUD(), new AddressCRUD());
             createcasecontroller = new CreateEntryController(createcaseInput);
             InitializeComponent();
         }

@@ -64,17 +64,17 @@ namespace UseCases.OpenHouse
             foreach (var item in CaseIDLists[0])
             {
                 Entities.Case workingCase = caseCRUD.ReadCase(item);
-                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate, workingCase.Price, realtorCRUD.ReadRealtor(RealtorID1));
+                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate.GetValueOrDefault(), workingCase.Price, realtorCRUD.ReadRealtor(RealtorID1));
             }
             foreach (var item in CaseIDLists[1])
             {
                 Entities.Case workingCase = caseCRUD.ReadCase(item);
-                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate, workingCase.Price, realtorCRUD.ReadRealtor(RealtorID2));
+                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate.GetValueOrDefault(), workingCase.Price, realtorCRUD.ReadRealtor(RealtorID2));
             }
             foreach (var item in CaseIDLists[2])
             {
                 Entities.Case workingCase = caseCRUD.ReadCase(item);
-                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate, workingCase.Price, realtorCRUD.ReadRealtor(RealtorID3));
+                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate.GetValueOrDefault(), workingCase.Price, realtorCRUD.ReadRealtor(RealtorID3));
             }
         }
         public void OpenHouseReturn(List<List<int>> CaseIDLists, bool success)

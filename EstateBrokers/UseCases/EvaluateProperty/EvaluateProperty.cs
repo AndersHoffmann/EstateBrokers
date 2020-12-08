@@ -19,7 +19,7 @@ namespace UseCases.EvaluateProperty
 
 
 
-        public void MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel)
+        public EvaluatePropertyResponseModel MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel)
         {
 
             var response = new EvaluatePropertyResponseModel();
@@ -39,6 +39,7 @@ namespace UseCases.EvaluateProperty
 
             response.PropertyValuation = evaluation;
             EvaluatePropertyOutput.DisplayPropertyEvaluation(response);
+            return response;
 
         }
     }

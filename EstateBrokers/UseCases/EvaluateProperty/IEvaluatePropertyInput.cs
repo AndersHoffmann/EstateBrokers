@@ -6,7 +6,7 @@ namespace UseCases.EvaluateProperty
 {
     public interface IEvaluatePropertyInput
     {
-        public void MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel);
+        public EvaluatePropertyResponseModel MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel);
 
     }
 }
