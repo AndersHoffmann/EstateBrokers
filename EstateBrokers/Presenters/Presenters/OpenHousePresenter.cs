@@ -23,6 +23,8 @@ namespace Presenters
             openHouseViewModel.Realtor1Cases = response.Realtor1Cases.Select(c => c.ToString()).ToList();
             openHouseViewModel.Realtor2Cases = response.Realtor2Cases.Select(c => c.ToString()).ToList();
             openHouseViewModel.Realtor3Cases = response.Realtor3Cases.Select(c => c.ToString()).ToList();
+
+            FrontEnd.ListsForCaseAssign(openHouseViewModel);
         }
     }
 }

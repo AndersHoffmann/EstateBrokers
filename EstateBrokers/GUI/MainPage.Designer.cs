@@ -37,6 +37,7 @@
             this.panel_botton_mainpage = new System.Windows.Forms.Panel();
             this.panel_right_mainpage = new System.Windows.Forms.Panel();
             this.panel_MainContainer = new System.Windows.Forms.Panel();
+            this.loginPage1 = new GUI.LoginPage();
             this.button_support_mainpage = new System.Windows.Forms.Button();
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.estimatesPage1 = new GUI.EstimatesPage();
             this.supportPage1 = new GUI.SupportPage();
             this.openHousePage1 = new GUI.OpenHousePage();
-            this.loginPage1 = new GUI.LoginPage();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_MainContainer.SuspendLayout();
             this.SuspendLayout();
@@ -141,6 +141,16 @@
             this.panel_MainContainer.Name = "panel_MainContainer";
             this.panel_MainContainer.Size = new System.Drawing.Size(1423, 920);
             this.panel_MainContainer.TabIndex = 4;
+            // 
+            // loginPage1
+            // 
+            this.loginPage1.BackColor = System.Drawing.Color.White;
+            this.loginPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginPage1.Location = new System.Drawing.Point(-1, -3);
+            this.loginPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.loginPage1.Name = "loginPage1";
+            this.loginPage1.Size = new System.Drawing.Size(1424, 923);
+            this.loginPage1.TabIndex = 9;
             // 
             // button_support_mainpage
             // 
@@ -238,16 +248,6 @@
             this.openHousePage1.Name = "openHousePage1";
             this.openHousePage1.Size = new System.Drawing.Size(1429, 917);
             this.openHousePage1.TabIndex = 8;
-            // 
-            // propertyValuationPage1
-            // 
-            this.loginPage1.BackColor = System.Drawing.Color.White;
-            this.loginPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loginPage1.Location = new System.Drawing.Point(-1, -3);
-            this.loginPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.loginPage1.Name = "loginPage1";
-            this.loginPage1.Size = new System.Drawing.Size(1424, 923);
-            this.loginPage1.TabIndex = 9;
             // 
             // MainPage
             // 

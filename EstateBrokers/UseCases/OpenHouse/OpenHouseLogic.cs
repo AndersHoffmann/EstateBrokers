@@ -31,9 +31,13 @@ namespace UseCases.OpenHouse
             OpenHouseResponseModel response = new OpenHouseResponseModel();
             Random rnd = new Random();
             List<List<int>> CaseIDLists = new List<List<int>>();
-            List<Entities.Case> Cases = caseCRUD.ReadAPreDefinedNumberOfCasesWithNoRealtor(18);
+            List<Entities.Case> Cases = caseCRUD.ReadAPreDefinedNumberOfCasesWithNoRealtor(19);
 
-            if (Cases.Count != 18)
+            CaseIDLists.Add(new List<int>());
+            CaseIDLists.Add(new List<int>());
+            CaseIDLists.Add(new List<int>());
+
+            if (Cases.Count != 19)
             {
                 success = false;
                 response.HousesAssignedSuccessfully = success;
@@ -41,6 +45,8 @@ namespace UseCases.OpenHouse
             }
             else
             {
+
+
                 for (int i = 1; i < Cases.Count; i++)
                 {
 
@@ -49,6 +55,7 @@ namespace UseCases.OpenHouse
                     Cases[i].Realtor = tempArray[i % 3];
                     CaseIDLists[i % 3].Add(Cases[i].CaseID);
                 }
+
                 success = true;
 
                 response.Realtor1Cases = CaseIDLists[0];

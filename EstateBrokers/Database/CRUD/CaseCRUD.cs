@@ -1,5 +1,4 @@
-﻿using Database;
-using Gateways;
+﻿using Gateways;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,23 +33,21 @@ namespace Database
         public List<Entities.Case> ReadAPreDefinedNumberOfCasesWithNoRealtor(int number)
         {
             List<Entities.Case> caseList = new List<Entities.Case>();
+
             using (var database = new EstateBrokerContext())
             {
 
-                foreach (var Case in  database.Cases)
+                foreach (var Case in database.Cases)
                 {
-                    if (Case.Realtor == null)
+                    if (Case.RealtorID == 1 && caseList.Count != number)
                     {
                         caseList.Add((Entities.Case)CaseFactory.CreateCase(Case));
                     }
                 }
-                if (caseList.Count > number)
-                {
-                    caseList.RemoveRange(number, caseList.Count - 1);
-                }
-         
-                    return caseList;
-  
+
+
+                return caseList;
+
             }
 
         }
@@ -95,7 +92,7 @@ namespace Database
 
                 foreach (var item in properties)
                 {
-                   this.cases = database.Cases.Where(s => s.CaseID == item.CaseID).ToList();
+                    this.cases = database.Cases.Where(s => s.CaseID == item.CaseID).ToList();
                 }
 
                 database.SaveChanges();
