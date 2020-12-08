@@ -37,7 +37,8 @@ namespace Database
             using (var database = new EstateBrokerContext())
             {
 
-                caseList.Add((Entities.Case)database.Cases.Where(a => a.RealtorID == 0));
+                caseList.AddRange((IEnumerable<Entities.Case>)(Entities.Case)database.Cases.Where(a => a.RealtorID == null));
+
                 if (caseList.Count > number)
                 {
                     caseList.RemoveRange(number, caseList.Count - 1);
