@@ -37,7 +37,7 @@ namespace UseCases
             using (var database = new EstateBrokerContext())
             {
 
-                caseList.Add((Entities.Case)database.Cases.Where(a => a.RealtorID == 0));
+                caseList.AddRange((IEnumerable<Entities.Case>)(Entities.Case)database.Cases.Where(a => a.RealtorID == 0));
                 if (caseList.Count > number)
                 {
                     caseList.RemoveRange(number, caseList.Count - 1);
@@ -59,8 +59,6 @@ namespace UseCases
             }
 
         }
-
-        //********************************************
         public List<Entities.Case> ReadAllCases()
         {
             List<Entities.Case> caseList = new List<Entities.Case>();
@@ -74,9 +72,6 @@ namespace UseCases
             }
 
         }
-        //********************************************
-
-
         public List<Entities.Case> ReadCases(int postalCode)
         {
             using (var database = new EstateBrokerContext())
