@@ -19,9 +19,7 @@ namespace GUI
 
         public PropertyValuationPage()
         {
-            IEvaluatePropertyOutput estimatesOutput = new EvaluatePropertyPresenter(this);
-            IEvaluatePropertyInput estimatesInput = new EvaluateProperty(estimatesOutput);
-            EvaluatePropertyController = new EvaluatePropertyController(estimatesInput);
+            EvaluatePropertyController = DependencyInjectionContainer.GetEvaluatePropertyController(this);
             InitializeComponent();
         }
 

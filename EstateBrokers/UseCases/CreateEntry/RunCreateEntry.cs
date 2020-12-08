@@ -6,31 +6,34 @@ namespace UseCases.CreateEntry
     public class RunCreateEntry : ICreateEntryInput
     {
 
-        public ICreateEntryOutput createEntryOutput { get; set; }
+        public ICreateEntryOutput _createEntryOutput;
+        public ICaseCRUD _caseCRUD;
+        public IPropertyCRUD _propertyCRUD;
+        public IAddressCRUD _addressCRUD;
+        
 
-        public RunCreateEntry(ICreateEntryOutput createentryoutput)
+        public RunCreateEntry(ICreateEntryOutput createentryoutput, ICaseCRUD caseCRUD, IPropertyCRUD propertyCRUD, IAddressCRUD addressCRUD)
         {
-            createEntryOutput = createentryoutput;
+            _createEntryOutput = createentryoutput;
+            _caseCRUD = caseCRUD;
+            _propertyCRUD = propertyCRUD;
+            _addressCRUD = addressCRUD;
         }
 
         public void Create(CreateEntryRequestModel request)
         {
-            ICaseCRUD caseCrud = new CaseCRUD();
-            IPropertyCRUD propertyCrud = new PropertyCRUD();
-            IAddressCRUD addressCrud = new AddressCRUD();
-            IRealtorCRUD realtorCrud = new RealtorCRUD();
 
-            int caseID = caseCrud.CreateCase(request.creationDate, request.price, request.realtorID);
+            int caseID = _caseCRUD.CreateCase(request.creationDate, request.price, request.realtorID);
 
-            int propertyID = propertyCrud.CreateProperty(request.estimatedPrice, caseCrud.ReadCase(caseID), request.postalCode, request.AddressLine1);
+            int propertyID = _propertyCRUD.CreateProperty(request.estimatedPrice, _caseCRUD.ReadCase(caseID), request.postalCode, request.AddressLine1);
 
-            int postalCodeofAddressObject = addressCrud.CreateAddress(
+            int postalCodeofAddressObject = _addressCRUD.CreateAddress(
                 request.postalCode, request.AddressLine1, request.AddressLine2, request.ownershipCost,
                 request.exteriorArea, request.interiorArea, request.buildYear);
 
             CreateEntryResponseModel response = new CreateEntryResponseModel();
 
-            if (caseID != null && propertyID != null && addressCrud != null)
+            if (caseID != null && propertyID != null && postalCodeofAddressObject != null)
             {
                 response.EntryCreatedSuccesfully = true;
             }
@@ -38,7 +41,7 @@ namespace UseCases.CreateEntry
             {
                 response.EntryCreatedSuccesfully = false;
             }
-            createEntryOutput.ConfirmEntryCreation(response);
+            _createEntryOutput.ConfirmEntryCreation(response);
 
         }
 
