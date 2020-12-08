@@ -9,8 +9,6 @@ namespace GUI
 {
     public class DependencyInjectionContainer
     {
-
-
         public static EvaluatePropertyController GetEvaluatePropertyController(PropertyValuationPage propertyValuationPage)
         {
             IEvaluatePropertyOutput estimatesOutput = new EvaluatePropertyPresenter(propertyValuationPage);
@@ -18,8 +16,5 @@ namespace GUI
 
             return new EvaluatePropertyController(estimatesInput);
         }
-
-
-
     }
 }

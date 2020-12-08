@@ -41,9 +41,7 @@ namespace UseCases
                 if (caseList.Count > number)
                 {
                     caseList.RemoveRange(number, caseList.Count - 1);
-                }
-
-                
+                }      
                     return caseList;
                 
                 

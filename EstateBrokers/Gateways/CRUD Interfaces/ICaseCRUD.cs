@@ -19,5 +19,6 @@ namespace Gateways
         public void UpdateCase(int ID, DateTime creationDate, DateTime closedDate, double price, Realtor realtor);
 
         public void DeleteCase(int ID);
+        void UpdateCase(int item, DateTime creationDate, DateTime? closedDate, double price, Realtor realtor);
     }
 }

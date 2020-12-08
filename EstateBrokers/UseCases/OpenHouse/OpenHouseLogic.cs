@@ -1,4 +1,5 @@
 ﻿using Gateways;
+using Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,7 @@ namespace UseCases.OpenHouse
 
 
             DistributeCases(out CaseIDLists, out success, Cases, rnd, realtorList);
+            AssignCases(CaseIDLists, realtorList[0].RealtorID, realtorList[1].RealtorID, realtorList[2].RealtorID);
             OpenHouseReturn(CaseIDLists, success);
             
         }
@@ -53,6 +55,26 @@ namespace UseCases.OpenHouse
             {
                 Success = false;
                 CaseIDLists = tempIDList;
+            }
+        }
+        public void AssignCases(List<List<int>> CaseIDLists, int RealtorID1, int RealtorID2, int RealtorID3)
+        {
+            ICaseCRUD caseCRUD = new CaseCRUD();
+            IRealtorCRUD realtorCRUD = new RealtorCRUD(); 
+            foreach (var item in CaseIDLists[0])
+            {
+                Entities.Case workingCase = caseCRUD.ReadCase(item);
+                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate, workingCase.Price, realtorCRUD.ReadRealtor(RealtorID1));
+            }
+            foreach (var item in CaseIDLists[1])
+            {
+                Entities.Case workingCase = caseCRUD.ReadCase(item);
+                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate, workingCase.Price, realtorCRUD.ReadRealtor(RealtorID2));
+            }
+            foreach (var item in CaseIDLists[2])
+            {
+                Entities.Case workingCase = caseCRUD.ReadCase(item);
+                caseCRUD.UpdateCase(item, workingCase.CreationDate, workingCase.ClosedDate, workingCase.Price, realtorCRUD.ReadRealtor(RealtorID3));
             }
         }
         public void OpenHouseReturn(List<List<int>> CaseIDLists, bool success)
