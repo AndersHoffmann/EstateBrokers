@@ -13,43 +13,33 @@ namespace UnitTests
     [TestClass]
     public class OpenHouse_Test
     {
-         List<Case> Cases = new List<Case>();
-         List<Realtor> realtors = new List<Realtor>();
-         
-
-        private void FillLists()
-        {
-            Cases.Clear();
-            realtors.Clear();
-
-            for (int i = 0; i < 18; i++)
-            {
-                Cases.Add(new Case());
-                Cases[i].CaseID = i;
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                realtors.Add(new Realtor());
-                realtors[i].RealtorID = i;
-            }
-        }
-
         [TestMethod()]
-        public void Number_Of_Properties_Should_Be_Equal()
+        public void If_Input_Is_Eighteen_Method_Shoud_Return_True()
         {
             //Arrange
-            FillLists();
+         
             OpenHouseLogic openHouseLogic = new OpenHouseLogic();
 
             //Act
-            //openHouseLogic.RunOpenHouse(realtors);
-
-            int realtorOne = Cases.Count(s => s.Realtor.RealtorID == 0);
-            int realtorTwo = Cases.Count(s => s.Realtor.RealtorID == 1);
-            int realtorThree = Cases.Count(s => s.Realtor.RealtorID == 2);
+           bool result = openHouseLogic.CheckIfNumberOFCasesIsValid(18);
 
             //Assert
-            Assert.AreEqual(realtorOne, realtorOne, realtorThree);
+            Assert.IsTrue(result);
+            
+        }
+        [TestMethod()]
+        public void If_Input_Is_Not_Eighteen_Method_Shoud_return_False()
+        {
+            //Arrange
+
+            OpenHouseLogic openHouseLogic = new OpenHouseLogic();
+
+            //Act
+            bool result = openHouseLogic.CheckIfNumberOFCasesIsValid(15);
+
+            //Assert
+            Assert.IsTrue(result);
+
         }
     }
 }
