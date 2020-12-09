@@ -16,7 +16,7 @@ namespace Gateways
 
         public List<Case> ReadCases(int PostalCode);
 
-        public void UpdateCase(int ID, DateTime creationDate, DateTime closedDate, double price, Realtor realtor);
+        public bool UpdateCase(int ID, DateTime creationDate, DateTime? closedDate, double price, int realtorID);
 
         public void DeleteCase(int ID);
      

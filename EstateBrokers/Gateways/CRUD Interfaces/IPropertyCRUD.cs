@@ -13,7 +13,7 @@ namespace Gateways
 
         public List<Property> GetAllProperties();
 
-        public void UpdateProperty(int ID, int estimatedPrice, Case Case, int postalCode, string adressLine1);
+        public bool UpdateProperty(int ID, double estimatedPrice, int caseID, int postalCode, string adressLine1);
 
         public void DeleteProperty(int ID);
     }

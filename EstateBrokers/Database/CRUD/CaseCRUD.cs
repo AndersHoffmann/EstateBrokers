@@ -103,17 +103,27 @@ namespace Database
 
         }
 
-        public void UpdateCase(int ID, DateTime creationDate, DateTime closedDate, double price, Entities.Realtor realtor)
+        public bool UpdateCase(int ID, DateTime creationDate, DateTime? closedDate, double price, int realtorID)
         {
-            using (var database = new EstateBrokerContext())
+
+            try
             {
-                Database.Case workingCase = database.Cases.Find(ID);
-                workingCase.CreationDate = creationDate;
-                workingCase.ClosedDate = closedDate;
-                workingCase.Price = price;
-                workingCase.Realtor = realtor;
-                database.SaveChanges();
+                using (var database = new EstateBrokerContext())
+                {
+                    Database.Case workingCase = database.Cases.Find(ID);
+                    workingCase.CreationDate = creationDate;
+                    workingCase.ClosedDate = closedDate;
+                    workingCase.Price = price;
+                    workingCase.RealtorID = realtorID;
+                    database.SaveChanges();
+                }
+                return true;
             }
+            catch
+            {
+                return false;
+            }
+            
 
         }
         public void DeleteCase(int ID)

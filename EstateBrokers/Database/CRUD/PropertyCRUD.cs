@@ -45,17 +45,27 @@ namespace UseCases
             }
             return workingList;
         }
-        public void UpdateProperty(int ID, int estimatedPrice, Entities.Case Case, int postalCode, string adressLine1)
+        public bool UpdateProperty(int ID, double estimatedPrice, int caseID, int postalCode, string adressLine1)
         {
-            using (var database = new EstateBrokerContext())
+            try
             {
-                Database.Property property = database.Properties.Find(ID);
-                property.EstimatedPrice = estimatedPrice;
-                property.Case = Case;
-                property.PostalCode = postalCode;
-                property.AddressLine1 = adressLine1;
-                database.SaveChanges();
+                using (var database = new EstateBrokerContext())
+                {
+                    Database.Property property = database.Properties.Find(ID);
+                    property.EstimatedPrice = estimatedPrice;
+                    property.CaseID = caseID;
+                    property.PostalCode = postalCode;
+                    property.AddressLine1 = adressLine1;
+                    database.SaveChanges();
+                }
+                return true;
             }
+            catch 
+            {
+                return false;
+              
+            }
+            
         }
         public void DeleteProperty(int ID)
         {

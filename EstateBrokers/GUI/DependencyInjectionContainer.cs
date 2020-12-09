@@ -34,7 +34,6 @@ namespace GUI
             IEstimatesInput estimatesInput = new CalculateAverageM2PriceForArea(estimatesOutput, caseCRUD);
 
             return new EstimatesController(estimatesInput);
-
         }
 
         public static ShowEntryController GetShowEntryController(GetEntryPage getEntryPage)
@@ -106,9 +105,6 @@ namespace GUI
             return new LoginController(loginInput);
 
         }
-
-
-
 
     }
 }

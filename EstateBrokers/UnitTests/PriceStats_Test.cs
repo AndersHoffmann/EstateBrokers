@@ -20,9 +20,6 @@ namespace UnitTests
         public void Output_Price_Is_Not_Exactly_5000_Times_Input_House_Area()
         {
             //Arrange
-            PropertyValuationPage propertyValuationPage = new PropertyValuationPage();
-            EvaluatePropertyController evaluatePropertyController = DependencyInjectionContainer.GetEvaluatePropertyController(propertyValuationPage);
-
             EvaluatePropertyRequestModel e = new EvaluatePropertyRequestModel();
 
             e.HasBasement = false;
@@ -33,8 +30,7 @@ namespace UnitTests
             e.SquareMeter = 50;
 
             //Act
-            IEvaluatePropertyInput ip = EvaluatePropertyController._evaluatePropertyInput;
-            EvaluatePropertyResponseModel result = ip.MakeEvaluation(e);
+            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeEvaluation(e);
             double estimatedValue = result.PropertyValuation;
 
             //Assert
@@ -44,9 +40,6 @@ namespace UnitTests
         public void Output_Price_Is_Less_Than_Ten_Percent_Higher_than_Input_Area_Times_5000()
         {
             //Arrange
-            PropertyValuationPage propertyValuationPage = new PropertyValuationPage();
-            EvaluatePropertyController evaluatePropertyController = DependencyInjectionContainer.GetEvaluatePropertyController(propertyValuationPage);
-
             EvaluatePropertyRequestModel e = new EvaluatePropertyRequestModel();
 
 
@@ -58,8 +51,8 @@ namespace UnitTests
             e.SquareMeter = 50;
 
             //Act
-            IEvaluatePropertyInput ip = EvaluatePropertyController._evaluatePropertyInput;
-            EvaluatePropertyResponseModel result = ip.MakeEvaluation(e);
+            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeEvaluation(e);
+            
             double estimatedValue = result.PropertyValuation;
 
             if (estimatedValue  > (e.SquareMeter * 5000) * 1.1)
@@ -72,13 +65,7 @@ namespace UnitTests
         public void Output_Price_Is_Exactly_()
         {
             //Arrange
-            PropertyValuationPage propertyValuationPage = new PropertyValuationPage();
-            EvaluatePropertyController evaluatePropertyController = DependencyInjectionContainer.GetEvaluatePropertyController(propertyValuationPage);
-
             EvaluatePropertyRequestModel e = new EvaluatePropertyRequestModel();
-            IEvaluatePropertyInput ip = EvaluatePropertyController._evaluatePropertyInput;
-            EvaluatePropertyResponseModel result = ip.MakeEvaluation(e);
-            double estimatedValue = result.PropertyValuation;
 
             e.HasBasement = false;
             e.HasGarage = true;
@@ -86,6 +73,9 @@ namespace UnitTests
             e.IsDesignerHouse = false;
             e.HouseCondition = 8;
             e.SquareMeter = 73;
+
+            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeEvaluation(e);
+            double estimatedValue = result.PropertyValuation;
 
             //Act
             double finalPrice = (e.SquareMeter * (1 + 8 / 20)) * 1.1;
