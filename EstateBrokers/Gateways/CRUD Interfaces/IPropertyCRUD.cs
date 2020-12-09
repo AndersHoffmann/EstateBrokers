@@ -8,6 +8,7 @@ namespace Gateways
         public int CreateProperty(double estimatedPrice, Case Case, int postalCode, string adressLine1);
 
         public Property ReadProperty(int ID);
+        public Property ReadPropertyFromCaseID(int ID):
 
         public List<Property> GetAllProperties();
 
