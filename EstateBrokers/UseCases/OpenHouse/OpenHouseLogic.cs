@@ -26,22 +26,20 @@ namespace UseCases.OpenHouse
             
         public void RunOpenHouse(OpenHouseRequestModel openHouseRequestModel)
         {
-            ICaseCRUD caseCRUD = new CaseCRUD();
-            IRealtorCRUD realtorcrud = new RealtorCRUD();
 
             List<Entities.Realtor> realtorList = new List<Entities.Realtor>();
 
             bool success;
 
-            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId1));
-            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId2));
-            realtorList.Add(realtorcrud.ReadRealtor(openHouseRequestModel.RealtorId3));
+            realtorList.Add(_realtorCRUD.ReadRealtor(openHouseRequestModel.RealtorId1));
+            realtorList.Add(_realtorCRUD.ReadRealtor(openHouseRequestModel.RealtorId2));
+            realtorList.Add(_realtorCRUD.ReadRealtor(openHouseRequestModel.RealtorId3));
 
 
             OpenHouseResponseModel response = new OpenHouseResponseModel();
             Random rnd = new Random();
             List<List<int>> CaseIDLists = new List<List<int>>();
-            List<Entities.Case> Cases = caseCRUD.ReadAPreDefinedNumberOfCasesWithNoRealtor(19);
+            List<Entities.Case> Cases = _caseCRUD.ReadAPreDefinedNumberOfCasesWithNoRealtor(19);
 
             CaseIDLists.Add(new List<int>());
             CaseIDLists.Add(new List<int>());

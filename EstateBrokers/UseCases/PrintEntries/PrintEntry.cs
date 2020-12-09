@@ -11,9 +11,9 @@ namespace UseCases.PrintEntries
     {
         IPrintEntriesOutput _printEntriesOutput;
         IAddressCRUD _addressCRUD;
-        ICaseCRUD _caseCRUD = new CaseCRUD();
-        IPropertyCRUD _propertyCRUD = new PropertyCRUD();
-        IRealtorCRUD _realtorCRUD = new RealtorCRUD();
+        ICaseCRUD _caseCRUD;
+        IPropertyCRUD _propertyCRUD;
+        IRealtorCRUD _realtorCRUD;
         
 
         public PrintEntry(IPrintEntriesOutput printEntriesOutput, IAddressCRUD addressCRUD, ICaseCRUD caseCRUD, IPropertyCRUD propertyCRUD, IRealtorCRUD realtorCRUD)
