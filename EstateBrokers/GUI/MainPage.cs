@@ -39,7 +39,7 @@ namespace GUI
                 this.Close();
             }
 
-        }
+        } 
 
 
         private void button_Home_FrontPage_Click(object sender, EventArgs e)
