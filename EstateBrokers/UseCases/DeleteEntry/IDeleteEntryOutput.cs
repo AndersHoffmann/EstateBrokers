@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UseCases.EvaluateProperty
+namespace UseCases.DeleteEntry
 {
     public interface IDeleteEntryOutput
     {
-       
+        public bool ConfirmDeletion(DeleteEntryResponseModel deleteEntryResponseModel);
+
     }
 }

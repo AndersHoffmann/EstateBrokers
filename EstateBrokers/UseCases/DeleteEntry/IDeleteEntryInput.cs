@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UseCases.EvaluateProperty
+namespace UseCases.DeleteEntry
 {
     public interface IDeleteEntryInput
     {
-        public void DeleteEntry(int caseID);
+        public void EntryDeletion(int caseID);
 
     }
 }

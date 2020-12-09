@@ -4,11 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UseCases.EvaluateProperty
+namespace UseCases.DeleteEntry
 {
     public class DeleteEntryRequestModel
     {
-
-
+        public int CaseID { get; set; }
     }
 }

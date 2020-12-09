@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UseCases.EvaluateProperty
+namespace UseCases.DeleteEntry
 {
     public class DeleteEntryResponseModel
     {
-
+        public bool confirm { get; set; }
     }
 }
