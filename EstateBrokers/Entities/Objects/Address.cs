@@ -17,6 +17,7 @@ namespace Entities
         public int ExteriorArea { get; set; }
         public int InteriorArea { get; set; }
         public int BuildYear { get; set; }
+
         public Address(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
         {
             PostalCode = postalCode;
@@ -27,6 +28,7 @@ namespace Entities
             InteriorArea = interiorArea;
             BuildYear = buildYear;
         }
+
         public Address()
         {
                 

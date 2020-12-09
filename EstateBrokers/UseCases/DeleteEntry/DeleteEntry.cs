@@ -18,9 +18,9 @@ namespace UseCases.DeleteEntry
             _propertyCRUD = propertyCRUD;
             _addressCRUD = addressCRUD;
         }
-        public void EntryDeletion(int caseID)
+        public void EntryDeletion(DeleteEntryRequestModel request)
         {
-            Entities.Property workingProperty = _propertyCRUD.ReadPropertyFromCaseID(caseID);
+            Entities.Property workingProperty = _propertyCRUD.ReadPropertyFromCaseID(request.CaseID);
 
             DeleteEntryResponseModel response = new DeleteEntryResponseModel();
             try

@@ -21,8 +21,7 @@ namespace UseCases.ShowCases
         }
         public void GetEntries()
         {
-            
-
+           
             List<ShowEntriesResponseModel> responseList = new List<ShowEntriesResponseModel>();
             List<Entities.Property> workingPropertyList = _propertyCRUD.GetAllProperties();
 
@@ -47,6 +46,7 @@ namespace UseCases.ShowCases
                
              
                 Entities.Address workingAddress = _addressCRUD.ReadAddress(property.PostalCode, property.AddressLine1);
+
                 showEntriesResponseModel.postalCode = workingAddress.PostalCode;
                 showEntriesResponseModel.AddressLine1 = workingAddress.AddressLine1;
                 showEntriesResponseModel.AddressLine2 = workingAddress.AddressLine2;

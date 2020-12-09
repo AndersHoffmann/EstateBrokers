@@ -1,5 +1,6 @@
 ﻿using Controllers;
 using Presenters;
+using Presenters.IFrontEnd;
 using System;
 using System.Windows.Forms;
 using UseCases.PrintEntries;
@@ -8,10 +9,11 @@ using ViewModels;
 
 namespace GUI
 {
-    public partial class GetEntryPage : UserControl, IGetEntryFrontEnd, IPrintEntryFrontEnd
+    public partial class GetEntryPage : UserControl, IGetEntryFrontEnd, IPrintEntryFrontEnd, IDeleteEntryFrontEnd
     {
         ShowEntryController _showentrycontroller;
         PrintEntryController _printEntryController;
+        DeleteEntryController _deleteEntryController;
 
         public GetEntryPage()
         {
@@ -20,6 +22,9 @@ namespace GUI
 
             //Print entry
             _printEntryController = DependencyInjectionContainer.GetPrintEntryController(this);
+
+            //Delete entry
+            _deleteEntryController = DependencyInjectionContainer.DeleteEntryController(this);
 
             InitializeComponent();
         }
@@ -30,17 +35,11 @@ namespace GUI
             _showentrycontroller.StartShowEntries();
         }
 
-
-
         public void EntriesForDataGridView(ShowEntriesViewModel showEntriesViewModel)
         {
             dataGridView_ShowEntries.DataSource = showEntriesViewModel.Entries;
         }
 
-        private void dataGridView_ShowEntries_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void button_Reload_Click(object sender, EventArgs e)
         {
@@ -68,6 +67,20 @@ namespace GUI
 
         }
 
-   
+        private void button_Delete_Click(object sender, EventArgs e)
+        {
+            _deleteEntryController.DeleteEntryID(textBox_CaseToDelete.Text);
+
+
+        }
+
+        public void confirmCaseDelete(DeleteEntryViewModel deleteEntryViewModel)
+        {
+            if (deleteEntryViewModel.CaseDeleteSucess == true)
+            {
+                MessageBox.Show($"Case id ** {textBox_CaseToDelete.Text} ** deleted");
+            }
+            
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace UseCases.DeleteEntry
 {
     public interface IDeleteEntryOutput
     {
-        public bool ConfirmDeletion(DeleteEntryResponseModel deleteEntryResponseModel);
+        public void ConfirmDeletion(DeleteEntryResponseModel deleteEntryResponseModel);
 
     }
 }

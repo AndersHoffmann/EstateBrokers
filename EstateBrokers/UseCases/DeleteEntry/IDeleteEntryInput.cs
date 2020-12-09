@@ -6,7 +6,7 @@ namespace UseCases.DeleteEntry
 {
     public interface IDeleteEntryInput
     {
-        public void EntryDeletion(int caseID);
+        public void EntryDeletion(DeleteEntryRequestModel requestModel);
 
     }
 }

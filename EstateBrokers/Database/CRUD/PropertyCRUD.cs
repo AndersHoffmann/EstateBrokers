@@ -38,7 +38,7 @@ namespace UseCases
         {
             using (var database = new EstateBrokerContext())
             {
-                return (Entities.Property)PropertyFactory.CreateProperty(database.Properties.First(a => a.CaseID == ID));
+                return (Entities.Property)PropertyFactory.CreateProperty(database.Properties.FirstOrDefault(a => a.CaseID == ID));
             }
         }
 

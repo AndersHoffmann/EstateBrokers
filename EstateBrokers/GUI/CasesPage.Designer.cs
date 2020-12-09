@@ -32,9 +32,10 @@ namespace GUI
             this.button_CreateCase = new System.Windows.Forms.Button();
             this.button_ShowCases = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.createEntryPage1 = new GUI.CreateEntryPage();
             this.getEntryPage1 = new GUI.GetEntryPage();
+            this.createEntryPage1 = new GUI.CreateEntryPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_UpdateCase = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,16 +74,14 @@ namespace GUI
             this.panel1.Size = new System.Drawing.Size(1169, 845);
             this.panel1.TabIndex = 2;
             // 
-            // label1
+            // getEntryPage1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(43, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 44);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Cases";
+            this.getEntryPage1.BackColor = System.Drawing.Color.White;
+            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.getEntryPage1.Location = new System.Drawing.Point(7, 0);
+            this.getEntryPage1.Name = "getEntryPage1";
+            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
+            this.getEntryPage1.TabIndex = 1;
             // 
             // createEntryPage1
             // 
@@ -94,20 +93,35 @@ namespace GUI
             this.createEntryPage1.Size = new System.Drawing.Size(1169, 845);
             this.createEntryPage1.TabIndex = 0;
             // 
-            // getEntryPage1
+            // label1
             // 
-            this.getEntryPage1.BackColor = System.Drawing.Color.White;
-            this.getEntryPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.getEntryPage1.Location = new System.Drawing.Point(7, 0);
-            this.getEntryPage1.Name = "getEntryPage1";
-            this.getEntryPage1.Size = new System.Drawing.Size(1169, 845);
-            this.getEntryPage1.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.Location = new System.Drawing.Point(43, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 44);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Cases";
+            // 
+            // button_UpdateCase
+            // 
+            this.button_UpdateCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_UpdateCase.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_UpdateCase.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button_UpdateCase.Location = new System.Drawing.Point(0, 575);
+            this.button_UpdateCase.Name = "button_UpdateCase";
+            this.button_UpdateCase.Size = new System.Drawing.Size(205, 116);
+            this.button_UpdateCase.TabIndex = 4;
+            this.button_UpdateCase.Text = "Update case";
+            this.button_UpdateCase.UseVisualStyleBackColor = true;
             // 
             // CasesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button_UpdateCase);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_ShowCases);
@@ -131,5 +145,6 @@ namespace GUI
         private CreateEntryPage OnCasesPage_createEntryPage;
         private CreateEntryPage createEntryPage1;
         private GetEntryPage getEntryPage1;
+        private System.Windows.Forms.Button button_UpdateCase;
     }
 }

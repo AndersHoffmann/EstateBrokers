@@ -4,6 +4,7 @@ using Database;
 using Database.Login;
 using Gateways;
 using Presenters;
+using Presenters.Presenters;
 using System;
 using UseCases;
 using UseCases.CreateEntry;
@@ -14,6 +15,7 @@ using UseCases.PaymentCalculator;
 using UseCases.PrintEntries;
 using UseCases.ShowCases;
 using UseCases.Statistics;
+using UseCases.DeleteEntry;
 
 namespace GUI
 {
@@ -58,6 +60,20 @@ namespace GUI
             IPrintEntriesInput printInput = new PrintEntry(printOutput, addressCRUD, caseCRUD, propertyCRUD, realtorCRUD);
          
             return new PrintEntryController(printInput);
+
+        }
+
+        public static DeleteEntryController DeleteEntryController(GetEntryPage getEntryPage)
+        {
+
+
+            IDeleteEntryOutput deleteEntryOutput = new DeleteEntryPresenter(getEntryPage);
+            ICaseCRUD caseCRUD = new CaseCRUD();
+            IPropertyCRUD propertyCRUD = new PropertyCRUD();
+            IAddressCRUD addressCRUD = new AddressCRUD();
+            IDeleteEntryInput deleteEntryInput = new DeleteEntry(deleteEntryOutput,caseCRUD, propertyCRUD,addressCRUD);
+
+            return new DeleteEntryController(deleteEntryInput);
 
         }
 
