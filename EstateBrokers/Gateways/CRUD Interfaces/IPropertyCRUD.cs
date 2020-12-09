@@ -1,7 +1,5 @@
 ﻿using Entities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Gateways
 {
@@ -12,6 +10,8 @@ namespace Gateways
         public Property ReadProperty(int ID);
 
         public List<Property> GetAllProperties();
+
+        public Entities.Property ReadPropertyFromCaseID(int id);
 
         public bool UpdateProperty(int ID, double estimatedPrice, int caseID, int postalCode, string adressLine1);
 

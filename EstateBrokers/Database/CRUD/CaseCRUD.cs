@@ -60,7 +60,7 @@ namespace Database
 
         }
 
-        //********************************************
+
         public List<Entities.Case> ReadAllCases()
         {
             List<Entities.Case> caseList = new List<Entities.Case>();
@@ -74,8 +74,7 @@ namespace Database
             }
 
         }
-        //********************************************
-
+      
 
         public List<Entities.Case> ReadCases(int postalCode)
         {

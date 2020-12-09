@@ -30,8 +30,18 @@ namespace UseCases
             using (var database = new EstateBrokerContext())
             {
                 return (Entities.Property)PropertyFactory.CreateProperty(database.Properties.Find(ID));
+
             }
         }
+
+        public Entities.Property ReadPropertyFromCaseID(int ID)
+        {
+            using (var database = new EstateBrokerContext())
+            {
+                return (Entities.Property)PropertyFactory.CreateProperty(database.Properties.First(a => a.CaseID == ID));
+            }
+        }
+
         public List<Entities.Property> GetAllProperties()
         {
             List<Entities.Property> workingList = new List<Entities.Property>();

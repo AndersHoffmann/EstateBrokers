@@ -1,8 +1,4 @@
 ﻿using Gateways;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using UseCases.UpdateEntry;
 
 namespace UseCases.DeleteEntry
 {
