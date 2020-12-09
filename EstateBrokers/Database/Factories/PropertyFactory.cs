@@ -28,9 +28,5 @@ namespace Database
 
         }
 
-        internal static Entities.Property CreateProperty(IQueryable<Property> queryables)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

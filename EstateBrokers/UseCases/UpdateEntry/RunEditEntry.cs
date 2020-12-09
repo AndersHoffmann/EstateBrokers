@@ -6,10 +6,10 @@ namespace UseCases.UpdateEntry
     public class RunUpdateEntry : IUpdateEntryInput
     {
 
-        public IUpdateEntryOutput _updateEntryOutput;
-        public ICaseCRUD _caseCRUD;
-        public IPropertyCRUD _propertyCRUD;
-        public IAddressCRUD _addressCRUD;
+        IUpdateEntryOutput _updateEntryOutput;
+        ICaseCRUD _caseCRUD;
+        IPropertyCRUD _propertyCRUD;
+        IAddressCRUD _addressCRUD;
         
 
         public RunUpdateEntry(IUpdateEntryOutput updateEntryOutput, ICaseCRUD caseCRUD, IPropertyCRUD propertyCRUD, IAddressCRUD addressCRUD)

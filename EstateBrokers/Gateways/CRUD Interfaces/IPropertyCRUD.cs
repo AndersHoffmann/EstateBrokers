@@ -8,11 +8,9 @@ namespace Gateways
         public int CreateProperty(double estimatedPrice, Case Case, int postalCode, string adressLine1);
 
         public Property ReadProperty(int ID);
-        public Property ReadPropertyFromCaseID(int ID):
+        public Property ReadPropertyFromCaseID(int ID);
 
         public List<Property> GetAllProperties();
-
-        public Entities.Property ReadPropertyFromCaseID(int id);
 
         public bool UpdateProperty(int ID, double estimatedPrice, int caseID, int postalCode, string adressLine1);
 
