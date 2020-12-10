@@ -7,7 +7,6 @@ namespace UseCases.PaymentCalculator
     public class CalculateMonthlyPayment : IPaymentCalculatorInput
     {
         IPaymentCalculatorOutput _paymentCalculatorOutput;
-        public static PaymentCalculatorRequestModel RequestModel;
         IBank _bank;
 
         public CalculateMonthlyPayment(IPaymentCalculatorOutput paymentCalculatorOutput, IBank bank)
