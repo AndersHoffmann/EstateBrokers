@@ -4,19 +4,19 @@ namespace Controllers
     public class ShowEntryController
     {
 
-        public static IShowEntryInput ShowEntryInput;
+        IShowEntryInput _showEntryInput;
 
         public ShowEntryController(IShowEntryInput showEntryInput)
         {
 
-            ShowEntryInput = showEntryInput;
+            _showEntryInput = showEntryInput;
 
         }
 
         public void StartShowEntries()
         {
 
-            ShowEntryInput.GetEntries();
+            _showEntryInput.GetEntries();
 
         }
 

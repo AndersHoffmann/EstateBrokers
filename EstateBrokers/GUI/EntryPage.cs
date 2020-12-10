@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using Controllers;
+using ViewModels;
+using Presenters.IFrontEnd;
 namespace GUI
 {
-    public partial class CasesPage : UserControl
+    public partial class EntryPage : UserControl, IDeleteEntryFrontEnd
     {
-        public CasesPage()
+
+        DeleteEntryController _deleteEntryController;
+
+        public EntryPage()
         {
+            _deleteEntryController = DependencyInjectionContainer.DeleteEntryController(this);
+
             InitializeComponent();
             HideAllUserControls();
         }
@@ -37,6 +44,20 @@ namespace GUI
             getEntryPage1.Hide();
             editEntryPage1.Hide();
 
+        }
+
+        private void button_DeleteCase_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void confirmCaseDelete(DeleteEntryViewModel deleteEntryViewModel)
+        {
+            if (deleteEntryViewModel.CaseDeleteSucess == true)
+            {
+                MessageBox.Show($"Case id ** {textBox_CaseIdToDelete.Text} ** is now deleted");
+                textBox_CaseIdToDelete.Clear();
+            }
         }
     }
 }

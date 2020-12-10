@@ -4,7 +4,7 @@ namespace Controllers
 {
     public class PaymentCalculatorController
     {
-        public static IPaymentCalculatorInput PaymentCalculatorInput;
+        IPaymentCalculatorInput PaymentCalculatorInput;
 
         public PaymentCalculatorController(IPaymentCalculatorInput paymentCalculatorInput)
         {

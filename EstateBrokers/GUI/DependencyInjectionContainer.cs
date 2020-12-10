@@ -63,11 +63,10 @@ namespace GUI
 
         }
 
-        public static DeleteEntryController DeleteEntryController(GetEntryPage getEntryPage)
+        public static DeleteEntryController DeleteEntryController(EntryPage entryPage)
         {
 
-
-            IDeleteEntryOutput deleteEntryOutput = new DeleteEntryPresenter(getEntryPage);
+            IDeleteEntryOutput deleteEntryOutput = new DeleteEntryPresenter(entryPage);
             ICaseCRUD caseCRUD = new CaseCRUD();
             IPropertyCRUD propertyCRUD = new PropertyCRUD();
             IAddressCRUD addressCRUD = new AddressCRUD();
@@ -99,7 +98,7 @@ namespace GUI
         }
 
 
-        public static GetEntryEditCaseData GetEntryEditCaseData(EditEntryPage editEntryPage)
+        public static UpdateEntryController GetEntryEditCaseData(EditEntryPage editEntryPage)
         {
             IUpdateEntryOutput entryOutput = new UpdateEntryPresenter(editEntryPage);
             ICaseCRUD caseCRUD = new CaseCRUD();
@@ -108,7 +107,7 @@ namespace GUI
 
             IUpdateEntryInput updateEntryInput = new RunUpdateEntry(entryOutput, caseCRUD, propertyCRUD, addressCRUD);
 
-            return new GetEntryEditCaseData(updateEntryInput);
+            return new UpdateEntryController(updateEntryInput);
 
         }
 

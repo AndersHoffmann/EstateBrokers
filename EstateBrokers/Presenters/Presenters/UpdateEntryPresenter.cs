@@ -19,35 +19,38 @@ namespace Presenters.Presenters
 
         public void ConfirmEntryCreation(UpdateEntryResponseModel response)
         {
-            throw new NotImplementedException();
+            UpdateEntryViewModel updateEntryViewModel = new UpdateEntryViewModel();
+            updateEntryViewModel.UpdateSuccess = response.EntryUpdatedSuccesfully;
+            _frontEnd.ShowUpdateStatus(updateEntryViewModel);
         }
 
         public void ReturnEntryInformation(ShowEntryEditableResponseModel response)
         {
-            ShowEditAbleEntryViewModel showEditAbleEntryViewModel = new ShowEditAbleEntryViewModel();
-
+            UpdateEntryViewModel updateEntryViewModel = new UpdateEntryViewModel();
+            
             //Case
-            showEditAbleEntryViewModel.caseID = response.caseID.ToString();
-            showEditAbleEntryViewModel.realtorID = response.realtorID.ToString();
-            showEditAbleEntryViewModel.creationDate = response.creationDate.ToString();
-            showEditAbleEntryViewModel.closedDate = response.closedDate.ToString();
-            showEditAbleEntryViewModel.price = response.price.ToString();
+            updateEntryViewModel.caseID = response.caseID.ToString();
+            //
+            updateEntryViewModel.realtorID = Convert.ToDecimal(response.realtorID.ToString());
+            updateEntryViewModel.creationDate = response.creationDate.ToString();
+            updateEntryViewModel.closedDate = response.closedDate.ToString();
+            updateEntryViewModel.price = Convert.ToDecimal(response.price);
 
             //Property
-            showEditAbleEntryViewModel.estimatedPrice = response.estimatedPrice.ToString();
+            updateEntryViewModel.estimatedPrice = Convert.ToDecimal(response.estimatedPrice);
 
             //Property and Address
-            showEditAbleEntryViewModel.postalCode = response.postalCode.ToString();
-            showEditAbleEntryViewModel.addressLine1 = response.addressLine1;
+            updateEntryViewModel.postalCode = Convert.ToDecimal(response.postalCode);
+            updateEntryViewModel.addressLine1 = response.addressLine1;
 
             //Address
-            showEditAbleEntryViewModel.addressLine2 = response.addressLine2;
-            showEditAbleEntryViewModel.ownershipCost = response.ownershipCost.ToString();
-            showEditAbleEntryViewModel.exteriorArea = response.exteriorArea.ToString();
-            showEditAbleEntryViewModel.interiorArea = response.interiorArea.ToString();
-            showEditAbleEntryViewModel.buildYear = response.buildYear.ToString();
+            updateEntryViewModel.addressLine2 = response.addressLine2;
+            updateEntryViewModel.ownershipCost = Convert.ToDecimal(response.ownershipCost);
+            updateEntryViewModel.exteriorArea = Convert.ToDecimal(response.exteriorArea);
+            updateEntryViewModel.interiorArea = Convert.ToDecimal(response.interiorArea);
+            updateEntryViewModel.buildYear = Convert.ToDecimal(response.buildYear);
 
-            _frontEnd.EntryToTextBoxes(showEditAbleEntryViewModel);
+            _frontEnd.EntryToTextBoxes(updateEntryViewModel);
         }
     }
 }

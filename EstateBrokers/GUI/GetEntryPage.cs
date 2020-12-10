@@ -7,11 +7,10 @@ using ViewModels;
 
 namespace GUI
 {
-    public partial class GetEntryPage : UserControl, IGetEntryFrontEnd, IPrintEntryFrontEnd, IDeleteEntryFrontEnd
+    public partial class GetEntryPage : UserControl, IGetEntryFrontEnd, IPrintEntryFrontEnd
     {
         ShowEntryController _showentrycontroller;
         PrintEntryController _printEntryController;
-        DeleteEntryController _deleteEntryController;
 
         public GetEntryPage()
         {
@@ -20,9 +19,6 @@ namespace GUI
 
             //Print entry
             _printEntryController = DependencyInjectionContainer.GetPrintEntryController(this);
-
-            //Delete entry
-            _deleteEntryController = DependencyInjectionContainer.DeleteEntryController(this);
 
             InitializeComponent();
         }
@@ -65,19 +61,5 @@ namespace GUI
 
         }
 
-        private void button_Delete_Click(object sender, EventArgs e)
-        {
-            _deleteEntryController.DeleteEntryID(textBox_CaseToDelete.Text);
-
-
-        }
-
-        public void confirmCaseDelete(DeleteEntryViewModel deleteEntryViewModel)
-        {
-            
-                MessageBox.Show($"Case id ** {textBox_CaseToDelete.Text} ** deleted");
- 
-            
-        }
     }
 }

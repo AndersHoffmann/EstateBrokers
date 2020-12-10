@@ -42,7 +42,7 @@
             this.button_estimates_mainpage = new System.Windows.Forms.Button();
             this.button_openhouse_mainpage = new System.Windows.Forms.Button();
             this.button_cases_mainpage = new System.Windows.Forms.Button();
-            this.casesPage1 = new GUI.CasesPage();
+            this.casesPage1 = new GUI.EntryPage();
             this.estimatesPage1 = new GUI.EstimatesPage();
             this.supportPage1 = new GUI.SupportPage();
             this.openHousePage1 = new GUI.OpenHousePage();
@@ -288,7 +288,7 @@
         private System.Windows.Forms.Button button_estimates_mainpage;
         private System.Windows.Forms.Button button_openhouse_mainpage;
         private System.Windows.Forms.Button button_cases_mainpage;
-        private CasesPage casesPage1;
+        private EntryPage casesPage1;
         private EstimatesPage estimatesPage1;
         private SupportPage supportPage1;
         private OpenHousePage openHousePage1;

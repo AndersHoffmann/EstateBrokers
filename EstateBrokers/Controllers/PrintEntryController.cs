@@ -6,7 +6,7 @@ namespace Controllers
     public class PrintEntryController
     {
 
-        public static IPrintEntriesInput PrintInput;
+        IPrintEntriesInput PrintInput;
 
         public PrintEntryController(IPrintEntriesInput printInput)
         {

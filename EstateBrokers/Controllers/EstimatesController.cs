@@ -5,7 +5,7 @@ namespace Controllers
 {
     public class EstimatesController
     {
-        public static IEstimatesInput EstimatesInput;
+        IEstimatesInput EstimatesInput;
 
         public EstimatesController (IEstimatesInput estimatesInput)
         {

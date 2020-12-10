@@ -3,6 +3,9 @@ namespace Presenters.IFrontEnd
 {
     public interface IShowEditAbleEntryFrontEnd
     {
-        public void EntryToTextBoxes(ShowEditAbleEntryViewModel showEditAbleEntryViewModel);
+        public void EntryToTextBoxes(UpdateEntryViewModel updateEntryViewModel);
+
+        public void ShowUpdateStatus(UpdateEntryViewModel updateEntryViewModel);
+          
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class CasesPage
+    partial class EntryPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,6 +32,7 @@ namespace GUI
             this.button_CreateCase = new System.Windows.Forms.Button();
             this.button_ShowCases = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.editEntryPage1 = new GUI.EditEntryPage();
             this.getEntryPage1 = new GUI.GetEntryPage();
             this.createEntryPage1 = new GUI.CreateEntryPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace GUI
             this.button_DeleteCase = new System.Windows.Forms.Button();
             this.textBox_CaseIdToDelete = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.editEntryPage1 = new GUI.EditEntryPage();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,17 @@ namespace GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1162, 845);
             this.panel1.TabIndex = 2;
+            // 
+            // editEntryPage1
+            // 
+            this.editEntryPage1.BackColor = System.Drawing.Color.White;
+            this.editEntryPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.editEntryPage1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.editEntryPage1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.editEntryPage1.Location = new System.Drawing.Point(0, 0);
+            this.editEntryPage1.Name = "editEntryPage1";
+            this.editEntryPage1.Size = new System.Drawing.Size(1176, 845);
+            this.editEntryPage1.TabIndex = 2;
             // 
             // getEntryPage1
             // 
@@ -133,10 +144,11 @@ namespace GUI
             this.button_DeleteCase.TabIndex = 5;
             this.button_DeleteCase.Text = "Delete case";
             this.button_DeleteCase.UseVisualStyleBackColor = true;
+            this.button_DeleteCase.Click += new System.EventHandler(this.button_DeleteCase_Click);
             // 
             // textBox_CaseIdToDelete
             // 
-            this.textBox_CaseIdToDelete.Location = new System.Drawing.Point(0, 789);
+            this.textBox_CaseIdToDelete.Location = new System.Drawing.Point(7, 789);
             this.textBox_CaseIdToDelete.Name = "textBox_CaseIdToDelete";
             this.textBox_CaseIdToDelete.Size = new System.Drawing.Size(198, 27);
             this.textBox_CaseIdToDelete.TabIndex = 6;
@@ -146,21 +158,11 @@ namespace GUI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(0, 767);
+            this.label2.Location = new System.Drawing.Point(7, 767);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 19);
             this.label2.TabIndex = 7;
             this.label2.Text = "Enter case id to delete";
-            // 
-            // editEntryPage1
-            // 
-            this.editEntryPage1.BackColor = System.Drawing.Color.White;
-            this.editEntryPage1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.editEntryPage1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.editEntryPage1.Location = new System.Drawing.Point(0, 0);
-            this.editEntryPage1.Name = "editEntryPage1";
-            this.editEntryPage1.Size = new System.Drawing.Size(1176, 845);
-            this.editEntryPage1.TabIndex = 2;
             // 
             // CasesPage
             // 
