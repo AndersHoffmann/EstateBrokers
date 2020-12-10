@@ -16,7 +16,7 @@ namespace GUI
 {
     public partial class EstimatesPage : UserControl, IPaymentCalculatorFrontEnd
     {
-        PaymentCalculatorController _paymentCalculateController { get; set; }
+        PaymentCalculatorController _paymentCalculateController;
 
         public EstimatesPage()
         {

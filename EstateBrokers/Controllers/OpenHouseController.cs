@@ -4,7 +4,7 @@ namespace Controllers
 {
     public class OpenHouseController
     {
-        public static IOpenHouseInput OpenHouseInput;
+        IOpenHouseInput OpenHouseInput;
 
         public OpenHouseController(IOpenHouseInput openHouseInput)
         {

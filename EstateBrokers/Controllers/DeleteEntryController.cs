@@ -6,7 +6,7 @@ namespace Controllers
     public class DeleteEntryController
     {
 
-        public static IDeleteEntryInput DeleteEntryInput;
+        IDeleteEntryInput DeleteEntryInput;
 
         public DeleteEntryController(IDeleteEntryInput deleteEntryInput)
         {

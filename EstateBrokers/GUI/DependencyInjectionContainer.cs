@@ -15,6 +15,7 @@ using UseCases.PaymentCalculator;
 using UseCases.PrintEntries;
 using UseCases.ShowCases;
 using UseCases.Statistics;
+using UseCases.UpdateEntry;
 
 namespace GUI
 {
@@ -62,11 +63,10 @@ namespace GUI
 
         }
 
-        public static DeleteEntryController DeleteEntryController(GetEntryPage getEntryPage)
+        public static DeleteEntryController DeleteEntryController(EntryPage entryPage)
         {
 
-
-            IDeleteEntryOutput deleteEntryOutput = new DeleteEntryPresenter(getEntryPage);
+            IDeleteEntryOutput deleteEntryOutput = new DeleteEntryPresenter(entryPage);
             ICaseCRUD caseCRUD = new CaseCRUD();
             IPropertyCRUD propertyCRUD = new PropertyCRUD();
             IAddressCRUD addressCRUD = new AddressCRUD();
@@ -94,6 +94,20 @@ namespace GUI
             IPaymentCalculatorInput paymentCalculatorInput = new CalculateMonthlyPayment(paymentCalculatorOutput, bank);
 
             return new PaymentCalculatorController(paymentCalculatorInput);
+
+        }
+
+
+        public static UpdateEntryController GetEntryEditCaseData(EditEntryPage editEntryPage)
+        {
+            IUpdateEntryOutput entryOutput = new UpdateEntryPresenter(editEntryPage);
+            ICaseCRUD caseCRUD = new CaseCRUD();
+            IPropertyCRUD propertyCRUD = new PropertyCRUD();
+            IAddressCRUD addressCRUD = new AddressCRUD();
+
+            IUpdateEntryInput updateEntryInput = new RunUpdateEntry(entryOutput, caseCRUD, propertyCRUD, addressCRUD);
+
+            return new UpdateEntryController(updateEntryInput);
 
         }
 

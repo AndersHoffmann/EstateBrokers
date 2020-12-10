@@ -6,8 +6,8 @@ namespace Controllers
 {
     public class EvaluatePropertyController
     {
-        //Public PGA testing
-        public static IEvaluatePropertyInput _evaluatePropertyInput;
+
+        IEvaluatePropertyInput _evaluatePropertyInput;
 
         public EvaluatePropertyController(IEvaluatePropertyInput evaluatePropertyInput)
         {

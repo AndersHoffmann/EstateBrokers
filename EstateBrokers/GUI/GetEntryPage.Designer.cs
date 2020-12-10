@@ -34,10 +34,6 @@ namespace GUI
             this.button_Reload = new System.Windows.Forms.Button();
             this.textBox_CaseIDtoPrint = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox_CaseToDelete = new System.Windows.Forms.TextBox();
-            this.button_Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowEntries)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,53 +89,11 @@ namespace GUI
             this.label1.TabIndex = 10;
             this.label1.Text = "Which case ID would you like to print?";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 765);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 21);
-            this.label2.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(236, 773);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 23);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Case id to delete";
-            // 
-            // textBox_CaseToDelete
-            // 
-            this.textBox_CaseToDelete.Location = new System.Drawing.Point(236, 804);
-            this.textBox_CaseToDelete.Name = "textBox_CaseToDelete";
-            this.textBox_CaseToDelete.Size = new System.Drawing.Size(169, 27);
-            this.textBox_CaseToDelete.TabIndex = 13;
-            // 
-            // button_Delete
-            // 
-            this.button_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Delete.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_Delete.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button_Delete.Location = new System.Drawing.Point(411, 774);
-            this.button_Delete.Name = "button_Delete";
-            this.button_Delete.Size = new System.Drawing.Size(149, 60);
-            this.button_Delete.TabIndex = 14;
-            this.button_Delete.Text = "Delete";
-            this.button_Delete.UseVisualStyleBackColor = true;
-            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
-            // 
             // GetEntryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button_Delete);
-            this.Controls.Add(this.textBox_CaseToDelete);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_CaseIDtoPrint);
             this.Controls.Add(this.button_Reload);
@@ -162,9 +116,5 @@ namespace GUI
         private System.Windows.Forms.Button button_Reload;
         private System.Windows.Forms.TextBox textBox_CaseIDtoPrint;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_CaseToDelete;
-        private System.Windows.Forms.Button button_Delete;
     }
 }
