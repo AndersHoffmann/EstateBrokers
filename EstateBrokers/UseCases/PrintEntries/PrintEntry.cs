@@ -32,7 +32,7 @@ namespace UseCases.PrintEntries
             PrintEntriesResponseModel response = new PrintEntriesResponseModel();
             PrintObject po = GetDataForPrint(Request.CaseID);
             var outputFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
-                             $"Case /{po.CaseID} Details.txt";
+                             $"/Case_{po.CaseID}_Details.txt";
             
 
             double M2price = po.Price / po.InteriorArea;
@@ -76,7 +76,7 @@ namespace UseCases.PrintEntries
 
             Entities.Case workingCase = _caseCRUD.ReadCase(caseId);
 
-            Entities.Realtor workingRealtor = _realtorCRUD.ReadRealtor(workingCase.Realtor);
+            Entities.Realtor workingRealtor = _realtorCRUD.ReadRealtor(_caseCRUD.ReturnRealtorIDOnCase(caseId));
 
             Entities.Property workingProperty = _propertyCRUD.ReadProperty(caseId);
 
@@ -87,7 +87,10 @@ namespace UseCases.PrintEntries
 
             printObject.CaseID = workingCase.CaseID;
             printObject.CreationDate = workingCase.CreationDate;
-            printObject.ClosedDate = (DateTime)workingCase.ClosedDate;
+            if (workingCase.ClosedDate != null)
+            {
+                printObject.ClosedDate = (DateTime)workingCase.ClosedDate;
+            }
             printObject.Price = workingCase.Price;
 
             printObject.PostalCode = workingProperty.PostalCode;

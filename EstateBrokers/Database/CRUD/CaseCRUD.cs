@@ -53,6 +53,14 @@ namespace Database
 
         }
 
+        public int ReturnRealtorIDOnCase(int ID)
+        {
+            using (var database = new EstateBrokerContext())
+            {
+                Database.Case tempCase = database.Cases.Find(ID);
+                return tempCase.RealtorID;
+            }
+        }
 
         public List<Entities.Case> ReadAllCases()
         {

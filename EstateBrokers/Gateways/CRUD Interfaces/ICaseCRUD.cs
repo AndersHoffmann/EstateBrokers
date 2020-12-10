@@ -11,6 +11,7 @@ namespace Gateways
 
         public Case ReadCase(int ID);
 
+        public int ReturnRealtorIDOnCase(int ID);
         public List<Case> ReadAllCases();
 
         public List<Case> ReadAPreDefinedNumberOfCasesWithNoRealtor(int number);
