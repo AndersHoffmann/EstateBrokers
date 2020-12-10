@@ -21,6 +21,7 @@ namespace UseCases
             };
 
             database.Addresses.Add(address);
+            database.SaveChanges();
             return address.PostalCode;
         }
         public Entities.Address ReadAddress(int postalCode, string addressLine1)

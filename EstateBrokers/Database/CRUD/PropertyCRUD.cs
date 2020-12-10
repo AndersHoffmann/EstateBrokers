@@ -10,15 +10,16 @@ namespace UseCases
 {
     public class PropertyCRUD : IPropertyCRUD
     {
-        public int CreateProperty(double estimatedPrice, Entities.Case Case, int postalCode, string adressLine1 )
+        public int CreateProperty(double estimatedPrice,int caseID, int postalCode, string adressLine1 )
         {
             var database = new EstateBrokerContext();
             var property = new Database.Property()
             {
                 EstimatedPrice = estimatedPrice,
-                Case = database.Cases.FirstOrDefault(a => a.CaseID == Case.CaseID),
                 PostalCode = postalCode,
-                AddressLine1= adressLine1
+                AddressLine1= adressLine1,
+                CaseID = caseID
+
             };
 
             database.Properties.Add(property);

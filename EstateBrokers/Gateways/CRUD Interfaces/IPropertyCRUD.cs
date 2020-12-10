@@ -5,7 +5,7 @@ namespace Gateways
 {
     public interface IPropertyCRUD
     {
-        public int CreateProperty(double estimatedPrice, Case Case, int postalCode, string adressLine1);
+        public int CreateProperty(double estimatedPrice, int caseID, int postalCode, string adressLine1);
 
         public Property ReadProperty(int ID);
         public Property ReadPropertyFromCaseID(int ID);

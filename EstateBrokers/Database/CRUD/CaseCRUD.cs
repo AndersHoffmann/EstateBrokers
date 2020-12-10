@@ -14,22 +14,24 @@ namespace Database
         {
 
             var database = new EstateBrokerContext();
-            IRealtorCRUD realtorCRUD = new RealtorCRUD();
+          //  IRealtorCRUD realtorCRUD = new RealtorCRUD();
 
 
             var workingCase = new Database.Case()
             {
                 CreationDate = creationDate,
                 Price = price,
+                RealtorID = realtorID
             };
-            Realtor realtor = database.Realtors.FirstOrDefault(a => a.RealtorID == realtorID);
+         //   Realtor realtor = database.Realtors.FirstOrDefault(a => a.RealtorID == realtorID);
 
-            workingCase.Realtor = realtor;
+           // workingCase.Realtor = realtor;
 
             database.Cases.Add(workingCase);
             database.SaveChanges();
             return workingCase.CaseID;
         }
+
         public List<Entities.Case> ReadAPreDefinedNumberOfCasesWithNoRealtor(int number)
         {
             List<Entities.Case> caseList = new List<Entities.Case>();
@@ -44,10 +46,7 @@ namespace Database
                         caseList.Add((Entities.Case)CaseFactory.CreateCase(Case));
                     }
                 }
-
-
                 return caseList;
-
             }
 
         }
@@ -99,12 +98,10 @@ namespace Database
                 return cases;
 
             }
-
         }
 
         public bool UpdateCase(int ID, DateTime creationDate, DateTime? closedDate, double price, int realtorID)
         {
-
             try
             {
                 using (var database = new EstateBrokerContext())
@@ -123,8 +120,8 @@ namespace Database
                 return false;
             }
             
-
         }
+
         public void DeleteCase(int ID)
         {
             var workingCase = new Database.Case()

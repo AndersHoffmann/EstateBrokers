@@ -12,6 +12,7 @@ namespace Gateways
         public Case ReadCase(int ID);
 
         public List<Case> ReadAllCases();
+
         public List<Case> ReadAPreDefinedNumberOfCasesWithNoRealtor(int number);
 
         public List<Case> ReadCases(int PostalCode);

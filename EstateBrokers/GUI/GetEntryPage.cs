@@ -76,10 +76,9 @@ namespace GUI
 
         public void confirmCaseDelete(DeleteEntryViewModel deleteEntryViewModel)
         {
-            if (deleteEntryViewModel.CaseDeleteSucess == true)
-            {
+            
                 MessageBox.Show($"Case id ** {textBox_CaseToDelete.Text} ** deleted");
-            }
+ 
             
         }
     }

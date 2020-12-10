@@ -25,7 +25,7 @@ namespace UseCases.CreateEntry
 
             int caseID = _caseCRUD.CreateCase(request.creationDate, request.price, request.realtorID);
 
-            int propertyID = _propertyCRUD.CreateProperty(request.estimatedPrice, _caseCRUD.ReadCase(caseID), request.postalCode, request.AddressLine1);
+            int propertyID = _propertyCRUD.CreateProperty(request.estimatedPrice, caseID, request.postalCode, request.AddressLine1);
 
             int postalCodeofAddressObject = _addressCRUD.CreateAddress(
                 request.postalCode, request.AddressLine1, request.AddressLine2, request.ownershipCost,
