@@ -302,9 +302,9 @@ namespace GUI
             this.checkBox_AreYouSure.ForeColor = System.Drawing.Color.DodgerBlue;
             this.checkBox_AreYouSure.Location = new System.Drawing.Point(705, 708);
             this.checkBox_AreYouSure.Name = "checkBox_AreYouSure";
-            this.checkBox_AreYouSure.Size = new System.Drawing.Size(434, 27);
+            this.checkBox_AreYouSure.Size = new System.Drawing.Size(435, 27);
             this.checkBox_AreYouSure.TabIndex = 28;
-            this.checkBox_AreYouSure.Text = "Are you sure the case information is currect?";
+            this.checkBox_AreYouSure.Text = "Are you sure the case information is correct?";
             this.checkBox_AreYouSure.UseVisualStyleBackColor = true;
             // 
             // textBox_Price
@@ -380,7 +380,6 @@ namespace GUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateEntryPage";
             this.Size = new System.Drawing.Size(1169, 845);
-            this.Load += new System.EventHandler(this.CreateCasePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

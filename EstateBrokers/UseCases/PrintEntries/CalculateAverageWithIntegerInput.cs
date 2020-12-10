@@ -18,7 +18,7 @@ namespace UseCases.PrintEntries
         {
           
 
-            List<Entities.Case> cases = _caseCRUD.ReadCases(input);
+            List<Entities.Case> cases = _caseCRUD.ReadCasesInPostalCode(input);
             double totalPrice = 0;
             int count = 0;
             foreach (var item in cases)

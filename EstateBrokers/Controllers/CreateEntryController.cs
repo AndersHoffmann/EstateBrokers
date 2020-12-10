@@ -5,11 +5,11 @@ namespace Controllers
 {
     public class CreateEntryController
     {
-        public static ICreateEntryInput CreateEntryInput;
+        ICreateEntryInput _createEntryInput;
 
         public CreateEntryController(ICreateEntryInput createEntryInput)
         {
-            CreateEntryInput = createEntryInput;
+            _createEntryInput = createEntryInput;
 
         }
 
@@ -17,6 +17,7 @@ namespace Controllers
             string AddressLine2, string ownershipCost, string exteriorArea, string interiorArea, string buildYear )
         {
             CreateEntryRequestModel request = new CreateEntryRequestModel();
+
             //For Case
             request.realtorID = Int32.Parse(realtorID);
             request.creationDate = DateTime.Today;
@@ -37,7 +38,7 @@ namespace Controllers
             request.buildYear = Int32.Parse(buildYear);
 
 
-            CreateEntryInput.Create(request);
+            _createEntryInput.CreateEntry(request);
 
         }
 

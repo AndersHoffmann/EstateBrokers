@@ -5,9 +5,9 @@ using Database.Login;
 using Gateways;
 using Presenters;
 using Presenters.Presenters;
-using System;
 using UseCases;
 using UseCases.CreateEntry;
+using UseCases.DeleteEntry;
 using UseCases.EvaluateProperty;
 using UseCases.Login;
 using UseCases.OpenHouse;
@@ -15,7 +15,6 @@ using UseCases.PaymentCalculator;
 using UseCases.PrintEntries;
 using UseCases.ShowCases;
 using UseCases.Statistics;
-using UseCases.DeleteEntry;
 
 namespace GUI
 {
@@ -25,7 +24,7 @@ namespace GUI
         {
             IEvaluatePropertyOutput estimatesOutput = new EvaluatePropertyPresenter(propertyValuationPage);
             IEvaluatePropertyInput estimatesInput = new EvaluateProperty(estimatesOutput);
-            
+
             return new EvaluatePropertyController(estimatesInput);
         }
 
@@ -50,7 +49,7 @@ namespace GUI
 
         }
 
-        public static PrintEntryController GetPrintEntryController (GetEntryPage getEntryPage)
+        public static PrintEntryController GetPrintEntryController(GetEntryPage getEntryPage)
         {
             IPrintEntriesOutput printOutput = new PrintEntryPresenter(getEntryPage);
             IAddressCRUD addressCRUD = new AddressCRUD();
@@ -58,7 +57,7 @@ namespace GUI
             IPropertyCRUD propertyCRUD = new PropertyCRUD();
             IRealtorCRUD realtorCRUD = new RealtorCRUD();
             IPrintEntriesInput printInput = new PrintEntry(printOutput, addressCRUD, caseCRUD, propertyCRUD, realtorCRUD);
-         
+
             return new PrintEntryController(printInput);
 
         }
@@ -71,7 +70,7 @@ namespace GUI
             ICaseCRUD caseCRUD = new CaseCRUD();
             IPropertyCRUD propertyCRUD = new PropertyCRUD();
             IAddressCRUD addressCRUD = new AddressCRUD();
-            IDeleteEntryInput deleteEntryInput = new DeleteEntry(deleteEntryOutput,caseCRUD, propertyCRUD,addressCRUD);
+            IDeleteEntryInput deleteEntryInput = new DeleteEntry(deleteEntryOutput, caseCRUD, propertyCRUD, addressCRUD);
 
             return new DeleteEntryController(deleteEntryInput);
 
@@ -102,9 +101,10 @@ namespace GUI
         {
 
             ICreateEntryOutput createcaseOutput = new CreateEntryPresenter(createEntryPage);
-            IAddressCRUD addressCRUD = new AddressCRUD();
             ICaseCRUD caseCRUD = new CaseCRUD();
             IPropertyCRUD propertyCRUD = new PropertyCRUD();
+            IAddressCRUD addressCRUD = new AddressCRUD();
+
             ICreateEntryInput createcaseInput = new RunCreateEntry(createcaseOutput, caseCRUD, propertyCRUD, addressCRUD);
 
             return new CreateEntryController(createcaseInput);

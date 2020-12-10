@@ -19,7 +19,7 @@ namespace UseCases.Statistics
         public void Calculate(EstimatesRequestModel request)
         {
             
-            List<Entities.Case> cases = _caseCRUD.ReadCases(request.PostalCode);
+            List<Entities.Case> cases = _caseCRUD.ReadCasesInPostalCode(request.PostalCode);
             double totalPrice = 0;
             int count = 0;
             foreach (var item in cases)

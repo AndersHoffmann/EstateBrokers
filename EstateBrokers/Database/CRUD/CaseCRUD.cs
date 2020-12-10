@@ -7,29 +7,23 @@ namespace Database
 {
     public class CaseCRUD : ICaseCRUD
     {
-        public object cases { get; private set; }
-
 
         public int CreateCase(DateTime creationDate, double price, int realtorID)
         {
 
-            var database = new EstateBrokerContext();
-          //  IRealtorCRUD realtorCRUD = new RealtorCRUD();
-
-
-            var workingCase = new Database.Case()
+            using (var database = new EstateBrokerContext())
             {
-                CreationDate = creationDate,
-                Price = price,
-                RealtorID = realtorID
-            };
-         //   Realtor realtor = database.Realtors.FirstOrDefault(a => a.RealtorID == realtorID);
+                var workingCase = new Case()
+                {
+                    CreationDate = creationDate,
+                    Price = price,
+                    RealtorID = realtorID
+                };
 
-           // workingCase.Realtor = realtor;
-
-            database.Cases.Add(workingCase);
-            database.SaveChanges();
-            return workingCase.CaseID;
+                database.Cases.Add(workingCase);
+                database.SaveChanges();
+                return workingCase.CaseID;
+            } 
         }
 
         public List<Entities.Case> ReadAPreDefinedNumberOfCasesWithNoRealtor(int number)
@@ -73,10 +67,11 @@ namespace Database
             }
 
         }
-      
 
-        public List<Entities.Case> ReadCases(int postalCode)
+
+        public List<Entities.Case> ReadCasesInPostalCode(int postalCode)
         {
+            
             using (var database = new EstateBrokerContext())
             {
                 List<Entities.Case> cases = new List<Entities.Case>();
@@ -87,10 +82,9 @@ namespace Database
                     properties = database.Properties.Where(s => s.PostalCode == postalCode).ToList();
                 }
 
-
                 foreach (var item in properties)
                 {
-                    this.cases = database.Cases.Where(s => s.CaseID == item.CaseID).ToList();
+                    cases.Add((Entities.Case)CaseFactory.CreateCase(database.Cases.Find(item.CaseID)));
                 }
 
                 database.SaveChanges();
@@ -119,7 +113,7 @@ namespace Database
             {
                 return false;
             }
-            
+
         }
 
         public void DeleteCase(int ID)

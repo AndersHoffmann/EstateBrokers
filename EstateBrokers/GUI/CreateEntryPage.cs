@@ -11,20 +11,19 @@ namespace GUI
     public partial class CreateEntryPage : UserControl, ICreateEntryFrontEnd
     {
 
-        CreateEntryController _createcasecontroller { get; set; }
+        CreateEntryController _createEntryController;
 
         public CreateEntryPage()
         {
-            _createcasecontroller = DependencyInjectionContainer.GetCreateEntryController(this);
+            _createEntryController = DependencyInjectionContainer.GetCreateEntryController(this);
             InitializeComponent();
         }
 
         public void DisplayCreateCasesStatus(CasesViewModel casesViewModel)
         {
-            if (casesViewModel.CreateCasesSucess == true)
+            if (casesViewModel.CreateEntrySuccess == true)
             {
-                MessageBox.Show("Sucess");
-
+                MessageBox.Show("Success");
             }
             else
             {
@@ -34,14 +33,18 @@ namespace GUI
 
         }
 
-        private void CreateCasePage_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            _createcasecontroller.CreateEntry(textBox_RealtorID.Text, textBox_Price.Text, textBox_EstimatedPrice.Text, textbox_PostalCode.Text, textbox_AddressLine1.Text, textBox_AddressLine2.Text, textBox_OwnershipCost.Text, textBox_ExteriorArea.Text, textBox_InteriorArea.Text, textBox_BuildYear.Text);
+            if (checkBox_AreYouSure.Checked)
+            {
+                _createEntryController.CreateEntry(textBox_RealtorID.Text, textBox_Price.Text, textBox_EstimatedPrice.Text, textbox_PostalCode.Text, textbox_AddressLine1.Text, textBox_AddressLine2.Text, textBox_OwnershipCost.Text, textBox_ExteriorArea.Text, textBox_InteriorArea.Text, textBox_BuildYear.Text);
+            }
+            
+            else
+            {
+                MessageBox.Show("Please check your data and accept its correct ");
+            }
 
         }
 

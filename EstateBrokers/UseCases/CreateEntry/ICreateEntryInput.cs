@@ -6,6 +6,6 @@ namespace UseCases.CreateEntry
 {
     public interface ICreateEntryInput
     {
-        public void Create(CreateEntryRequestModel request);
+        public void CreateEntry(CreateEntryRequestModel request);
     }
 }

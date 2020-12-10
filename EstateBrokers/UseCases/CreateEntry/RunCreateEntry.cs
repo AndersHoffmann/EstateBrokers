@@ -6,10 +6,10 @@ namespace UseCases.CreateEntry
     public class RunCreateEntry : ICreateEntryInput
     {
 
-        public ICreateEntryOutput _createEntryOutput;
-        public ICaseCRUD _caseCRUD;
-        public IPropertyCRUD _propertyCRUD;
-        public IAddressCRUD _addressCRUD;
+        ICreateEntryOutput _createEntryOutput;
+        ICaseCRUD _caseCRUD;
+        IPropertyCRUD _propertyCRUD;
+        IAddressCRUD _addressCRUD;
         
 
         public RunCreateEntry(ICreateEntryOutput createentryoutput, ICaseCRUD caseCRUD, IPropertyCRUD propertyCRUD, IAddressCRUD addressCRUD)
@@ -20,7 +20,7 @@ namespace UseCases.CreateEntry
             _addressCRUD = addressCRUD;
         }
 
-        public void Create(CreateEntryRequestModel request)
+        public void CreateEntry(CreateEntryRequestModel request)
         {
 
             int caseID = _caseCRUD.CreateCase(request.creationDate, request.price, request.realtorID);
@@ -33,7 +33,7 @@ namespace UseCases.CreateEntry
 
             CreateEntryResponseModel response = new CreateEntryResponseModel();
 
-            if (caseID != null && propertyID != null && postalCodeofAddressObject != null)
+            if (caseID != 0 && propertyID != 0 && postalCodeofAddressObject != 0)
             {
                 response.EntryCreatedSuccesfully = true;
             }

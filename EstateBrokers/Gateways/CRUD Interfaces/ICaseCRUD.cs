@@ -15,7 +15,7 @@ namespace Gateways
 
         public List<Case> ReadAPreDefinedNumberOfCasesWithNoRealtor(int number);
 
-        public List<Case> ReadCases(int PostalCode);
+        public List<Case> ReadCasesInPostalCode(int PostalCode);
 
         public bool UpdateCase(int ID, DateTime creationDate, DateTime? closedDate, double price, int realtorID);
 

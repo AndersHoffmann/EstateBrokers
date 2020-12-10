@@ -6,11 +6,11 @@ namespace Presenters
 
     public partial class CreateEntryPresenter : ICreateEntryOutput
     {
-        public ICreateEntryFrontEnd FrontEnd { get; set; }
+        ICreateEntryFrontEnd _frontEnd;
 
         public CreateEntryPresenter(ICreateEntryFrontEnd frontEnd)
         {
-            FrontEnd = frontEnd;
+            _frontEnd = frontEnd;
         }
 
       
@@ -18,9 +18,9 @@ namespace Presenters
         {
             CasesViewModel casesviewmodel = new CasesViewModel();
 
-            casesviewmodel.CreateCasesSucess = response.EntryCreatedSuccesfully;
+            casesviewmodel.CreateEntrySuccess = response.EntryCreatedSuccesfully;
 
-            FrontEnd.DisplayCreateCasesStatus(casesviewmodel);
+            _frontEnd.DisplayCreateCasesStatus(casesviewmodel);
         }
     }
 

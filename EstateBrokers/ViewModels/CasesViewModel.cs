@@ -3,7 +3,7 @@
     public class CasesViewModel
     {
 
-        public bool CreateCasesSucess { get; set; }
+        public bool CreateEntrySuccess { get; set; }
 
     }
 }
