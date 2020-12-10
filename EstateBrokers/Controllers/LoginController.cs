@@ -4,12 +4,12 @@ namespace Controllers
 {
     public class LoginController
     {
-        public static ILoginInput LoginInput;
+        ILoginInput _loginInput;
 
         public LoginController(ILoginInput loginInput)
         {
 
-            LoginInput = loginInput;
+            _loginInput = loginInput;
 
         }
 
@@ -19,7 +19,7 @@ namespace Controllers
             request.username = username;
             request.password = password;
 
-            LoginInput.Auth(request);
+            _loginInput.Auth(request);
         }
 
     }

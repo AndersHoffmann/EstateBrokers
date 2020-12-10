@@ -3,8 +3,6 @@ using Presenters;
 using Presenters.IFrontEnd;
 using System;
 using System.Windows.Forms;
-using UseCases.PrintEntries;
-using UseCases.ShowCases;
 using ViewModels;
 
 namespace GUI

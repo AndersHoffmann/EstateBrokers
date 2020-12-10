@@ -6,11 +6,11 @@ namespace Presenters
 {
     public partial class LoginPresenter : ILoginOutput
     {
-        ILoginFrontEnd FrontEnd { get; set; }
+        ILoginFrontEnd _frontEnd;
 
         public LoginPresenter(ILoginFrontEnd frontEnd)
         {
-            FrontEnd = frontEnd;
+            _frontEnd = frontEnd;
 
         }
 
@@ -20,7 +20,7 @@ namespace Presenters
 
             loginViewModel.LoginSucess = response.LoginSucess;
 
-            FrontEnd.LoginAttempt(loginViewModel);
+            _frontEnd.LoginAttempt(loginViewModel);
 
         }
 

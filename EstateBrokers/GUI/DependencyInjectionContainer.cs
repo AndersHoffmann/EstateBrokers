@@ -15,6 +15,7 @@ using UseCases.PaymentCalculator;
 using UseCases.PrintEntries;
 using UseCases.ShowCases;
 using UseCases.Statistics;
+using UseCases.UpdateEntry;
 
 namespace GUI
 {
@@ -94,6 +95,20 @@ namespace GUI
             IPaymentCalculatorInput paymentCalculatorInput = new CalculateMonthlyPayment(paymentCalculatorOutput, bank);
 
             return new PaymentCalculatorController(paymentCalculatorInput);
+
+        }
+
+
+        public static GetEntryEditCaseData GetEntryEditCaseData(EditEntryPage editEntryPage)
+        {
+            IUpdateEntryOutput entryOutput = new UpdateEntryPresenter(editEntryPage);
+            ICaseCRUD caseCRUD = new CaseCRUD();
+            IPropertyCRUD propertyCRUD = new PropertyCRUD();
+            IAddressCRUD addressCRUD = new AddressCRUD();
+
+            IUpdateEntryInput updateEntryInput = new RunUpdateEntry(entryOutput, caseCRUD, propertyCRUD, addressCRUD);
+
+            return new GetEntryEditCaseData(updateEntryInput);
 
         }
 

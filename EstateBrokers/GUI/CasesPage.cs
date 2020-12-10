@@ -23,10 +23,19 @@ namespace GUI
             createEntryPage1.BringToFront();
         }
 
+
+        private void button_UpdateCase_Click(object sender, EventArgs e)
+        {
+            editEntryPage1.Show();
+            editEntryPage1.BringToFront();
+        }
+
+
         private void HideAllUserControls()
         {
             createEntryPage1.Hide();
             getEntryPage1.Hide();
+            editEntryPage1.Hide();
 
         }
     }
