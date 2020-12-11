@@ -47,7 +47,6 @@ namespace GUI
             IShowEntryInput entryInput = new ShowEntries(entryOutput, addressCRUD, caseCRUD, propertyCRUD);
 
             return new ShowEntryController(entryInput);
-
         }
 
         public static PrintEntryController GetPrintEntryController(GetEntryPage getEntryPage)

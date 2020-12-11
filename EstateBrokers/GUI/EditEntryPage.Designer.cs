@@ -73,6 +73,7 @@ namespace GUI
             // 
             this.textBox_CreationDate.Location = new System.Drawing.Point(287, 288);
             this.textBox_CreationDate.Name = "textBox_CreationDate";
+            this.textBox_CreationDate.ReadOnly = true;
             this.textBox_CreationDate.Size = new System.Drawing.Size(282, 31);
             this.textBox_CreationDate.TabIndex = 2;
             // 
@@ -87,6 +88,7 @@ namespace GUI
             // 
             this.textBox_AddressLine1.Location = new System.Drawing.Point(638, 199);
             this.textBox_AddressLine1.Name = "textBox_AddressLine1";
+            this.textBox_AddressLine1.ReadOnly = true;
             this.textBox_AddressLine1.Size = new System.Drawing.Size(282, 31);
             this.textBox_AddressLine1.TabIndex = 7;
             // 
@@ -94,6 +96,7 @@ namespace GUI
             // 
             this.textBox_AddressLine2.Location = new System.Drawing.Point(640, 288);
             this.textBox_AddressLine2.Name = "textBox_AddressLine2";
+            this.textBox_AddressLine2.ReadOnly = true;
             this.textBox_AddressLine2.Size = new System.Drawing.Size(282, 31);
             this.textBox_AddressLine2.TabIndex = 8;
             // 
@@ -115,9 +118,9 @@ namespace GUI
             this.button_searchCaseID.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button_searchCaseID.Location = new System.Drawing.Point(287, 101);
             this.button_searchCaseID.Name = "button_searchCaseID";
-            this.button_searchCaseID.Size = new System.Drawing.Size(154, 47);
+            this.button_searchCaseID.Size = new System.Drawing.Size(154, 42);
             this.button_searchCaseID.TabIndex = 14;
-            this.button_searchCaseID.Text = "Seach case id";
+            this.button_searchCaseID.Text = "Search case id";
             this.button_searchCaseID.UseVisualStyleBackColor = true;
             this.button_searchCaseID.Click += new System.EventHandler(this.button_searchCaseID_Click);
             // 
@@ -300,6 +303,7 @@ namespace GUI
             0,
             0});
             this.numericUpDown_PostalCode.Name = "numericUpDown_PostalCode";
+            this.numericUpDown_PostalCode.ReadOnly = true;
             this.numericUpDown_PostalCode.Size = new System.Drawing.Size(283, 31);
             this.numericUpDown_PostalCode.TabIndex = 31;
             // 
@@ -342,6 +346,7 @@ namespace GUI
             0,
             0});
             this.numericUpDown_BuildYear.Name = "numericUpDown_BuildYear";
+            this.numericUpDown_BuildYear.ReadOnly = true;
             this.numericUpDown_BuildYear.Size = new System.Drawing.Size(282, 31);
             this.numericUpDown_BuildYear.TabIndex = 34;
             // 

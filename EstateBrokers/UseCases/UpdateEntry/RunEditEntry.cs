@@ -25,13 +25,15 @@ namespace UseCases.UpdateEntry
 
             bool caseConfirmed = _caseCRUD.UpdateCase(request.caseID, request.creationDate, request.closedDate, request.price, request.realtorID);
 
-            int propertyID = _caseCRUD.ReadCase(request.caseID).Property.PropertyID;
+            //  int propertyID = _caseCRUD.ReadCase(request.caseID).PropertyID;
+            int propertyID = _propertyCRUD.ReadPropertyFromCaseID(request.caseID).PropertyID;
+
 
             bool propertyConfirmed = _propertyCRUD.UpdateProperty(propertyID, request.estimatedPrice, request.caseID, request.postalCode, request.addressLine1);
 
             bool addressConfirmed = _addressCRUD.UpdateAddress(
-                request.postalCode, request.addressLine1, request.addressLine2, request.ownershipCost,
-                request.exteriorArea, request.interiorArea, request.buildYear);
+                request.postalCode, request.addressLine1, request.ownershipCost,
+                request.exteriorArea, request.interiorArea);
 
 
             UpdateEntryResponseModel response = new UpdateEntryResponseModel();
@@ -50,12 +52,13 @@ namespace UseCases.UpdateEntry
             var selectedCase =_caseCRUD.ReadCase(request.CaseID);
 
             response.caseID = selectedCase.CaseID;
-            response.realtorID = selectedCase.Realtor.RealtorID;
+            response.realtorID = _caseCRUD.ReturnRealtorIDOnCase(request.CaseID);
             response.creationDate = selectedCase.CreationDate;
             response.closedDate = selectedCase.ClosedDate;
             response.price = selectedCase.Price;
+            
 
-            var selectedProperty = _propertyCRUD.ReadProperty(selectedCase.Realtor.RealtorID);
+            var selectedProperty = _propertyCRUD.ReadPropertyFromCaseID(request.CaseID);
 
             response.estimatedPrice = selectedProperty.EstimatedPrice;
             response.postalCode = selectedProperty.PostalCode;

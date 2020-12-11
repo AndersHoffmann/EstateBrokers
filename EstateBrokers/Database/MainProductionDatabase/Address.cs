@@ -14,11 +14,12 @@ namespace Database
         {
         }
 
-        public Address(int postalCode, string addressLine1, string addressLine2, int exteriorArea, int interiorArea, int buildYear)
+        public Address(int postalCode, string addressLine1, string addressLine2, double ownershipcost, int exteriorArea, int interiorArea, int buildYear)
         {
             PostalCode = postalCode;
             AddressLine1 = addressLine1;
             AddressLine2 = addressLine2;
+            OwnershipCost = ownershipcost;
             ExteriorArea = exteriorArea;
             InteriorArea = interiorArea;
             BuildYear = buildYear;

@@ -82,8 +82,8 @@ namespace UseCases.PrintEntries
 
             Entities.Address workingAddress = _addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
 
-          //  printObject.RealtorName = workingRealtor.Name;
-           // printObject.RealtorPhone = workingRealtor.PhoneNR;
+            printObject.RealtorName = workingRealtor.Name;
+            printObject.RealtorPhone = workingRealtor.PhoneNR;
 
             printObject.CaseID = workingCase.CaseID;
             printObject.CreationDate = workingCase.CreationDate;

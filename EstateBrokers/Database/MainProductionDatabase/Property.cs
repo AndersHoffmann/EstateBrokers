@@ -12,7 +12,6 @@ namespace Database
         public Property()
         {
         }
-
         public Property(int propertyID, double estimatedPrice, ICase @case, int caseID, int postalCode, string addressLine1)
         {
             PropertyID = propertyID;
