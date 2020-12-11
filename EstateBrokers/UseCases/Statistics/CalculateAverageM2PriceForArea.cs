@@ -1,8 +1,7 @@
-﻿using System;
-using Entities;
-using Gateways;
+﻿using Gateways;
 using System.Collections.Generic;
-using Database;
+using System.Linq;
+using System.Threading;
 
 namespace UseCases.Statistics
 {
@@ -11,14 +10,17 @@ namespace UseCases.Statistics
 
         IEstimatesOutput _estimatesOutput;
         ICaseCRUD _caseCRUD;
-        public CalculateAverageM2PriceForArea(IEstimatesOutput estimatesOutput, ICaseCRUD caseCRUD)
+        IPropertyCRUD _propertyCRUD;
+
+        public CalculateAverageM2PriceForArea(IEstimatesOutput estimatesOutput, ICaseCRUD caseCRUD, IPropertyCRUD propertyCRUD)
         {
             _estimatesOutput = estimatesOutput;
             _caseCRUD = caseCRUD;
+            _propertyCRUD = propertyCRUD;
         }
-        public void Calculate(EstimatesRequestModel request)
+        public void CalculateAreaPriceByPostalCode(EstimatesRequestModel request)
         {
-            
+
             List<Entities.Case> cases = _caseCRUD.ReadCasesInPostalCode(request.PostalCode);
             double totalPrice = 0;
             int count = 0;
@@ -34,6 +36,21 @@ namespace UseCases.Statistics
             _estimatesOutput.DisplayData(response);
         }
 
-       
+
+        public void GetAvailableAreaCodes()
+        {
+            GetAreaCodesResponseModel responseModel = new GetAreaCodesResponseModel();
+            var thread = new Thread(() =>
+            {
+
+                responseModel.AvailableAreaCodes = _propertyCRUD.GetAllProperties().Select(c => c.PostalCode).Distinct().ToList(); 
+
+            });
+
+            thread.Start();
+            thread.Join();
+
+            _estimatesOutput.DisplayAvailableAreaCodes(responseModel);
+        }
     }
 }

@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBox_AreaCodes = new System.Windows.Forms.ComboBox();
+            this.button_LoadAvailableAreaCodes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_check
@@ -46,7 +48,7 @@
             this.button_check.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_check.Image = ((System.Drawing.Image)(resources.GetObject("button_check.Image")));
             this.button_check.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_check.Location = new System.Drawing.Point(86, 602);
+            this.button_check.Location = new System.Drawing.Point(411, 602);
             this.button_check.Name = "button_check";
             this.button_check.Size = new System.Drawing.Size(300, 78);
             this.button_check.TabIndex = 0;
@@ -67,7 +69,7 @@
             // textBox_AreaCodeInput
             // 
             this.textBox_AreaCodeInput.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_AreaCodeInput.Location = new System.Drawing.Point(86, 565);
+            this.textBox_AreaCodeInput.Location = new System.Drawing.Point(518, 729);
             this.textBox_AreaCodeInput.Name = "textBox_AreaCodeInput";
             this.textBox_AreaCodeInput.Size = new System.Drawing.Size(300, 31);
             this.textBox_AreaCodeInput.TabIndex = 2;
@@ -138,11 +140,34 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Postal estimates";
             // 
+            // comboBox_AreaCodes
+            // 
+            this.comboBox_AreaCodes.FormattingEnabled = true;
+            this.comboBox_AreaCodes.Location = new System.Drawing.Point(86, 569);
+            this.comboBox_AreaCodes.Name = "comboBox_AreaCodes";
+            this.comboBox_AreaCodes.Size = new System.Drawing.Size(300, 29);
+            this.comboBox_AreaCodes.TabIndex = 14;
+            // 
+            // button_LoadAvailableAreaCodes
+            // 
+            this.button_LoadAvailableAreaCodes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LoadAvailableAreaCodes.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_LoadAvailableAreaCodes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_LoadAvailableAreaCodes.Location = new System.Drawing.Point(86, 602);
+            this.button_LoadAvailableAreaCodes.Name = "button_LoadAvailableAreaCodes";
+            this.button_LoadAvailableAreaCodes.Size = new System.Drawing.Size(300, 78);
+            this.button_LoadAvailableAreaCodes.TabIndex = 15;
+            this.button_LoadAvailableAreaCodes.Text = "Load Available Area Codes";
+            this.button_LoadAvailableAreaCodes.UseVisualStyleBackColor = true;
+            this.button_LoadAvailableAreaCodes.Click += new System.EventHandler(this.button_LoadAvailableAreaCodes_Click);
+            // 
             // PostalCodeEstimates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button_LoadAvailableAreaCodes);
+            this.Controls.Add(this.comboBox_AreaCodes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -157,7 +182,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PostalCodeEstimates";
             this.Size = new System.Drawing.Size(1165, 852);
-            this.Load += new System.EventHandler(this.EstimatesPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +199,7 @@
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox_AreaCodes;
+        private System.Windows.Forms.Button button_LoadAvailableAreaCodes;
     }
 }

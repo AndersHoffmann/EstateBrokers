@@ -48,7 +48,7 @@ namespace GUI
 
         private void button_DeleteCase_Click(object sender, EventArgs e)
         {
-            _deleteEntryController.DeleteEntryID(textBox_CaseIdToDelete.Text);
+            _deleteEntryController.DeleteEntryID(numericUpDown_CaseIdToDelete.Value);
         }
 
         public void confirmCaseDelete(DeleteEntryViewModel deleteEntryViewModel)

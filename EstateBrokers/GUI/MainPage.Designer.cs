@@ -46,6 +46,7 @@
             this.estimatesPage1 = new GUI.EstimatesPage();
             this.supportPage1 = new GUI.SupportPage();
             this.openHousePage1 = new GUI.OpenHousePage();
+            this.button_LogOut = new System.Windows.Forms.Button();
             this.panel_top_mainpage.SuspendLayout();
             this.panel_MainContainer.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // panel_top_mainpage
             // 
             this.panel_top_mainpage.BackColor = System.Drawing.Color.Black;
+            this.panel_top_mainpage.Controls.Add(this.button_LogOut);
             this.panel_top_mainpage.Controls.Add(this.label1);
             this.panel_top_mainpage.Controls.Add(this.button_Close_FrontPage);
             this.panel_top_mainpage.Controls.Add(this.button_Home_FrontPage);
@@ -249,6 +251,20 @@
             this.openHousePage1.Size = new System.Drawing.Size(1429, 917);
             this.openHousePage1.TabIndex = 8;
             // 
+            // button_LogOut
+            // 
+            this.button_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_LogOut.ForeColor = System.Drawing.Color.White;
+            this.button_LogOut.Image = ((System.Drawing.Image)(resources.GetObject("button_LogOut.Image")));
+            this.button_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_LogOut.Location = new System.Drawing.Point(178, 1);
+            this.button_LogOut.Name = "button_LogOut";
+            this.button_LogOut.Size = new System.Drawing.Size(126, 40);
+            this.button_LogOut.TabIndex = 6;
+            this.button_LogOut.Text = "Logout";
+            this.button_LogOut.UseVisualStyleBackColor = true;
+            this.button_LogOut.Click += new System.EventHandler(this.button_LogOut_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -294,5 +310,6 @@
         private OpenHousePage openHousePage1;
         private LoginPage loginPage1;
         private PropertyValuationPage propertyValuationPage1;
+        private System.Windows.Forms.Button button_LogOut;
     }
 }

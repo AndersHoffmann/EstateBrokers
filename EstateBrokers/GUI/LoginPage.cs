@@ -1,18 +1,15 @@
 ﻿using Controllers;
-using UseCases.Login;
 using Presenters;
 using System;
 using System.Windows.Forms;
 using ViewModels;
-using Gateways;
-using Database.Login;
 
 namespace GUI
 {
     public partial class LoginPage : UserControl, ILoginFrontEnd
     {
         LoginController _loginController { get; set; }
-      
+
 
         public LoginPage()
         {
@@ -33,7 +30,8 @@ namespace GUI
             {
 
                 MessageBox.Show("Login sucess");
-                this.Dispose();
+                ClearLogInData();
+                this.Hide();
 
             }
             else
@@ -44,23 +42,22 @@ namespace GUI
 
         }
 
-        private void LoginPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_login_Click(object sender, EventArgs e)
         {
-
             _loginController.TryLogin(textbox_username.Text, TextBox_password.Text);
-
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        private void ClearLogInData()
         {
 
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox)
+                {
+                    (control as TextBox).Clear();
+
+                }
+            }
         }
-
-
     }
 }

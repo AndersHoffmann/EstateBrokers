@@ -23,14 +23,9 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void EstimatesPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_check_Click(object sender, EventArgs e)
         {
-             _estimatesController.EstimateCode(textBox_AreaCodeInput.Text);
+             _estimatesController.EstimateCode(comboBox_AreaCodes.Text);
         }
 
         public void UpdateAveragePriceField(EstimatesViewModel estimatesViewModel)
@@ -41,6 +36,20 @@ namespace GUI
         private void button_AddToList_Click(object sender, EventArgs e)
         {
             listBox_AveragePricePerSquareMeter.Items.Add($"Postal code: {textBox_AreaCodeInput.Text} ------ Price per square meter {textBox_AvaragePricePerSquareMeter.Text}");
+        }
+
+        public void AreaCodesToComboBox(AvailableAreaCodesViewModel availableAreaCodesViewModel)
+        {
+            foreach (var areaCode in availableAreaCodesViewModel.AreaCodes)
+            {
+                comboBox_AreaCodes.Items.Add(areaCode);
+            }
+            
+        }
+
+        private void button_LoadAvailableAreaCodes_Click(object sender, EventArgs e)
+        {
+            _estimatesController.AreaCodes();
         }
     }
 }

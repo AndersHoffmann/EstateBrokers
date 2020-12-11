@@ -1,5 +1,5 @@
 ﻿using UseCases.PrintEntries;
-
+using System;
 
 namespace Controllers
 {
@@ -13,10 +13,10 @@ namespace Controllers
             PrintInput = printInput;
         }
 
-        public void PrintCases(int caseId)
+        public void PrintCases(decimal caseId)
         {
             PrintEntriesRequestModel request = new PrintEntriesRequestModel();
-            request.CaseID = caseId;
+            request.CaseID = Convert.ToInt32(caseId);
             PrintInput.WriteToFile(request);
 
         }

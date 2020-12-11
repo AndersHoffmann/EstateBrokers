@@ -230,7 +230,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginPage";
             this.Size = new System.Drawing.Size(1408, 908);
-            this.Load += new System.EventHandler(this.LoginPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsernamePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ForLockToPassword)).EndInit();

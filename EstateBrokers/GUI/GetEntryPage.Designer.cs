@@ -32,9 +32,10 @@ namespace GUI
             this.dataGridView_ShowEntries = new System.Windows.Forms.DataGridView();
             this.button_Print = new System.Windows.Forms.Button();
             this.button_Reload = new System.Windows.Forms.Button();
-            this.textBox_CaseIDtoPrint = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown_CaseIDtoPrint = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowEntries)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CaseIDtoPrint)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView_ShowEntries
@@ -72,30 +73,35 @@ namespace GUI
             this.button_Reload.UseVisualStyleBackColor = true;
             this.button_Reload.Click += new System.EventHandler(this.button_Reload_Click);
             // 
-            // textBox_CaseIDtoPrint
-            // 
-            this.textBox_CaseIDtoPrint.Location = new System.Drawing.Point(646, 803);
-            this.textBox_CaseIDtoPrint.Name = "textBox_CaseIDtoPrint";
-            this.textBox_CaseIDtoPrint.Size = new System.Drawing.Size(357, 27);
-            this.textBox_CaseIDtoPrint.TabIndex = 9;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(646, 772);
+            this.label1.Location = new System.Drawing.Point(646, 779);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(357, 23);
             this.label1.TabIndex = 10;
             this.label1.Text = "Which case ID would you like to print?";
+            // 
+            // numericUpDown_CaseIDtoPrint
+            // 
+            this.numericUpDown_CaseIDtoPrint.Location = new System.Drawing.Point(646, 805);
+            this.numericUpDown_CaseIDtoPrint.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numericUpDown_CaseIDtoPrint.Name = "numericUpDown_CaseIDtoPrint";
+            this.numericUpDown_CaseIDtoPrint.Size = new System.Drawing.Size(357, 27);
+            this.numericUpDown_CaseIDtoPrint.TabIndex = 11;
             // 
             // GetEntryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.numericUpDown_CaseIDtoPrint);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_CaseIDtoPrint);
             this.Controls.Add(this.button_Reload);
             this.Controls.Add(this.button_Print);
             this.Controls.Add(this.dataGridView_ShowEntries);
@@ -103,6 +109,7 @@ namespace GUI
             this.Name = "GetEntryPage";
             this.Size = new System.Drawing.Size(1169, 845);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ShowEntries)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CaseIDtoPrint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,7 +121,7 @@ namespace GUI
         private System.Windows.Forms.Button button_Print;
         private System.Windows.Forms.DataGridView dataGridView_ShowEntries;
         private System.Windows.Forms.Button button_Reload;
-        private System.Windows.Forms.TextBox textBox_CaseIDtoPrint;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_CaseIDtoPrint;
     }
 }

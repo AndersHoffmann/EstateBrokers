@@ -13,12 +13,12 @@ namespace Controllers
             DeleteEntryInput = deleteEntryInput;
         }
 
-        public void DeleteEntryID(string CaseID)
+        public void DeleteEntryID(decimal CaseID)
         {
 
             DeleteEntryRequestModel request = new DeleteEntryRequestModel();
 
-            request.CaseID = Int32.Parse(CaseID);
+            request.CaseID = Convert.ToInt32(CaseID);
 
             DeleteEntryInput.EntryDeletion(request);
 

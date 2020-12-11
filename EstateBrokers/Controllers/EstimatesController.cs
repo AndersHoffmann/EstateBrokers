@@ -5,20 +5,25 @@ namespace Controllers
 {
     public class EstimatesController
     {
-        IEstimatesInput EstimatesInput;
+        IEstimatesInput _estimatesInput;
 
-        public EstimatesController (IEstimatesInput estimatesInput)
+        public EstimatesController(IEstimatesInput estimatesInput)
         {
-            EstimatesInput = estimatesInput;
-            
+            _estimatesInput = estimatesInput;
+
         }
-       
+
         public void EstimateCode(string postalCode)
         {
             EstimatesRequestModel request = new EstimatesRequestModel();
             request.PostalCode = Int32.Parse(postalCode);
-            EstimatesInput.Calculate(request);
+            _estimatesInput.CalculateAreaPriceByPostalCode(request);
         }
- 
+        public void AreaCodes()
+        {
+            _estimatesInput.GetAvailableAreaCodes();
+
+        }
+
     }
 }

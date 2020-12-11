@@ -7,5 +7,6 @@ namespace UseCases.Statistics
     public class EstimatesResponseModel
     {
        public double AverageHousePrice { get; set; }
+
     }
 }

@@ -5,7 +5,9 @@ namespace UseCases.Statistics
 {
     public interface IEstimatesInput
     {
-        public void Calculate(EstimatesRequestModel request);
+        public void CalculateAreaPriceByPostalCode(EstimatesRequestModel request);
+
+        public void GetAvailableAreaCodes();
 
     }
 }

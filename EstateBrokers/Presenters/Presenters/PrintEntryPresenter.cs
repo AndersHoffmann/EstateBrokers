@@ -1,5 +1,4 @@
-﻿using System;
-using UseCases.PrintEntries;
+﻿using UseCases.PrintEntries;
 using ViewModels;
 
 namespace Presenters
@@ -12,6 +11,7 @@ namespace Presenters
         {
             FrontEnd = frontEnd;
         }
+
         public void PrintSuccess(PrintEntriesResponseModel responseModel)
         {
             PrintEntryViewModel printviewmodel = new PrintEntryViewModel();

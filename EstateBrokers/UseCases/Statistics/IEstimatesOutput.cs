@@ -6,5 +6,7 @@ namespace UseCases.Statistics
     {
         public void DisplayData(EstimatesResponseModel response);
 
+        public void DisplayAvailableAreaCodes(GetAreaCodesResponseModel response);
+
     }
 }

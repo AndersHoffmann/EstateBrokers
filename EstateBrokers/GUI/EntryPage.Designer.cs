@@ -40,7 +40,9 @@ namespace GUI
             this.button_DeleteCase = new System.Windows.Forms.Button();
             this.textBox_CaseIdToDelete = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown_CaseIdToDelete = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CaseIdToDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // button_CreateCase
@@ -164,11 +166,22 @@ namespace GUI
             this.label2.TabIndex = 7;
             this.label2.Text = "Enter case id to delete";
             // 
-            // CasesPage
+            // numericUpDown_CaseIdToDelete
+            // 
+            this.numericUpDown_CaseIdToDelete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown_CaseIdToDelete.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_CaseIdToDelete.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_CaseIdToDelete.Location = new System.Drawing.Point(7, 822);
+            this.numericUpDown_CaseIdToDelete.Name = "numericUpDown_CaseIdToDelete";
+            this.numericUpDown_CaseIdToDelete.Size = new System.Drawing.Size(198, 31);
+            this.numericUpDown_CaseIdToDelete.TabIndex = 8;
+            // 
+            // EntryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.numericUpDown_CaseIdToDelete);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_CaseIdToDelete);
             this.Controls.Add(this.button_DeleteCase);
@@ -179,9 +192,10 @@ namespace GUI
             this.Controls.Add(this.button_CreateCase);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "CasesPage";
+            this.Name = "EntryPage";
             this.Size = new System.Drawing.Size(1408, 908);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_CaseIdToDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +215,6 @@ namespace GUI
         private System.Windows.Forms.TextBox textBox_CaseIdToDelete;
         private System.Windows.Forms.Label label2;
         private EditEntryPage editEntryPage1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_CaseIdToDelete;
     }
 }

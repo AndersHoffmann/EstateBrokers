@@ -33,7 +33,8 @@ namespace GUI
         {
             IEstimatesOutput estimatesOutput = new EstimatesPresenter(postalCodeEstimates);
             ICaseCRUD caseCRUD = new CaseCRUD();
-            IEstimatesInput estimatesInput = new CalculateAverageM2PriceForArea(estimatesOutput, caseCRUD);
+            IPropertyCRUD propertyCRUD = new PropertyCRUD();
+            IEstimatesInput estimatesInput = new CalculateAverageM2PriceForArea(estimatesOutput, caseCRUD, propertyCRUD);
 
             return new EstimatesController(estimatesInput);
         }

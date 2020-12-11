@@ -5,5 +5,6 @@ namespace Presenters
     {
         public void UpdateAveragePriceField(EstimatesViewModel estimatesViewModel);
 
+        public void AreaCodesToComboBox(AvailableAreaCodesViewModel availableAreaCodesViewModel);
     }
 }

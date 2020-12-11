@@ -38,9 +38,7 @@ namespace GUI
                 this.Dispose();
                 this.Close();
             }
-
         }
-
 
         private void button_Home_FrontPage_Click(object sender, EventArgs e)
         {
@@ -86,6 +84,11 @@ namespace GUI
 
         }
 
-   
+        private void button_LogOut_Click(object sender, EventArgs e)
+        {
+            HideAllUserControls();
+            loginPage1.Show();
+            loginPage1.BringToFront();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using UseCases.Statistics;
 using ViewModels;
 
@@ -8,10 +8,11 @@ namespace Presenters
 {
     public partial class EstimatesPresenter : IEstimatesOutput
     {
-        public IEstimatesFrontEnd FrontEnd { get; set; }
+        IEstimatesFrontEnd _frontEnd;
+
         public EstimatesPresenter(IEstimatesFrontEnd frontEnd)
         {
-            FrontEnd = frontEnd;
+            _frontEnd = frontEnd;
         }
         
         public void DisplayData(EstimatesResponseModel response)
@@ -20,8 +21,15 @@ namespace Presenters
 
             estimatesViewModel.AveragePriceOfHouses = response.AverageHousePrice.ToString();
            
-            FrontEnd.UpdateAveragePriceField(estimatesViewModel);
+            _frontEnd.UpdateAveragePriceField(estimatesViewModel);
         }
-        
+
+        public void DisplayAvailableAreaCodes(GetAreaCodesResponseModel response)
+        {
+            AvailableAreaCodesViewModel availableAreaCodesViewModel = new AvailableAreaCodesViewModel();
+
+            availableAreaCodesViewModel.AreaCodes = response.AvailableAreaCodes.Select(c => c.ToString()).ToList();
+            _frontEnd.AreaCodesToComboBox(availableAreaCodesViewModel);
+        }
     }
 }

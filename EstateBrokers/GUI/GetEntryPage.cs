@@ -42,7 +42,7 @@ namespace GUI
 
         private void button_Print_Click(object sender, EventArgs e)
         {
-            _printEntryController.PrintCases(Convert.ToInt32(textBox_CaseIDtoPrint.Text));
+            _printEntryController.PrintCases(numericUpDown_CaseIDtoPrint.Value);
 
         }
 
@@ -51,7 +51,7 @@ namespace GUI
 
             if (printViewmodel.PrintEntrySucess == true)
             {
-                MessageBox.Show("Sucess");
+                MessageBox.Show("Success");
 
             }
             else
@@ -60,6 +60,5 @@ namespace GUI
             }
 
         }
-
     }
 }
