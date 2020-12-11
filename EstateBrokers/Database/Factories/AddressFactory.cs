@@ -12,11 +12,11 @@ namespace Database
 
             if (Address is Database.Address) 
             {
-                return new Entities.Address(Address.PostalCode, Address.AddressLine1, Address.AddressLine2, Address.ExteriorArea, Address.InteriorArea, Address.BuildYear);
+                return new Entities.Address(Address.PostalCode, Address.AddressLine1, Address.AddressLine2, Address.OwnershipCost, Address.ExteriorArea, Address.InteriorArea, Address.BuildYear);
             }
             if (Address is Entities.Address)
             {
-                return new Database.Address(Address.PostalCode, Address.AddressLine1, Address.AddressLine2, Address.ExteriorArea, Address.InteriorArea, Address.BuildYear);
+                return new Database.Address(Address.PostalCode, Address.AddressLine1, Address.AddressLine2, Address.OwnershipCost, Address.ExteriorArea, Address.InteriorArea, Address.BuildYear);
             }
             else 
             {

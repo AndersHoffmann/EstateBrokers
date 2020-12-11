@@ -32,20 +32,16 @@ namespace UseCases
              
             }
         }
-        public bool UpdateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
+        public bool UpdateAddress(int postalCode, string addressLine1, double ownershipCost, int exteriorArea, int interiorArea)
         {
             try
             {
                 using (var database = new EstateBrokerContext())
                 {
                     Address address = database.Addresses.Find(postalCode, addressLine1);
-                    address.PostalCode = postalCode;
-                    address.AddressLine1 = addressLine1;
-                    address.AddressLine2 = addressLine2;
                     address.OwnershipCost = ownershipCost;
                     address.ExteriorArea = exteriorArea;
                     address.InteriorArea = interiorArea;
-                    address.BuildYear = buildYear;
                     database.SaveChanges();
                 }
                 return true;

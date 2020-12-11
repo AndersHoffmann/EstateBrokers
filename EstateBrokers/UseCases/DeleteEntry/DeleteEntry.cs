@@ -23,20 +23,17 @@ namespace UseCases.DeleteEntry
             Entities.Property workingProperty = _propertyCRUD.ReadPropertyFromCaseID(request.CaseID);
 
             DeleteEntryResponseModel response = new DeleteEntryResponseModel();
-            try
-            {
-                _caseCRUD.DeleteCase(workingProperty.CaseID);
 
-                _addressCRUD.DeleteAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
+            _addressCRUD.DeleteAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
 
-                _propertyCRUD.DeleteProperty(workingProperty.PropertyID);
+            _propertyCRUD.DeleteProperty(workingProperty.PropertyID);
 
-                response.confirm = true;
-            }
-            catch 
-            {
-                response.confirm = false;
-            }
+            _caseCRUD.DeleteCase(workingProperty.CaseID);
+
+
+            response.confirm = true;
+
+
 
             _deleteEntryOutput.ConfirmDeletion(response);
 

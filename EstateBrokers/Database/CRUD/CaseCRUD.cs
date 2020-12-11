@@ -126,15 +126,13 @@ namespace Database
 
         public void DeleteCase(int ID)
         {
-            var workingCase = new Database.Case()
-            {
-                CaseID = ID
-            };
+            
             using (var database = new EstateBrokerContext())
             {
-                database.Cases.Remove(workingCase);
+                database.Cases.Remove(database.Cases.Find(ID));
                 database.SaveChanges();
             }
+
         }
     }
 }

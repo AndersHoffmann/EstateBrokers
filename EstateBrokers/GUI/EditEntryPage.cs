@@ -26,9 +26,10 @@ namespace GUI
         private void button_save_Click(object sender, EventArgs e)
         {
             _getEntryEditCaseData.UpdateEntry(numericUpDown_CaseID.Value, numericUpDown_RealtorID.Value = numericUpDown_RealtorID.Value,
-                textBox_CreationDate.Text, textBox_CloseDate.Text, numericUpDown_Price.Value, numericUpDown_EstimatedPrice.Value, 
+                textBox_CreationDate.Text, textBox_CloseDate.Text, numericUpDown_Price.Value, numericUpDown_EstimatedPrice.Value,
                 numericUpDown_PostalCode.Value, textBox_AddressLine1.Text, textBox_AddressLine2.Text,
                numericUpDown_OwnerShipCost.Value, numericUpDown_ExteriorArea.Value, numericUpDown_InteriorArea.Value, numericUpDown_BuildYear.Value);
+            ClearAllControls();
 
         }
 
@@ -71,12 +72,18 @@ namespace GUI
 
         private void button_clear_Click(object sender, EventArgs e)
         {
+            ClearAllControls();
+        }
+
+        private void ClearAllControls()
+        {
+
             foreach (Control control in Controls)
             {
                 if (control is TextBox)
                 {
                     (control as TextBox).Clear();
-                   
+
                 }
                 else if (control is NumericUpDown)
                 {

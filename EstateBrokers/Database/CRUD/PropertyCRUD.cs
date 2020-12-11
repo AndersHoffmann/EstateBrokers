@@ -82,6 +82,7 @@ namespace UseCases
         {
             using (var database = new EstateBrokerContext())
             {
+               
                 database.Properties.Remove(database.Properties.Find(ID));
                 database.SaveChanges();
             }

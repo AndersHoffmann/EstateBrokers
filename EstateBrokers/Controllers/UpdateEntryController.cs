@@ -33,7 +33,15 @@ namespace Controllers
             request.caseID = Convert.ToInt32(CaseID);
             request.realtorID = Convert.ToInt32(realtorID);
             request.creationDate = DateTime.Parse(creationDate);
-            request.closedDate = DateTime.Parse(closedDate);
+            if (!string.IsNullOrWhiteSpace(closedDate))
+            {
+                request.closedDate = DateTime.Parse(closedDate);
+            }
+            else
+            {
+                request.closedDate = null;
+            }
+
             request.price = Convert.ToDouble(price);
 
             //Property

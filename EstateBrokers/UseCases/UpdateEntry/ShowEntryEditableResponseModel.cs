@@ -28,6 +28,5 @@ namespace UseCases.UpdateEntry
         public int interiorArea { get; set; }
         public int buildYear { get; set; }
 
-
     }
 }
