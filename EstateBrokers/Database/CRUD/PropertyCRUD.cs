@@ -30,8 +30,8 @@ namespace UseCases
         {
             using (var database = new EstateBrokerContext())
             {
-                return (Entities.Property)PropertyFactory.CreateProperty((Entities.ObjectInterFaces.IProperty)database.Properties.Where(a => a.CaseID == ID));
-
+                Entities.Property tempProperty = (Entities.Property)PropertyFactory.CreateProperty(database.Properties.FirstOrDefault(a => a.CaseID == ID));
+                return tempProperty;
             }
         }
 
