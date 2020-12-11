@@ -78,7 +78,7 @@ namespace UseCases.PrintEntries
 
             Entities.Realtor workingRealtor = _realtorCRUD.ReadRealtor(_caseCRUD.ReturnRealtorIDOnCase(caseId));
 
-            Entities.Property workingProperty = _propertyCRUD.ReadProperty(caseId);
+            Entities.Property workingProperty = _propertyCRUD.ReadPropertyFromCaseID(caseId);
 
             Entities.Address workingAddress = _addressCRUD.ReadAddress(workingProperty.PostalCode, workingProperty.AddressLine1);
 
