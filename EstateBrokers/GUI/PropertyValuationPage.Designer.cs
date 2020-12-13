@@ -31,7 +31,6 @@ namespace GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PropertyValuationPage));
             this.label18 = new System.Windows.Forms.Label();
-            this.textbox_SquareMeter = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.checkbox_DesignerHouse = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -70,13 +69,6 @@ namespace GUI
             this.label18.Size = new System.Drawing.Size(183, 23);
             this.label18.TabIndex = 50;
             this.label18.Text = "House informations";
-            // 
-            // textbox_SquareMeter
-            // 
-            this.textbox_SquareMeter.Location = new System.Drawing.Point(46, 308);
-            this.textbox_SquareMeter.Name = "textbox_SquareMeter";
-            this.textbox_SquareMeter.Size = new System.Drawing.Size(188, 31);
-            this.textbox_SquareMeter.TabIndex = 49;
             // 
             // label17
             // 
@@ -305,7 +297,7 @@ namespace GUI
             // numericUpDown_HouseSquareMeter
             // 
             this.numericUpDown_HouseSquareMeter.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.numericUpDown_HouseSquareMeter.Location = new System.Drawing.Point(278, 639);
+            this.numericUpDown_HouseSquareMeter.Location = new System.Drawing.Point(46, 310);
             this.numericUpDown_HouseSquareMeter.Name = "numericUpDown_HouseSquareMeter";
             this.numericUpDown_HouseSquareMeter.Size = new System.Drawing.Size(187, 31);
             this.numericUpDown_HouseSquareMeter.TabIndex = 58;
@@ -322,7 +314,6 @@ namespace GUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_FinalPrice);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textbox_SquareMeter);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.checkbox_DesignerHouse);
             this.Controls.Add(this.label16);
@@ -355,7 +346,6 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textbox_SquareMeter;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.CheckBox checkbox_DesignerHouse;
         private System.Windows.Forms.Label label16;

@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Entities.Objects;
 using System.Collections.Generic;
 
 namespace Gateways
