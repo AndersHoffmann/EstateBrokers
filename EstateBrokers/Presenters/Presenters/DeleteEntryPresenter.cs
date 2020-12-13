@@ -18,7 +18,7 @@ namespace Presenters.Presenters
         public void ConfirmDeletion(DeleteEntryResponseModel deleteEntryResponseModel)
         {
             DeleteEntryViewModel entryViewModel = new DeleteEntryViewModel();
-            entryViewModel.CaseDeleteSucess = deleteEntryResponseModel.confirm;
+            entryViewModel.CaseDeleteSucess = deleteEntryResponseModel.Confirm;
 
             FrontEnd.confirmCaseDelete(entryViewModel);
         }

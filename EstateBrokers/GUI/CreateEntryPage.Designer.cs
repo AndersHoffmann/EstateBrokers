@@ -40,25 +40,33 @@ namespace GUI
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox_RealtorID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textbox_PostalCode = new System.Windows.Forms.TextBox();
             this.textbox_AddressLine1 = new System.Windows.Forms.TextBox();
             this.textBox_AddressLine2 = new System.Windows.Forms.TextBox();
-            this.textBox_OwnershipCost = new System.Windows.Forms.TextBox();
-            this.textBox_ExteriorArea = new System.Windows.Forms.TextBox();
-            this.textBox_InteriorArea = new System.Windows.Forms.TextBox();
-            this.textBox_BuildYear = new System.Windows.Forms.TextBox();
             this.checkBox_AreYouSure = new System.Windows.Forms.CheckBox();
-            this.textBox_Price = new System.Windows.Forms.TextBox();
-            this.textBox_EstimatedPrice = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.numericUpDown_RealtorID = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_PostalCode = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_OwnerShipCost = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ExteriorArea = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_InteriorArea = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_BuildYear = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ListedPrice = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_EstimatedPrice = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_RealtorID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PostalCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OwnerShipCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ExteriorArea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_InteriorArea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BuildYear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ListedPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_EstimatedPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // button_Save
@@ -138,7 +146,7 @@ namespace GUI
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(456, 293);
+            this.label5.Location = new System.Drawing.Point(456, 285);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 24);
             this.label5.TabIndex = 7;
@@ -177,19 +185,12 @@ namespace GUI
             this.label7.TabIndex = 12;
             this.label7.Text = "Realtor ID";
             // 
-            // textBox_RealtorID
-            // 
-            this.textBox_RealtorID.Location = new System.Drawing.Point(120, 180);
-            this.textBox_RealtorID.Name = "textBox_RealtorID";
-            this.textBox_RealtorID.Size = new System.Drawing.Size(141, 27);
-            this.textBox_RealtorID.TabIndex = 13;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label10.Location = new System.Drawing.Point(120, 284);
+            this.label10.Location = new System.Drawing.Point(120, 285);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 23);
             this.label10.TabIndex = 14;
@@ -239,14 +240,6 @@ namespace GUI
             this.label11.TabIndex = 20;
             this.label11.Text = "Price informations";
             // 
-            // textbox_PostalCode
-            // 
-            this.textbox_PostalCode.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textbox_PostalCode.Location = new System.Drawing.Point(120, 320);
-            this.textbox_PostalCode.Name = "textbox_PostalCode";
-            this.textbox_PostalCode.Size = new System.Drawing.Size(222, 31);
-            this.textbox_PostalCode.TabIndex = 21;
-            // 
             // textbox_AddressLine1
             // 
             this.textbox_AddressLine1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -263,38 +256,6 @@ namespace GUI
             this.textBox_AddressLine2.Size = new System.Drawing.Size(222, 31);
             this.textBox_AddressLine2.TabIndex = 23;
             // 
-            // textBox_OwnershipCost
-            // 
-            this.textBox_OwnershipCost.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_OwnershipCost.Location = new System.Drawing.Point(456, 250);
-            this.textBox_OwnershipCost.Name = "textBox_OwnershipCost";
-            this.textBox_OwnershipCost.Size = new System.Drawing.Size(222, 31);
-            this.textBox_OwnershipCost.TabIndex = 24;
-            // 
-            // textBox_ExteriorArea
-            // 
-            this.textBox_ExteriorArea.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_ExteriorArea.Location = new System.Drawing.Point(456, 390);
-            this.textBox_ExteriorArea.Name = "textBox_ExteriorArea";
-            this.textBox_ExteriorArea.Size = new System.Drawing.Size(222, 31);
-            this.textBox_ExteriorArea.TabIndex = 25;
-            // 
-            // textBox_InteriorArea
-            // 
-            this.textBox_InteriorArea.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_InteriorArea.Location = new System.Drawing.Point(456, 324);
-            this.textBox_InteriorArea.Name = "textBox_InteriorArea";
-            this.textBox_InteriorArea.Size = new System.Drawing.Size(222, 31);
-            this.textBox_InteriorArea.TabIndex = 26;
-            // 
-            // textBox_BuildYear
-            // 
-            this.textBox_BuildYear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_BuildYear.Location = new System.Drawing.Point(456, 458);
-            this.textBox_BuildYear.Name = "textBox_BuildYear";
-            this.textBox_BuildYear.Size = new System.Drawing.Size(222, 31);
-            this.textBox_BuildYear.TabIndex = 27;
-            // 
             // checkBox_AreYouSure
             // 
             this.checkBox_AreYouSure.AutoSize = true;
@@ -306,22 +267,6 @@ namespace GUI
             this.checkBox_AreYouSure.TabIndex = 28;
             this.checkBox_AreYouSure.Text = "Are you sure the case information is correct?";
             this.checkBox_AreYouSure.UseVisualStyleBackColor = true;
-            // 
-            // textBox_Price
-            // 
-            this.textBox_Price.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_Price.Location = new System.Drawing.Point(800, 269);
-            this.textBox_Price.Name = "textBox_Price";
-            this.textBox_Price.Size = new System.Drawing.Size(222, 31);
-            this.textBox_Price.TabIndex = 29;
-            // 
-            // textBox_EstimatedPrice
-            // 
-            this.textBox_EstimatedPrice.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_EstimatedPrice.Location = new System.Drawing.Point(800, 343);
-            this.textBox_EstimatedPrice.Name = "textBox_EstimatedPrice";
-            this.textBox_EstimatedPrice.Size = new System.Drawing.Size(222, 31);
-            this.textBox_EstimatedPrice.TabIndex = 30;
             // 
             // label12
             // 
@@ -343,29 +288,136 @@ namespace GUI
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
+            // numericUpDown_RealtorID
+            // 
+            this.numericUpDown_RealtorID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_RealtorID.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_RealtorID.Location = new System.Drawing.Point(120, 181);
+            this.numericUpDown_RealtorID.Name = "numericUpDown_RealtorID";
+            this.numericUpDown_RealtorID.Size = new System.Drawing.Size(119, 31);
+            this.numericUpDown_RealtorID.TabIndex = 33;
+            // 
+            // numericUpDown_PostalCode
+            // 
+            this.numericUpDown_PostalCode.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_PostalCode.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_PostalCode.Location = new System.Drawing.Point(120, 312);
+            this.numericUpDown_PostalCode.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.numericUpDown_PostalCode.Name = "numericUpDown_PostalCode";
+            this.numericUpDown_PostalCode.Size = new System.Drawing.Size(222, 31);
+            this.numericUpDown_PostalCode.TabIndex = 34;
+            // 
+            // numericUpDown_OwnerShipCost
+            // 
+            this.numericUpDown_OwnerShipCost.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_OwnerShipCost.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_OwnerShipCost.Location = new System.Drawing.Point(456, 241);
+            this.numericUpDown_OwnerShipCost.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.numericUpDown_OwnerShipCost.Name = "numericUpDown_OwnerShipCost";
+            this.numericUpDown_OwnerShipCost.Size = new System.Drawing.Size(230, 31);
+            this.numericUpDown_OwnerShipCost.TabIndex = 35;
+            // 
+            // numericUpDown_ExteriorArea
+            // 
+            this.numericUpDown_ExteriorArea.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_ExteriorArea.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_ExteriorArea.Location = new System.Drawing.Point(456, 390);
+            this.numericUpDown_ExteriorArea.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.numericUpDown_ExteriorArea.Name = "numericUpDown_ExteriorArea";
+            this.numericUpDown_ExteriorArea.Size = new System.Drawing.Size(230, 31);
+            this.numericUpDown_ExteriorArea.TabIndex = 36;
+            // 
+            // numericUpDown_InteriorArea
+            // 
+            this.numericUpDown_InteriorArea.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_InteriorArea.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_InteriorArea.Location = new System.Drawing.Point(456, 312);
+            this.numericUpDown_InteriorArea.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.numericUpDown_InteriorArea.Name = "numericUpDown_InteriorArea";
+            this.numericUpDown_InteriorArea.Size = new System.Drawing.Size(230, 31);
+            this.numericUpDown_InteriorArea.TabIndex = 37;
+            // 
+            // numericUpDown_BuildYear
+            // 
+            this.numericUpDown_BuildYear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_BuildYear.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_BuildYear.Location = new System.Drawing.Point(456, 458);
+            this.numericUpDown_BuildYear.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.numericUpDown_BuildYear.Name = "numericUpDown_BuildYear";
+            this.numericUpDown_BuildYear.Size = new System.Drawing.Size(230, 31);
+            this.numericUpDown_BuildYear.TabIndex = 38;
+            // 
+            // numericUpDown_ListedPrice
+            // 
+            this.numericUpDown_ListedPrice.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_ListedPrice.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_ListedPrice.Location = new System.Drawing.Point(800, 259);
+            this.numericUpDown_ListedPrice.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.numericUpDown_ListedPrice.Name = "numericUpDown_ListedPrice";
+            this.numericUpDown_ListedPrice.Size = new System.Drawing.Size(230, 31);
+            this.numericUpDown_ListedPrice.TabIndex = 39;
+            // 
+            // numericUpDown_EstimatedPrice
+            // 
+            this.numericUpDown_EstimatedPrice.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_EstimatedPrice.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_EstimatedPrice.Location = new System.Drawing.Point(800, 339);
+            this.numericUpDown_EstimatedPrice.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.numericUpDown_EstimatedPrice.Name = "numericUpDown_EstimatedPrice";
+            this.numericUpDown_EstimatedPrice.Size = new System.Drawing.Size(230, 31);
+            this.numericUpDown_EstimatedPrice.TabIndex = 40;
+            // 
             // CreateEntryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.numericUpDown_EstimatedPrice);
+            this.Controls.Add(this.numericUpDown_ListedPrice);
+            this.Controls.Add(this.numericUpDown_BuildYear);
+            this.Controls.Add(this.numericUpDown_InteriorArea);
+            this.Controls.Add(this.numericUpDown_ExteriorArea);
+            this.Controls.Add(this.numericUpDown_OwnerShipCost);
+            this.Controls.Add(this.numericUpDown_PostalCode);
+            this.Controls.Add(this.numericUpDown_RealtorID);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox_EstimatedPrice);
-            this.Controls.Add(this.textBox_Price);
             this.Controls.Add(this.checkBox_AreYouSure);
-            this.Controls.Add(this.textBox_BuildYear);
-            this.Controls.Add(this.textBox_InteriorArea);
-            this.Controls.Add(this.textBox_ExteriorArea);
-            this.Controls.Add(this.textBox_OwnershipCost);
             this.Controls.Add(this.textBox_AddressLine2);
             this.Controls.Add(this.textbox_AddressLine1);
-            this.Controls.Add(this.textbox_PostalCode);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox_RealtorID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -381,6 +433,14 @@ namespace GUI
             this.Name = "CreateEntryPage";
             this.Size = new System.Drawing.Size(1169, 845);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_RealtorID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PostalCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_OwnerShipCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ExteriorArea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_InteriorArea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_BuildYear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ListedPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_EstimatedPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,23 +458,23 @@ namespace GUI
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_RealtorID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textbox_PostalCode;
         private System.Windows.Forms.TextBox textbox_AddressLine1;
         private System.Windows.Forms.TextBox textBox_AddressLine2;
-        private System.Windows.Forms.TextBox textBox_OwnershipCost;
-        private System.Windows.Forms.TextBox textBox_ExteriorArea;
-        private System.Windows.Forms.TextBox textBox_InteriorArea;
-        private System.Windows.Forms.TextBox textBox_BuildYear;
         private System.Windows.Forms.CheckBox checkBox_AreYouSure;
-        private System.Windows.Forms.TextBox textBox_Price;
-        private System.Windows.Forms.TextBox textBox_EstimatedPrice;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_RealtorID;
+        private System.Windows.Forms.NumericUpDown numericUpDown_PostalCode;
+        private System.Windows.Forms.NumericUpDown numericUpDown_OwnerShipCost;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ExteriorArea;
+        private System.Windows.Forms.NumericUpDown numericUpDown_InteriorArea;
+        private System.Windows.Forms.NumericUpDown numericUpDown_BuildYear;
+        private System.Windows.Forms.NumericUpDown numericUpDown_ListedPrice;
+        private System.Windows.Forms.NumericUpDown numericUpDown_EstimatedPrice;
     }
 }

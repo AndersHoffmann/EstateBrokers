@@ -57,4 +57,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="button_PostalEstimates.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAASBJREFUWEft
+        kD1uwkAQhbcOTZRL2A5ShMQJEOICHCQliJqC41DsWgoVCgdCilKRArNrdtjw/MNMwCGK/EmveOP3ZkdW
+        Lf+H2GRn+nX+zAF34+YHJOlIRWZjl25PyzlyBO+671bjfM4m0XNb2vslMjnK5rFe5N8u8qyHtuAe36nE
+        TFVfP6iXVUdF6audfeXfIjPw6QA99B1Or8Dxt2f2L0z8JBDrmX9o7SeBsgOIul6B2Hzm4d7y0U8C3bcn
+        v+jDTwJ1B9T1CtQtclz6XgW7h0HyKCnsHgbJo6Swexgkj5LC7mGQPEoKu4dB8igp7B4GyaOksHsYJI+S
+        wu5hkDxKCruHQfIoKT/tFWjsAAo0rUrKwk3o5jS2mEt7wN0PaLkKpQ6/k8LpJ8yfKwAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="button_PropertyValuation.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAalJREFUWEft
+        lbFLw0AUxh+KTm7i4CrSXJqxjurg7n+i+C+4VHR018VFieBgLtXZ1a6CbqJSxaE4dHJofe/utUkwuVza
+        WBDygwd3977vu9C8tlBRMTbu7TIIeQ5OeKHW08OfBRHs4OVfWAMuWu+q3p8iZAPrni+lugRX+rF9Gz+R
+        NVaXyGprCZzgDC/o80UP4Iab3MXXgWs6072+0pJncvZnMGwPQ7sc3lP7RnuOBRF0prU91nbVnjLGon7t
+        gSPvOIzqBmpyhbvZkIa0Qx9lUJY1nr+AQ3aM5m8dEL7gfpu79pBHyFd+EMzCTMrORcgnNuG7lCcgrha5
+        UxzyuvJUZanM4JE7BvTlA6gF63ySzVCbR11uWGtHwiyx58/jJ3OI/eeYltbN1OEk8jIT5Imd8CihSVaT
+        VUniGitMYiE7qhf/HXBaW+x545MkprxUTAYh31XPZkaGlPoA+v3rflQ4A+FB7gxYYzJEQ/g50kVlngFr
+        ihqmPAMfqhefAf1nRJ4OnyQx5aViMkzyNbTGZEifAVxPawjjlK0bUdiQw/99gLLLmjRzGVVR8QuAHxVQ
+        rHtggWsWAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button_LoanEstimate.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAATtJREFUWEft
+        lEFKxEAQRXvhxoWewOVAOrfwCBKZhYs5hyh4IXeSjlsvoDO4EA8y4krUTlIVQqW6u1JGJww++Iv/q+tT
+        DGHMP/PFuq9JNRqu5CcajXqRsD8HoJcKoV5MqEgqhHox2iLt3gBtkXZvQKhIKoR6MaEiqRDqxagXp2KW
+        B9As5fvEZizcAs1Svk9sxjJ6IYB1hddj1yfuFT+MkLml7/jsuvpKwj2kWcpnbtP43F2ak9tDSIXQshqa
+        pf1b47O7I0hGQMs04C9g3bU5fTiAVMgUB9jqoutp9e6zZ69zeBGBO4BmKV+TVyufvXp9dPNWBbwIwJXR
+        LOUp9Ydoy6v2XbmGNECqTMvi/hi6t5AE+I0D6g8xdzfQ/QRpADxAK4SbtX9Owm9AK2Q4ezF5eQbTPwQP
+        2Bk7P4DFmG99hxLuPZZ1sgAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

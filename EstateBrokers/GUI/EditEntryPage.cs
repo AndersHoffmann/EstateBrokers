@@ -77,7 +77,6 @@ namespace GUI
 
         private void ClearAllControls()
         {
-
             foreach (Control control in Controls)
             {
                 if (control is TextBox)

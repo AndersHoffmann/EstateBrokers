@@ -23,13 +23,13 @@ namespace UseCases.CreateEntry
         public void CreateEntry(CreateEntryRequestModel request)
         {
 
-            int caseID = _caseCRUD.CreateCase(request.creationDate, request.price, request.realtorID);
+            int caseID = _caseCRUD.CreateCase(request.CreationDate, request.Price, request.RealtorID);
 
-            int propertyID = _propertyCRUD.CreateProperty(request.estimatedPrice, caseID, request.postalCode, request.AddressLine1);
+            int propertyID = _propertyCRUD.CreateProperty(request.EstimatedPrice, caseID, request.PostalCode, request.AddressLine1);
 
             int postalCodeofAddressObject = _addressCRUD.CreateAddress(
-                request.postalCode, request.AddressLine1, request.AddressLine2, request.ownershipCost,
-                request.exteriorArea, request.interiorArea, request.buildYear);
+                request.PostalCode, request.AddressLine1, request.AddressLine2, request.OwnershipCost,
+                request.ExteriorArea, request.InteriorArea, request.BuildYear);
 
             CreateEntryResponseModel response = new CreateEntryResponseModel();
 

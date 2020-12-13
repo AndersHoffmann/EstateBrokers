@@ -12,14 +12,14 @@ namespace Controllers
 
         }
 
-        public void OpenHouseDistribution(string realterIdOne, string realtorIdTwo, string realtorIdThree)
+        public void OpenHouseDistribution(decimal realterIdOne, decimal realtorIdTwo, decimal realtorIdThree)
         {
 
             OpenHouseRequestModel openHouseRequestModel = new OpenHouseRequestModel();
 
-            openHouseRequestModel.RealtorId1 = Int32.Parse(realterIdOne);
-            openHouseRequestModel.RealtorId2 = Int32.Parse(realtorIdTwo);
-            openHouseRequestModel.RealtorId3 = Int32.Parse(realtorIdThree);
+            openHouseRequestModel.RealtorId1 = Convert.ToInt32(realterIdOne);
+            openHouseRequestModel.RealtorId2 = Convert.ToInt32(realtorIdTwo);
+            openHouseRequestModel.RealtorId3 = Convert.ToInt32(realtorIdThree);
 
             OpenHouseInput.RunOpenHouse(openHouseRequestModel);
 

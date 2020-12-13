@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstimatesPage));
             this.label4 = new System.Windows.Forms.Label();
             this.button_PostalEstimates = new System.Windows.Forms.Button();
             this.button_PropertyValuation = new System.Windows.Forms.Button();
@@ -41,13 +42,15 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_HousePrice = new System.Windows.Forms.TextBox();
-            this.textBox_NumberOfPayments = new System.Windows.Forms.TextBox();
             this.textBox_PricePerMonth = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.numericUpDown_HousePrice = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_NumberOfPayments = new System.Windows.Forms.NumericUpDown();
             this.MainPanelForEstimatePage.SuspendLayout();
             this.panel_coverpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HousePrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_NumberOfPayments)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -66,11 +69,13 @@ namespace GUI
             this.button_PostalEstimates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_PostalEstimates.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_PostalEstimates.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button_PostalEstimates.Location = new System.Drawing.Point(15, 772);
+            this.button_PostalEstimates.Image = ((System.Drawing.Image)(resources.GetObject("button_PostalEstimates.Image")));
+            this.button_PostalEstimates.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_PostalEstimates.Location = new System.Drawing.Point(0, 772);
             this.button_PostalEstimates.Name = "button_PostalEstimates";
-            this.button_PostalEstimates.Size = new System.Drawing.Size(207, 87);
+            this.button_PostalEstimates.Size = new System.Drawing.Size(222, 87);
             this.button_PostalEstimates.TabIndex = 8;
-            this.button_PostalEstimates.Text = "Postal estimates";
+            this.button_PostalEstimates.Text = " Postal estimates";
             this.button_PostalEstimates.UseVisualStyleBackColor = true;
             this.button_PostalEstimates.Click += new System.EventHandler(this.button_PostalEstimates_Click);
             // 
@@ -79,11 +84,13 @@ namespace GUI
             this.button_PropertyValuation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_PropertyValuation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_PropertyValuation.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button_PropertyValuation.Location = new System.Drawing.Point(15, 679);
+            this.button_PropertyValuation.Image = ((System.Drawing.Image)(resources.GetObject("button_PropertyValuation.Image")));
+            this.button_PropertyValuation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_PropertyValuation.Location = new System.Drawing.Point(0, 682);
             this.button_PropertyValuation.Name = "button_PropertyValuation";
-            this.button_PropertyValuation.Size = new System.Drawing.Size(207, 87);
+            this.button_PropertyValuation.Size = new System.Drawing.Size(222, 84);
             this.button_PropertyValuation.TabIndex = 9;
-            this.button_PropertyValuation.Text = "Property valuation";
+            this.button_PropertyValuation.Text = "     Property valuation";
             this.button_PropertyValuation.UseVisualStyleBackColor = true;
             this.button_PropertyValuation.Click += new System.EventHandler(this.button_PropertyValuation_Click);
             // 
@@ -139,6 +146,8 @@ namespace GUI
             this.button_LoanEstimate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_LoanEstimate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_LoanEstimate.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button_LoanEstimate.Image = ((System.Drawing.Image)(resources.GetObject("button_LoanEstimate.Image")));
+            this.button_LoanEstimate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_LoanEstimate.Location = new System.Drawing.Point(13, 353);
             this.button_LoanEstimate.Name = "button_LoanEstimate";
             this.button_LoanEstimate.Size = new System.Drawing.Size(207, 87);
@@ -180,24 +189,6 @@ namespace GUI
             this.label3.TabIndex = 14;
             this.label3.Text = "Price per month";
             // 
-            // textBox_HousePrice
-            // 
-            this.textBox_HousePrice.BackColor = System.Drawing.Color.White;
-            this.textBox_HousePrice.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_HousePrice.Location = new System.Drawing.Point(13, 231);
-            this.textBox_HousePrice.Name = "textBox_HousePrice";
-            this.textBox_HousePrice.Size = new System.Drawing.Size(207, 31);
-            this.textBox_HousePrice.TabIndex = 15;
-            // 
-            // textBox_NumberOfPayments
-            // 
-            this.textBox_NumberOfPayments.BackColor = System.Drawing.Color.White;
-            this.textBox_NumberOfPayments.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox_NumberOfPayments.Location = new System.Drawing.Point(13, 316);
-            this.textBox_NumberOfPayments.Name = "textBox_NumberOfPayments";
-            this.textBox_NumberOfPayments.Size = new System.Drawing.Size(207, 31);
-            this.textBox_NumberOfPayments.TabIndex = 16;
-            // 
             // textBox_PricePerMonth
             // 
             this.textBox_PricePerMonth.BackColor = System.Drawing.Color.White;
@@ -224,15 +215,43 @@ namespace GUI
             this.panel2.Size = new System.Drawing.Size(222, 10);
             this.panel2.TabIndex = 19;
             // 
+            // numericUpDown_HousePrice
+            // 
+            this.numericUpDown_HousePrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_HousePrice.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_HousePrice.Location = new System.Drawing.Point(13, 230);
+            this.numericUpDown_HousePrice.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numericUpDown_HousePrice.Name = "numericUpDown_HousePrice";
+            this.numericUpDown_HousePrice.Size = new System.Drawing.Size(208, 33);
+            this.numericUpDown_HousePrice.TabIndex = 20;
+            // 
+            // numericUpDown_NumberOfPayments
+            // 
+            this.numericUpDown_NumberOfPayments.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_NumberOfPayments.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_NumberOfPayments.Location = new System.Drawing.Point(13, 306);
+            this.numericUpDown_NumberOfPayments.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDown_NumberOfPayments.Name = "numericUpDown_NumberOfPayments";
+            this.numericUpDown_NumberOfPayments.Size = new System.Drawing.Size(208, 33);
+            this.numericUpDown_NumberOfPayments.TabIndex = 21;
+            // 
             // EstimatesPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.numericUpDown_NumberOfPayments);
+            this.Controls.Add(this.numericUpDown_HousePrice);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox_PricePerMonth);
-            this.Controls.Add(this.textBox_NumberOfPayments);
-            this.Controls.Add(this.textBox_HousePrice);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -245,6 +264,8 @@ namespace GUI
             this.Size = new System.Drawing.Size(1408, 908);
             this.MainPanelForEstimatePage.ResumeLayout(false);
             this.panel_coverpanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HousePrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_NumberOfPayments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,8 +281,6 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_HousePrice;
-        private System.Windows.Forms.TextBox textBox_NumberOfPayments;
         private System.Windows.Forms.TextBox textBox_PricePerMonth;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -269,5 +288,7 @@ namespace GUI
         private System.Windows.Forms.Panel panel_HidePage;
         private PropertyValuationPage propertyValuationPage1;
         private PostalCodeEstimates postalCodeEstimates1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_HousePrice;
+        private System.Windows.Forms.NumericUpDown numericUpDown_NumberOfPayments;
     }
 }

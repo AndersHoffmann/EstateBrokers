@@ -6,6 +6,6 @@ namespace UseCases.DeleteEntry
 {
     public class DeleteEntryResponseModel
     {
-        public bool confirm { get; set; }
+        public bool Confirm { get; set; }
     }
 }

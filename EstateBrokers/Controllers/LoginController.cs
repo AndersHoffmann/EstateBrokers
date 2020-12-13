@@ -16,8 +16,8 @@ namespace Controllers
         public void TryLogin(string username, string password)
         {
             LoginRequestModel request = new LoginRequestModel();
-            request.username = username;
-            request.password = password;
+            request.Username = username;
+            request.Password = password;
 
             _loginInput.Auth(request);
         }

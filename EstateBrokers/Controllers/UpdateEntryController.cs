@@ -30,33 +30,33 @@ namespace Controllers
             UpdatedEntryRequestModel request = new UpdatedEntryRequestModel();
 
             //Case
-            request.caseID = Convert.ToInt32(CaseID);
-            request.realtorID = Convert.ToInt32(realtorID);
-            request.creationDate = DateTime.Parse(creationDate);
+            request.CaseID = Convert.ToInt32(CaseID);
+            request.RealtorID = Convert.ToInt32(realtorID);
+            request.CreationDate = DateTime.Parse(creationDate);
             if (!string.IsNullOrWhiteSpace(closedDate))
             {
-                request.closedDate = DateTime.Parse(closedDate);
+                request.ClosedDate = DateTime.Parse(closedDate);
             }
             else
             {
-                request.closedDate = null;
+                request.ClosedDate = null;
             }
 
-            request.price = Convert.ToDouble(price);
+            request.Price = Convert.ToDouble(price);
 
             //Property
-            request.estimatedPrice = Convert.ToDouble(estimatedPrice);
+            request.EstimatedPrice = Convert.ToDouble(estimatedPrice);
 
             //Property and Address
-            request.postalCode = Convert.ToInt32(postalCode);
-            request.addressLine1 = addressLine1;
+            request.PostalCode = Convert.ToInt32(postalCode);
+            request.AddressLine1 = addressLine1;
 
             //Address
-            request.addressLine2 = addressLine2;
-            request.ownershipCost = Convert.ToDouble(ownershipCost);
-            request.exteriorArea = Convert.ToInt32(exteriorArea);
-            request.interiorArea = Convert.ToInt32(interiorArea);
-            request.buildYear = Convert.ToInt32(buildYear);
+            request.AddressLine2 = addressLine2;
+            request.OwnershipCost = Convert.ToDouble(ownershipCost);
+            request.ExteriorArea = Convert.ToInt32(exteriorArea);
+            request.InteriorArea = Convert.ToInt32(interiorArea);
+            request.BuildYear = Convert.ToInt32(buildYear);
 
             _updateEntryInput.UpdateEntry(request);
 

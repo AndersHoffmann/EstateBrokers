@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntryPage));
             this.button_CreateCase = new System.Windows.Forms.Button();
             this.button_ShowCases = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,7 +39,6 @@ namespace GUI
             this.label1 = new System.Windows.Forms.Label();
             this.button_UpdateCase = new System.Windows.Forms.Button();
             this.button_DeleteCase = new System.Windows.Forms.Button();
-            this.textBox_CaseIdToDelete = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown_CaseIdToDelete = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
@@ -50,6 +50,8 @@ namespace GUI
             this.button_CreateCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_CreateCase.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_CreateCase.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button_CreateCase.Image = ((System.Drawing.Image)(resources.GetObject("button_CreateCase.Image")));
+            this.button_CreateCase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_CreateCase.Location = new System.Drawing.Point(0, 220);
             this.button_CreateCase.Name = "button_CreateCase";
             this.button_CreateCase.Size = new System.Drawing.Size(205, 115);
@@ -63,6 +65,8 @@ namespace GUI
             this.button_ShowCases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ShowCases.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_ShowCases.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button_ShowCases.Image = ((System.Drawing.Image)(resources.GetObject("button_ShowCases.Image")));
+            this.button_ShowCases.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_ShowCases.Location = new System.Drawing.Point(0, 341);
             this.button_ShowCases.Name = "button_ShowCases";
             this.button_ShowCases.Size = new System.Drawing.Size(205, 116);
@@ -127,6 +131,8 @@ namespace GUI
             this.button_UpdateCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_UpdateCase.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_UpdateCase.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button_UpdateCase.Image = ((System.Drawing.Image)(resources.GetObject("button_UpdateCase.Image")));
+            this.button_UpdateCase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_UpdateCase.Location = new System.Drawing.Point(0, 463);
             this.button_UpdateCase.Name = "button_UpdateCase";
             this.button_UpdateCase.Size = new System.Drawing.Size(205, 116);
@@ -140,6 +146,8 @@ namespace GUI
             this.button_DeleteCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_DeleteCase.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_DeleteCase.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button_DeleteCase.Image = ((System.Drawing.Image)(resources.GetObject("button_DeleteCase.Image")));
+            this.button_DeleteCase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_DeleteCase.Location = new System.Drawing.Point(0, 648);
             this.button_DeleteCase.Name = "button_DeleteCase";
             this.button_DeleteCase.Size = new System.Drawing.Size(205, 116);
@@ -147,13 +155,6 @@ namespace GUI
             this.button_DeleteCase.Text = "Delete case";
             this.button_DeleteCase.UseVisualStyleBackColor = true;
             this.button_DeleteCase.Click += new System.EventHandler(this.button_DeleteCase_Click);
-            // 
-            // textBox_CaseIdToDelete
-            // 
-            this.textBox_CaseIdToDelete.Location = new System.Drawing.Point(7, 789);
-            this.textBox_CaseIdToDelete.Name = "textBox_CaseIdToDelete";
-            this.textBox_CaseIdToDelete.Size = new System.Drawing.Size(198, 27);
-            this.textBox_CaseIdToDelete.TabIndex = 6;
             // 
             // label2
             // 
@@ -171,7 +172,7 @@ namespace GUI
             this.numericUpDown_CaseIdToDelete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown_CaseIdToDelete.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.numericUpDown_CaseIdToDelete.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.numericUpDown_CaseIdToDelete.Location = new System.Drawing.Point(7, 822);
+            this.numericUpDown_CaseIdToDelete.Location = new System.Drawing.Point(7, 793);
             this.numericUpDown_CaseIdToDelete.Name = "numericUpDown_CaseIdToDelete";
             this.numericUpDown_CaseIdToDelete.Size = new System.Drawing.Size(198, 31);
             this.numericUpDown_CaseIdToDelete.TabIndex = 8;
@@ -183,7 +184,6 @@ namespace GUI
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.numericUpDown_CaseIdToDelete);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox_CaseIdToDelete);
             this.Controls.Add(this.button_DeleteCase);
             this.Controls.Add(this.button_UpdateCase);
             this.Controls.Add(this.label1);
@@ -212,7 +212,6 @@ namespace GUI
         private GetEntryPage getEntryPage1;
         private System.Windows.Forms.Button button_UpdateCase;
         private System.Windows.Forms.Button button_DeleteCase;
-        private System.Windows.Forms.TextBox textBox_CaseIdToDelete;
         private System.Windows.Forms.Label label2;
         private EditEntryPage editEntryPage1;
         private System.Windows.Forms.NumericUpDown numericUpDown_CaseIdToDelete;

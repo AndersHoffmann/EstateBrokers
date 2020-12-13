@@ -64,7 +64,7 @@ namespace UseCases.PrintEntries
                 sw.WriteLine(" ");
                 sw.WriteLine($"This property cost {M2price} per m2, and the average for the area is {po.AverageAreaPrice}");
 
-                response.success = true;
+                response.Success = true;
                 sw.Close();
             }
             _printEntriesOutput.PrintSuccess(response);

@@ -11,12 +11,12 @@ namespace Controllers
             PaymentCalculatorInput = paymentCalculatorInput;
         }
 
-        public void CalculatePayment(string price, string loanDuration)
+        public void CalculatePayment(decimal price, decimal loanDuration)
         {
             PaymentCalculatorRequestModel request = new PaymentCalculatorRequestModel();
 
-            request.Price = Double.Parse(price);
-            request.LoanDuration = Int32.Parse(loanDuration);
+            request.Price = Convert.ToDouble(price);
+            request.LoanDuration = Convert.ToInt32(loanDuration);
 
             PaymentCalculatorInput.CalculatePayment(request);
 

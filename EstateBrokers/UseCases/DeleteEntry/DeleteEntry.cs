@@ -31,7 +31,7 @@ namespace UseCases.DeleteEntry
             _caseCRUD.DeleteCase(workingProperty.CaseID);
 
 
-            response.confirm = true;
+            response.Confirm = true;
 
 
 

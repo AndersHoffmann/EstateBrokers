@@ -23,17 +23,17 @@ namespace UseCases.UpdateEntry
         public void UpdateEntry(UpdatedEntryRequestModel request)
         {
 
-            bool caseConfirmed = _caseCRUD.UpdateCase(request.caseID, request.creationDate, request.closedDate, request.price, request.realtorID);
+            bool caseConfirmed = _caseCRUD.UpdateCase(request.CaseID, request.CreationDate, request.ClosedDate, request.Price, request.RealtorID);
 
             //  int propertyID = _caseCRUD.ReadCase(request.caseID).PropertyID;
-            int propertyID = _propertyCRUD.ReadPropertyFromCaseID(request.caseID).PropertyID;
+            int propertyID = _propertyCRUD.ReadPropertyFromCaseID(request.CaseID).PropertyID;
 
 
-            bool propertyConfirmed = _propertyCRUD.UpdateProperty(propertyID, request.estimatedPrice, request.caseID, request.postalCode, request.addressLine1);
+            bool propertyConfirmed = _propertyCRUD.UpdateProperty(propertyID, request.EstimatedPrice, request.CaseID, request.PostalCode, request.AddressLine1);
 
             bool addressConfirmed = _addressCRUD.UpdateAddress(
-                request.postalCode, request.addressLine1, request.ownershipCost,
-                request.exteriorArea, request.interiorArea);
+                request.PostalCode, request.AddressLine1, request.OwnershipCost,
+                request.ExteriorArea, request.InteriorArea);
 
 
             UpdateEntryResponseModel response = new UpdateEntryResponseModel();

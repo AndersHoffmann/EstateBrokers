@@ -11,7 +11,7 @@ namespace UseCases.PrintEntries
         public int CaseID { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime ClosedDate { get; set; }
-        public Double Price { get; set; }
+        public double Price { get; set; }
         public int PostalCode { get; set; }
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }

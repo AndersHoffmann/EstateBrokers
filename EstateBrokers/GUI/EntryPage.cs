@@ -55,8 +55,8 @@ namespace GUI
         {
             if (deleteEntryViewModel.CaseDeleteSucess == true)
             {
-                MessageBox.Show($"Case id ** {textBox_CaseIdToDelete.Text} ** is now deleted");
-                textBox_CaseIdToDelete.Clear();
+                MessageBox.Show($"Case id ** {numericUpDown_CaseIdToDelete.Value} ** is now deleted");
+                numericUpDown_CaseIdToDelete.Value = 0;
             }
         }
     }

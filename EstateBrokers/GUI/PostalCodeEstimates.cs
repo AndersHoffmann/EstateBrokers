@@ -35,7 +35,7 @@ namespace GUI
 
         private void button_AddToList_Click(object sender, EventArgs e)
         {
-            listBox_AveragePricePerSquareMeter.Items.Add($"Postal code: {textBox_AreaCodeInput.Text} ------ Price per square meter {textBox_AvaragePricePerSquareMeter.Text}");
+            listBox_AveragePricePerSquareMeter.Items.Add($"Postal code: {comboBox_AreaCodes.Text} ------ Price per square meter {textBox_AvaragePricePerSquareMeter.Text}");
         }
 
         public void AreaCodesToComboBox(AvailableAreaCodesViewModel availableAreaCodesViewModel)
@@ -50,6 +50,11 @@ namespace GUI
         private void button_LoadAvailableAreaCodes_Click(object sender, EventArgs e)
         {
             _estimatesController.AreaCodes();
+        }
+
+        private void button_RemoveFromList_Click(object sender, EventArgs e)
+        {
+            listBox_AveragePricePerSquareMeter.Items.Remove(listBox_AveragePricePerSquareMeter.SelectedItem);
         }
     }
 }

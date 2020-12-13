@@ -15,7 +15,7 @@ namespace Presenters
         public void PrintSuccess(PrintEntriesResponseModel responseModel)
         {
             PrintEntryViewModel printviewmodel = new PrintEntryViewModel();
-            printviewmodel.PrintEntrySucess = responseModel.success;
+            printviewmodel.PrintEntrySucess = responseModel.Success;
 
             FrontEnd.PrintSucess(printviewmodel);
 

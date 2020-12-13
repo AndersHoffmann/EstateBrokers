@@ -50,8 +50,8 @@ namespace GUI
 
         private void button_LoanEstimate_Click(object sender, EventArgs e)
         {
-
-            _paymentCalculateController.CalculatePayment(textBox_HousePrice.Text, textBox_NumberOfPayments.Text);
+            
+            _paymentCalculateController.CalculatePayment(numericUpDown_HousePrice.Value, numericUpDown_NumberOfPayments.Value);
 
         }
 

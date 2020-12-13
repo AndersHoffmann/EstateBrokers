@@ -26,7 +26,7 @@ namespace GUI
 
         private void button_Estimate_Click(object sender, EventArgs e)
         {
-            EvaluatePropertyController.EstimateCode(textbox_SquareMeter.Text, trackbar_HouseCondition.Value, checkbox_DesignerHouse.Checked, checkbox_Garden.Checked, checkbox_Basement.Checked, checkBox_Garage.Checked);
+            EvaluatePropertyController.EstimateCode(numericUpDown_HouseSquareMeter.Value, trackbar_HouseCondition.Value, checkbox_DesignerHouse.Checked, checkbox_Garden.Checked, checkbox_Basement.Checked, checkBox_Garage.Checked);
         }
 
         public void UpdatePropertyValuationField(EvaluatePropertyViewModel evaluatePropertyViewModel)

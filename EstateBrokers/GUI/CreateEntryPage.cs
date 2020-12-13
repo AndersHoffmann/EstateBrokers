@@ -1,10 +1,7 @@
 ﻿using Controllers;
-using Database;
 using Presenters;
 using System;
 using System.Windows.Forms;
-using UseCases;
-using UseCases.CreateEntry;
 using ViewModels;
 namespace GUI
 {
@@ -24,6 +21,7 @@ namespace GUI
             if (casesViewModel.CreateEntrySuccess == true)
             {
                 MessageBox.Show("Success");
+                ClearAllControls();
             }
             else
             {
@@ -36,11 +34,14 @@ namespace GUI
 
         private void button_Save_Click(object sender, EventArgs e)
         {
+
             if (checkBox_AreYouSure.Checked)
             {
-                _createEntryController.CreateEntry(textBox_RealtorID.Text, textBox_Price.Text, textBox_EstimatedPrice.Text, textbox_PostalCode.Text, textbox_AddressLine1.Text, textBox_AddressLine2.Text, textBox_OwnershipCost.Text, textBox_ExteriorArea.Text, textBox_InteriorArea.Text, textBox_BuildYear.Text);
+                _createEntryController.CreateEntry(numericUpDown_RealtorID.Value, numericUpDown_ListedPrice.Value, numericUpDown_EstimatedPrice.Value,
+                   numericUpDown_PostalCode.Value, textbox_AddressLine1.Text, textBox_AddressLine2.Text, numericUpDown_OwnerShipCost.Value,
+                    numericUpDown_ExteriorArea.Value, numericUpDown_InteriorArea.Value, numericUpDown_BuildYear.Value);
             }
-            
+
             else
             {
                 MessageBox.Show("Please check your data and accept its correct ");
@@ -62,9 +63,25 @@ namespace GUI
             }
             else
             {
-                
+
             }
 
+        }
+
+        private void ClearAllControls()
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox)
+                {
+                    (control as TextBox).Clear();
+
+                }
+                else if (control is NumericUpDown)
+                {
+                    (control as NumericUpDown).Value = 0;
+                }
+            }
         }
     }
 }

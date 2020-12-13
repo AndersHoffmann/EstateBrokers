@@ -54,8 +54,10 @@ namespace GUI
             this.button_Estimate = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown_HouseSquareMeter = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.trackbar_HouseCondition)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HouseSquareMeter)).BeginInit();
             this.SuspendLayout();
             // 
             // label18
@@ -300,11 +302,20 @@ namespace GUI
             this.label3.TabIndex = 57;
             this.label3.Text = "Property valuation";
             // 
+            // numericUpDown_HouseSquareMeter
+            // 
+            this.numericUpDown_HouseSquareMeter.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_HouseSquareMeter.Location = new System.Drawing.Point(278, 639);
+            this.numericUpDown_HouseSquareMeter.Name = "numericUpDown_HouseSquareMeter";
+            this.numericUpDown_HouseSquareMeter.Size = new System.Drawing.Size(187, 31);
+            this.numericUpDown_HouseSquareMeter.TabIndex = 58;
+            // 
             // PropertyValuationPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.numericUpDown_HouseSquareMeter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_Estimate);
@@ -335,6 +346,7 @@ namespace GUI
             this.Size = new System.Drawing.Size(1165, 852);
             ((System.ComponentModel.ISupportInitialize)(this.trackbar_HouseCondition)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_HouseSquareMeter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,5 +378,6 @@ namespace GUI
         private System.Windows.Forms.Button button_Estimate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numericUpDown_HouseSquareMeter;
     }
 }

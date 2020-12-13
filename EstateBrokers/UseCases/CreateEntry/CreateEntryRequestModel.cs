@@ -7,23 +7,23 @@ namespace UseCases.CreateEntry
     public class CreateEntryRequestModel
     {
         //For Case
-        public int realtorID { get; set; }
-        public DateTime creationDate { get; set; }
-        public Double price { get; set; }
+        public int RealtorID { get; set; }
+        public DateTime CreationDate { get; set; }
+        public double Price { get; set; }
 
         //For Property
-        public double estimatedPrice { get; set; }
+        public double EstimatedPrice { get; set; }
 
         //For Property and Address
-        public int postalCode { get; set; }
+        public int PostalCode { get; set; }
         public string AddressLine1 { get; set; }
 
         //For Address
         public string AddressLine2 { get; set; }
-        public double ownershipCost { get; set; }
-        public int exteriorArea { get; set; }
-        public int interiorArea { get; set; }
-        public int buildYear { get; set; }
+        public double OwnershipCost { get; set; }
+        public int ExteriorArea { get; set; }
+        public int InteriorArea { get; set; }
+        public int BuildYear { get; set; }
 
     }
 }

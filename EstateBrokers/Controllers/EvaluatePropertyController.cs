@@ -15,11 +15,11 @@ namespace Controllers
 
         }
 
-        public void EstimateCode(string squareMeters, int houseCondition, bool isDesignerHouse, bool hasGarden, bool hasBasement, bool hasGarage)
+        public void EstimateCode(decimal squareMeters, int houseCondition, bool isDesignerHouse, bool hasGarden, bool hasBasement, bool hasGarage)
         {
             EvaluatePropertyRequestModel request = new EvaluatePropertyRequestModel();
 
-            request.SquareMeter = int.Parse(squareMeters);
+            request.SquareMeter = Convert.ToInt32(squareMeters);
             request.HouseCondition = houseCondition;
             request.IsDesignerHouse = isDesignerHouse;
             request.HasGarden = hasGarden;

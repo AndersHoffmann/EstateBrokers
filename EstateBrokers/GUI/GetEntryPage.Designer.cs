@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GetEntryPage));
             this.dataGridView_ShowEntries = new System.Windows.Forms.DataGridView();
             this.button_Print = new System.Windows.Forms.Button();
             this.button_Reload = new System.Windows.Forms.Button();
@@ -52,6 +53,8 @@ namespace GUI
             this.button_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Print.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_Print.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button_Print.Image = ((System.Drawing.Image)(resources.GetObject("button_Print.Image")));
+            this.button_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Print.Location = new System.Drawing.Point(1009, 774);
             this.button_Print.Name = "button_Print";
             this.button_Print.Size = new System.Drawing.Size(149, 58);
@@ -65,7 +68,9 @@ namespace GUI
             this.button_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Reload.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_Reload.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button_Reload.Location = new System.Drawing.Point(0, 774);
+            this.button_Reload.Image = ((System.Drawing.Image)(resources.GetObject("button_Reload.Image")));
+            this.button_Reload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Reload.Location = new System.Drawing.Point(9, 774);
             this.button_Reload.Name = "button_Reload";
             this.button_Reload.Size = new System.Drawing.Size(149, 59);
             this.button_Reload.TabIndex = 8;

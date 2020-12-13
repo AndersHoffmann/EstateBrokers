@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditEntryPage));
             this.textBox_CreationDate = new System.Windows.Forms.TextBox();
             this.textBox_CloseDate = new System.Windows.Forms.TextBox();
             this.textBox_AddressLine1 = new System.Windows.Forms.TextBox();
@@ -116,9 +117,11 @@ namespace GUI
             this.button_searchCaseID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_searchCaseID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_searchCaseID.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button_searchCaseID.Image = ((System.Drawing.Image)(resources.GetObject("button_searchCaseID.Image")));
+            this.button_searchCaseID.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_searchCaseID.Location = new System.Drawing.Point(287, 101);
             this.button_searchCaseID.Name = "button_searchCaseID";
-            this.button_searchCaseID.Size = new System.Drawing.Size(154, 42);
+            this.button_searchCaseID.Size = new System.Drawing.Size(222, 42);
             this.button_searchCaseID.TabIndex = 14;
             this.button_searchCaseID.Text = "Search case id";
             this.button_searchCaseID.UseVisualStyleBackColor = true;
@@ -259,6 +262,8 @@ namespace GUI
             // button_clear
             // 
             this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_clear.Image = ((System.Drawing.Image)(resources.GetObject("button_clear.Image")));
+            this.button_clear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_clear.Location = new System.Drawing.Point(753, 687);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(167, 75);
@@ -270,6 +275,8 @@ namespace GUI
             // button_save
             // 
             this.button_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_save.Image = ((System.Drawing.Image)(resources.GetObject("button_save.Image")));
+            this.button_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_save.Location = new System.Drawing.Point(287, 687);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(167, 75);

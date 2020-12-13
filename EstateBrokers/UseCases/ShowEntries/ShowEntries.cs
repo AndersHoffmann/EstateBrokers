@@ -28,32 +28,32 @@ namespace UseCases.ShowCases
             foreach (var property in workingPropertyList)
             {
                 ShowEntriesResponseModel showEntriesResponseModel = new ShowEntriesResponseModel();
-                showEntriesResponseModel.estimatedPrice = property.EstimatedPrice;
+                showEntriesResponseModel.EstimatedPrice = property.EstimatedPrice;
 
                 Entities.Case workingCase = _caseCRUD.ReadCase(property.CaseID);
 
                 if (workingCase.Realtor != null)
                 {
-                    showEntriesResponseModel.realtorID = workingCase.Realtor.RealtorID;
+                    showEntriesResponseModel.RealtorID = workingCase.Realtor.RealtorID;
                 }   
                 
                 if (workingCase.ClosedDate != null)
                 {
-                    showEntriesResponseModel.closedDate = workingCase.ClosedDate;
+                    showEntriesResponseModel.ClosedDate = workingCase.ClosedDate;
                 }
 
-                showEntriesResponseModel.price = workingCase.Price;
+                showEntriesResponseModel.Price = workingCase.Price;
                
              
                 Entities.Address workingAddress = _addressCRUD.ReadAddress(property.PostalCode, property.AddressLine1);
 
-                showEntriesResponseModel.postalCode = workingAddress.PostalCode;
+                showEntriesResponseModel.PostalCode = workingAddress.PostalCode;
                 showEntriesResponseModel.AddressLine1 = workingAddress.AddressLine1;
                 showEntriesResponseModel.AddressLine2 = workingAddress.AddressLine2;
-                showEntriesResponseModel.ownershipCost = workingAddress.OwnershipCost;
-                showEntriesResponseModel.exteriorArea = workingAddress.ExteriorArea;
-                showEntriesResponseModel.interiorArea = workingAddress.InteriorArea;
-                showEntriesResponseModel.buildYear = workingAddress.BuildYear;
+                showEntriesResponseModel.OwnershipCost = workingAddress.OwnershipCost;
+                showEntriesResponseModel.ExteriorArea = workingAddress.ExteriorArea;
+                showEntriesResponseModel.InteriorArea = workingAddress.InteriorArea;
+                showEntriesResponseModel.BuildYear = workingAddress.BuildYear;
                 responseList.Add(showEntriesResponseModel);
 
                 _showEntryOutput.DisplayListOfEntries(responseList);

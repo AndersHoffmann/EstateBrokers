@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_RealtorID1 = new System.Windows.Forms.TextBox();
-            this.textBox_RealtorID2 = new System.Windows.Forms.TextBox();
-            this.textBox_RealtorID3 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpenHousePage));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,39 +77,24 @@
             this.listBox_casesId1 = new System.Windows.Forms.ListBox();
             this.listbox_CasesId2 = new System.Windows.Forms.ListBox();
             this.listbox_CasesId3 = new System.Windows.Forms.ListBox();
+            this.numericUpDown_RealtorID1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_RealtorID2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_RealtorID3 = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_RealtorID1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_RealtorID2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_RealtorID3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox_RealtorID1
-            // 
-            this.textBox_RealtorID1.Location = new System.Drawing.Point(127, 309);
-            this.textBox_RealtorID1.Name = "textBox_RealtorID1";
-            this.textBox_RealtorID1.Size = new System.Drawing.Size(191, 27);
-            this.textBox_RealtorID1.TabIndex = 0;
-            // 
-            // textBox_RealtorID2
-            // 
-            this.textBox_RealtorID2.Location = new System.Drawing.Point(366, 309);
-            this.textBox_RealtorID2.Name = "textBox_RealtorID2";
-            this.textBox_RealtorID2.Size = new System.Drawing.Size(191, 27);
-            this.textBox_RealtorID2.TabIndex = 1;
-            // 
-            // textBox_RealtorID3
-            // 
-            this.textBox_RealtorID3.Location = new System.Drawing.Point(602, 309);
-            this.textBox_RealtorID3.Name = "textBox_RealtorID3";
-            this.textBox_RealtorID3.Size = new System.Drawing.Size(191, 27);
-            this.textBox_RealtorID3.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(127, 283);
+            this.label1.Location = new System.Drawing.Point(340, 283);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 23);
             this.label1.TabIndex = 3;
@@ -122,7 +105,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(366, 283);
+            this.label2.Location = new System.Drawing.Point(579, 283);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 23);
             this.label2.TabIndex = 4;
@@ -133,7 +116,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(602, 283);
+            this.label3.Location = new System.Drawing.Point(815, 283);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 23);
             this.label3.TabIndex = 5;
@@ -142,11 +125,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label4.Location = new System.Drawing.Point(17, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 28);
+            this.label4.Size = new System.Drawing.Size(205, 38);
             this.label4.TabIndex = 6;
             this.label4.Text = "Open house";
             // 
@@ -155,7 +138,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(127, 400);
+            this.label5.Location = new System.Drawing.Point(340, 391);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 23);
             this.label5.TabIndex = 10;
@@ -166,7 +149,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(366, 400);
+            this.label12.Location = new System.Drawing.Point(579, 391);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(129, 23);
             this.label12.TabIndex = 17;
@@ -177,7 +160,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label16.Location = new System.Drawing.Point(602, 400);
+            this.label16.Location = new System.Drawing.Point(815, 391);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(129, 23);
             this.label16.TabIndex = 24;
@@ -519,9 +502,11 @@
             this.button_Assign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Assign.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_Assign.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button_Assign.Location = new System.Drawing.Point(100, 714);
+            this.button_Assign.Image = ((System.Drawing.Image)(resources.GetObject("button_Assign.Image")));
+            this.button_Assign.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Assign.Location = new System.Drawing.Point(340, 714);
             this.button_Assign.Name = "button_Assign";
-            this.button_Assign.Size = new System.Drawing.Size(245, 74);
+            this.button_Assign.Size = new System.Drawing.Size(218, 74);
             this.button_Assign.TabIndex = 30;
             this.button_Assign.Text = "Assign";
             this.button_Assign.UseVisualStyleBackColor = true;
@@ -532,9 +517,11 @@
             this.button_Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Clear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_Clear.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button_Clear.Location = new System.Drawing.Point(575, 714);
+            this.button_Clear.Image = ((System.Drawing.Image)(resources.GetObject("button_Clear.Image")));
+            this.button_Clear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Clear.Location = new System.Drawing.Point(788, 711);
             this.button_Clear.Name = "button_Clear";
-            this.button_Clear.Size = new System.Drawing.Size(244, 74);
+            this.button_Clear.Size = new System.Drawing.Size(218, 77);
             this.button_Clear.TabIndex = 31;
             this.button_Clear.Text = "Clear";
             this.button_Clear.UseVisualStyleBackColor = true;
@@ -543,7 +530,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel6.Location = new System.Drawing.Point(335, 283);
+            this.panel6.Location = new System.Drawing.Point(548, 283);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(10, 426);
             this.panel6.TabIndex = 32;
@@ -551,7 +538,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel7.Location = new System.Drawing.Point(575, 283);
+            this.panel7.Location = new System.Drawing.Point(788, 283);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 426);
             this.panel7.TabIndex = 33;
@@ -559,7 +546,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel8.Location = new System.Drawing.Point(809, 283);
+            this.panel8.Location = new System.Drawing.Point(1022, 283);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(10, 426);
             this.panel8.TabIndex = 34;
@@ -569,7 +556,7 @@
             this.listBox_casesId1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listBox_casesId1.FormattingEnabled = true;
             this.listBox_casesId1.ItemHeight = 25;
-            this.listBox_casesId1.Location = new System.Drawing.Point(127, 426);
+            this.listBox_casesId1.Location = new System.Drawing.Point(340, 417);
             this.listBox_casesId1.Name = "listBox_casesId1";
             this.listBox_casesId1.Size = new System.Drawing.Size(191, 254);
             this.listBox_casesId1.TabIndex = 35;
@@ -579,7 +566,7 @@
             this.listbox_CasesId2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listbox_CasesId2.FormattingEnabled = true;
             this.listbox_CasesId2.ItemHeight = 25;
-            this.listbox_CasesId2.Location = new System.Drawing.Point(366, 426);
+            this.listbox_CasesId2.Location = new System.Drawing.Point(579, 417);
             this.listbox_CasesId2.Name = "listbox_CasesId2";
             this.listbox_CasesId2.Size = new System.Drawing.Size(191, 254);
             this.listbox_CasesId2.TabIndex = 36;
@@ -589,16 +576,46 @@
             this.listbox_CasesId3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listbox_CasesId3.FormattingEnabled = true;
             this.listbox_CasesId3.ItemHeight = 25;
-            this.listbox_CasesId3.Location = new System.Drawing.Point(602, 426);
+            this.listbox_CasesId3.Location = new System.Drawing.Point(815, 417);
             this.listbox_CasesId3.Name = "listbox_CasesId3";
             this.listbox_CasesId3.Size = new System.Drawing.Size(191, 254);
             this.listbox_CasesId3.TabIndex = 37;
+            // 
+            // numericUpDown_RealtorID1
+            // 
+            this.numericUpDown_RealtorID1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_RealtorID1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_RealtorID1.Location = new System.Drawing.Point(340, 309);
+            this.numericUpDown_RealtorID1.Name = "numericUpDown_RealtorID1";
+            this.numericUpDown_RealtorID1.Size = new System.Drawing.Size(191, 31);
+            this.numericUpDown_RealtorID1.TabIndex = 38;
+            // 
+            // numericUpDown_RealtorID2
+            // 
+            this.numericUpDown_RealtorID2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_RealtorID2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_RealtorID2.Location = new System.Drawing.Point(579, 309);
+            this.numericUpDown_RealtorID2.Name = "numericUpDown_RealtorID2";
+            this.numericUpDown_RealtorID2.Size = new System.Drawing.Size(191, 31);
+            this.numericUpDown_RealtorID2.TabIndex = 39;
+            // 
+            // numericUpDown_RealtorID3
+            // 
+            this.numericUpDown_RealtorID3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numericUpDown_RealtorID3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown_RealtorID3.Location = new System.Drawing.Point(815, 309);
+            this.numericUpDown_RealtorID3.Name = "numericUpDown_RealtorID3";
+            this.numericUpDown_RealtorID3.Size = new System.Drawing.Size(191, 31);
+            this.numericUpDown_RealtorID3.TabIndex = 40;
             // 
             // OpenHousePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.numericUpDown_RealtorID3);
+            this.Controls.Add(this.numericUpDown_RealtorID2);
+            this.Controls.Add(this.numericUpDown_RealtorID1);
             this.Controls.Add(this.listbox_CasesId3);
             this.Controls.Add(this.listbox_CasesId2);
             this.Controls.Add(this.listBox_casesId1);
@@ -616,9 +633,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_RealtorID3);
-            this.Controls.Add(this.textBox_RealtorID2);
-            this.Controls.Add(this.textBox_RealtorID1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "OpenHousePage";
             this.Size = new System.Drawing.Size(1499, 908);
@@ -630,16 +644,15 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_RealtorID1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_RealtorID2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_RealtorID3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox_RealtorID1;
-        private System.Windows.Forms.TextBox textBox_RealtorID2;
-        private System.Windows.Forms.TextBox textBox_RealtorID3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -688,5 +701,8 @@
         private System.Windows.Forms.ListBox listBox_casesId1;
         private System.Windows.Forms.ListBox listbox_CasesId2;
         private System.Windows.Forms.ListBox listbox_CasesId3;
+        private System.Windows.Forms.NumericUpDown numericUpDown_RealtorID1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_RealtorID2;
+        private System.Windows.Forms.NumericUpDown numericUpDown_RealtorID3;
     }
 }

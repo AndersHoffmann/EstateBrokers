@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Windows.Forms;
-
-using UseCases.OpenHouse;
-using Controllers;
-using ViewModels;
+﻿using Controllers;
 using Presenters;
+using System;
+using System.Windows.Forms;
+using ViewModels;
 
 namespace GUI
 {
@@ -28,18 +21,12 @@ namespace GUI
         private void button_Clear_Click(object sender, EventArgs e)
         {
 
-            foreach (Control control in Controls)
-            {
-                if (control is TextBox)
-                {
-                    (control as TextBox).Clear();
-                }
-            }
+            ClearControls();
         }
 
         private void button_Assign_Click(object sender, EventArgs e)
         {
-            _openHouseController.OpenHouseDistribution(textBox_RealtorID1.Text, textBox_RealtorID2.Text, textBox_RealtorID3.Text);
+            _openHouseController.OpenHouseDistribution(numericUpDown_RealtorID1.Value, numericUpDown_RealtorID2.Value, numericUpDown_RealtorID3.Value);
         }
 
         public void ListsForCaseAssign(OpenHouseViewModel openHouseViewModel)
@@ -47,7 +34,23 @@ namespace GUI
             listBox_casesId1.DataSource = openHouseViewModel.Realtor1Cases;
             listbox_CasesId2.DataSource = openHouseViewModel.Realtor2Cases;
             listbox_CasesId3.DataSource = openHouseViewModel.Realtor3Cases;
-            
+
+        }
+
+        private void ClearControls()
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is ListBox)
+                {
+                    (control as ListBox).DataSource = null;
+                }
+                if (control is NumericUpDown)
+                {
+                    (control as NumericUpDown).Value = 0;
+                }
+            }
+
         }
     }
 }
