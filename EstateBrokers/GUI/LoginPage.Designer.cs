@@ -49,9 +49,13 @@
             this.toolTip_ForPassword = new System.Windows.Forms.ToolTip(this.components);
             this.label_NewUser = new System.Windows.Forms.Label();
             this.toolTip_NewUser = new System.Windows.Forms.ToolTip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsernamePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ForLockToPassword)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -162,6 +166,9 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
@@ -205,6 +212,39 @@
             this.label_NewUser.TabIndex = 14;
             this.label_NewUser.Text = "New user?";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(360, 490);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Test login";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(360, 519);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 22);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Martin";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(360, 577);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(123, 22);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "MartinsKode";
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -233,6 +273,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UsernamePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ForLockToPassword)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +303,8 @@
         private System.Windows.Forms.ToolTip toolTip_ForPassword;
         private System.Windows.Forms.Label label_NewUser;
         private System.Windows.Forms.ToolTip toolTip_NewUser;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

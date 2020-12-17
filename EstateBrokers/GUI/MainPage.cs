@@ -19,8 +19,7 @@ namespace GUI
         {
        
             InitializeComponent();
-            //  loginPage1.BringToFront();
-            loginPage1.Hide();
+            loginPage1.BringToFront();
             HideAllUserControls();
             
         }
