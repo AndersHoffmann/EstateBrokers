@@ -52,13 +52,15 @@ namespace UseCases.OpenHouse
                 _openHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
             }
             else
-            {
-
-
+           
                 for (int i = 1; i < Cases.Count; i++)
                 {
-                    List<Entities.Realtor> tempArray = realtorList.OrderBy(x => rnd.Next()).ToList();
-                    Cases[i].Realtor = tempArray[i % 3];
+                    List<Entities.Realtor> tempList = realtorList;
+                    if (i % 3 == 1)
+                    {
+                        tempList = realtorList.OrderBy(x => rnd.Next()).ToList();
+                    }
+                    Cases[i].Realtor = tempList[i % 3];
                     CaseIDLists[i % 3].Add(Cases[i].CaseID);
                 }
 

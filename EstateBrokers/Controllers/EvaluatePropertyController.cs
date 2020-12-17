@@ -6,7 +6,7 @@ namespace Controllers
 {
     public class EvaluatePropertyController
     {
-
+        //Public for test
         IEvaluatePropertyInput _evaluatePropertyInput;
 
         public EvaluatePropertyController(IEvaluatePropertyInput evaluatePropertyInput)
