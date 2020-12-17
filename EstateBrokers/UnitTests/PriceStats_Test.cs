@@ -30,7 +30,7 @@ namespace UnitTests
             e.SquareMeter = 50;
 
             //Act
-            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeEvaluation(e);
+            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeValuation(e);
             double estimatedValue = result.PropertyValuation;
 
             //Assert
@@ -51,7 +51,7 @@ namespace UnitTests
             e.SquareMeter = 50;
 
             //Act
-            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeEvaluation(e);
+            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeValuation(e);
             
             double estimatedValue = result.PropertyValuation;
 
@@ -74,7 +74,7 @@ namespace UnitTests
             e.HouseCondition = 8;
             e.SquareMeter = 73;
 
-            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeEvaluation(e);
+            EvaluatePropertyResponseModel result = EvaluatePropertyController._evaluatePropertyInput.MakeValuation(e);
             double estimatedValue = result.PropertyValuation;
 
             //Act

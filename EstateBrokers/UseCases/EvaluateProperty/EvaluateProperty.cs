@@ -12,14 +12,14 @@ namespace UseCases.EvaluateProperty
 
     {
 
-        public IEvaluatePropertyOutput EvaluatePropertyOutput { get; set; }
+        IEvaluatePropertyOutput EvaluatePropertyOutput { get; set; }
 
         public EvaluateProperty(IEvaluatePropertyOutput evaluatePropertyOutput)
         {
             EvaluatePropertyOutput = evaluatePropertyOutput;
         }
 
-        public EvaluatePropertyResponseModel MakeEvaluation(EvaluatePropertyRequestModel evaluatePropertyRequestModel)
+        public EvaluatePropertyResponseModel MakeValuation(EvaluatePropertyRequestModel evaluatePropertyRequestModel)
         {
 
             var property = new Property();
@@ -35,7 +35,7 @@ namespace UseCases.EvaluateProperty
 
             response.PropertyValuation = property.PropertyValuation.CalculateValuation();
 
-            EvaluatePropertyOutput.DisplayPropertyEvaluation(response);
+            EvaluatePropertyOutput.DisplayPropertyValuation(response);
             return response;
 
         }

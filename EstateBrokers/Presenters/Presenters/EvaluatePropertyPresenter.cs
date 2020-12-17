@@ -14,16 +14,18 @@ namespace Presenters
 
         public IEvaluatePropertyFrontEnd FrontEnd { get; set; }
 
-        public EvaluatePropertyViewModel evaluatePropertyViewModel;
+        
 
         public EvaluatePropertyPresenter(IEvaluatePropertyFrontEnd evaluatePropertyFrontEnd)
         {
-            evaluatePropertyViewModel = new EvaluatePropertyViewModel();
+            
             FrontEnd = evaluatePropertyFrontEnd;
         }
 
-        public void DisplayPropertyEvaluation(EvaluatePropertyResponseModel evaluatePropertyResponseModel)
+        public void DisplayPropertyValuation(EvaluatePropertyResponseModel evaluatePropertyResponseModel)
         {
+            EvaluatePropertyViewModel evaluatePropertyViewModel = new EvaluatePropertyViewModel();
+
             evaluatePropertyViewModel.PropertyValuation = evaluatePropertyResponseModel.PropertyValuation.ToString();
 
             FrontEnd.UpdatePropertyValuationField(evaluatePropertyViewModel);

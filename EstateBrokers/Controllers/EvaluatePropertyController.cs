@@ -15,7 +15,7 @@ namespace Controllers
 
         }
 
-        public void EstimateCode(decimal squareMeters, int houseCondition, bool isDesignerHouse, bool hasGarden, bool hasBasement, bool hasGarage)
+        public void EvaluateProperty(decimal squareMeters, int houseCondition, bool isDesignerHouse, bool hasGarden, bool hasBasement, bool hasGarage)
         {
             EvaluatePropertyRequestModel request = new EvaluatePropertyRequestModel();
 
@@ -26,7 +26,7 @@ namespace Controllers
             request.HasBasement = hasBasement;
             request.HasGarage = hasGarage;
 
-            _evaluatePropertyInput.MakeEvaluation(request);
+            _evaluatePropertyInput.MakeValuation(request);
         }
 
     }
