@@ -4,7 +4,7 @@ using Gateways;
 namespace UseCases
 {
     public class AddressCRUD : IAddressCRUD
-    { 
+    {
         public int CreateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)
         {
             var database = new EstateBrokerContext();
@@ -29,7 +29,7 @@ namespace UseCases
             using (var database = new EstateBrokerContext())
             {
                 return (Entities.Address)AddressFactory.CreateAddress(database.Addresses.Find(postalCode, addressLine1));
-             
+
             }
         }
         public bool UpdateAddress(int postalCode, string addressLine1, double ownershipCost, int exteriorArea, int interiorArea)
@@ -51,7 +51,7 @@ namespace UseCases
                 return false;
             }
         }
-            
+
         public void DeleteAddress(int postalCode, string addressLine1)
         {
             using (var database = new EstateBrokerContext())
@@ -60,6 +60,5 @@ namespace UseCases
                 database.SaveChanges();
             }
         }
-
     }
 }

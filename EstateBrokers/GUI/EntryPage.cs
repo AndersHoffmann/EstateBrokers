@@ -48,7 +48,14 @@ namespace GUI
 
         private void button_DeleteCase_Click(object sender, EventArgs e)
         {
-            _deleteEntryController.DeleteEntryID(numericUpDown_CaseIdToDelete.Value);
+            if (numericUpDown_CaseIdToDelete.Value == 0)
+            {
+                MessageBox.Show("Invaid value");
+            }
+            else
+            {
+                _deleteEntryController.DeleteEntryID(numericUpDown_CaseIdToDelete.Value);
+            }
         }
 
         public void confirmCaseDelete(DeleteEntryViewModel deleteEntryViewModel)

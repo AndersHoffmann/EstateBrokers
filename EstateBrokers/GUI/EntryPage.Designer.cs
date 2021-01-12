@@ -173,6 +173,11 @@ namespace GUI
             this.numericUpDown_CaseIdToDelete.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.numericUpDown_CaseIdToDelete.ForeColor = System.Drawing.Color.DodgerBlue;
             this.numericUpDown_CaseIdToDelete.Location = new System.Drawing.Point(7, 793);
+            this.numericUpDown_CaseIdToDelete.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
             this.numericUpDown_CaseIdToDelete.Name = "numericUpDown_CaseIdToDelete";
             this.numericUpDown_CaseIdToDelete.Size = new System.Drawing.Size(198, 31);
             this.numericUpDown_CaseIdToDelete.TabIndex = 8;
