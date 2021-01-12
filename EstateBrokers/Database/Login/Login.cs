@@ -10,6 +10,7 @@ namespace Database.Login
     {
         private static string sqlConn = ConfigurationManager.AppSettings.Get("sqlConnectionstring");
 
+        //SQLCLIENT
         public bool TryLogin(string username, string password)
         {
 

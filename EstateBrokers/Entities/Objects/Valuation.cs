@@ -25,7 +25,7 @@ namespace Entities.Objects
             HasGarage = hasGarage;
         }
 
-
+        //Grasp - Information Expert
         public double CalculateValuation()
         {
             double calculatedValuation = BasePrice;

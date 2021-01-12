@@ -19,6 +19,7 @@ using UseCases.UpdateEntry;
 
 namespace GUI
 {
+    //Dependency injection
     public class DependencyInjectionContainer
     {
         public static EvaluatePropertyController GetEvaluatePropertyController(PropertyValuationPage propertyValuationPage)

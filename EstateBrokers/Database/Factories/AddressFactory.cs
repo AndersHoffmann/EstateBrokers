@@ -7,6 +7,7 @@ namespace Database
 {
     static class AddressFactory
     {
+        //GOF - Factory
         public static IAddress CreateAddress(IAddress Address = null)
         {
 
@@ -22,7 +23,6 @@ namespace Database
             {
                 return new Entities.Address();
             }
-          
 
         }
 

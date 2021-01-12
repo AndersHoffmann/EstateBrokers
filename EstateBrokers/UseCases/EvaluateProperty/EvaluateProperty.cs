@@ -18,7 +18,7 @@ namespace UseCases.EvaluateProperty
         {
             EvaluatePropertyOutput = evaluatePropertyOutput;
         }
-
+        //GOF - Facade (entities)
         public EvaluatePropertyResponseModel MakeValuation(EvaluatePropertyRequestModel evaluatePropertyRequestModel)
         {
 

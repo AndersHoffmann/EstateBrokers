@@ -75,5 +75,5 @@ namespace UseCases.OpenHouse
         }
 
     }
-}
+
 

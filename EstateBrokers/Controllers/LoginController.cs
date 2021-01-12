@@ -12,7 +12,7 @@ namespace Controllers
             _loginInput = loginInput;
 
         }
-
+        //GRASP - Controller
         public void TryLogin(string username, string password)
         {
             LoginRequestModel request = new LoginRequestModel();

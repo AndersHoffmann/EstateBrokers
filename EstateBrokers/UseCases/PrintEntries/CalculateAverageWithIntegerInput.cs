@@ -9,6 +9,7 @@ namespace UseCases.PrintEntries
 {
     public class CalculateAverageWithIntegerInput
     {
+        //GRASP - High Cohesion
         ICaseCRUD _caseCRUD;
         public CalculateAverageWithIntegerInput(ICaseCRUD caseCRUD)
         {
@@ -17,7 +18,6 @@ namespace UseCases.PrintEntries
         public double Calculate(int input)
         {
           
-
             List<Entities.Case> cases = _caseCRUD.ReadCasesInPostalCode(input);
             double totalPrice = 0;
             int count = 0;

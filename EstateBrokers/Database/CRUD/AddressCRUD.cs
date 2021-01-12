@@ -3,6 +3,7 @@ using Gateways;
 
 namespace UseCases
 {
+    //Polymorphism 
     public class AddressCRUD : IAddressCRUD
     { 
         public int CreateAddress(int postalCode, string addressLine1, string addressLine2, double ownershipCost, int exteriorArea, int interiorArea, int buildYear)

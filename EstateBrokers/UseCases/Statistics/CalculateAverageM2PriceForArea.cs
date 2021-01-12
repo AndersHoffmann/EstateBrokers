@@ -36,7 +36,7 @@ namespace UseCases.Statistics
             _estimatesOutput.DisplayData(response);
         }
 
-
+        //Thread tråd 
         public void GetAvailableAreaCodes()
         {
             GetAreaCodesResponseModel responseModel = new GetAreaCodesResponseModel();

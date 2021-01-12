@@ -10,7 +10,7 @@ namespace UseCases.DeleteEntry
         IPropertyCRUD _propertyCRUD;
         IAddressCRUD _addressCRUD;
 
-
+        //Dependency injection Abstraction
         public DeleteEntry(IDeleteEntryOutput deleteEntryOutput, ICaseCRUD caseCRUD, IPropertyCRUD propertyCRUD, IAddressCRUD addressCRUD)
         {
             _deleteEntryOutput = deleteEntryOutput;

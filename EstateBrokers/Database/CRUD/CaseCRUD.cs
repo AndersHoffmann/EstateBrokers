@@ -7,7 +7,7 @@ namespace Database
 {
     public class CaseCRUD : ICaseCRUD
     {
-
+        
         public int CreateCase(DateTime creationDate, double price, int realtorID)
         {
 

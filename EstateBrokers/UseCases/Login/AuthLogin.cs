@@ -16,7 +16,7 @@ namespace UseCases.Login
             Login = login;
 
         }
-
+        //Thread Tråd
         public void Auth(LoginRequestModel request)
         {
             var response = new LoginResponseModel();

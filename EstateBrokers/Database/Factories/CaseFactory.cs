@@ -7,6 +7,7 @@ namespace Database
 {
     static class CaseFactory
     {
+        //GRASP - Creator
         public static ICase CreateCase(ICase Case = null)
         {
 

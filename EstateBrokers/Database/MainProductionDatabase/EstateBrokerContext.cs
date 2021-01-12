@@ -8,6 +8,7 @@ using System.Text;
 
 namespace Database
 {
+    //Arv 
     public class EstateBrokerContext : DbContext
     {
         public EstateBrokerContext() : base()
