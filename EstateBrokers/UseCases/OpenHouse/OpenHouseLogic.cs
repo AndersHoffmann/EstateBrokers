@@ -1,6 +1,4 @@
-﻿using Database;
-using Gateways;
-using Database;
+﻿using Gateways;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +21,7 @@ namespace UseCases.OpenHouse
             _caseCRUD = caseCRUD;
             _realtorCRUD = realtorCRUD;
         }
-            
+
         public void RunOpenHouse(OpenHouseRequestModel openHouseRequestModel)
         {
 
@@ -52,7 +50,7 @@ namespace UseCases.OpenHouse
                 _openHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
             }
             else
-           
+
                 for (int i = 1; i < Cases.Count; i++)
                 {
                     List<Entities.Realtor> tempList = realtorList;
@@ -64,16 +62,16 @@ namespace UseCases.OpenHouse
                     CaseIDLists[i % 3].Add(Cases[i].CaseID);
                 }
 
-                success = true;
+            success = true;
 
-                response.Realtor1Cases = CaseIDLists[0];
-                response.Realtor2Cases = CaseIDLists[1];
-                response.Realtor3Cases = CaseIDLists[2];
-                response.HousesAssignedSuccessfully = success;
-                _openHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
-            }
+            response.Realtor1Cases = CaseIDLists[0];
+            response.Realtor2Cases = CaseIDLists[1];
+            response.Realtor3Cases = CaseIDLists[2];
+            response.HousesAssignedSuccessfully = success;
+            _openHouseOutput.ReturnSuccessStateAndAsssignedPropertyIDs(response);
         }
-
     }
 
+    
+}
 
